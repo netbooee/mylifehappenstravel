@@ -173,17 +173,17 @@ function Home({ setPage }) {
         {/* hero image strip */}
         <Container style={{ marginTop: 56 }}>
           <div data-r="hero-strip" style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr 1fr', gap: 16, height: 480 }}>
-            <image-slot id="m-hero-1" src="assets/hero-unsplash.jpg" placeholder="Italy · cover photo" shape="rounded" radius="12"
+            <image-slot id="m-hero-1" src="assets/florence-arno-sunset.jpg" placeholder="Florence · Arno at sunset" shape="rounded" radius="12"
               style={{ display: 'block', width: '100%', height: '100%', background: '#e6d8b8' }} />
-            <image-slot id="m-hero-2" placeholder="Cooking class · hand-rolled pasta" shape="rounded" radius="12"
+            <image-slot id="m-hero-2" src="assets/cooking-class.jpg" placeholder="Cooking class · Towns of Italy" shape="rounded" radius="12"
               style={{ display: 'block', width: '100%', height: '100%', background: '#e6d8b8' }} />
-            <image-slot id="m-hero-3" placeholder="Burano blue door" shape="rounded" radius="12"
+            <image-slot id="m-hero-3" src="assets/murano.jpg" placeholder="Murano · coloured glass" shape="rounded" radius="12"
               style={{ display: 'block', width: '100%', height: '100%', background: '#e6d8b8' }} />
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 16, fontSize: 12.5, color: C.inkSoft, fontFamily: M_FONTS.mono, letterSpacing: 1, textTransform: 'uppercase' }}>
             <span>Florence · day 1</span>
             <span>Day 3 · pasta class</span>
-            <span>Burano · day 7</span>
+            <span>Murano · day 7</span>
           </div>
         </Container>
       </section>
