@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>My Life Happens Travel</title>
+<meta name="description" content="Real travel guides, honest gear picks, and photos from the road — because your life happens everywhere." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Caveat:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; }
+  body { overflow: hidden; font-family: 'DM Sans', -apple-system, system-ui, sans-serif; background: #fbf3df; }
+  #root { width: 100vw; height: 100vh; }
+  image-slot { --slot-bg: rgba(0,0,0,.04); --slot-fg: rgba(0,0,0,.5); }
+  *::-webkit-scrollbar { width: 6px; height: 6px; }
+  *::-webkit-scrollbar-track { background: transparent; }
+  *::-webkit-scrollbar-thumb { background: rgba(0,0,0,.15); border-radius: 3px; }
+
+  /* ── Responsive layout overrides ── */
+
+  /* Tablet ≤ 960 */
+  @media (max-width: 960px) {
+    [data-r="container"] { padding-left: 28px !important; padding-right: 28px !important; }
+    [data-r="hero-grid"], [data-r="split-2col"], [data-r="app-split"], [data-r="video-split"], [data-r="intro-split"], [data-r="newsletter-split"] {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+    }
+    [data-r="cards-3"] { grid-template-columns: 1fr 1fr !important; }
+    [data-r="cards-2"] { grid-template-columns: 1fr !important; }
+    [data-r="meta-row"] { grid-template-columns: 1fr 1fr 1fr !important; gap: 24px !important; }
+    [data-r="meta-row"] > * { padding-left: 0 !important; border-left: none !important; }
+    [data-r="stats-4"] { grid-template-columns: 1fr 1fr !important; gap: 24px !important; }
+    [data-r="stats-4"] > * { padding-left: 0 !important; border-left: none !important; }
+    [data-r="hero-strip"] {
+      grid-template-columns: 1fr 1fr !important;
+      height: auto !important;
+    }
+    [data-r="hero-strip"] > image-slot, [data-r="hero-strip"] > * {
+      aspect-ratio: 4/3 !important; height: auto !important;
+    }
+    [data-r="h1-xl"] { font-size: clamp(48px, 9vw, 96px) !important; line-height: 1.04 !important; letter-spacing: -0.4px !important; }
+    [data-r="h1"]    { font-size: clamp(40px, 7vw, 80px) !important; line-height: 1.05 !important; }
+    [data-r="h2"]    { font-size: clamp(28px, 5vw, 48px) !important; line-height: 1.08 !important; }
+    [data-r="phone-frame"] { transform: none !important; width: 220px !important; height: 460px !important; }
+    [data-r="phone-frame"][data-r-rot] { transform: rotate(var(--rot,0deg)) !important; }
+    [data-r="day-row"] { grid-template-columns: 50px 1fr !important; row-gap: 4px !important; }
+    [data-r="day-row-tag"], [data-r="day-row-km"] { display: none !important; }
+    [data-r="day-row-title"] { grid-column: 2 / -1 !important; }
+    [data-r="day-detail"]   { grid-template-columns: 1fr !important; padding-left: 24px !important; }
+    [data-r="nav-links"]    { display: none !important; }
+    [data-r="nav-burger"]   { display: inline-flex !important; }
+    [data-r="reels"] { padding-left: 0 !important; padding-right: 0 !important; }
+    [data-r="reels"] [data-r="container"] > div:last-child { padding-left: 28px !important; padding-right: 28px !important; }
+  }
+
+  /* Phone ≤ 640 */
+  @media (max-width: 640px) {
+    [data-r="container"] { padding-left: 18px !important; padding-right: 18px !important; }
+    [data-r="cards-3"] { grid-template-columns: 1fr !important; gap: 28px !important; }
+    [data-r="hero-strip"] { grid-template-columns: 1fr !important; }
+    [data-r="meta-row"] { grid-template-columns: 1fr 1fr !important; }
+    [data-r="h1-xl"] { font-size: clamp(40px, 11vw, 64px) !important; letter-spacing: -0.2px !important; }
+    [data-r="h1"]    { font-size: clamp(34px, 9vw, 56px) !important; }
+    [data-r="h2"]    { font-size: clamp(24px, 7vw, 40px) !important; }
+    [data-r="hero-cluster"] { height: 360px !important; }
+    [data-r="hero-cluster"] > * { transform: scale(0.7) !important; }
+    [data-r="shop-card"] { grid-template-columns: 110px 1fr !important; gap: 14px !important; }
+    [data-r="shop-card"] image-slot { height: 130px !important; }
+    [data-r="postcard-back"] { padding: 20px !important; }
+    [data-r="meta-tags"] { gap: 8px !important; }
+    [data-r="postcard-hero"] { grid-template-columns: 1fr !important; }
+    [data-r="nav-cta"] { display: none !important; }
+    [data-r="footer-foot"] { flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; }
+  }
+
+  /* Mobile nav drawer */
+  [data-r="nav-drawer"] {
+    position: fixed; inset: 0; background: rgba(0,0,0,.4); backdrop-filter: blur(8px);
+    z-index: 200; opacity: 0; pointer-events: none; transition: opacity .2s;
+  }
+  [data-r="nav-drawer"][data-open="1"] { opacity: 1; pointer-events: auto; }
+  [data-r="nav-drawer-panel"] {
+    position: absolute; top: 0; right: 0; bottom: 0; width: min(320px, 80vw);
+    background: var(--mhl-cream, #f3eee6); padding: 24px;
+    transform: translateX(100%); transition: transform .25s ease-out;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  [data-r="nav-drawer"][data-open="1"] [data-r="nav-drawer-panel"] { transform: translateX(0); }
+  [data-r="nav-burger"] { display: none; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<!-- React + Babel -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<!-- image-slot web component -->
+<script src="image-slot.js"></script>
+
+<!-- shared data, tweaks, both site variants -->
+<script type="text/babel" src="shared-data.jsx"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="postcard-site.jsx"></script>
+<script type="text/babel" src="modern-site.jsx"></script>
+
+<script type="text/babel">
+  const TWEAK_DEFAULTS = {
+    "style": "modern",
+    "palette": "coastal",
+    "density": "cozy"
+  };
+
+  function Root() {
+    const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+    const P = PALETTES[t.palette] || PALETTES.tuscan;
+    const Site = t.style === 'postcard' ? PostcardSite : ModernSite;
+    return (
+      <React.Fragment>
+        <Site palette={t.palette} density={t.density} />
+        <TweaksPanel title="Tweaks">
+          <TweakSection label="Style" />
+          <TweakRadio value={t.style}
+            options={['modern', 'postcard']}
+            onChange={(v) => setTweak('style', v)} />
+
+          <TweakSection label="Palette" />
+          <TweakColor
+            value={[P.primary, P.accent, P.deep, P.cream]}
+            options={[
+              [PALETTES.tuscan.primary,   PALETTES.tuscan.accent,   PALETTES.tuscan.deep,   PALETTES.tuscan.cream],
+              [PALETTES.coastal.primary,  PALETTES.coastal.accent,  PALETTES.coastal.deep,  PALETTES.coastal.cream],
+              [PALETTES.sageRust.primary, PALETTES.sageRust.accent, PALETTES.sageRust.deep, PALETTES.sageRust.cream],
+              [PALETTES.dusk.primary,     PALETTES.dusk.accent,     PALETTES.dusk.deep,     PALETTES.dusk.cream],
+            ]}
+            onChange={(arr) => {
+              const match = Object.entries(PALETTES).find(([, p]) => p.primary === arr[0]);
+              if (match) setTweak('palette', match[0]);
+            }}
+          />
+          <div style={{ fontSize: 10.5, color: 'rgba(41,38,27,.6)', textAlign: 'center', marginTop: -4 }}>
+            {P.name}
+          </div>
+
+          <TweakSection label="Layout" />
+          <TweakRadio label="Density" value={t.density}
+            options={['cozy', 'regular', 'airy']}
+            onChange={(v) => setTweak('density', v)} />
+        </TweaksPanel>
+      </React.Fragment>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(<Root />);
+</script>
+
+</body>
+</html>
