@@ -7,6 +7,13 @@ REPO="$(cd "$HERE/../.." && pwd)"
 WORK="${TRIP_PHOTOS_WORK:-$(dirname "$REPO")/trip-photos-work}"
 ENV="$WORK/.env"
 
+# Python environments remember the folder they were made in, so renaming or moving the folders breaks
+# them. If the environment can't start, throw it away and set it up again (it only holds the tools).
+if [ -d "$ENV" ] && ! "$ENV/venv/bin/python" -c "import osxphotos, PIL, pillow_heif" >/dev/null 2>&1; then
+  echo "The photo tools' setup in $ENV no longer works (folder renamed or moved?); setting it up again." >&2
+  case "$ENV" in */trip-photos-work/.env|*/.env) rm -rf -- "$ENV" ;; esac
+fi
+
 if [ ! -x "$ENV/venv/bin/osxphotos" ] || [ "$HERE/requirements.txt" -nt "$ENV/venv/.installed" ]; then
   echo "Setting up the photo tools in $ENV (one time, a few minutes)…" >&2
   mkdir -p "$ENV"
