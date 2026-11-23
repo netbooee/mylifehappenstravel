@@ -8,7 +8,7 @@
   "start": "2024-08-21",
   "end": "2024-08-25",
   "days": 5,
-  "hero": "",
+  "hero": "montreal",
   "glance": [
     {
       "label": "Dates",
@@ -127,7 +127,13 @@
           "text": "End the day with a slow walk along the Old Port promenade to see the city lights"
         }
       ],
-      "tip": "Watch the forecast. The Underground City and the Museum of Fine Arts make an easy rainy-day swap for the walk up Mount Royal."
+      "tip": "Watch the forecast. The Underground City and the Museum of Fine Arts make an easy rainy-day swap for the walk up Mount Royal.",
+      "photos": [
+        "mtl-sangria",
+        "mtl-plateau-restaurant",
+        "mtl-beaver-lake",
+        "mtl-old-montreal-night"
+      ]
     },
     {
       "label": "Day 3",
@@ -186,14 +192,19 @@
           "booked": true
         }
       ],
-      "tip": "Get to Le Petit Navire about 20 minutes early. The Ferris wheel and the zipline are right next to each other, so the rest of the morning falls into place."
+      "tip": "Get to Le Petit Navire about 20 minutes early. The Ferris wheel and the zipline are right next to each other, so the rest of the morning falls into place.",
+      "photos": [
+        "mtl-terrace-lunch",
+        "mtl-zipline",
+        "mtl-family-selfie"
+      ]
     },
     {
       "label": "Day 4",
       "date": "Sat, Aug 24",
       "place": "Montreal",
       "title": "Ferry to Parc Jean-Drapeau & a night in the Village",
-      "text": "We cross the river by ferry to Parc Jean-Drapeau, the island park left over from Expo 67, to see the Biosphère and catch Les Rendez-vous gourmands, a one-day food festival for the park's 150th anniversary. Back in town, we walk the car-free stretch of Saint Catherine Street East before dinner.",
+      "text": "We cross the river by ferry to Parc Jean-Drapeau, the island park left over from Expo 67, to see the Biosphère and catch Les Rendez-vous gourmands, a one-day food festival for the park's 150th anniversary, and try our luck at the Casino de Montréal. Back in town, we walk the car-free stretch of Saint Catherine Street East before dinner.",
       "items": [
         {
           "time": "9:45 AM",
@@ -239,7 +250,12 @@
           "text": "If we're still up for it: the bars on Crescent Street"
         }
       ],
-      "tip": "If the Village is too much fun to leave, cancel the Jacopo reservation on OpenTable in time and eat there instead."
+      "tip": "If the Village is too much fun to leave, cancel the Jacopo reservation on OpenTable in time and eat there instead.",
+      "photos": [
+        "mtl-jacopo-dinner",
+        "mtl-casino",
+        "mtl-aperol-toast"
+      ]
     },
     {
       "label": "Day 5",
@@ -400,13 +416,34 @@
     }
   ],
   "map": {
-    "Old Montreal": [45.5032, -73.5563],
-    "The Plateau": [45.5162, -73.5776],
-    "Mount Royal": [45.5036, -73.5871],
-    "Old Port": [45.5107, -73.5455],
-    "Parc Jean-Drapeau": [45.5141, -73.5311],
-    "The Village": [45.5194, -73.5551],
-    "Mile End": [45.5227, -73.5986]
+    "Old Montreal": [
+      45.5032,
+      -73.5563
+    ],
+    "The Plateau": [
+      45.5162,
+      -73.5776
+    ],
+    "Mount Royal": [
+      45.5036,
+      -73.5871
+    ],
+    "Old Port": [
+      45.5107,
+      -73.5455
+    ],
+    "Parc Jean-Drapeau": [
+      45.5141,
+      -73.5311
+    ],
+    "The Village": [
+      45.5194,
+      -73.5551
+    ],
+    "Mile End": [
+      45.5227,
+      -73.5986
+    ]
   },
   "videos": []
 }
