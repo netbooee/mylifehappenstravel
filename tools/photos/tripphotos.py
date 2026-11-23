@@ -81,13 +81,35 @@ def write_trip(path: pathlib.Path, trip: dict, raw: str) -> None:
                     encoding="utf-8")
 
 
+def _day_dates(text: str, start: dt.date) -> list[dt.date]:
+    """Calendar dates named in a day's "date" ("Fri, Apr 3", "Sat, Aug 9 – Sun, Aug 10"), year from the trip."""
+    found = []
+    for mon, day in re.findall(r"\b([A-Z][a-z]{2})[a-z]*\.? (\d{1,2})\b", text or ""):
+        try:
+            d = dt.datetime.strptime(f"{mon} {day} {start.year}", "%b %d %Y").date()
+        except ValueError:
+            continue
+        if d < start - dt.timedelta(days=7):      # a trip running over New Year
+            d = d.replace(year=d.year + 1)
+        found.append(d)
+    return found
+
+
 def day_slots(trip: dict) -> list[tuple[str, list[dt.date]]]:
-    """[(label, [dates])] for each days_plan entry: "Day 2" -> start+1, "Days 4–6" -> start+3..start+5."""
+    """[(label, [dates])] for each days_plan entry. Uses the day's own "date" when it names one ("Fri, Apr 3"),
+    since Day 1 isn't always the trip's start (an overnight flight); otherwise "Day 2" -> start+1,
+    "Days 4–6" -> start+3..start+5."""
     start = dt.date.fromisoformat(trip["start"])
     out = []
     for d in trip.get("days_plan", []):
         nums = [int(x) for x in re.findall(r"\d+", d["label"])]
-        if nums:
+        if not nums:
+            continue
+        named = _day_dates(d.get("date", ""), start)
+        if named:
+            first, last = min(named), max(named)
+            out.append((d["label"], [first + dt.timedelta(days=i) for i in range((last - first).days + 1)]))
+        else:
             out.append((d["label"], [start + dt.timedelta(days=n - 1) for n in range(nums[0], nums[-1] + 1)]))
     return out
 
