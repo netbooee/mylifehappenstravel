@@ -89,7 +89,11 @@
           "text": "First night in California on the balcony, with soft, warm valley air"
         }
       ],
-      "tip": "Thursday afternoon traffic leaving the Bay Area can add 30–45 minutes to the two-hour drive, so plan for it."
+      "tip": "Thursday afternoon traffic leaving the Bay Area can add 30–45 minutes to the two-hour drive, so plan for it.",
+      "photos": [
+        "cal-ranch-sunset",
+        "cal-ranch-pool"
+      ]
     },
     {
       "label": "Day 2",
@@ -120,7 +124,12 @@
           "booked": true
         }
       ],
-      "tip": "The lavender field peaks in July; early morning light gives the best photos before the midday sun flattens the color."
+      "tip": "The lavender field peaks in July; early morning light gives the best photos before the midday sun flattens the color.",
+      "photos": [
+        "cal-ranch-walk",
+        "cal-folktale-garden",
+        "cal-folktale-wine"
+      ]
     },
     {
       "label": "Day 3",
@@ -160,7 +169,11 @@
           "booked": true
         }
       ],
-      "tip": "Sections of Route 1 between Big Sur and Cambria have been intermittently closed. Check Caltrans before driving south and take Hwy 101 to Hwy 46 West if needed."
+      "tip": "Sections of Route 1 between Big Sur and Cambria have been intermittently closed. Check Caltrans before driving south and take Hwy 101 to Hwy 46 West if needed.",
+      "photos": [
+        "cal-carmel-beach",
+        "cal-cambria-sunset"
+      ]
     },
     {
       "label": "Day 4",
@@ -201,7 +214,12 @@
           "booked": true
         }
       ],
-      "tip": "Hearst Castle wants a printed confirmation letter and photo ID at the Visitor Center ticket window, not just a phone screen. Print before you leave home."
+      "tip": "Hearst Castle wants a printed confirmation letter and photo ID at the Visitor Center ticket window, not just a phone screen. Print before you leave home.",
+      "photos": [
+        "cal-hearst-castle",
+        "cal-hearst-hall",
+        "cal-piedras-blancas"
+      ]
     },
     {
       "label": "Day 5",
@@ -228,7 +246,11 @@
           "text": "No dinner plans: Old Fisherman's Grotto and Monterey Fish House are local seafood favorites"
         }
       ],
-      "tip": "The kelp beds around Cannery Row are prime sea otter habitat. Early morning and late afternoon are the best times to spot them."
+      "tip": "The kelp beds around Cannery Row are prime sea otter habitat. Early morning and late afternoon are the best times to spot them.",
+      "photos": [
+        "cal-cambria-boardwalk",
+        "cal-monterey-harbor"
+      ]
     },
     {
       "label": "Day 6",
@@ -259,7 +281,11 @@
           "text": "Walk the Monterey Bay Coastal Trail: the flat 2-mile stretch to Lovers Point Park in Pacific Grove, or past the aquarium and McAbee Beach to the Coast Guard Pier"
         }
       ],
-      "tip": "The bay is much colder than the shore. Dress warmer than you think you need to: base layer, fleece, windproof jacket, long pants and closed shoes, plus snacks, binoculars and sunscreen."
+      "tip": "The bay is much colder than the shore. Dress warmer than you think you need to: base layer, fleece, windproof jacket, long pants and closed shoes, plus snacks, binoculars and sunscreen.",
+      "photos": [
+        "cal-whale-tail",
+        "cal-whale-watch"
+      ]
     },
     {
       "label": "Day 7",
@@ -291,7 +317,12 @@
           "text": "Dinner within a 15-minute walk: Barbara's Fishtrap (cash only, no reservations) or Half Moon Bay Brewing Company"
         }
       ],
-      "tip": "Barbara's Fishtrap is cash only with no reservations. Arrive by 5:30–6 PM if you want a table."
+      "tip": "Barbara's Fishtrap is cash only with no reservations. Arrive by 5:30–6 PM if you want a table.",
+      "photos": [
+        "cal-pelican",
+        "cal-lone-cypress",
+        "cal-lone-cypress-josh"
+      ]
     },
     {
       "label": "Day 8",
@@ -336,7 +367,10 @@
           "text": "Check in to our Vrbo rental"
         }
       ],
-      "tip": ""
+      "tip": "",
+      "photos": [
+        "cal-sol-food"
+      ]
     },
     {
       "label": "Day 10",
@@ -361,7 +395,9 @@
       ],
       "tip": "Muir Woods requires a timed parking reservation; you can't drive in without one. Bring a National Park Pass and layers, as the grove stays cool even in August.",
       "photos": [
-        "cal-mount-tamalpais"
+        "cal-mount-tamalpais",
+        "cal-muir-woods-sign",
+        "cal-muir-woods-redwoods"
       ]
     },
     {
@@ -420,7 +456,9 @@
       "tip": "Calistoga sits on a geothermal field: if time allows, a 60-minute mud bath at Indian Springs or Dr. Wilkinson's is the quintessential Calistoga experience.",
       "photos": [
         "cal-vineyard",
-        "cal-wine"
+        "cal-wine",
+        "cal-tamber-bey-toast",
+        "cal-bennett-lane-glass"
       ]
     },
     {
@@ -448,7 +486,11 @@
           "text": "Complimentary wine hour at the inn (5:30–6:30 PM) with local Mendocino coast wines and snacks"
         }
       ],
-      "tip": "Download offline maps before leaving Calistoga: Hwy 128 and the Mendocino coast have spotty or no cell service."
+      "tip": "Download offline maps before leaving Calistoga: Hwy 128 and the Mendocino coast have spotty or no cell service.",
+      "photos": [
+        "cal-brewery-gulch-porch",
+        "cal-brewery-gulch-sunset"
+      ]
     },
     {
       "label": "Day 14",
@@ -474,7 +516,11 @@
           "text": "Second evening of the inn's complimentary wine hour"
         }
       ],
-      "tip": "Ask the staff at the wine hour where to eat and which trails to walk; the innkeepers are a genuine resource."
+      "tip": "Ask the staff at the wine hour where to eat and which trails to walk; the innkeepers are a genuine resource.",
+      "photos": [
+        "cal-mendocino-headlands",
+        "cal-point-cabrillo"
+      ]
     },
     {
       "label": "Day 15",
@@ -506,7 +552,11 @@
           "booked": true
         }
       ],
-      "tip": "Alila's poolside dining runs 11 AM–2 PM, so an early arrival can mean lunch by the pool."
+      "tip": "Alila's poolside dining runs 11 AM–2 PM, so an early arrival can mean lunch by the pool.",
+      "photos": [
+        "cal-alila-vineyard",
+        "cal-alila-reading"
+      ]
     },
     {
       "label": "Day 16",
@@ -529,7 +579,10 @@
           "text": "No plan: the Ferry Building Marketplace (15-minute walk) for casual bites, or Bix, Zuni Café or Foreign Cinema for a sit-down dinner"
         }
       ],
-      "tip": "Have at least one meal in the Palace's Garden Court; it's one of the most architecturally spectacular dining rooms in the country."
+      "tip": "Have at least one meal in the Palace's Garden Court; it's one of the most architecturally spectacular dining rooms in the country.",
+      "photos": [
+        "cal-alila-selfie"
+      ]
     },
     {
       "label": "Days 17–18",
@@ -552,7 +605,13 @@
           "booked": true
         }
       ],
-      "tip": "The SFO rental car return is off-site and needs the AirTrain. Budget 30–45 minutes for it and 2.5–3 hours at the airport in total."
+      "tip": "The SFO rental car return is off-site and needs the AirTrain. Budget 30–45 minutes for it and 2.5–3 hours at the airport in total.",
+      "photos": [
+        "cal-leica-store",
+        "cal-sf-heart",
+        "cal-ferry-building",
+        "cal-fishermans-wharf"
+      ]
     }
   ],
   "stays": [
