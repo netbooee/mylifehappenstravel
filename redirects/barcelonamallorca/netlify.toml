@@ -1,0 +1,12 @@
+# Settings for the OLD "barcelonamallorca" Netlify site.
+# That site's Base directory is set to redirects/barcelonamallorca, so Netlify reads this file
+# and publishes only this folder: a single redirect to the trip's page on the main site.
+[build]
+  publish = "."
+  command = ""
+
+[[redirects]]
+  from = "/*"
+  to = "https://mylifehappenstravel.netlify.app/itineraries/barcelona-mallorca-2026/"
+  status = 301
+  force = true
