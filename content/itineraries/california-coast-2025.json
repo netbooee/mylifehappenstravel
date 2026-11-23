@@ -291,8 +291,8 @@
       "label": "Day 7",
       "date": "Wed, Jul 30",
       "place": "Monterey & Half Moon Bay",
-      "title": "Monterey Bay Aquarium & the drive to Half Moon Bay",
-      "text": "A morning at one of the finest aquariums in the world, then two hours north along the coast to the fog-draped headlands of Half Moon Bay.",
+      "title": "Monterey Bay Aquarium, 17-Mile Drive & on to Half Moon Bay",
+      "text": "We spent the morning at one of the finest aquariums in the world, then looped around 17-Mile Drive past the Lone Cypress before driving two hours north to the fog-draped headlands of Half Moon Bay.",
       "items": [
         {
           "time": "9:00 AM",
@@ -304,11 +304,15 @@
           "booked": true
         },
         {
-          "time": "1:00 PM",
+          "time": "12:45 PM",
+          "text": "17-Mile Drive through Pebble Beach: the Lone Cypress, windswept cypresses on the rocks and pelicans fishing in the kelp"
+        },
+        {
+          "time": "2:30 PM",
           "text": "Collect our bags and drive about 2 hours north on Route 1, stopping at any turnout that looks good"
         },
         {
-          "time": "3:00 PM",
+          "time": "Late afternoon",
           "text": "Check in at the Beach House Hotel, Half Moon Bay, right on the Coastside Trail",
           "booked": true
         },
