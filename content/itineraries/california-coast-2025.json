@@ -359,7 +359,10 @@
           "text": "Flexible: the Marin Headlands, the Sausalito waterfront and Point Reyes are all nearby"
         }
       ],
-      "tip": "Muir Woods requires a timed parking reservation; you can't drive in without one. Bring a National Park Pass and layers, as the grove stays cool even in August."
+      "tip": "Muir Woods requires a timed parking reservation; you can't drive in without one. Bring a National Park Pass and layers, as the grove stays cool even in August.",
+      "photos": [
+        "cal-mount-tamalpais"
+      ]
     },
     {
       "label": "Day 11",
@@ -414,7 +417,11 @@
           "text": "Dinner in town and a second visit to Calistoga Creamery"
         }
       ],
-      "tip": "Calistoga sits on a geothermal field: if time allows, a 60-minute mud bath at Indian Springs or Dr. Wilkinson's is the quintessential Calistoga experience."
+      "tip": "Calistoga sits on a geothermal field: if time allows, a 60-minute mud bath at Indian Springs or Dr. Wilkinson's is the quintessential Calistoga experience.",
+      "photos": [
+        "cal-vineyard",
+        "cal-wine"
+      ]
     },
     {
       "label": "Day 13",

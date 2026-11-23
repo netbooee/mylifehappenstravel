@@ -142,7 +142,11 @@
           "text": "Walk back and bed"
         }
       ],
-      "tip": "If the cable car line is long, skip it and taxi back; if you're running early, add Montjuïc Castle (check it's still open)."
+      "tip": "If the cable car line is long, skip it and taxi back; if you're running early, add Montjuïc Castle (check it's still open).",
+      "photos": [
+        "bcn-first-afternoon",
+        "bcn-arc-de-triomf"
+      ]
     },
     {
       "label": "Day 2",
@@ -251,6 +255,7 @@
       "items": [],
       "tip": "",
       "photos": [
+        "mallorca-sunset",
         "zafiro-cocktail",
         "zafiro-sunhat"
       ]
