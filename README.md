@@ -116,7 +116,7 @@ Then open http://localhost:8000.
 
 ## Short links
 
-`mylifehappenstravel.com/italy`, `/barcelona`, `/vegas`, `/california`, `/london`, `/paris`, `/montreal`, `/ireland` go straight to each
+`mylifehappenstravel.com/italy`, `/barcelona`, `/vegas`, `/california`, `/london`, `/paris`, `/montreal`, `/tahoe`, `/ireland` go straight to each
 trip (set in `netlify.toml`). Handy for an Instagram bio.
 
 ## Newsletter sign-up
