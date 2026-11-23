@@ -628,6 +628,30 @@ def home_stats(trips: list[dict], total_days: int) -> str:
         '<a class="stats-more" href="/about/#numbers">All our travel stats →</a>'
 
 
+def latest_feature(t: dict) -> str:
+    """The newest trip, shown big near the top of the home page (it also appears in the year grid)."""
+    ph = TRIP_PHOTOS.get(t.get("hero", ""), {})
+    media = picture(ph["hero"], "(min-width: 960px) 60vw, 100vw", "feature-img") if ph else ""
+    glance = "".join(f'<div><dt>{e(g["label"])}</dt><dd>{e(g["value"])}</dd></div>' for g in t.get("glance", [])[:4])
+    when = date_range(t)
+    return f"""<section class="section latest">
+    <div class="wrap">
+      <div class="section-head"><div><span class="eyebrow">Latest trip</span><h2>Just back from <em>{e(t["country"])}.</em></h2></div></div>
+      <article class="feature">
+        <a class="feature-media" href="/itineraries/{t["slug"]}/" tabindex="-1" aria-hidden="true">{media}<span class="badge">{t["days"]} days</span></a>
+        <div class="feature-body">
+          <p class="card-kicker">{e(t["country"])}{" · " + e(when) if when else ""}</p>
+          <h3><a href="/itineraries/{t["slug"]}/">{e(t["title"])}</a></h3>
+          {f'<p class="feature-sub">{e(t["subtitle"])}</p>' if t.get("subtitle") else ""}
+          <p>{e(t["summary"])}</p>
+          {f'<dl class="mini-glance">{glance}</dl>' if glance else ""}
+          <a class="btn dark" href="/itineraries/{t["slug"]}/">Read the itinerary →</a>
+        </div>
+      </article>
+    </div>
+  </section>"""
+
+
 def trips_by_year(trips: list[dict]) -> str:
     """Trips under year headings, newest first, three across.
 
@@ -686,6 +710,8 @@ def home(trips: list[dict]) -> str:
   <section class="stats" aria-label="At a glance">
     <div class="wrap stats-row">{home_stats(trips, total_days)}</div>
   </section>
+
+  {latest_feature(trips[0])}
 
   <section class="section tint" id="trips">
     <div class="wrap">
