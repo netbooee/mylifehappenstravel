@@ -28,6 +28,8 @@ DOMAIN = "https://mylifehappens.com"
 INSTAGRAM = "https://www.instagram.com/mylifehappenstravel"
 YOUTUBE = "https://www.youtube.com/@MyLifeHappensTravel"
 VIDEOS: list[dict] = []  # filled from content/videos.json in main()
+FLIGHTS: dict = {}  # filled from content/flights.json in main() (made by tools/flights.py)
+EARTH_MILES = 24901  # once around the equator
 
 # ── Photos ────────────────────────────────────────────────────────────────────
 # key: (width, height of the 800px version, largest width available, alt text, credit or "")
@@ -286,7 +288,97 @@ def video_card(v: dict, heading: str = "h3") -> str:
 </article>"""
 
 
+# ── Flights (lifetime totals from our Flighty export) ─────────────────────────
+def n(x: float) -> str:
+    return f"{x:,.0f}"
+
+
+def flight_stats() -> dict:
+    fl, ap = FLIGHTS.get("flights", []), FLIGHTS.get("airports", {})
+    if not fl:
+        return {}
+    count = lambda xs: sorted(((xs.count(x), x) for x in set(xs)), key=lambda c: (-c[0], c[1]))
+    miles = sum(f["miles"] for f in fl)
+    longest = max(fl, key=lambda f: f["miles"])
+    upd = parse(FLIGHTS.get("updated", ""))
+    return {
+        "flights": len(fl), "miles": miles, "laps": miles / EARTH_MILES,
+        "hours": sum(f["minutes"] or 0 for f in fl) / 60,
+        "airports": len(ap), "countries": len({a["country"] for a in ap.values()}),
+        "airlines": count([f["airline"] for f in fl]),
+        "busiest": count([x for f in fl for x in (f["from"], f["to"])]),
+        "routes": count([" ↔ ".join(sorted((f["from"], f["to"]))) for f in fl]),
+        "longest": longest, "since": min(f["year"] for f in fl),
+        "updated": f"{upd:%B %Y}" if upd else "",
+    }
+
+
+def trip_flights(slug: str) -> str:
+    fl = [f for f in FLIGHTS.get("flights", []) if f.get("trip") == slug]
+    if not fl:
+        return ""
+    return f'{len(fl)} flight{"s" if len(fl) > 1 else ""} · {n(sum(f["miles"] for f in fl))} miles'
+
+
+def flight_map(st: dict) -> str:
+    ap = FLIGHTS["airports"]
+    visits = {c: k for k, c in st["busiest"]}
+    routes = [[k, *r.split(" ↔ ")] for k, r in st["routes"]]
+    data = json.dumps({"airports": [[c, a["name"], a["lat"], a["lon"], visits.get(c, 0)] for c, a in ap.items()], "routes": routes},
+                      ensure_ascii=False, separators=(",", ":"))
+    return (f'<div class="flight-map" data-flights="{e(data)}" role="img" '
+            f'aria-label="World map of every route we have flown: {len(routes)} routes between {len(ap)} airports"></div>')
+
+
+def numbers_section(st: dict) -> str:
+    ap = FLIGHTS["airports"]
+    lg = st["longest"]
+    tiles = [
+        (n(st["miles"]), "miles flown"),
+        (n(st["flights"]), "flights"),
+        (n(st["airports"]), "airports"),
+        (n(st["countries"]), "countries &amp; territories"),
+        (n(st["hours"]), "hours in the air"),
+        (f'{st["laps"]:.1f}×', "around the Earth"),
+        (n(len(st["airlines"])), "airlines"),
+        (n(lg["miles"]), f'miles on our longest flight, {e(ap[lg["from"]]["name"])} → {e(ap[lg["to"]]["name"])}'),
+    ]
+    name = lambda c: f'{e(ap[c]["name"])} <small>{c}</small>'
+    def ranked(title: str, rows: list[tuple[int, str]], label) -> str:
+        top = rows[0][0]
+        lis = "".join(f'<li><span class="what">{label(x)}</span><span class="bar" style="--w:{k / top:.3f}"></span><span class="num">{k}</span></li>'
+                      for k, x in rows[:5])
+        return f'<div class="ranked"><h3>{title}</h3><ol>{lis}</ol></div>'
+    route_name = lambda r: " ↔ ".join(e(ap[c]["name"]) for c in r.split(" ↔ "))
+    return f"""<section class="section numbers" id="numbers">
+    <div class="wrap">
+      <div class="section-head"><div><span class="eyebrow">By the numbers</span><h2>Every flight <em>since {st["since"]}.</em></h2>
+        <p>Our lifetime totals from Flighty, the app we track every flight in{f", updated {st['updated']}" if st["updated"] else ""}. Distances are airport to airport, as the crow flies.</p></div></div>
+      <dl class="number-grid">{"".join(f"<div><dt>{lbl}</dt><dd>{v}</dd></div>" for v, lbl in tiles)}</dl>
+      {flight_map(st)}
+      <div class="ranked-row">
+        {ranked("Most-flown routes", st["routes"], route_name)}
+        {ranked("Busiest airports", st["busiest"], name)}
+        {ranked("Airlines", st["airlines"], e)}
+      </div>
+      <p class="numbers-note">Counts are flights, one way. Newark is home, so it turns up on most of them.</p>
+    </div>
+  </section>"""
+
+
 # ── Pages ─────────────────────────────────────────────────────────────────────
+def home_stats(trips: list[dict], total_days: int) -> str:
+    st = flight_stats()
+    if not st:
+        cells = [(len(trips), "trips written up"), (total_days, "days planned, hour by hour"),
+                 (len({t["country"] for t in trips}), "countries"), (2, "travelers, one shared calendar")]
+        return "".join(f"<div><strong>{v}</strong><span>{lbl}</span></div>" for v, lbl in cells)
+    cells = [(n(st["miles"]), "miles flown"), (n(st["flights"]), f'flights since {st["since"]}'),
+             (n(st["airports"]), "airports"), (len(trips), "trips written up, hour by hour")]
+    return "".join(f"<div><strong>{v}</strong><span>{lbl}</span></div>" for v, lbl in cells) + \
+        '<a class="stats-more" href="/about/#numbers">All our travel stats →</a>'
+
+
 def home(trips: list[dict]) -> str:
     latest, rest = trips[0], trips[1:]
     lph = TRIP_PHOTOS[latest["hero"]]
@@ -320,12 +412,7 @@ def home(trips: list[dict]) -> str:
   </section>
 
   <section class="stats" aria-label="At a glance">
-    <div class="wrap stats-row">
-      <div><strong>{len(trips)}</strong><span>trips written up</span></div>
-      <div><strong>{total_days}</strong><span>days planned, hour by hour</span></div>
-      <div><strong>{len({t["country"] for t in trips})}</strong><span>countries</span></div>
-      <div><strong>2</strong><span>travelers, one shared calendar</span></div>
-    </div>
+    <div class="wrap stats-row">{home_stats(trips, total_days)}</div>
   </section>
 
   <section class="section">
@@ -508,7 +595,10 @@ def itinerary(t: dict, trips: list[dict]) -> str:
     extra_html = "".join(f'<section class="block" id="{i}"><h2>{ICONS[ic]}{e(h)}</h2>{b}</section>' for i, h, b, ic in extra)
     toc_html = "".join(f'<li><a href="#{i}">{e(lbl)}<small>{e(p)}</small></a></li>' for i, lbl, p in toc) + "".join(
         f'<li><a href="#{i}">{e(h)}</a></li>' for i, h, _b, _ic in extra)
-    glance = "".join(f'<div><dt>{e(g["label"])}</dt><dd>{e(g["value"])}</dd></div>' for g in t.get("glance", []))
+    glance_rows = list(t.get("glance", []))
+    if trip_flights(slug) and not any(g["label"].lower().startswith("flight") for g in glance_rows):
+        glance_rows.append({"label": "Flights", "value": trip_flights(slug)})
+    glance = "".join(f'<div><dt>{e(g["label"])}</dt><dd>{e(g["value"])}</dd></div>' for g in glance_rows)
     route = ""
     if t.get("route"):
         route = '<ol class="route" aria-label="Route">' + "".join(f"<li>{e(r)}</li>" for r in t["route"]) + "</ol>"
@@ -577,8 +667,11 @@ def itinerary(t: dict, trips: list[dict]) -> str:
 
 def about(trips: list[dict]) -> str:
     countries = sorted({t["country"] for t in trips})
+    st = flight_stats()
+    leaflet = ('<link rel="stylesheet" href="/assets/vendor/leaflet/leaflet.css">\n'
+               '<script src="/assets/vendor/leaflet/leaflet.js" defer></script>\n') if st else ""
     return head("About us", "We're Tony & Sharon, and this is where we keep the plans from every trip we take.", "/about/",
-                image="ita-trevi") + f"""<body>
+                image="ita-trevi", extra=leaflet) + f"""<body>
 {header("/about/")}
 <main id="main">
   <section class="page-head">
@@ -598,10 +691,11 @@ def about(trips: list[dict]) -> str:
       <h2>Why we write it all down</h2>
       <p>Every trip starts as a detailed plan: times, tickets, addresses and reservations. After we get home, we tidy that plan up and post it here, so anyone planning the same trip can borrow as much or as little of it as they like.</p>
       <h2>Where we've been</h2>
-      <p>So far on the site: {", ".join(e(c) for c in countries)}, with more trips on the way.</p>
+      <p>So far on the site: {", ".join(e(c) for c in countries)}, with more trips on the way.{" Counting every flight, not just these trips, we've flown " + n(st["miles"]) + " miles. <a href='#numbers'>The numbers are below.</a>" if st else ""}</p>
       <div class="actions"><a class="btn primary" href="/itineraries/">See our itineraries</a><a class="btn ghost" href="{INSTAGRAM}" rel="noopener">Say hi on Instagram</a></div>
     </div>
   </section>
+  {numbers_section(st) if st else ""}
 </main>
 """ + footer(trips)
 
@@ -626,6 +720,8 @@ def main() -> None:
     trips = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(CONTENT.glob("*.json"))]
     # newest first; trips without dates go last
     trips.sort(key=lambda t: t.get("start") or "0000", reverse=True)
+    fp = ROOT / "content" / "flights.json"
+    FLIGHTS.update(json.loads(fp.read_text(encoding="utf-8")) if fp.exists() else {})
     VIDEOS[:] = sorted(json.loads((ROOT / "content" / "videos.json").read_text(encoding="utf-8")), key=lambda v: v["date"], reverse=True)
 
     def write(rel: str, text: str) -> None:

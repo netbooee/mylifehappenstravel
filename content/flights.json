@@ -1,0 +1,934 @@
+{
+ "updated": "2026-11-23",
+ "airports": {
+  "BCN": {
+   "name": "Barcelona",
+   "country": "Spain",
+   "lat": 41.2974,
+   "lon": 2.0833
+  },
+  "BNA": {
+   "name": "Nashville",
+   "country": "USA",
+   "lat": 36.1263,
+   "lon": -86.6774
+  },
+  "BOS": {
+   "name": "Boston",
+   "country": "USA",
+   "lat": 42.3656,
+   "lon": -71.0096
+  },
+  "CDG": {
+   "name": "Paris",
+   "country": "France",
+   "lat": 49.0097,
+   "lon": 2.5479
+  },
+  "CLT": {
+   "name": "Charlotte",
+   "country": "USA",
+   "lat": 35.214,
+   "lon": -80.9431
+  },
+  "CUN": {
+   "name": "Cancún",
+   "country": "Mexico",
+   "lat": 21.0365,
+   "lon": -86.8771
+  },
+  "DCA": {
+   "name": "Washington",
+   "country": "USA",
+   "lat": 38.8512,
+   "lon": -77.0402
+  },
+  "DEN": {
+   "name": "Denver",
+   "country": "USA",
+   "lat": 39.8561,
+   "lon": -104.6737
+  },
+  "EWR": {
+   "name": "Newark",
+   "country": "USA",
+   "lat": 40.6895,
+   "lon": -74.1745
+  },
+  "FLL": {
+   "name": "Fort Lauderdale",
+   "country": "USA",
+   "lat": 26.0742,
+   "lon": -80.1506
+  },
+  "FLR": {
+   "name": "Florence",
+   "country": "Italy",
+   "lat": 43.81,
+   "lon": 11.2051
+  },
+  "IAD": {
+   "name": "Washington",
+   "country": "USA",
+   "lat": 38.9531,
+   "lon": -77.4565
+  },
+  "JFK": {
+   "name": "New York",
+   "country": "USA",
+   "lat": 40.6413,
+   "lon": -73.7781
+  },
+  "LAS": {
+   "name": "Las Vegas",
+   "country": "USA",
+   "lat": 36.084,
+   "lon": -115.1537
+  },
+  "LAX": {
+   "name": "Los Angeles",
+   "country": "USA",
+   "lat": 33.9416,
+   "lon": -118.4085
+  },
+  "LGA": {
+   "name": "New York",
+   "country": "USA",
+   "lat": 40.7769,
+   "lon": -73.874
+  },
+  "LHR": {
+   "name": "London",
+   "country": "England",
+   "lat": 51.47,
+   "lon": -0.4543
+  },
+  "MCI": {
+   "name": "Kansas City",
+   "country": "USA",
+   "lat": 39.2976,
+   "lon": -94.7139
+  },
+  "MCO": {
+   "name": "Orlando",
+   "country": "USA",
+   "lat": 28.4312,
+   "lon": -81.3081
+  },
+  "MIA": {
+   "name": "Miami",
+   "country": "USA",
+   "lat": 25.7959,
+   "lon": -80.287
+  },
+  "MSP": {
+   "name": "Minneapolis",
+   "country": "USA",
+   "lat": 44.8848,
+   "lon": -93.2223
+  },
+  "OPO": {
+   "name": "Porto",
+   "country": "Portugal",
+   "lat": 41.2481,
+   "lon": -8.6814
+  },
+  "PHX": {
+   "name": "Phoenix",
+   "country": "USA",
+   "lat": 33.4352,
+   "lon": -112.0101
+  },
+  "PLS": {
+   "name": "Providenciales",
+   "country": "Turks & Caicos",
+   "lat": 21.7736,
+   "lon": -72.2659
+  },
+  "PMI": {
+   "name": "Palma de Mallorca",
+   "country": "Spain",
+   "lat": 39.5517,
+   "lon": 2.7388
+  },
+  "SFO": {
+   "name": "San Francisco",
+   "country": "USA",
+   "lat": 37.6213,
+   "lon": -122.379
+  },
+  "SJU": {
+   "name": "San Juan",
+   "country": "Puerto Rico",
+   "lat": 18.4394,
+   "lon": -66.0018
+  },
+  "SLC": {
+   "name": "Salt Lake City",
+   "country": "USA",
+   "lat": 40.7899,
+   "lon": -111.9791
+  },
+  "VIE": {
+   "name": "Vienna",
+   "country": "Austria",
+   "lat": 48.1103,
+   "lon": 16.5697
+  },
+  "ZRH": {
+   "name": "Zurich",
+   "country": "Switzerland",
+   "lat": 47.4582,
+   "lon": 8.5555
+  }
+ },
+ "flights": [
+  {
+   "year": 2010,
+   "airline": "Delta",
+   "from": "JFK",
+   "to": "DCA",
+   "miles": 213,
+   "minutes": 53,
+   "trip": ""
+  },
+  {
+   "year": 2010,
+   "airline": "Delta",
+   "from": "DCA",
+   "to": "JFK",
+   "miles": 213,
+   "minutes": 48,
+   "trip": ""
+  },
+  {
+   "year": 2010,
+   "airline": "United",
+   "from": "EWR",
+   "to": "LAS",
+   "miles": 2222,
+   "minutes": 324,
+   "trip": ""
+  },
+  {
+   "year": 2010,
+   "airline": "United",
+   "from": "LAS",
+   "to": "EWR",
+   "miles": 2222,
+   "minutes": 291,
+   "trip": ""
+  },
+  {
+   "year": 2011,
+   "airline": "American",
+   "from": "EWR",
+   "to": "CLT",
+   "miles": 528,
+   "minutes": 100,
+   "trip": ""
+  },
+  {
+   "year": 2011,
+   "airline": "American",
+   "from": "CLT",
+   "to": "CUN",
+   "miles": 1044,
+   "minutes": 176,
+   "trip": ""
+  },
+  {
+   "year": 2011,
+   "airline": "American",
+   "from": "CUN",
+   "to": "CLT",
+   "miles": 1044,
+   "minutes": 173,
+   "trip": ""
+  },
+  {
+   "year": 2011,
+   "airline": "American",
+   "from": "CLT",
+   "to": "EWR",
+   "miles": 528,
+   "minutes": 103,
+   "trip": ""
+  },
+  {
+   "year": 2011,
+   "airline": "Swiss",
+   "from": "JFK",
+   "to": "ZRH",
+   "miles": 3921,
+   "minutes": 413,
+   "trip": ""
+  },
+  {
+   "year": 2011,
+   "airline": "Swiss",
+   "from": "ZRH",
+   "to": "LHR",
+   "miles": 490,
+   "minutes": 92,
+   "trip": ""
+  },
+  {
+   "year": 2011,
+   "airline": "Swiss",
+   "from": "LHR",
+   "to": "ZRH",
+   "miles": 490,
+   "minutes": 72,
+   "trip": ""
+  },
+  {
+   "year": 2011,
+   "airline": "Swiss",
+   "from": "ZRH",
+   "to": "EWR",
+   "miles": 3936,
+   "minutes": 560,
+   "trip": ""
+  },
+  {
+   "year": 2012,
+   "airline": "United",
+   "from": "EWR",
+   "to": "MCO",
+   "miles": 938,
+   "minutes": 142,
+   "trip": ""
+  },
+  {
+   "year": 2012,
+   "airline": "United",
+   "from": "MCO",
+   "to": "EWR",
+   "miles": 938,
+   "minutes": 135,
+   "trip": ""
+  },
+  {
+   "year": 2013,
+   "airline": "United",
+   "from": "EWR",
+   "to": "LAS",
+   "miles": 2222,
+   "minutes": 302,
+   "trip": ""
+  },
+  {
+   "year": 2013,
+   "airline": "United",
+   "from": "LAS",
+   "to": "EWR",
+   "miles": 2222,
+   "minutes": 252,
+   "trip": ""
+  },
+  {
+   "year": 2013,
+   "airline": "TAP Air Portugal",
+   "from": "EWR",
+   "to": "OPO",
+   "miles": 3331,
+   "minutes": 371,
+   "trip": ""
+  },
+  {
+   "year": 2013,
+   "airline": "TAP Air Portugal",
+   "from": "OPO",
+   "to": "EWR",
+   "miles": 3331,
+   "minutes": 422,
+   "trip": ""
+  },
+  {
+   "year": 2014,
+   "airline": "TAP Air Portugal",
+   "from": "EWR",
+   "to": "OPO",
+   "miles": 3331,
+   "minutes": 356,
+   "trip": ""
+  },
+  {
+   "year": 2014,
+   "airline": "TAP Air Portugal",
+   "from": "OPO",
+   "to": "EWR",
+   "miles": 3331,
+   "minutes": 430,
+   "trip": ""
+  },
+  {
+   "year": 2015,
+   "airline": "United",
+   "from": "EWR",
+   "to": "BNA",
+   "miles": 746,
+   "minutes": 146,
+   "trip": ""
+  },
+  {
+   "year": 2015,
+   "airline": "United",
+   "from": "BNA",
+   "to": "EWR",
+   "miles": 746,
+   "minutes": 135,
+   "trip": ""
+  },
+  {
+   "year": 2015,
+   "airline": "United",
+   "from": "EWR",
+   "to": "BNA",
+   "miles": 746,
+   "minutes": 108,
+   "trip": ""
+  },
+  {
+   "year": 2015,
+   "airline": "United",
+   "from": "BNA",
+   "to": "EWR",
+   "miles": 746,
+   "minutes": 102,
+   "trip": ""
+  },
+  {
+   "year": 2016,
+   "airline": "Swiss",
+   "from": "JFK",
+   "to": "ZRH",
+   "miles": 3921,
+   "minutes": 445,
+   "trip": ""
+  },
+  {
+   "year": 2016,
+   "airline": "Swiss",
+   "from": "ZRH",
+   "to": "JFK",
+   "miles": 3921,
+   "minutes": 508,
+   "trip": ""
+  },
+  {
+   "year": 2018,
+   "airline": "JetBlue",
+   "from": "EWR",
+   "to": "BOS",
+   "miles": 201,
+   "minutes": 70,
+   "trip": ""
+  },
+  {
+   "year": 2018,
+   "airline": "United",
+   "from": "BOS",
+   "to": "EWR",
+   "miles": 201,
+   "minutes": 92,
+   "trip": ""
+  },
+  {
+   "year": 2018,
+   "airline": "United",
+   "from": "EWR",
+   "to": "BOS",
+   "miles": 201,
+   "minutes": 69,
+   "trip": ""
+  },
+  {
+   "year": 2018,
+   "airline": "United",
+   "from": "BOS",
+   "to": "EWR",
+   "miles": 201,
+   "minutes": 86,
+   "trip": ""
+  },
+  {
+   "year": 2022,
+   "airline": "United",
+   "from": "EWR",
+   "to": "BOS",
+   "miles": 201,
+   "minutes": 47,
+   "trip": ""
+  },
+  {
+   "year": 2022,
+   "airline": "United",
+   "from": "BOS",
+   "to": "EWR",
+   "miles": 201,
+   "minutes": 53,
+   "trip": ""
+  },
+  {
+   "year": 2023,
+   "airline": "American",
+   "from": "DCA",
+   "to": "MSP",
+   "miles": 929,
+   "minutes": 125,
+   "trip": ""
+  },
+  {
+   "year": 2023,
+   "airline": "American",
+   "from": "MSP",
+   "to": "DCA",
+   "miles": 929,
+   "minutes": 152,
+   "trip": ""
+  },
+  {
+   "year": 2023,
+   "airline": "Alaska",
+   "from": "EWR",
+   "to": "SFO",
+   "miles": 2559,
+   "minutes": 324,
+   "trip": ""
+  },
+  {
+   "year": 2023,
+   "airline": "United",
+   "from": "SFO",
+   "to": "EWR",
+   "miles": 2559,
+   "minutes": 317,
+   "trip": ""
+  },
+  {
+   "year": 2023,
+   "airline": "Alaska",
+   "from": "EWR",
+   "to": "SFO",
+   "miles": 2559,
+   "minutes": 342,
+   "trip": ""
+  },
+  {
+   "year": 2023,
+   "airline": "Alaska",
+   "from": "SFO",
+   "to": "EWR",
+   "miles": 2559,
+   "minutes": 289,
+   "trip": ""
+  },
+  {
+   "year": 2023,
+   "airline": "Alaska",
+   "from": "SFO",
+   "to": "EWR",
+   "miles": 2559,
+   "minutes": 280,
+   "trip": ""
+  },
+  {
+   "year": 2023,
+   "airline": "United",
+   "from": "EWR",
+   "to": "IAD",
+   "miles": 211,
+   "minutes": 45,
+   "trip": ""
+  },
+  {
+   "year": 2023,
+   "airline": "United",
+   "from": "IAD",
+   "to": "PLS",
+   "miles": 1226,
+   "minutes": 163,
+   "trip": ""
+  },
+  {
+   "year": 2023,
+   "airline": "United",
+   "from": "PLS",
+   "to": "EWR",
+   "miles": 1312,
+   "minutes": 189,
+   "trip": ""
+  },
+  {
+   "year": 2023,
+   "airline": "Spirit",
+   "from": "EWR",
+   "to": "MIA",
+   "miles": 1087,
+   "minutes": 156,
+   "trip": ""
+  },
+  {
+   "year": 2024,
+   "airline": "United",
+   "from": "SJU",
+   "to": "EWR",
+   "miles": 1612,
+   "minutes": 220,
+   "trip": ""
+  },
+  {
+   "year": 2024,
+   "airline": "Alaska",
+   "from": "EWR",
+   "to": "LAX",
+   "miles": 2449,
+   "minutes": 317,
+   "trip": ""
+  },
+  {
+   "year": 2024,
+   "airline": "Alaska",
+   "from": "LAX",
+   "to": "EWR",
+   "miles": 2449,
+   "minutes": 298,
+   "trip": ""
+  },
+  {
+   "year": 2024,
+   "airline": "Spirit",
+   "from": "EWR",
+   "to": "BNA",
+   "miles": 746,
+   "minutes": 110,
+   "trip": ""
+  },
+  {
+   "year": 2024,
+   "airline": "United",
+   "from": "EWR",
+   "to": "PHX",
+   "miles": 2128,
+   "minutes": 313,
+   "trip": ""
+  },
+  {
+   "year": 2024,
+   "airline": "United",
+   "from": "PHX",
+   "to": "EWR",
+   "miles": 2128,
+   "minutes": 235,
+   "trip": ""
+  },
+  {
+   "year": 2025,
+   "airline": "Delta",
+   "from": "LGA",
+   "to": "MCI",
+   "miles": 1105,
+   "minutes": 172,
+   "trip": ""
+  },
+  {
+   "year": 2025,
+   "airline": "Delta",
+   "from": "MCI",
+   "to": "JFK",
+   "miles": 1110,
+   "minutes": 141,
+   "trip": ""
+  },
+  {
+   "year": 2025,
+   "airline": "United",
+   "from": "EWR",
+   "to": "LHR",
+   "miles": 3457,
+   "minutes": 394,
+   "trip": "london-paris-2025"
+  },
+  {
+   "year": 2025,
+   "airline": "United",
+   "from": "CDG",
+   "to": "EWR",
+   "miles": 3640,
+   "minutes": 454,
+   "trip": "london-paris-2025"
+  },
+  {
+   "year": 2025,
+   "airline": "United",
+   "from": "EWR",
+   "to": "SFO",
+   "miles": 2559,
+   "minutes": 320,
+   "trip": ""
+  },
+  {
+   "year": 2025,
+   "airline": "Delta",
+   "from": "SFO",
+   "to": "SLC",
+   "miles": 598,
+   "minutes": 82,
+   "trip": ""
+  },
+  {
+   "year": 2025,
+   "airline": "Delta",
+   "from": "SLC",
+   "to": "EWR",
+   "miles": 1963,
+   "minutes": 244,
+   "trip": ""
+  },
+  {
+   "year": 2025,
+   "airline": "Alaska",
+   "from": "EWR",
+   "to": "SFO",
+   "miles": 2559,
+   "minutes": 320,
+   "trip": "california-coast-2025"
+  },
+  {
+   "year": 2025,
+   "airline": "United",
+   "from": "SFO",
+   "to": "EWR",
+   "miles": 2559,
+   "minutes": 306,
+   "trip": "california-coast-2025"
+  },
+  {
+   "year": 2025,
+   "airline": "United",
+   "from": "EWR",
+   "to": "MIA",
+   "miles": 1087,
+   "minutes": 160,
+   "trip": ""
+  },
+  {
+   "year": 2025,
+   "airline": "Spirit",
+   "from": "FLL",
+   "to": "EWR",
+   "miles": 1066,
+   "minutes": 125,
+   "trip": ""
+  },
+  {
+   "year": 2025,
+   "airline": "United",
+   "from": "EWR",
+   "to": "DEN",
+   "miles": 1601,
+   "minutes": 230,
+   "trip": ""
+  },
+  {
+   "year": 2025,
+   "airline": "United",
+   "from": "DEN",
+   "to": "EWR",
+   "miles": 1601,
+   "minutes": 179,
+   "trip": ""
+  },
+  {
+   "year": 2026,
+   "airline": "JetBlue",
+   "from": "BOS",
+   "to": "SFO",
+   "miles": 2697,
+   "minutes": 426,
+   "trip": ""
+  },
+  {
+   "year": 2026,
+   "airline": "JetBlue",
+   "from": "EWR",
+   "to": "LAS",
+   "miles": 2222,
+   "minutes": 283,
+   "trip": "las-vegas-2026"
+  },
+  {
+   "year": 2026,
+   "airline": "JetBlue",
+   "from": "LAS",
+   "to": "EWR",
+   "miles": 2222,
+   "minutes": 247,
+   "trip": "las-vegas-2026"
+  },
+  {
+   "year": 2026,
+   "airline": "Austrian",
+   "from": "EWR",
+   "to": "VIE",
+   "miles": 4242,
+   "minutes": 422,
+   "trip": "italy-2026"
+  },
+  {
+   "year": 2026,
+   "airline": "Austrian",
+   "from": "VIE",
+   "to": "FLR",
+   "miles": 393,
+   "minutes": 66,
+   "trip": "italy-2026"
+  },
+  {
+   "year": 2026,
+   "airline": "Austrian",
+   "from": "FLR",
+   "to": "VIE",
+   "miles": 393,
+   "minutes": 63,
+   "trip": "italy-2026"
+  },
+  {
+   "year": 2026,
+   "airline": "Austrian",
+   "from": "VIE",
+   "to": "EWR",
+   "miles": 4242,
+   "minutes": 527,
+   "trip": "italy-2026"
+  },
+  {
+   "year": 2026,
+   "airline": "United",
+   "from": "EWR",
+   "to": "SFO",
+   "miles": 2559,
+   "minutes": 336,
+   "trip": ""
+  },
+  {
+   "year": 2026,
+   "airline": "United",
+   "from": "SFO",
+   "to": "EWR",
+   "miles": 2559,
+   "minutes": 295,
+   "trip": ""
+  },
+  {
+   "year": 2026,
+   "airline": "United",
+   "from": "EWR",
+   "to": "BCN",
+   "miles": 3839,
+   "minutes": 422,
+   "trip": "barcelona-mallorca-2026"
+  },
+  {
+   "year": 2026,
+   "airline": "Ryanair",
+   "from": "BCN",
+   "to": "PMI",
+   "miles": 125,
+   "minutes": 36,
+   "trip": "barcelona-mallorca-2026"
+  },
+  {
+   "year": 2026,
+   "airline": "Ryanair",
+   "from": "PMI",
+   "to": "BCN",
+   "miles": 125,
+   "minutes": 37,
+   "trip": "barcelona-mallorca-2026"
+  },
+  {
+   "year": 2026,
+   "airline": "United",
+   "from": "BCN",
+   "to": "EWR",
+   "miles": 3839,
+   "minutes": 474,
+   "trip": "barcelona-mallorca-2026"
+  },
+  {
+   "year": 2026,
+   "airline": "United",
+   "from": "EWR",
+   "to": "CUN",
+   "miles": 1549,
+   "minutes": 204,
+   "trip": ""
+  },
+  {
+   "year": 2026,
+   "airline": "United",
+   "from": "CUN",
+   "to": "EWR",
+   "miles": 1549,
+   "minutes": 199,
+   "trip": ""
+  },
+  {
+   "year": 2026,
+   "airline": "United",
+   "from": "EWR",
+   "to": "BNA",
+   "miles": 746,
+   "minutes": 113,
+   "trip": ""
+  },
+  {
+   "year": 2026,
+   "airline": "United",
+   "from": "BNA",
+   "to": "EWR",
+   "miles": 746,
+   "minutes": 96,
+   "trip": ""
+  },
+  {
+   "year": 2026,
+   "airline": "United",
+   "from": "EWR",
+   "to": "SFO",
+   "miles": 2559,
+   "minutes": 311,
+   "trip": ""
+  },
+  {
+   "year": 2026,
+   "airline": "United",
+   "from": "SFO",
+   "to": "EWR",
+   "miles": 2559,
+   "minutes": 279,
+   "trip": ""
+  },
+  {
+   "year": 2026,
+   "airline": "American",
+   "from": "EWR",
+   "to": "MIA",
+   "miles": 1087,
+   "minutes": 147,
+   "trip": ""
+  },
+  {
+   "year": 2026,
+   "airline": "American",
+   "from": "MIA",
+   "to": "EWR",
+   "miles": 1087,
+   "minutes": 153,
+   "trip": ""
+  }
+ ]
+}
