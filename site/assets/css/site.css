@@ -336,7 +336,9 @@ svg { flex: none; }
 .gallery figure:first-child { grid-row: span 2; }
 .gallery[data-count="2"] { grid-template-columns: 2fr 1fr; }
 .gallery[data-count="2"] figure:first-child { grid-row: span 1; }
-@media (max-width: 560px) { .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; } .gallery figure:first-child { grid-column: span 2; grid-row: span 1; } }
+@media (max-width: 560px) { .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; } .gallery figure:first-child { grid-column: span 2; grid-row: span 1; }
+  /* an even-sized gallery (4, 6, 8…) leaves its last photo alone on a phone: let it fill the row */
+  .gallery figure:last-child:nth-child(even):not(:nth-child(2)) { grid-column: span 2; } }
 .gallery figure { margin: 0; border-radius: 10px; overflow: hidden; background: var(--tint); }
 .gallery img { width: 100%; height: 100%; object-fit: cover; }
 .days-title, .block h2 { display: flex; align-items: center; gap: 14px; font-size: clamp(30px, 3.8vw, 44px); margin: clamp(56px, 7vw, 84px) 0 12px; }
