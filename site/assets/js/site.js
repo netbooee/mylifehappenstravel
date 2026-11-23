@@ -37,8 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const a = byId.get(en.target.id);
         if (a) {
           a.classList.add('active');
-          if (getComputedStyle(a.parentElement.parentElement).display === 'flex') {
-            a.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+          // On phones the day list is a horizontal strip. Slide only the strip so the active day
+          // is centred. Never use scrollIntoView here: it also scrolls the page, which cuts off
+          // the reader's swipe mid-flick on iOS.
+          const strip = a.closest('ol');
+          if (strip && strip.scrollWidth > strip.clientWidth) {
+            const left = a.offsetLeft - (strip.clientWidth - a.offsetWidth) / 2;
+            strip.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
           }
         }
       });
