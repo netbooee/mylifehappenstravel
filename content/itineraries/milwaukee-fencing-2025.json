@@ -1,0 +1,219 @@
+{
+  "slug": "milwaukee-fencing-2025",
+  "title": "5 Days in Milwaukee",
+  "subtitle": "Fencing Summer Nationals, a Chicago day trip & the Historic Third Ward",
+  "summary": "Five days in Milwaukee for USA Fencing Summer Nationals: Josh competing at the Baird Center, a RiverWalk and Third Ward stroll, a day trip to Chicago on the Hiawatha, a Lakefront Brewery tour, and brunch at the Pfister.",
+  "country": "USA",
+  "region": "North America",
+  "start": "2025-06-30",
+  "end": "2025-07-04",
+  "days": 5,
+  "hero": "",
+  "glance": [
+    { "label": "Dates", "value": "Jun 30 – Jul 4, 2025 (5 days, 4 nights)" },
+    { "label": "Base", "value": "The Trade, Autograph Collection, downtown Milwaukee (4 nights)" },
+    { "label": "Why we're here", "value": "USA Fencing Summer Nationals at the Baird Center – Josh fencing Division 2 and Division 1A Men's Épée" },
+    { "label": "Day trip", "value": "Chicago by Amtrak Hiawatha – Millennium Park, the Riverwalk, Navy Pier and the Centennial Wheel" },
+    { "label": "Getting around", "value": "Mostly on foot downtown, Uber when short on time, and the free Hop streetcar between neighborhoods" },
+    { "label": "Highlights", "value": "Lakefront Brewery tour, Purple Door Ice Cream, brunch at the Pfister, a day in Chicago" }
+  ],
+  "intro": [
+    "Josh's Summer Nationals meant a week built around two fencing days at the Baird Center, with everything else fit around them: a landing day downtown, a full day trip to Chicago, and a couple of easier mornings before his later bout on the last day. The Trade put us a short walk from the convention center, the RiverWalk and the Third Ward, so we barely needed the car-free city's transit beyond The Hop streetcar.",
+    "We kept fencing days simple – coffee and snacks instead of a sit-down breakfast, home base close enough to shower and regroup between rounds – and used the lighter days for the RiverWalk, Lakefront Brewery, brunch at the Pfister and a full day across the border in Chicago on the Hiawatha."
+  ],
+  "route": [
+    "Downtown Milwaukee",
+    "Historic Third Ward",
+    "Chicago",
+    "Lakefront Brewery",
+    "Lake Park"
+  ],
+  "days_plan": [
+    {
+      "label": "Day 1",
+      "date": "Mon, Jun 30",
+      "place": "Milwaukee",
+      "title": "Landing day – the Baird Center, the RiverWalk & the Third Ward",
+      "text": "A morning flight in, a quick stop at the fencing venue to cheer on a friend and get Josh's gear checked, then an afternoon easing into downtown Milwaukee on foot before our first dinner reservation.",
+      "items": [
+        { "time": "9:25 AM", "text": "Fly United flight UA3554 from Newark (EWR), landing in Milwaukee (MKE) at 10:57 AM", "booked": true },
+        { "time": "11:00 AM", "text": "Uber to The Trade, Autograph Collection to check in or at least hold our luggage", "booked": true },
+        { "time": "12:00 PM", "text": "Walk to the Baird Center to catch Lottie fencing 70+ Vet Women's Épée, if we make it in time, and have Josh do his equipment check" },
+        { "time": "", "text": "Lunch – walk and see what's on the way; Craft at the hotel is the fallback if we're hungry and nothing else stands out, though it's pricier with fewer casual options" },
+        { "time": "", "text": "Back to the hotel to drop off fencing gear, freshen up and get properly checked in" },
+        { "time": "Afternoon", "text": "Walk the Milwaukee RiverWalk into the Historic Third Ward – a scenic 3-mile river path with public art and bridges, then cobblestone streets, galleries and boutiques just a few minutes further on foot" },
+        { "time": "", "text": "Lakeshore State Park for the pebbly shoreline, prairie landscaping and the fishing pier where it links up with the Oak Leaf and Hank Aaron trails" },
+        { "time": "6:30 PM", "text": "Dinner at The Social American Tavern, 611 N Broadway (OpenTable reservation)", "booked": true }
+      ],
+      "tip": "Quick water and snack stops downtown: Tourist Convenience at 240 W Wells St, right between the hotel blocks; The Grand Convenient about 0.3 miles away; or the Walgreens at 275 W Wisconsin Ave, about a 5-minute walk."
+    },
+    {
+      "label": "Day 2",
+      "date": "Tue, Jul 1",
+      "place": "Chicago",
+      "title": "A day trip to Chicago on the Hiawatha",
+      "text": "The Amtrak Hiawatha makes Chicago an easy day trip from Milwaukee: Millennium Park and The Bean, a walk along the Riverwalk, deep dish or lobster rolls for lunch, and an afternoon at Navy Pier before the train back for a lighter dinner at the hotel.",
+      "items": [
+        { "time": "7:15 AM", "text": "Leave the hotel and walk to the Milwaukee Intermodal Station" },
+        { "time": "8:00 AM", "text": "Depart Milwaukee on the Amtrak Hiawatha", "booked": true },
+        { "time": "9:30 AM", "text": "Arrive at Union Station, Chicago" },
+        { "time": "10:00 AM", "text": "Millennium Park & The Bean – Cloud Gate, Crown Fountain and Lurie Garden, with skyline views and photos" },
+        { "time": "10:45 AM", "text": "Walk the Chicago Riverwalk east toward the lake – bridges, architecture and people-watching, with a cold drink stop at Tiny Tapp or Island Party Hut" },
+        { "time": "12:00 PM", "text": "Lunch – Giordano's deep dish at 730 N Rush St (call ahead around 11:30 AM to have it ready by noon) or Luke's Lobster at 134 N LaSalle St for a faster lobster or crab roll" },
+        { "time": "1:30 PM", "text": "Walk or Uber to Navy Pier, 600 E Grand Ave, for lake views, shops and a lemonade or ice cream" },
+        { "time": "2:00 PM", "text": "Ride the Centennial Wheel – about 15 minutes with skyline and lake views", "booked": true },
+        { "time": "3:15 PM", "text": "Coffee or a donut break – Do-Rite Donuts or the Offshore Café on the pier, if we want one" },
+        { "time": "4:00 PM", "text": "Walk or Uber back to Union Station, aiming to be there by 4:45 PM" },
+        { "time": "", "text": "Return train to Milwaukee on the Hiawatha", "booked": true },
+        { "time": "6:45 PM", "text": "Walk back toward the hotel, keeping an eye out for a better dinner option along the way" },
+        { "time": "7:15 PM", "text": "Dinner reservation at Craft, the hotel restaurant (OpenTable) – nothing too heavy, since Josh fences tomorrow", "booked": true }
+      ],
+      "tip": "Other quick lunch options near the Riverwalk: Brown Bag Seafood Co. at 340 E Randolph St for seafood bowls and tacos, America's Dog & Burger inside Navy Pier for classic Chicago dogs, Small Cheval near River North for quick-serve burgers, or Big City Chicken inside Navy Pier for fried chicken sandwiches. Bring comfortable shoes, sun protection, a refillable water bottle and a light layer for the lake breeze."
+    },
+    {
+      "label": "Day 3",
+      "date": "Wed, Jul 2",
+      "place": "Milwaukee",
+      "title": "Josh's Division 2 Men's Épée, Lakefront Brewery & Lake Park",
+      "text": "Josh's first fencing day at the Baird Center, then an afternoon at Lakefront Brewery for the tour and the cheese curds, a walk through Lake Park toward Juneau Park, and ice cream before an early night.",
+      "items": [
+        { "time": "6:45 AM", "text": "Coffee and a bite from the hotel lobby, or bars and snacks brought along for breakfast" },
+        { "time": "7:30 AM", "text": "Leave the hotel and walk to the Baird Center, 400 W Wisconsin Ave" },
+        { "time": "8:00 AM", "text": "Josh's Division 2 Men's Épée tournament at the Baird Center", "booked": true },
+        { "time": "", "text": "Back to the hotel after fencing for Josh to shower" },
+        { "time": "1:30 PM", "text": "Walk to Lakefront Brewery" },
+        { "time": "2:00 PM", "text": "Lakefront Brewery Tour, 1872 N Commerce St – Uber instead if we're short on time", "booked": true },
+        { "time": "", "text": "After the tour, grab a table for lunch if one's free – the cheese curds are supposed to be excellent" },
+        { "time": "5:30 PM", "text": "Walk to Lake Park, explore, and walk south toward Juneau Park" },
+        { "time": "7:00 PM", "text": "Purple Door Ice Cream, 205 S 2nd St (open until 10 PM) – good reviews and unique flavors" },
+        { "time": "8:00 PM", "text": "Head back toward the hotel and get ready for tomorrow" }
+      ],
+      "tip": "Lakefront Brewery's tours run on a schedule and the on-site restaurant fills up fast right after – grab a table as soon as the tour ends if lunch there is the plan."
+    },
+    {
+      "label": "Day 4",
+      "date": "Thu, Jul 3",
+      "place": "Milwaukee",
+      "title": "A slow morning, brunch at the Pfister & Division 1A",
+      "text": "A late start, brunch at the Pfister before the lunch menu takes over, Josh's second fencing day in the afternoon, and a low-key dinner around the corner from the hotel once we're packed for tomorrow's early flight.",
+      "items": [
+        { "time": "9:00 AM", "text": "Sleep in" },
+        { "time": "10:00 AM", "text": "Walk to brunch at Cafe at the Pfister, 424 E Wisconsin Ave – breakfast is only served until 11 AM, when the lunch menu takes over; no reservation, so we can detour if another spot catches our eye" },
+        { "time": "1:00 PM", "text": "Leave the hotel and walk to the Baird Center" },
+        { "time": "2:00 PM", "text": "Josh's Division 1A Men's Épée tournament at the Baird Center", "booked": true },
+        { "time": "", "text": "Back to the hotel after fencing for Josh to shower, and start packing – a very early departure tomorrow" },
+        { "time": "7:30 PM", "text": "Dinner at Oak Barrel Public House, around the corner from the hotel (reviews are mixed, but it's convenient on a packing night)" }
+      ],
+      "tip": "Café at the Pfister stops serving breakfast at 11 AM sharp – go early if the morning menu is the point."
+    },
+    {
+      "label": "Day 5",
+      "date": "Fri, Jul 4",
+      "place": "Milwaukee → Newark",
+      "title": "Early flight home",
+      "text": "A 6 AM flight means leaving the hotel in the dark, but we're back in Newark by mid-morning.",
+      "items": [
+        { "time": "3:45 AM", "text": "Leave the hotel for the airport" },
+        { "time": "6:05 AM", "text": "Fly United Airlines from Milwaukee (MKE)", "booked": true },
+        { "time": "9:25 AM", "text": "Land back in Newark (EWR)" }
+      ],
+      "tip": ""
+    }
+  ],
+  "stays": [
+    {
+      "name": "The Trade, Autograph Collection",
+      "place": "Downtown Milwaukee",
+      "nights": "4 nights",
+      "note": "Walking distance to the Baird Center, the RiverWalk and the Third Ward; Craft, the hotel restaurant, is a convenient but pricier fallback."
+    }
+  ],
+  "eats": [
+    {
+      "name": "The Social American Tavern",
+      "place": "611 N Broadway",
+      "note": "Our first-night dinner, booked on OpenTable.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Craft",
+      "place": "The Trade, Autograph Collection",
+      "note": "The hotel restaurant – reliable and no-Uber-needed, but on the pricier side with fewer casual options. Good for a lighter dinner before a fencing day.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Giordano's",
+      "place": "730 N Rush St, Chicago",
+      "note": "Famous Chicago-style deep dish – takes about 45 minutes to bake, so call ahead (312-951-0747) and ask for it ready by noon.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Luke's Lobster",
+      "place": "134 N LaSalle St, Chicago",
+      "note": "Fast-casual lobster, crab and shrimp rolls – ask for no mayo. About $18 for a roll; quick enough to eat at the Riverwalk.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Lakefront Brewery",
+      "place": "1872 N Commerce St",
+      "note": "Tour the brewery, then stay for lunch if a table's free – the cheese curds are supposed to be excellent.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Purple Door Ice Cream",
+      "place": "205 S 2nd St",
+      "note": "Open until 10 PM, with good reviews and unique flavors.",
+      "type": "Dessert"
+    },
+    {
+      "name": "Cafe at the Pfister",
+      "place": "424 E Wisconsin Ave",
+      "note": "Breakfast only served until 11 AM, then the lunch menu starts. No reservation needed.",
+      "type": "Brunch"
+    },
+    {
+      "name": "Oak Barrel Public House",
+      "place": "Around the corner from The Trade",
+      "note": "Convenient on a packing night; reviews are mixed.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Milwaukee Public Market",
+      "place": "Historic Third Ward",
+      "note": "A good casual lunch stop if there's time on either end of the trip.",
+      "type": "Lunch"
+    }
+  ],
+  "book_ahead": [
+    "The Trade, Autograph Collection",
+    "United Airlines flights to and from MKE",
+    "Amtrak Hiawatha tickets to Chicago and back",
+    "Centennial Wheel tickets at Navy Pier",
+    "Dinner at The Social American Tavern (OpenTable)",
+    "Dinner at Craft (OpenTable)",
+    "Lakefront Brewery tour",
+    "Call Giordano's ahead to time a deep-dish pickup"
+  ],
+  "tips": [
+    {
+      "title": "The Hop streetcar is free",
+      "text": "No tickets or vouchers needed – just hop on and off at any stop along the downtown route. It runs every 10–20 minutes (Mon–Fri 5 AM–12 AM, shorter hours on weekends) and connects Milwaukee Intermodal, the Third Ward, East Town, the Lower East Side and downtown – handy for stretches between the RiverWalk, Third Ward or lakeshore areas that we don't feel like walking."
+    },
+    {
+      "title": "Pace fencing days around the schedule, not the clock",
+      "text": "Grab-and-go coffee and snacks instead of a sit-down breakfast, and keep the hotel close enough to shower and regroup between rounds. The Baird Center is a short walk from The Trade, which made both tournament days easier."
+    },
+    {
+      "title": "If there's extra time",
+      "text": "The Pabst Mansion and the Milwaukee Art Museum are both worth a visit if the schedule allows, and the Milwaukee Public Market in the Third Ward is a good casual lunch stop."
+    }
+  ],
+  "map": {
+    "Downtown Milwaukee": [43.0389, -87.9065],
+    "Historic Third Ward": [43.0319, -87.9064],
+    "Chicago": [41.8826, -87.6226],
+    "Lakefront Brewery": [43.0555, -87.9066],
+    "Lake Park": [43.0867, -87.8781]
+  },
+  "videos": []
+}
