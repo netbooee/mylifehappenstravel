@@ -159,6 +159,7 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
 def head(title: str, desc: str, path: str, image: str = "valley-of-fire-1", noindex: bool = False, extra: str = "") -> str:
     full = title if "My Life Happens" in title else f"{title} · My Life Happens Travel"
     robots = '<meta name="robots" content="noindex">' if noindex else f'<link rel="canonical" href="{DOMAIN}{path}">'
+    share_w = min(1600, PHOTOS[image][2]) if image in PHOTOS else 1600  # some photos only go up to e.g. 1086px
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -172,7 +173,7 @@ def head(title: str, desc: str, path: str, image: str = "valley-of-fire-1", noin
 <meta property="og:title" content="{e(full)}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{DOMAIN}{path}">
-<meta property="og:image" content="{DOMAIN}/assets/img/{image}-1600.jpg">
+<meta property="og:image" content="{DOMAIN}/assets/img/{image}-{share_w}.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#faf6ef">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
