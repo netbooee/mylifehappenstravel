@@ -1,0 +1,777 @@
+{
+  "slug": "california-coast-2025",
+  "title": "18 Days on the California Coast",
+  "subtitle": "Carmel Valley to Mendocino: wine, whales, redwoods & Pacific sunsets",
+  "summary": "Our 18-day road trip up and down the California coast in summer 2025, from Carmel Valley Ranch and Hearst Castle to whale watching in Monterey, Muir Woods, Calistoga and Napa wineries, Mendocino's headlands and a final few days in San Francisco.",
+  "country": "USA",
+  "region": "North America",
+  "start": "2025-07-24",
+  "end": "2025-08-10",
+  "days": 18,
+  "hero": "california",
+  "glance": [
+    {
+      "label": "When",
+      "value": "July 24 – August 10, 2025 (18 days)"
+    },
+    {
+      "label": "Bases",
+      "value": "Carmel Valley, Cambria, Monterey, Half Moon Bay, Bay Area, Calistoga, Mendocino, Napa Valley, San Francisco"
+    },
+    {
+      "label": "Getting around",
+      "value": "Intermediate SUV rental from SFO, mostly Route 1 along the coast and US-101 inland"
+    },
+    {
+      "label": "Best for",
+      "value": "Coast, wine & nature"
+    },
+    {
+      "label": "Weather",
+      "value": "Coast 55–70°F with foggy mornings; Napa and Calistoga 85–100°F"
+    },
+    {
+      "label": "Highlights",
+      "value": "Hearst Castle, elephant seals, Monterey Bay whale watch, Monterey Bay Aquarium, Muir Woods, Mendocino Headlands"
+    }
+  ],
+  "intro": [
+    "This trip traced the California coast in all its variety: the pastoral calm of Carmel Valley Ranch, the dramatic cliffs of Big Sur and Cambria, the maritime wonder of Monterey, the rolling fog of Half Moon Bay, the wine country of Calistoga and Napa, the wild headlands of Mendocino, and finally San Francisco to close the loop.",
+    "Eighteen days was enough to slow down and actually feel each place rather than just drive through it. Almost every stop got at least two nights, and the pacing reflects that. A rental car was essential: the coast is meant to be driven on your own schedule."
+  ],
+  "route": [
+    "San Francisco (SFO)",
+    "Carmel Valley",
+    "Carmel-by-the-Sea",
+    "Cambria",
+    "Monterey",
+    "Half Moon Bay",
+    "Muir Woods",
+    "Calistoga",
+    "Mendocino",
+    "Napa Valley",
+    "San Francisco"
+  ],
+  "days_plan": [
+    {
+      "label": "Day 1",
+      "date": "Thu, Jul 24",
+      "place": "Carmel Valley",
+      "title": "Arrival day: SFO to Carmel Valley Ranch",
+      "text": "We flew into San Francisco, picked up our rental SUV and drove about two hours south to Carmel Valley Ranch, a luxury resort tucked into the Santa Lucia mountains with a working organic garden, lavender fields, an infinity hot tub and vineyard views.",
+      "items": [
+        {
+          "time": "9:00 AM",
+          "text": "Fly Newark → San Francisco, landing at SFO at 12:15 PM",
+          "booked": true
+        },
+        {
+          "time": "12:15 PM",
+          "text": "Pick up our intermediate SUV at the SFO rental car center (via AirTrain)",
+          "booked": true
+        },
+        {
+          "time": "1:30 PM",
+          "text": "Lunch and road-trip supplies around Millbrae/Burlingame"
+        },
+        {
+          "time": "~4:00 PM",
+          "text": "Drive about 2 hours south on US-101 and check in at Carmel Valley Ranch",
+          "booked": true
+        },
+        {
+          "time": "7:00 PM",
+          "text": "Dinner at Valley Kitchen, the resort's farm-to-table restaurant using produce from its own garden",
+          "booked": true
+        },
+        {
+          "time": "After dinner",
+          "text": "First night in California on the balcony, with soft, warm valley air"
+        }
+      ],
+      "tip": "Thursday afternoon traffic leaving the Bay Area can add 30–45 minutes to the two-hour drive, so plan for it."
+    },
+    {
+      "label": "Day 2",
+      "date": "Fri, Jul 25",
+      "place": "Carmel Valley",
+      "title": "Ranch day: hike, pool & Folktale Winery",
+      "text": "A slow day on the ranch: a morning hike or garden visit, a long afternoon at the pool and infinity hot tub, then dinner in a winery garden with live music.",
+      "items": [
+        {
+          "time": "8:00 AM",
+          "text": "Free coffee in the lobby and a pastry from The Market & Creamery on the ranch grounds"
+        },
+        {
+          "time": "Morning",
+          "text": "Choose an activity: the gentle Corral Hike, the moderate 3-mile Huff 'N' Puff + Horseshoe Trail Loop with vineyard views, or the organic garden and lavender field"
+        },
+        {
+          "time": "Afternoon",
+          "text": "Pool and the infinity hot tub overlooking the valley, one of the highlights of the property"
+        },
+        {
+          "time": "3:30 PM",
+          "text": "Ranch Roundup at the Lodge Lobby: a fun, complimentary 20-minute visit with the farm animals"
+        },
+        {
+          "time": "6:00 PM",
+          "text": "Dinner in the wine garden at Folktale Winery & Vineyards, with live music until 7 PM",
+          "booked": true
+        }
+      ],
+      "tip": "The lavender field peaks in July; early morning light gives the best photos before the midday sun flattens the color."
+    },
+    {
+      "label": "Day 3",
+      "date": "Sat, Jul 26",
+      "place": "Carmel-by-the-Sea & Cambria",
+      "title": "Carmel-by-the-Sea, then south to Cambria",
+      "text": "We left the ranch for a morning in the storybook village of Carmel-by-the-Sea before driving south to Cambria Beach Lodge for two nights.",
+      "items": [
+        {
+          "time": "Morning",
+          "text": "Coffee at the ranch, check out at 11 AM and leave our luggage with the concierge"
+        },
+        {
+          "time": "11:30 AM",
+          "text": "Drive 20–25 minutes via Carmel Valley Road to Ocean Avenue and park near Ocean & Lincoln"
+        },
+        {
+          "time": "Noon",
+          "text": "Lunch at Café Carmel: sandwiches, paninis, quiche, pastries and espresso"
+        },
+        {
+          "time": "Afternoon",
+          "text": "Walk Ocean Avenue's galleries and boutiques down to Carmel Beach, then the Scenic Bluff Path above the sand"
+        },
+        {
+          "time": "3:00 PM",
+          "text": "Collect our bags at the ranch and drive about 2 hours south to Cambria Beach Lodge",
+          "booked": true
+        },
+        {
+          "time": "Evening",
+          "text": "Sunset on the 1-mile Moonstone Beach boardwalk, looking for sea otters, pelicans and harbor seals"
+        },
+        {
+          "time": "7:00 PM",
+          "text": "Dinner at Robin's Restaurant, a Cambria institution with a garden setting (Sea Chest Oyster Bar, across from the hotel, is the walk-in alternative)",
+          "booked": true
+        }
+      ],
+      "tip": "Sections of Route 1 between Big Sur and Cambria have been intermittently closed. Check Caltrans before driving south and take Hwy 101 to Hwy 46 West if needed."
+    },
+    {
+      "label": "Day 4",
+      "date": "Sun, Jul 27",
+      "place": "Cambria & San Simeon",
+      "title": "Hearst Castle, elephant seals & a winery",
+      "text": "A full day north of Cambria: a morning tour of Hearst Castle, the elephant seal rookery at Piedras Blancas, a pier lunch in San Simeon and a tasting at Hearst Ranch Winery.",
+      "items": [
+        {
+          "time": "8:30 AM",
+          "text": "Continental breakfast at the hotel, then a 30-minute drive north on Route 1"
+        },
+        {
+          "time": "9:20 AM",
+          "text": "Hearst Castle Grand Rooms Tour: the Neptune Pool, Casa Grande and the Celestial Suite",
+          "booked": true
+        },
+        {
+          "time": "11:00 AM",
+          "text": "Piedras Blancas Elephant Seal Rookery, 4 miles north, plus a walk on the Boucher Trail toward the lighthouse (free)"
+        },
+        {
+          "time": "12:30 PM",
+          "text": "Walk San Simeon Pier, then pick up our lunch from Seaside Foods at Sebastian's General Store",
+          "booked": true
+        },
+        {
+          "time": "1:30 PM",
+          "text": "Legacy Tasting at the Hearst Ranch Winery tasting room in San Simeon (about 90 minutes)"
+        },
+        {
+          "time": "3:30 PM",
+          "text": "Optional browse of Cambria's West and East Villages"
+        },
+        {
+          "time": "7:00 PM",
+          "text": "Dinner at The Black Cat Bistro: seasonal California cuisine",
+          "booked": true
+        }
+      ],
+      "tip": "Hearst Castle wants a printed confirmation letter and photo ID at the Visitor Center ticket window, not just a phone screen. Print before you leave home."
+    },
+    {
+      "label": "Day 5",
+      "date": "Mon, Jul 28",
+      "place": "Monterey",
+      "title": "Arrive in Monterey: Cannery Row & the Coastal Trail",
+      "text": "A scenic 90-minute drive north on Route 1 brought us to the InterContinental The Clement, right on historic Cannery Row.",
+      "items": [
+        {
+          "time": "Morning",
+          "text": "Breakfast and check-out at Cambria Beach Lodge, then drive north on Route 1"
+        },
+        {
+          "time": "Noon",
+          "text": "Check in at the InterContinental The Clement Monterey and stroll Cannery Row",
+          "booked": true
+        },
+        {
+          "time": "Afternoon",
+          "text": "Pool time or the Monterey Bay Coastal Trail: southwest toward Lovers Point for seals and tide pools, or northeast to Fisherman's Wharf and the Coast Guard Pier for sea lions"
+        },
+        {
+          "time": "Evening",
+          "text": "No dinner plans: Old Fisherman's Grotto and Monterey Fish House are local seafood favorites"
+        }
+      ],
+      "tip": "The kelp beds around Cannery Row are prime sea otter habitat. Early morning and late afternoon are the best times to spot them."
+    },
+    {
+      "label": "Day 6",
+      "date": "Tue, Jul 29",
+      "place": "Monterey",
+      "title": "Whale watch & a coastal afternoon",
+      "text": "Monterey Bay is one of the best whale watching spots in the world: humpbacks, blue whales, orcas, dolphins and sea birds are all possible.",
+      "items": [
+        {
+          "time": "7:45 AM",
+          "text": "Coffee from the Starbucks on Cannery Row, a short walk from the hotel"
+        },
+        {
+          "time": "8:30 AM",
+          "text": "Check in for the 9 AM Monterey Bay Whale Watch (about 3–4 hours on the water)",
+          "booked": true
+        },
+        {
+          "time": "1:00 PM",
+          "text": "Relaxed lunch near the wharf on Cannery Row"
+        },
+        {
+          "time": "2:30 PM",
+          "text": "Rest in the room or by the pool"
+        },
+        {
+          "time": "4:30 PM",
+          "text": "Walk the Monterey Bay Coastal Trail: the flat 2-mile stretch to Lovers Point Park in Pacific Grove, or past the aquarium and McAbee Beach to the Coast Guard Pier"
+        }
+      ],
+      "tip": "The bay is much colder than the shore. Dress warmer than you think you need to: base layer, fleece, windproof jacket, long pants and closed shoes, plus snacks, binoculars and sunscreen."
+    },
+    {
+      "label": "Day 7",
+      "date": "Wed, Jul 30",
+      "place": "Monterey & Half Moon Bay",
+      "title": "Monterey Bay Aquarium & the drive to Half Moon Bay",
+      "text": "A morning at one of the finest aquariums in the world, then two hours north along the coast to the fog-draped headlands of Half Moon Bay.",
+      "items": [
+        {
+          "time": "9:00 AM",
+          "text": "Breakfast at Tidal Coffee, then check out and leave our bags at the hotel"
+        },
+        {
+          "time": "10:00 AM",
+          "text": "Monterey Bay Aquarium: the three-story Kelp Forest, Open Sea, sea otters, jellyfish galleries and the tide pool touch tanks (allow 2.5–3 hours)",
+          "booked": true
+        },
+        {
+          "time": "1:00 PM",
+          "text": "Collect our bags and drive about 2 hours north on Route 1, stopping at any turnout that looks good"
+        },
+        {
+          "time": "3:00 PM",
+          "text": "Check in at the Beach House Hotel, Half Moon Bay, right on the Coastside Trail",
+          "booked": true
+        },
+        {
+          "time": "Evening",
+          "text": "Dinner within a 15-minute walk: Barbara's Fishtrap (cash only, no reservations) or Half Moon Bay Brewing Company"
+        }
+      ],
+      "tip": "Barbara's Fishtrap is cash only with no reservations. Arrive by 5:30–6 PM if you want a table."
+    },
+    {
+      "label": "Day 8",
+      "date": "Thu, Jul 31",
+      "place": "Half Moon Bay",
+      "title": "Coastside Trail, Pillar Point Harbor & Sam's",
+      "text": "A relaxed day on the San Mateo coast, ending with dinner a two-minute walk from the hotel.",
+      "items": [
+        {
+          "time": "Morning",
+          "text": "Free continental breakfast at the Beach House Hotel"
+        },
+        {
+          "time": "Daytime",
+          "text": "Walk or bike the Coastside Trail (3 miles each way), or rent kayaks from Half Moon Bay Kayak Co. at Pillar Point Harbor; the hotel pool and Main Street are other options"
+        },
+        {
+          "time": "7:30 PM",
+          "text": "Dinner at Sam's Chowder House: lobster bisque, clam chowder and headland views from the deck",
+          "booked": true
+        }
+      ],
+      "tip": "The Maine Lobster Roll and New England clam chowder are Sam's signature orders, and the outdoor deck tables book fast."
+    },
+    {
+      "label": "Day 9",
+      "date": "Fri, Aug 1",
+      "place": "Half Moon Bay & Bay Area",
+      "title": "A slow Half Moon Bay morning, then on to our Vrbo",
+      "text": "An easy transition day between the coast and a Vrbo rental for the next two nights.",
+      "items": [
+        {
+          "time": "Morning",
+          "text": "Hotel breakfast and a walk on the Coastside Trail or the beach before checking out"
+        },
+        {
+          "time": "Afternoon",
+          "text": "Explore, run errands and find a spot for lunch on the way"
+        },
+        {
+          "time": "4:00 PM",
+          "text": "Check in to our Vrbo rental"
+        }
+      ],
+      "tip": ""
+    },
+    {
+      "label": "Day 10",
+      "date": "Sat, Aug 2",
+      "place": "Muir Woods",
+      "title": "Muir Woods: redwoods at dawn",
+      "text": "An early start for one of the most awe-inspiring old-growth redwood groves in Northern California, with coast redwoods over 1,000 years old and 250 feet tall.",
+      "items": [
+        {
+          "time": "7:45 AM",
+          "text": "Leave for Muir Woods to make our 8–8:30 AM parking window",
+          "booked": true
+        },
+        {
+          "time": "Morning",
+          "text": "The 2-mile Main Trail loop (about 90 minutes) through the Bohemian and Cathedral Groves, plus a side trail up the hillside"
+        },
+        {
+          "time": "Afternoon",
+          "text": "Flexible: the Marin Headlands, the Sausalito waterfront and Point Reyes are all nearby"
+        }
+      ],
+      "tip": "Muir Woods requires a timed parking reservation; you can't drive in without one. Bring a National Park Pass and layers, as the grove stays cool even in August."
+    },
+    {
+      "label": "Day 11",
+      "date": "Sun, Aug 3",
+      "place": "Calistoga",
+      "title": "North to Calistoga",
+      "text": "We checked out of the Vrbo and drove north into wine country for two nights at the Inn on Pine in Calistoga.",
+      "items": [
+        {
+          "time": "10:00 AM",
+          "text": "Check out of the Vrbo and load the car"
+        },
+        {
+          "time": "~6:00 PM",
+          "text": "Arrive at the Inn on Pine, Calistoga, roughly 2 hours from the Bay Area",
+          "booked": true
+        },
+        {
+          "time": "Evening",
+          "text": "Walk to Calistoga Creamery for ice cream (open until 9:30 PM)"
+        }
+      ],
+      "tip": "If you'll arrive after 6 PM, call the Inn on Pine ahead; the lobby is open until 10 PM."
+    },
+    {
+      "label": "Day 12",
+      "date": "Mon, Aug 4",
+      "place": "Calistoga",
+      "title": "Calistoga tastings: Bennett Lane & Tamber Bey",
+      "text": "A full day of tastings in Napa Valley's northernmost wine town, with ice cream to close the evening.",
+      "items": [
+        {
+          "time": "Morning",
+          "text": "Continental breakfast at the Inn on Pine"
+        },
+        {
+          "time": "11:30 AM",
+          "text": "Tasting at Bennett Lane Winery, known for its Maximus red blend and Cabernet Sauvignon",
+          "booked": true
+        },
+        {
+          "time": "1:00 PM",
+          "text": "Lunch in town (Brannan's Grill or Sam's Social Club at Indian Springs), then a wander past the boutiques and spa storefronts"
+        },
+        {
+          "time": "3:30 PM",
+          "text": "Tasting at Tamber Bey Winery, on a working equestrian estate with horses roaming the grounds",
+          "booked": true
+        },
+        {
+          "time": "Evening",
+          "text": "Dinner in town and a second visit to Calistoga Creamery"
+        }
+      ],
+      "tip": "Calistoga sits on a geothermal field: if time allows, a 60-minute mud bath at Indian Springs or Dr. Wilkinson's is the quintessential Calistoga experience."
+    },
+    {
+      "label": "Day 13",
+      "date": "Tue, Aug 5",
+      "place": "Mendocino",
+      "title": "To Mendocino through the Anderson Valley",
+      "text": "About 2.5 hours via Hwy 128 brought us to Brewery Gulch Inn on the south edge of Mendocino, one of California's most atmospheric coastal towns.",
+      "items": [
+        {
+          "time": "Morning",
+          "text": "Breakfast and an 11 AM check-out from the Inn on Pine"
+        },
+        {
+          "time": "Midday",
+          "text": "Lunch stop in Boonville, halfway there, at the Boonville Hotel Restaurant"
+        },
+        {
+          "time": "~3:00 PM",
+          "text": "Arrive at Brewery Gulch Inn and explore the headlands and town",
+          "booked": true
+        },
+        {
+          "time": "5:30 PM",
+          "text": "Complimentary wine hour at the inn (5:30–6:30 PM) with local Mendocino coast wines and snacks"
+        }
+      ],
+      "tip": "Download offline maps before leaving Calistoga: Hwy 128 and the Mendocino coast have spotty or no cell service."
+    },
+    {
+      "label": "Day 14",
+      "date": "Wed, Aug 6",
+      "place": "Mendocino",
+      "title": "Mendocino outdoors: ferns, cliffs & Big River",
+      "text": "Our one full day in Mendocino was for getting outside: canyon hikes, cliff-top state parks or a paddle up a redwood-lined estuary.",
+      "items": [
+        {
+          "time": "Morning",
+          "text": "Full breakfast at Brewery Gulch Inn, one of the best included breakfasts on the coast"
+        },
+        {
+          "time": "Morning",
+          "text": "Pick one: Van Damme State Park's Fern Canyon Trail to the pygmy forest, Mendocino Headlands State Park, the 3-mile round trip to Russian Gulch's 36-foot waterfall, or kayaking Big River with Catch a Canoe & Bicycles Too"
+        },
+        {
+          "time": "Afternoon",
+          "text": "Lunch in Mendocino village and a browse of the galleries and shops"
+        },
+        {
+          "time": "5:30 PM",
+          "text": "Second evening of the inn's complimentary wine hour"
+        }
+      ],
+      "tip": "Ask the staff at the wine hour where to eat and which trails to walk; the innkeepers are a genuine resource."
+    },
+    {
+      "label": "Day 15",
+      "date": "Thu, Aug 7",
+      "place": "Napa Valley",
+      "title": "Mendocino to Napa: pool, hot tub & dinner outdoors",
+      "text": "We said goodbye to the coast and drove southeast into Napa Valley for one night at Alila Napa Valley.",
+      "items": [
+        {
+          "time": "Morning",
+          "text": "Final breakfast at Brewery Gulch Inn and an 11 AM check-out; optional last park visit or shopping"
+        },
+        {
+          "time": "Midday",
+          "text": "Drive about 2.5 hours via Hwy 128 through the Anderson Valley"
+        },
+        {
+          "time": "~2:00 PM",
+          "text": "Check in at Alila Napa Valley, with welcome wine waiting in the room",
+          "booked": true
+        },
+        {
+          "time": "Afternoon",
+          "text": "A proper resort afternoon at the pool and infinity hot tub"
+        },
+        {
+          "time": "7:30 PM",
+          "text": "Dinner outside at Salva Terrace & Bar, then the welcome wine on our balcony",
+          "booked": true
+        }
+      ],
+      "tip": "Alila's poolside dining runs 11 AM–2 PM, so an early arrival can mean lunch by the pool."
+    },
+    {
+      "label": "Day 16",
+      "date": "Fri, Aug 8",
+      "place": "San Francisco",
+      "title": "Into San Francisco and the Palace Hotel",
+      "text": "A two-hour drive south took us to the Palace Hotel, one of San Francisco's grand historic hotels, opened in 1875, with the Garden Court at its center.",
+      "items": [
+        {
+          "time": "Morning",
+          "text": "Breakfast at Alila and an 11 AM check-out"
+        },
+        {
+          "time": "1:00 PM",
+          "text": "Check in at the Palace Hotel, then explore Union Square and SoMa on foot",
+          "booked": true
+        },
+        {
+          "time": "Evening",
+          "text": "No plan: the Ferry Building Marketplace (15-minute walk) for casual bites, or Bix, Zuni Café or Foreign Cinema for a sit-down dinner"
+        }
+      ],
+      "tip": "Have at least one meal in the Palace's Garden Court; it's one of the most architecturally spectacular dining rooms in the country."
+    },
+    {
+      "label": "Days 17–18",
+      "date": "Sat, Aug 9 – Sun, Aug 10",
+      "place": "San Francisco",
+      "title": "A free day in the city & flying home",
+      "text": "One unplanned day to wander San Francisco, then a final morning before the flight home.",
+      "items": [
+        {
+          "time": "Saturday",
+          "text": "Breakfast at the hotel, then a full day exploring: the Embarcadero, the Ferry Building, Chinatown, North Beach and the waterfront on foot or by cable car"
+        },
+        {
+          "time": "Sunday",
+          "text": "Breakfast, an 11 AM check-out and last sights; leave for SFO by 1 PM to return the car"
+        },
+        {
+          "time": "4:20 PM",
+          "text": "Fly San Francisco → Newark, landing at 1:05 AM",
+          "booked": true
+        }
+      ],
+      "tip": "The SFO rental car return is off-site and needs the AirTrain. Budget 30–45 minutes for it and 2.5–3 hours at the airport in total."
+    }
+  ],
+  "stays": [
+    {
+      "name": "Carmel Valley Ranch",
+      "place": "Carmel Valley",
+      "nights": "2 nights",
+      "note": "Luxury resort in the Santa Lucia mountains with ranch activities, pools, an infinity hot tub, an organic garden and a lavender field."
+    },
+    {
+      "name": "Cambria Beach Lodge",
+      "place": "Cambria",
+      "nights": "2 nights",
+      "note": "Steps from the Moonstone Beach boardwalk; continental breakfast."
+    },
+    {
+      "name": "InterContinental The Clement Monterey",
+      "place": "Monterey",
+      "nights": "2 nights",
+      "note": "Right on historic Cannery Row, walking distance to the aquarium and the Coastal Trail."
+    },
+    {
+      "name": "Beach House Hotel",
+      "place": "Half Moon Bay",
+      "nights": "2 nights",
+      "note": "On the Coastside Trail, a two-minute walk from Sam's Chowder House; free parking and continental breakfast."
+    },
+    {
+      "name": "Vrbo rental",
+      "place": "Bay Area",
+      "nights": "2 nights",
+      "note": "Our base for Muir Woods."
+    },
+    {
+      "name": "Inn on Pine",
+      "place": "Calistoga",
+      "nights": "2 nights",
+      "note": "Walking distance to Calistoga Creamery; continental breakfast."
+    },
+    {
+      "name": "Brewery Gulch Inn",
+      "place": "Mendocino",
+      "nights": "2 nights",
+      "note": "On the south edge of town with a superb full breakfast and a complimentary wine hour from 5:30 to 6:30 PM every evening."
+    },
+    {
+      "name": "Alila Napa Valley",
+      "place": "Napa Valley",
+      "nights": "1 night",
+      "note": "Resort pool, infinity hot tub, balcony and welcome wine in the room; home to Salva Terrace & Bar."
+    },
+    {
+      "name": "Palace Hotel",
+      "place": "San Francisco",
+      "nights": "2 nights",
+      "note": "Grand 1875 hotel with the Garden Court at its heart; breakfast included."
+    }
+  ],
+  "eats": [
+    {
+      "name": "Valley Kitchen",
+      "place": "Carmel Valley Ranch",
+      "note": "Farm-to-table cooking with produce from the resort's organic garden; no driving needed on arrival night.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Folktale Winery",
+      "place": "Carmel Valley",
+      "note": "Wine garden dining with live music until 7 PM on Friday evenings, estate wines and light bites.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Café Carmel",
+      "place": "Carmel-by-the-Sea",
+      "note": "Local classic on Ocean Avenue for sandwiches, paninis, quiche, pastries and espresso. Walk in.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Robin's Restaurant",
+      "place": "Cambria",
+      "note": "A Cambria institution with a diverse, globally inspired menu and a lovely garden setting.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Sea Chest Oyster Bar",
+      "place": "Cambria",
+      "note": "Across from Cambria Beach Lodge: fresh Pacific seafood, cash only, no reservations. Arrive early.",
+      "type": "Seafood"
+    },
+    {
+      "name": "The Black Cat Bistro",
+      "place": "Cambria",
+      "note": "Seasonal California cuisine; a refined finish after Hearst Castle and wine tasting.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Seaside Foods at Sebastian's",
+      "place": "San Simeon Pier",
+      "note": "Order online ahead for pickup at Sebastian's General Store, a historic building overlooking San Simeon Cove.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Sam's Chowder House",
+      "place": "Half Moon Bay",
+      "note": "Award-winning Maine Lobster Roll and New England clam chowder, and a deck with sweeping headland views.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Barbara's Fishtrap",
+      "place": "Half Moon Bay",
+      "note": "A local institution for fried seafood with harbor views. Cash only, no reservations; arrive by 5:30–6 PM.",
+      "type": "Casual"
+    },
+    {
+      "name": "Calistoga Creamery",
+      "place": "Calistoga",
+      "note": "Local ice cream, open until 9:30 PM; worth a visit on both Calistoga nights.",
+      "type": "Ice Cream"
+    },
+    {
+      "name": "Boonville Hotel Restaurant",
+      "place": "Boonville, Anderson Valley",
+      "note": "The natural lunch stop between Calistoga and Mendocino, in Pinot Noir country.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Salva Terrace & Bar",
+      "place": "Alila Napa Valley",
+      "note": "Outdoor terrace dining at one of Napa's most beautiful resort properties.",
+      "type": "Dinner"
+    }
+  ],
+  "book_ahead": [
+    "Rental SUV from SFO",
+    "Valley Kitchen dinner at Carmel Valley Ranch",
+    "Folktale Winery dinner",
+    "Robin's Restaurant and The Black Cat Bistro in Cambria",
+    "Hearst Castle tour (bring a printed confirmation and photo ID)",
+    "San Simeon Pier lunch (order online for pickup)",
+    "Monterey Bay Whale Watch (9 AM tour, check in at 8:30)",
+    "Monterey Bay Aquarium tickets",
+    "Sam's Chowder House dinner",
+    "Muir Woods timed parking reservation (plus a National Park Pass)",
+    "Bennett Lane Winery tasting",
+    "Tamber Bey Winery tasting",
+    "Salva Terrace & Bar dinner (ask for outside seating)",
+    "Half Moon Bay Kayak Co. kayaks or bikes (optional, online)"
+  ],
+  "tips": [
+    {
+      "title": "Plan around Route 1 closures",
+      "text": "Sections of Route 1 south of Big Sur have been closed. Check Caltrans before you drive and use inland alternatives such as Carmel Valley Road, US-101 and Hwy 46 West."
+    },
+    {
+      "title": "Pack layers, always",
+      "text": "The coast in summer runs 55–70°F with foggy mornings, while Napa and Calistoga can hit 85–100°F in July and August. Bring a light jacket for every coastal evening, and dress extra warm for the whale watch."
+    },
+    {
+      "title": "Choose a car with room",
+      "text": "We moved hotels every two nights or so, mostly on Route 1 and US-101, so an SUV with good storage space made life easier."
+    },
+    {
+      "title": "Download offline maps for Mendocino",
+      "text": "Cell service along Hwy 128 and the Mendocino coast is patchy or missing in many stretches."
+    },
+    {
+      "title": "Print the Hearst Castle confirmation",
+      "text": "The Visitor Center ticket window asks for a printed confirmation letter and photo ID."
+    },
+    {
+      "title": "Buy two bottles at Hearst Ranch Winery",
+      "text": "The $35 Legacy Tasting fee is waived with a two-bottle purchase, and they'll box the wine for the car."
+    },
+    {
+      "title": "Bring cash for the seafood shacks",
+      "text": "Barbara's Fishtrap and Sea Chest Oyster Bar are cash only with no reservations, so arrive early."
+    },
+    {
+      "title": "Use the hotel perks",
+      "text": "Brewery Gulch Inn has a complimentary wine hour from 5:30 to 6:30 PM daily, the Beach House Hotel and the Palace Hotel included breakfast, and Alila Napa Valley left welcome wine in the room."
+    }
+  ],
+  "map": {
+    "San Francisco (SFO)": [
+      37.6213,
+      -122.379
+    ],
+    "Carmel Valley": [
+      36.5214,
+      -121.8158
+    ],
+    "Carmel-by-the-Sea": [
+      36.5552,
+      -121.9233
+    ],
+    "Cambria": [
+      35.5641,
+      -121.0807
+    ],
+    "Monterey": [
+      36.6002,
+      -121.8947
+    ],
+    "Half Moon Bay": [
+      37.4636,
+      -122.4286
+    ],
+    "Muir Woods": [
+      37.897,
+      -122.5811
+    ],
+    "Calistoga": [
+      38.5788,
+      -122.5797
+    ],
+    "Mendocino": [
+      39.3077,
+      -123.7995
+    ],
+    "Napa Valley": [
+      38.4024,
+      -122.36
+    ],
+    "San Francisco": [
+      37.7749,
+      -122.4194
+    ]
+  }
+}

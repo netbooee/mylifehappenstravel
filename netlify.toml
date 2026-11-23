@@ -1,0 +1,49 @@
+# Netlify configuration for mylifehappens.com
+# Everything inside site/ is published as-is: there is no build step.
+
+[build]
+  publish = "site"
+
+# ── Short links (handy for an Instagram bio or a text message) ──
+[[redirects]]
+  from = "/barcelona"
+  to = "/itineraries/barcelona-mallorca-2026/"
+  status = 301
+[[redirects]]
+  from = "/italy"
+  to = "/itineraries/italy-2026/"
+  status = 301
+[[redirects]]
+  from = "/vegas"
+  to = "/itineraries/las-vegas-2026/"
+  status = 301
+[[redirects]]
+  from = "/california"
+  to = "/itineraries/california-coast-2025/"
+  status = 301
+[[redirects]]
+  from = "/ireland"
+  to = "/itineraries/ireland/"
+  status = 301
+
+# ── Old Squarespace addresses ──
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/home-1"
+  to = "/"
+  status = 301
+
+# ── Caching: photos, CSS and icons rarely change ──
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

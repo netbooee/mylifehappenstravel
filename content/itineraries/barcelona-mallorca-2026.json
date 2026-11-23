@@ -1,0 +1,435 @@
+{
+  "slug": "barcelona-mallorca-2026",
+  "title": "Barcelona to Mallorca",
+  "subtitle": "Two days in Gaudí's city, then a slow week at Camp de Mar",
+  "summary": "Two packed days on foot through Montjuïc, the Gothic Quarter and Gaudí's Barcelona, then an early flight to Mallorca for a slow week at Zafiro Palace Andratx in Camp de Mar.",
+  "country": "Spain",
+  "region": "Europe",
+  "start": "2026-07-02",
+  "end": "2026-07-10",
+  "days": 9,
+  "hero": "barcelona",
+  "glance": [
+    {
+      "label": "Dates",
+      "value": "Thursday Jul 2 to Friday Jul 10, 2026"
+    },
+    {
+      "label": "Bases",
+      "value": "Barcelona (2 nights, InterContinental), Camp de Mar, Mallorca (a week, Zafiro Palace Andratx)"
+    },
+    {
+      "label": "Pace",
+      "value": "Two full-on city days, then a slow island week"
+    },
+    {
+      "label": "Getting around",
+      "value": "On foot, plus taxis, Uber and the Port Cable Car in Barcelona; Ryanair to Mallorca"
+    },
+    {
+      "label": "Booked ahead",
+      "value": "Dinner tables, timed tickets, the flight and one tour"
+    }
+  ],
+  "intro": [
+    "We gave Barcelona two packed days and saw as much of it as we could on foot: Montjuïc, La Rambla and the Gothic Quarter, El Born, Passeig de Gràcia and the port on the first day, then Sagrada Família, the Passion Tower, Sant Pau and Park Güell on the second.",
+    "Then we took an early flight to the island for a slow week at Zafiro Palace Andratx on Mallorca's southwest coast. We booked a single tour for the week and left every other day open."
+  ],
+  "route": [
+    "Montjuïc",
+    "Gothic Quarter",
+    "El Born",
+    "Passeig de Gràcia",
+    "Port Vell",
+    "Sagrada Família",
+    "Sant Pau",
+    "Park Güell",
+    "Bunkers del Carmel",
+    "Camp de Mar, Mallorca"
+  ],
+  "days_plan": [
+    {
+      "label": "Day 1",
+      "date": "Thu, Jul 2",
+      "place": "Barcelona",
+      "title": "Montjuïc, the Old City and the port",
+      "text": "We landed, dropped our bags and walked straight out the door: a loop from the hotel on Montjuïc down through the medieval core, up to Passeig de Gràcia and back by cable car.",
+      "items": [
+        {
+          "time": "9:00 AM",
+          "text": "Land in Barcelona; customs and immigration, then a taxi or Uber to the hotel"
+        },
+        {
+          "time": "10:30 AM",
+          "text": "Check in at the InterContinental Barcelona (if the room isn't ready, they'll hold the bags). It has a rooftop pool and bar.",
+          "booked": true
+        },
+        {
+          "time": "11:00 AM–12:15 PM",
+          "text": "Montjuïc on foot, 5–10 minutes from the hotel"
+        },
+        {
+          "time": "",
+          "text": "Palau Nacional: the palace built for the 1929 International Exhibition, now the National Art Museum of Catalonia. Even without the museum, the Oval Hall and the terrace views are worth it."
+        },
+        {
+          "time": "",
+          "text": "Magic Fountain of Montjuïc: free and 1929-era. The water, music and light shows only run in the evening; by day it's mostly dormant."
+        },
+        {
+          "time": "12:15 PM",
+          "text": "Uber or taxi to La Boqueria (10–15 minutes)"
+        },
+        {
+          "time": "12:30–3:00 PM",
+          "text": "La Rambla and the Gothic Quarter on foot, one of the prettiest walks in the city"
+        },
+        {
+          "time": "",
+          "text": "La Boqueria, the huge historic food market, then down La Rambla"
+        },
+        {
+          "time": "",
+          "text": "Plaça Reial: a 19th-century neoclassical square with palm trees, busy terraces and street lamps by a young Gaudí"
+        },
+        {
+          "time": "",
+          "text": "Gothic Quarter: medieval lanes, Roman ruins, tapas bars and artisan shops; a good place for lunch"
+        },
+        {
+          "time": "",
+          "text": "Plaça Sant Jaume, home of the town hall, and Barcelona Cathedral"
+        },
+        {
+          "time": "3:00–4:30 PM",
+          "text": "El Born to the Arc de Triomf on foot"
+        },
+        {
+          "time": "",
+          "text": "Mercat de Santa Caterina, the El Born neighbourhood and the Gothic basilica of Santa Maria del Mar"
+        },
+        {
+          "time": "",
+          "text": "Parc de la Ciutadella, on the site of a former military citadel"
+        },
+        {
+          "time": "",
+          "text": "Arc de Triomf: the red-brick gateway to the 1888 Universal Exposition, then a stroll down the palm-lined promenade"
+        },
+        {
+          "time": "4:30–5:30 PM",
+          "text": "Taxi to Casa Batlló (about 25 minutes on foot otherwise), then walk Passeig de Gràcia: Casa Batlló and Casa Milà (La Pedrera) from the outside, plus 150+ designer boutiques in historic buildings"
+        },
+        {
+          "time": "5:30–6:30 PM",
+          "text": "Uber or taxi to Port Vell, the oldest part of the port, rebuilt for the 1992 Olympics: Maremagnum, IMAX Port Vell and Europe's largest aquarium"
+        },
+        {
+          "time": "6:30–7:30 PM",
+          "text": "Port Cable Car up to Montjuïc for views and photos, then walk back to the hotel"
+        },
+        {
+          "time": "7:30–8:15 PM",
+          "text": "Back to the hotel to relax"
+        },
+        {
+          "time": "9:00 PM",
+          "text": "Dinner at La Gastronómica Tapas, about a 15-minute walk from the hotel (reserved on TheFork)",
+          "booked": true
+        },
+        {
+          "time": "10:30 PM",
+          "text": "Walk back and bed"
+        }
+      ],
+      "tip": "If the cable car line is long, skip it and taxi back; if you're running early, add Montjuïc Castle (check it's still open)."
+    },
+    {
+      "label": "Day 2",
+      "date": "Fri, Jul 3",
+      "place": "Barcelona",
+      "title": "Gaudí, Modernisme and the view from the top",
+      "text": "Timed entries all morning, a hidden Art Nouveau campus at lunch, Park Güell in the afternoon and a late dinner at Casa Amàlia 1950.",
+      "items": [
+        {
+          "time": "8:45 AM",
+          "text": "Taxi to Sagrada Família, aiming to be at the entrance by 9:30"
+        },
+        {
+          "time": "9:45 AM–12:15 PM",
+          "text": "Sagrada Família tour. The 9–10 AM Quiet Hour means the basilica is silent when you walk in, and by 10:00 the morning sun lights up the blue, green and yellow windows of the eastern Nativity facade. We spent the first hour on the east side of the nave before the sun climbed.",
+          "booked": true
+        },
+        {
+          "time": "11:15 AM",
+          "text": "Climb the Passion Tower: elevator up, then a very narrow, winding spiral staircase down",
+          "booked": true
+        },
+        {
+          "time": "12:00 PM",
+          "text": "Museum and gift shop under the Passion facade; from the basement museum a small window looks down on Gaudí's tomb in the crypt"
+        },
+        {
+          "time": "12:15–1:15 PM",
+          "text": "Quick bite nearby: TuscaniaLab on the plaza, Buenas Migas or the Mercat de la Sagrada Família"
+        },
+        {
+          "time": "1:15–2:15 PM",
+          "text": "Recinte Modernista de Sant Pau (1:30 PM tickets, a 10-minute walk), the world's largest Art Nouveau complex and a UNESCO site: a former hospital built 1905–1930 as a garden city of light, air and green space",
+          "booked": true
+        },
+        {
+          "time": "",
+          "text": "Our quick route: the Administration Pavilion's pink vaulted ceilings and stained-glass staircase, the Central Courtyard and the coloured dome of the Sant Salvador Pavilion, a photo of the circular glass Operating Theatre, then out through the white-tiled underground tunnels"
+        },
+        {
+          "time": "2:15 PM",
+          "text": "Uber to Park Güell"
+        },
+        {
+          "time": "2:30–4:30 PM",
+          "text": "Park Güell"
+        },
+        {
+          "time": "4:30 PM",
+          "text": "Optional drink and a bite: Restaurant Terra Mía, Comida de Olla or Bodega La Riera"
+        },
+        {
+          "time": "5:15 PM",
+          "text": "Taxi to Bunkers del Carmel (Turó de la Rovira), only if the sky is clear. It's just a high point, but the panorama is spectacular."
+        },
+        {
+          "time": "",
+          "text": "Back to the hotel to freshen up, with a drink at the rooftop bar"
+        },
+        {
+          "time": "8:00 PM",
+          "text": "Drinks nearby first, then Uber or taxi to dinner"
+        },
+        {
+          "time": "9:00 PM",
+          "text": "Dinner at Casa Amàlia 1950",
+          "booked": true
+        }
+      ],
+      "tip": "Sagrada Família dress code: shoulders and knees covered, hats and caps off."
+    },
+    {
+      "label": "Day 3",
+      "date": "Sat, Jul 4",
+      "place": "Barcelona to Camp de Mar, Mallorca",
+      "title": "An early flight to the island",
+      "text": "A very early start for the short hop to Mallorca, then the start of a slow week at Camp de Mar.",
+      "items": [
+        {
+          "time": "5:30 AM",
+          "text": "Taxi from the hotel to Barcelona airport"
+        },
+        {
+          "time": "8:00 AM",
+          "text": "Ryanair flight to Mallorca",
+          "booked": true
+        },
+        {
+          "time": "9:00 AM",
+          "text": "Land, then Uber or taxi to the hotel"
+        },
+        {
+          "time": "",
+          "text": "Check in at Zafiro Palace Andratx, Camp de Mar",
+          "booked": true
+        }
+      ],
+      "tip": "Book the early airport taxi the day before."
+    },
+    {
+      "label": "Days 4–6",
+      "date": "Sun, Jul 5 – Tue, Jul 7",
+      "place": "Camp de Mar, Mallorca",
+      "title": "Open days at Camp de Mar",
+      "text": "Nothing planned: slow days on Mallorca's southwest coast.",
+      "items": [],
+      "tip": ""
+    },
+    {
+      "label": "Day 7",
+      "date": "Wed, Jul 8",
+      "place": "Mallorca",
+      "title": "Our one tour of the week",
+      "text": "",
+      "items": [
+        {
+          "time": "",
+          "text": "Viator tour of Mallorca",
+          "booked": true
+        }
+      ],
+      "tip": "Confirm the tour pickup details ahead of time."
+    },
+    {
+      "label": "Days 8–9",
+      "date": "Thu, Jul 9 – Fri, Jul 10",
+      "place": "Camp de Mar, Mallorca",
+      "title": "One more open day, then the last day",
+      "text": "",
+      "items": [],
+      "tip": ""
+    }
+  ],
+  "stays": [
+    {
+      "name": "InterContinental Barcelona",
+      "place": "Barcelona",
+      "nights": "2 nights",
+      "note": "On Montjuïc, 5–10 minutes' walk from the Palau Nacional, with a rooftop pool and bar."
+    },
+    {
+      "name": "Zafiro Palace Andratx",
+      "place": "Camp de Mar, Mallorca",
+      "nights": "A week",
+      "note": "Our base for a slow week on Mallorca's southwest coast."
+    }
+  ],
+  "eats": [
+    {
+      "name": "La Gastronómica Tapas",
+      "place": "Barcelona",
+      "note": "Tapas about a 15-minute walk from the InterContinental; we reserved on TheFork.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Casa Amàlia 1950",
+      "place": "Barcelona",
+      "note": "Our 9:00 PM table on the second night.",
+      "type": "Dinner"
+    },
+    {
+      "name": "TuscaniaLab",
+      "place": "Barcelona (Sagrada Família)",
+      "note": "On the plaza: focaccia sandwiches, salads, coffee and pastries, grab-and-go or a quick sit-down.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Buenas Migas",
+      "place": "Barcelona (Sagrada Família)",
+      "note": "Very close to the basilica: sandwiches, empanadas, pasta, coffee and beer.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Mercat de la Sagrada Família",
+      "place": "Barcelona (Sagrada Família)",
+      "note": "A one-minute walk from the basilica, with stalls selling sandwiches, empanadas, fruit and local snacks.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Restaurant Terra Mía",
+      "place": "Barcelona (Park Güell)",
+      "note": "One of our options for a drink and a bite after Park Güell.",
+      "type": "Snack"
+    },
+    {
+      "name": "Comida de Olla",
+      "place": "Barcelona (Park Güell)",
+      "note": "One of our options for a drink and a bite after Park Güell.",
+      "type": "Snack"
+    },
+    {
+      "name": "Bodega La Riera",
+      "place": "Barcelona (Park Güell)",
+      "note": "One of our options for a drink and a bite after Park Güell.",
+      "type": "Snack"
+    }
+  ],
+  "book_ahead": [
+    "Sagrada Família entry (we went in at 9:45 AM, around the morning Quiet Hour)",
+    "Passion Tower climb (timed ticket)",
+    "Recinte Modernista de Sant Pau (timed entry)",
+    "Dinner at La Gastronómica Tapas (via TheFork) and Casa Amàlia 1950",
+    "The flight from Barcelona to Mallorca",
+    "An early-morning taxi to Barcelona airport",
+    "A Viator tour on Mallorca"
+  ],
+  "tips": [
+    {
+      "title": "Dress for Sagrada Família",
+      "text": "Shoulders and knees need to be covered, and hats and caps come off inside."
+    },
+    {
+      "title": "Go early for the light",
+      "text": "The 9–10 AM Quiet Hour is calm, and around 10:00 the sun streams through the Nativity facade's windows. Spend the first hour on the east side of the nave before the sun climbs."
+    },
+    {
+      "title": "Head to the tower early, with a coin",
+      "text": "Lines for the Passion Tower elevator back up, so start walking about ten minutes before your slot. Bags go in free lockers at the base, which need a 1-euro coin."
+    },
+    {
+      "title": "Check which cable car you want",
+      "text": "There's more than one cable car option in Barcelona, so check which one goes where you want. The Port Cable Car runs from the waterfront up to Montjuïc; if the line is long, take a taxi instead."
+    },
+    {
+      "title": "Getting to Port Vell",
+      "text": "Give your driver Moll de la Fusta, the wharf, as the address."
+    },
+    {
+      "title": "Watch the weather for Bunkers del Carmel",
+      "text": "It's only worth the trip on a clear day; otherwise the hotel rooftop pool is a fine alternative."
+    },
+    {
+      "title": "Eating near Park Güell",
+      "text": "Avoid anywhere with \"Güell\" in the name."
+    },
+    {
+      "title": "Check opening hours",
+      "text": "If you want to add Montjuïc Castle at the end of a day, check its closing time first."
+    },
+    {
+      "title": "Confirm tour pickups",
+      "text": "Confirm the pickup details for island tours ahead of time."
+    }
+  ],
+  "map": {
+    "Montjuïc": [
+      41.3636,
+      2.1586
+    ],
+    "Gothic Quarter": [
+      41.3833,
+      2.1777
+    ],
+    "El Born": [
+      41.3851,
+      2.1823
+    ],
+    "Passeig de Gràcia": [
+      41.3917,
+      2.1649
+    ],
+    "Port Vell": [
+      41.376,
+      2.183
+    ],
+    "Sagrada Família": [
+      41.4036,
+      2.1744
+    ],
+    "Sant Pau": [
+      41.4114,
+      2.1744
+    ],
+    "Park Güell": [
+      41.4145,
+      2.1527
+    ],
+    "Bunkers del Carmel": [
+      41.4189,
+      2.1617
+    ],
+    "Camp de Mar, Mallorca": [
+      39.5378,
+      2.4227
+    ]
+  },
+  "videos": [
+    "4GLtHpa4wJE"
+  ]
+}

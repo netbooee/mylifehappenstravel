@@ -1,0 +1,409 @@
+{
+  "slug": "las-vegas-2026",
+  "title": "4 Days in Las Vegas",
+  "subtitle": "The Strip, Valley of Fire & Fremont Street",
+  "summary": "Four days and three nights based at The Venetian: a Styx concert, Meow Wolf's Omega Mart, a day among the red rocks of Valley of Fire, desert art south of town, steakhouse dinners and the best free spectacles on the Strip.",
+  "country": "USA",
+  "region": "North America",
+  "start": "2026-01-30",
+  "end": "2026-02-02",
+  "days": 4,
+  "hero": "vegas",
+  "glance": [
+    {
+      "label": "Dates",
+      "value": "Jan 30 – Feb 2, 2026 (4 days, 3 nights)"
+    },
+    {
+      "label": "Base",
+      "value": "The Venetian (3 nights)"
+    },
+    {
+      "label": "Day trip",
+      "value": "Valley of Fire State Park, 1 hour northeast of the Strip"
+    },
+    {
+      "label": "Getting around",
+      "value": "Rental car for the desert, walking and Uber on the Strip"
+    },
+    {
+      "label": "January weather",
+      "value": "Days 55–62°F, nights down to about 38°F"
+    },
+    {
+      "label": "Highlights",
+      "value": "Styx at the Venetian Theater, Omega Mart, the Fire Wave, Seven Magic Mountains"
+    }
+  ],
+  "intro": [
+    "This Las Vegas trip balanced the iconic with the unexpected: a Styx concert at the Venetian Theater, immersive art at Meow Wolf's Omega Mart, the jaw-dropping red rock landscape of Valley of Fire, steakhouse dinners, an ice bar, and the best free spectacles on the Strip. Four days, three nights, one rental car, and a lot of ground to cover.",
+    "We made The Venetian our home base. The Grand Canal Shoppes, Grand Lux Cafe and Rosina Cocktail Lounge are all steps from the room, and the Strip in both directions is walkable from the front entrance. The rental car stayed in the free self-park garage for our early desert mornings: Valley of Fire on Sunday, then Seven Magic Mountains and Jean Dry Lake Bed on Monday."
+  ],
+  "route": [
+    "The Venetian",
+    "Area 15",
+    "The Strip",
+    "Valley of Fire",
+    "Seven Magic Mountains",
+    "Jean Dry Lake Bed",
+    "Arts District",
+    "Fremont Street"
+  ],
+  "days_plan": [
+    {
+      "label": "Day 1",
+      "date": "Fri, Jan 30",
+      "place": "Las Vegas",
+      "title": "Arrival day – welcome to Vegas",
+      "text": "An evening flight, a rental car, and a first look at the Strip before an early night. Saturday is a full day.",
+      "items": [
+        {
+          "time": "Evening",
+          "text": "Fly from Newark to Harry Reid International (LAS)"
+        },
+        {
+          "time": "On arrival",
+          "text": "Take the rental car shuttle from the terminal and pick up the car we'd use for all three desert outings",
+          "booked": true
+        },
+        {
+          "time": "Late evening",
+          "text": "Check in at The Venetian, then a short stroll through the Grand Canal Shoppes or along the Strip – even 20 minutes sets the tone for the weekend",
+          "booked": true
+        }
+      ],
+      "tip": "The Venetian's attached self-park garage is free for hotel guests; we used it instead of valet to keep the car handy for early departures."
+    },
+    {
+      "label": "Day 2",
+      "date": "Sat, Jan 31",
+      "place": "Las Vegas",
+      "title": "Omega Mart, the Strip & Styx",
+      "text": "A morning inside Meow Wolf's surreal supermarket, a free-spectacle walk down the Strip, burgers at the Flamingo, and Styx at the Venetian Theater.",
+      "items": [
+        {
+          "time": "8:30 AM",
+          "text": "Breakfast at Grand Lux Cafe, right inside the Venetian – the Cheesecake Factory's upscale sibling, with a big all-day menu"
+        },
+        {
+          "time": "10:00 AM",
+          "text": "Meow Wolf Omega Mart at Area 15 (timed entry, a 10-minute drive) – an immersive art world hidden inside a surreal supermarket. Allow at least 90 minutes, follow the story and open every door",
+          "booked": true
+        },
+        {
+          "time": "12:00 PM",
+          "text": "Explore the rest of Area 15 with Level 0 passes – more immersive installations, axe throwing, VR and more, if energy allows",
+          "booked": true
+        },
+        {
+          "time": "1:00 PM",
+          "text": "Supply run for water and snacks (for the room and for Valley of Fire), then freshen up at the hotel"
+        },
+        {
+          "time": "2:30 PM",
+          "text": "Strip walk: Palazzo shops → Wynn Conservatory (free seasonal floral display) → coffee at Urth Caffé → the Forum Shops at Caesars (Trevi Fountain replica and animated Roman statues) → the free Flamingo Wildlife Habitat"
+        },
+        {
+          "time": "5:30 PM",
+          "text": "Dinner at Gordon Ramsay Burger at the Flamingo – the Hell's Kitchen burger and truffle fries are the standouts"
+        },
+        {
+          "time": "7:00 PM",
+          "text": "More Strip exploring on the way back toward the Venetian, including the Bellagio Fountains (every 15 minutes after 8 PM)"
+        },
+        {
+          "time": "8:30 PM",
+          "text": "Styx at the Venetian Theater",
+          "booked": true
+        },
+        {
+          "time": "10:30 PM",
+          "text": "A round on the Venetian casino floor or a drink at Rosina Cocktail Lounge before calling it a night"
+        }
+      ],
+      "tip": "The Flamingo Wildlife Habitat is free and genuinely surprising – Chilean flamingos, African penguins and koi behind a casino. Easy to spend 20 minutes there."
+    },
+    {
+      "label": "Day 3",
+      "date": "Sun, Feb 1",
+      "place": "Valley of Fire",
+      "title": "Valley of Fire & a night at The LINQ",
+      "text": "An early start for the desert light at Valley of Fire State Park, a picnic among the sandstone, the Fire Wave hike, then back to the Strip for steak, magic and the High Roller.",
+      "items": [
+        {
+          "time": "8:30 AM",
+          "text": "Quick Starbucks and pack all the water and snacks – the park has limited facilities"
+        },
+        {
+          "time": "9:00 AM",
+          "text": "Drive about an hour northeast on I-15, then Route 169 into the park (entry fee at the gate)"
+        },
+        {
+          "time": "10:00 AM",
+          "text": "Beehive Rock (~15 min) – sandstone cross-bedding whose grooves shift direction as you look"
+        },
+        {
+          "time": "10:20 AM",
+          "text": "Atlatl Rock (~20 min) – petroglyphs carved 2,000–4,000 years ago, seen up close from a metal staircase"
+        },
+        {
+          "time": "10:45 AM",
+          "text": "Picnic lunch at Seven Sisters (~40 min) among towering sandstone formations"
+        },
+        {
+          "time": "11:30 AM",
+          "text": "Rainbow Vista (~15 min) – swirling, painted-looking rock and a short loop toward the Fire Canyon overlook"
+        },
+        {
+          "time": "11:50 AM",
+          "text": "Fire Canyon Overlook (~10 min) – red-and-white sandstone with Silica Dome in the distance"
+        },
+        {
+          "time": "12:05 PM",
+          "text": "Elephant Rock (~20 min) – a short walk to the best view of the park's most photogenic landmark"
+        },
+        {
+          "time": "12:30 PM",
+          "text": "Fire Wave (~60 min) – the highlight: a striped red, white and pink sandstone wave, about 1.5 miles round trip, easy to moderate"
+        },
+        {
+          "time": "2:30 PM",
+          "text": "Drive back to the Venetian to shower and change"
+        },
+        {
+          "time": "4:30 PM",
+          "text": "Dinner at Smith & Wollensky's in the Grand Canal Shoppes – classic American steakhouse with an impressive wine list",
+          "booked": true
+        },
+        {
+          "time": "7:00 PM",
+          "text": "Mat Franco – Magic Reinvented Nightly at The LINQ, the America's Got Talent winner's intimate magic show"
+        },
+        {
+          "time": "8:45 PM",
+          "text": "Optional: Minus 5 Ice Bar at The LINQ – everything kept at -5°C, with thermal coats and gloves provided (about 45 minutes); the speakeasy next door is the warm alternative"
+        },
+        {
+          "time": "10:00 PM",
+          "text": "High Roller Observation Wheel – 550 feet tall, a 30-minute rotation over the Strip lit up at night"
+        },
+        {
+          "time": "11:00 PM",
+          "text": "Wind down at the Bellagio: the fountains and the free, 24/7 Conservatory, dressed for Lunar New Year"
+        }
+      ],
+      "tip": "Bring at least 2 liters of water per person – the desert is dehydrating even in January. The Fire Wave photographs best when the sun is low, morning or late afternoon."
+    },
+    {
+      "label": "Day 4",
+      "date": "Mon, Feb 2",
+      "place": "Las Vegas",
+      "title": "Desert art, Fremont Street & a final dinner",
+      "text": "Early photos at Seven Magic Mountains and Jean Dry Lake Bed, lunch in the Arts District, a steakhouse send-off at the Venetian, and a last night downtown.",
+      "items": [
+        {
+          "time": "8:00 AM",
+          "text": "Quick Starbucks and go early – fewer people and better light"
+        },
+        {
+          "time": "8:30 AM",
+          "text": "Seven Magic Mountains, about 30 minutes south on I-15 – Ugo Rondinone's seven neon-painted boulder towers, up to 35 feet tall. Free and open 24 hours"
+        },
+        {
+          "time": "9:30 AM",
+          "text": "Jean Dry Lake Bed, a short drive away – a vast white playa for wide-open desert shots and long morning shadows"
+        },
+        {
+          "time": "11:00 AM",
+          "text": "Welcome to Las Vegas sign, if there's room in the dedicated lot at the south end of the Strip"
+        },
+        {
+          "time": "11:30 AM",
+          "text": "Pinball Hall of Fame (free to enter, pay per game) or PlayPlayground at Luxor, a multi-story interactive venue"
+        },
+        {
+          "time": "1:00 PM",
+          "text": "Lunch at Esther's Kitchen in the Arts District – wood-fired, Italian-influenced cooking and excellent pasta",
+          "booked": true
+        },
+        {
+          "time": "2:30 PM",
+          "text": "Optional Arts District stroll: Container Park and Ferguson's Motel"
+        },
+        {
+          "time": "3:00 PM",
+          "text": "Back to the Venetian for the pool if it's heated and open – or last-minute Sphere tickets for The Wizard of Oz at 5 PM"
+        },
+        {
+          "time": "7:00 PM",
+          "text": "Final dinner at Delmonico Steakhouse, Emeril Lagasse's flagship inside the Venetian",
+          "booked": true
+        },
+        {
+          "time": "8:30 PM",
+          "text": "Uber downtown to the Fremont Street Experience: the free LED canopy shows on the hour, Don't Tell Mama piano bar, Vegas Vickie's Cocktail Lounge, the $1 million photo at Binion's, the Silver Strike coin machine and Pink Box Donuts at The Plaza, and the gold nugget at the Golden Nugget"
+        }
+      ],
+      "tip": "Get to Seven Magic Mountains as early as you can – the low morning light makes the colors pop, and by 10 AM the tour groups often arrive."
+    }
+  ],
+  "stays": [
+    {
+      "name": "The Venetian",
+      "place": "Las Vegas Strip",
+      "nights": "3 nights",
+      "note": "Grand Canal Shoppes, Grand Lux Cafe, Rosina and Delmonico are all steps from the room, the Strip is walkable in both directions, and self-parking is free for hotel guests."
+    }
+  ],
+  "eats": [
+    {
+      "name": "Grand Lux Cafe",
+      "place": "The Venetian",
+      "note": "The Cheesecake Factory's upscale concept with an extensive all-day menu – a proper sit-down breakfast without leaving the hotel. Walk in.",
+      "type": "Breakfast"
+    },
+    {
+      "name": "Gordon Ramsay Burger",
+      "place": "The Flamingo",
+      "note": "Casual and satisfying, and exactly right before a two-hour concert. The Hell's Kitchen burger and truffle fries are the go-to order.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Smith & Wollensky's",
+      "place": "Grand Canal Shoppes, The Venetian",
+      "note": "Classic American steakhouse with excellent cuts and an impressive wine list. The dinner menu starts at 5 PM, so book for 5 or later if you want it.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Esther's Kitchen",
+      "place": "Arts District",
+      "note": "One of Las Vegas's most acclaimed non-casino restaurants: wood-fired, Italian-influenced cooking, excellent pasta and a lively room. Off-Strip, so drive or Uber; reservation recommended.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Delmonico Steakhouse",
+      "place": "The Venetian",
+      "note": "Emeril Lagasse's flagship steakhouse – aged beef, Creole-influenced sides and a beautifully designed room. A strong, no-Uber-needed final dinner.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Milk Bar",
+      "place": "The Cosmopolitan",
+      "note": "Famous for Cereal Milk soft serve. Open late, inexpensive and genuinely delicious after the Bellagio fountains or a Strip walk.",
+      "type": "Dessert"
+    },
+    {
+      "name": "Rosina Cocktail Lounge",
+      "place": "The Venetian",
+      "note": "Classic cocktails in a relaxed but upscale room – not a club, not a dive. Exactly the right vibe after a long day; no reservation needed.",
+      "type": "Drinks"
+    },
+    {
+      "name": "The Chandelier Lounge",
+      "place": "The Cosmopolitan",
+      "note": "A stunning three-story lounge inside a massive chandelier installation. Craft cocktails and a grown-up energy – one of the best bars in Las Vegas.",
+      "type": "Drinks"
+    },
+    {
+      "name": "Skyfall Lounge",
+      "place": "Delano Las Vegas",
+      "note": "A 64th-floor lounge with some of the best panoramic Strip views from any bar. Calm and grown-up – ideal for a sunset cocktail.",
+      "type": "Drinks"
+    },
+    {
+      "name": "Giordano's",
+      "place": "Las Vegas Strip",
+      "note": "Chicago-style deep dish pizza – hearty and familiar for a casual dinner when nobody wants another steakhouse.",
+      "type": "Pizza"
+    },
+    {
+      "name": "Earl of Sandwich",
+      "place": "Planet Hollywood",
+      "note": "Hot pressed sandwiches, fast service and low prices – a reliable grab-and-go between Strip activities.",
+      "type": "Quick eats"
+    },
+    {
+      "name": "Pink Box Donuts",
+      "place": "The Plaza, Fremont Street",
+      "note": "Creative donut flavors and an inexpensive stop during a Fremont Street evening.",
+      "type": "Dessert"
+    }
+  ],
+  "book_ahead": [
+    "The Venetian (or your Strip hotel of choice)",
+    "Rental car from Harry Reid airport – you'll need it for Valley of Fire, Seven Magic Mountains and Jean Dry Lake Bed",
+    "Concert tickets for the Venetian Theater",
+    "Meow Wolf Omega Mart at Area 15 (timed entry) and Area 15 Level 0 passes",
+    "Smith & Wollensky's, Esther's Kitchen and Delmonico Steakhouse (all on OpenTable)",
+    "Mat Franco – Magic Reinvented Nightly at The LINQ (sells out regularly)",
+    "High Roller Observation Wheel at The LINQ",
+    "Minus 5 Ice Bar time slot at The LINQ",
+    "PlayPlayground at Luxor (buy online in advance)",
+    "Sphere – last-minute tickets are sometimes available, so check the website or box office on the day",
+    "Lion Habitat Ranch and Red Door Escape Rooms, if you have extra time"
+  ],
+  "tips": [
+    {
+      "title": "Rent a car for the desert",
+      "text": "The Strip is walkable and Uber covers the rest, but Valley of Fire, Seven Magic Mountains and Jean Dry Lake Bed all need a car. Pick it up via the rental car shuttle at Harry Reid and park free in the Venetian's self-park garage."
+    },
+    {
+      "title": "Layer up in January",
+      "text": "Days run 55–62°F, which is comfortable for exploring, but nights can drop to 38°F. Desert mornings are cold and afternoons warm, so bring a proper jacket. Check whether the pool is heated before planning a swim."
+    },
+    {
+      "title": "Prep for Valley of Fire",
+      "text": "It's an hour from the Strip with minimal facilities. Pack at least 2 liters of water per person plus snacks, bring sunscreen even in January, wear comfortable walking shoes for the Fire Wave, and have cash or card for the entry fee. Aim to leave by 9 AM for the best light."
+    },
+    {
+      "title": "Mind the steakhouse menu switch",
+      "text": "Smith & Wollensky's serves its lunch menu until 5 PM. If you're booked earlier, ask to be seated closer to 5 or check with the host about the dinner menu."
+    },
+    {
+      "title": "The best things on the Strip are free",
+      "text": "The Wynn Conservatory's seasonal display, the Forum Shops' Trevi Fountain, the Flamingo Wildlife Habitat, the Bellagio Fountains and Conservatory (open 24/7 – the Lunar New Year display is one of its best), and the Fremont Street canopy shows all cost nothing."
+    },
+    {
+      "title": "Go early for desert photos",
+      "text": "Seven Magic Mountains is best in soft, low morning light before the tour groups arrive around 10 AM. The Fire Wave looks richest in the morning or late afternoon; midday light flattens the rock."
+    },
+    {
+      "title": "If you have extra time",
+      "text": "Lion Habitat Ranch in Henderson is a nonprofit sanctuary for more than 40 African lions, and Red Door Escape Rooms at the Grand Bazaar Shops offers private rooms (Declassified, Enchantment or Survive). Book both in advance."
+    }
+  ],
+  "map": {
+    "The Venetian": [
+      36.1212,
+      -115.1697
+    ],
+    "Area 15": [
+      36.1308,
+      -115.1818
+    ],
+    "The Strip": [
+      36.1147,
+      -115.1728
+    ],
+    "Valley of Fire": [
+      36.43,
+      -114.513
+    ],
+    "Seven Magic Mountains": [
+      35.8383,
+      -115.272
+    ],
+    "Jean Dry Lake Bed": [
+      35.78,
+      -115.33
+    ],
+    "Arts District": [
+      36.159,
+      -115.153
+    ],
+    "Fremont Street": [
+      36.1707,
+      -115.144
+    ]
+  }
+}

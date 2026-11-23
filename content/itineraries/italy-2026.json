@@ -1,0 +1,693 @@
+{
+  "slug": "italy-2026",
+  "title": "10 Days in Italy",
+  "subtitle": "Florence, Venice & Rome",
+  "summary": "Ten days over Easter in Italy: five nights in Florence with day trips to Pisa, Lucca and Rome, then three nights in Venice with the islands and the Prosecco Hills. We filled it with Renaissance art, canals, ancient ruins and a lot of great pasta.",
+  "country": "Italy",
+  "region": "Europe",
+  "start": "2026-04-02",
+  "end": "2026-04-12",
+  "days": 10,
+  "hero": "italy",
+  "glance": [
+    {
+      "label": "Dates",
+      "value": "Apr 2–12, 2026 (Easter in Florence)"
+    },
+    {
+      "label": "Bases",
+      "value": "Florence (5 nights), Venice (3 nights), Florence (1 night)"
+    },
+    {
+      "label": "Day trips",
+      "value": "Pisa & Lucca, Rome, Prosecco Hills"
+    },
+    {
+      "label": "Islands",
+      "value": "Murano & Burano by vaporetto"
+    },
+    {
+      "label": "Getting around",
+      "value": "Frecciarossa high-speed and regional trains, vaporetto, FlixBus"
+    }
+  ],
+  "intro": [
+    "We built this trip around three of Italy's most storied cities, with day trips worked in. Five nights in Florence gave us time to breathe: the Uffizi, the Duomo, a day trip to Rome, a morning in Pisa and an afternoon cycling around Lucca. Three nights in Venice added the islands of Murano and Burano, a full day in the Prosecco Hills, and evenings spent getting lost in the calli on purpose. A final night back in Florence made for an easy departure.",
+    "We paced it on purpose: tours and sights in the morning, loose afternoons, and dinner reservations to look forward to after a long day. We pre-booked almost every big museum ticket, train and tour, and we noted where the timing had to be exact and where we could relax."
+  ],
+  "route": [
+    "Florence",
+    "Pisa & Lucca",
+    "Rome",
+    "Venice",
+    "Murano & Burano",
+    "Prosecco Hills",
+    "Florence"
+  ],
+  "days_plan": [
+    {
+      "label": "Day 1",
+      "date": "Fri, Apr 3",
+      "place": "Florence",
+      "title": "Landing in Florence & a first aperitivo",
+      "text": "We fly out of Newark on Thursday afternoon and land in Florence on Friday with plenty of daylight left. We drop our bags, freshen up and head out. Tonight is for easing in, because tomorrow's 8:30 AM walking tour is one of the biggest mornings of the trip.",
+      "items": [
+        {
+          "time": "",
+          "text": "Overnight flight from Newark to Florence (leaving Thu, Apr 2)"
+        },
+        {
+          "time": "~4:00 PM",
+          "text": "Check in at Hotel L'Orologio Firenze on Piazza Santa Maria Novella, perfectly placed for exploring the center on foot",
+          "booked": true
+        },
+        {
+          "time": "Late afternoon",
+          "text": "Wander Piazza Santa Maria Novella and the streets around it, then our first Italian aperitivo: a Negroni or Aperol Spritz at a café with outdoor seating. Mercato Centrale is close by if we'd rather graze"
+        },
+        {
+          "time": "8:00 PM",
+          "text": "Dinner at L'Osteria di Giovanni, a classic Florentine trattoria",
+          "booked": true
+        }
+      ],
+      "tip": "Don't overdo the first night: the Uffizi tour starts at 8:30 AM sharp."
+    },
+    {
+      "label": "Day 2",
+      "date": "Sat, Apr 4",
+      "place": "Florence",
+      "title": "The Uffizi, the Duomo & the bell tower",
+      "text": "Our biggest day in Florence. We do a small-group Renaissance tour in the morning, climb Giotto's Campanile on a timed ticket after lunch, then visit Santa Croce, walk the shopping streets and catch sunset over the city.",
+      "items": [
+        {
+          "time": "7:15 AM",
+          "text": "Breakfast at the hotel and out the door by 8"
+        },
+        {
+          "time": "8:15 AM",
+          "text": "Meet at the Florence & Global Tour office (Via Guelfa 12R) for the 4-hour small-group Uffizi and Accademia tour with 8:30 AM timed entry and a Duomo walk (Viator)",
+          "booked": true
+        },
+        {
+          "time": "12:30 PM",
+          "text": "Cappuccino and a light lunch near the Arno, then the Ponte Vecchio, the only Florentine bridge not destroyed in WWII, and Piazza della Signoria, an open-air sculpture gallery with the Neptune Fountain and a replica of Michelangelo's David"
+        },
+        {
+          "time": "2:00 PM",
+          "text": "Take in Santa Maria del Fiore (the Duomo) and the sheer scale of Brunelleschi's dome from Piazza del Duomo"
+        },
+        {
+          "time": "2:15 PM",
+          "text": "Climb Giotto's Campanile for sweeping views over the whole city. We need to be in line by 2:05 and back down by 3:00",
+          "booked": true
+        },
+        {
+          "time": "3:00 PM",
+          "text": "Rest, or grab a sandwich at Il Bufalo Trippone or Pino's Sandwiches / Salumeria Verdi"
+        },
+        {
+          "time": "3:45 PM",
+          "text": "Basilica of Santa Croce with an audio tour. Michelangelo and Galileo are buried here",
+          "booked": true
+        },
+        {
+          "time": "5:00 PM",
+          "text": "Museo dell'Opera del Duomo (included with the bell tower ticket, open until 7 PM), if we still have the energy",
+          "booked": true
+        },
+        {
+          "time": "6:00 PM",
+          "text": "Gelato and the shopping streets: Via del Corso, Via dei Calzaiuoli, Via Roma to Piazza della Repubblica's carousel and cafés, and the luxury shops of Via de' Tornabuoni"
+        },
+        {
+          "time": "7:00 PM",
+          "text": "Sunset at Piazzale Michelangelo or the quieter San Miniato al Monte just above it. The sun sets around 7:45"
+        },
+        {
+          "time": "8:30 PM",
+          "text": "Dinner at Osteria Lucignolo, booked through TheFork with 30% off food",
+          "booked": true
+        }
+      ],
+      "tip": "Timed entry at the Campanile is strict. Be in line by 2:05 PM and leave backpacks and large bags at the hotel."
+    },
+    {
+      "label": "Day 3",
+      "date": "Sun, Apr 5",
+      "place": "Florence",
+      "title": "Easter: the Explosion of the Cart, Pitti Palace & a pasta class",
+      "text": "Easter Sunday in Florence. We start with the Scoppio del Carro outside the Duomo, which happens only once a year. Then we cross the river for the Bardini Gardens and Palazzo Pitti and spend the afternoon making pasta and gelato from scratch.",
+      "items": [
+        {
+          "time": "8:30 AM",
+          "text": "A slow, full breakfast at the hotel, since there's no proper meal until the cooking class"
+        },
+        {
+          "time": "9:30 AM",
+          "text": "Scoppio del Carro in Piazza del Duomo. In this tradition dating to the 14th century, a cart loaded with fireworks is lit by a dove-shaped rocket during Easter mass for good fortune. It starts around 10–11 AM; arrive early for the crowds"
+        },
+        {
+          "time": "11:30 AM",
+          "text": "Free time to pick and choose. Palazzo Pitti can be entered before the timed tour slot"
+        },
+        {
+          "time": "12:00 PM",
+          "text": "Bardini Gardens: the baroque staircase, wisteria tunnel, panoramic terraces and fountains",
+          "booked": true
+        },
+        {
+          "time": "1:00 PM",
+          "text": "30-minute guided tour of the Royal Apartments at Palazzo Pitti",
+          "booked": true
+        },
+        {
+          "time": "After Pitti",
+          "text": "Boboli Gardens (free entry today) if the lines are reasonable, or the Oltrarno's artisan workshops and leather shops"
+        },
+        {
+          "time": "2:25 PM",
+          "text": "20-minute walk to the cooking school"
+        },
+        {
+          "time": "3:00 PM",
+          "text": "Small-group pasta and gelato cooking class with Towns of Italy (Via Panicale). We eat what we make, finishing around 6 PM",
+          "booked": true
+        },
+        {
+          "time": "7:00 PM",
+          "text": "Sunset at whichever viewpoint we missed yesterday"
+        },
+        {
+          "time": "8:30 PM",
+          "text": "A light dinner: drinks over the Ponte Vecchio at the Hotel La Scaletta rooftop bar if it's open, or walk-in pizza at Mister Pizza or LiVio Pizzeria"
+        }
+      ],
+      "tip": "Once you leave any museum in the Pitti complex you can't re-enter. Some Oltrarno shops may be closed on Easter Sunday."
+    },
+    {
+      "label": "Day 4",
+      "date": "Mon, Apr 6",
+      "place": "Pisa & Lucca",
+      "title": "The Leaning Tower of Pisa & cycling Lucca",
+      "text": "An early regional train to Pisa for the Piazza dei Miracoli and a climb up the Leaning Tower, then on to Lucca for an afternoon of cycling the Renaissance walls with food and wine tastings. We're back in Florence for a late cheese-wheel pasta dinner.",
+      "items": [
+        {
+          "time": "7:00 AM",
+          "text": "Coffee and a croissant to go from the hotel. Small bags only today"
+        },
+        {
+          "time": "7:28 AM",
+          "text": "Regional train from Florence SMN to Pisa Centrale, arriving 8:42",
+          "booked": true
+        },
+        {
+          "time": "8:45 AM",
+          "text": "Walk to the Piazza dei Miracoli, home to the Cathedral, Baptistery, Leaning Tower and Camposanto"
+        },
+        {
+          "time": "9:10 AM",
+          "text": "A quick visit to the Baptistery of St. John (included with the Pisa ticket)",
+          "booked": true
+        },
+        {
+          "time": "9:45 AM",
+          "text": "Climb the Leaning Tower on a timed slot (arrive by 9:30; bags may need to go in the cloakroom), plus the cathedral's marble floors and bronze doors and the frescoed Camposanto on the same ticket",
+          "booked": true
+        },
+        {
+          "time": "12:00 PM",
+          "text": "Coffee and pastry at Pasticceria Salza near the square, then back to Pisa Centrale"
+        },
+        {
+          "time": "~12:30 PM",
+          "text": "Short regional train from Pisa to Lucca (tickets at the station or in the app)"
+        },
+        {
+          "time": "1:00 PM",
+          "text": "A light lunch near the station: In Pasta – Cibo e Convivio, Fiaschetto or Ciacco on Piazza Napoleone"
+        },
+        {
+          "time": "2:20 PM",
+          "text": "Lucca Bikes & Bites small-group tour (Viator) from the Tourist Center Lucca bike rental. We cycle the tree-lined Renaissance walls and the medieval streets with food and wine tastings along the way, until about 5:15",
+          "booked": true
+        },
+        {
+          "time": "~5:30 PM",
+          "text": "Train from Lucca back to Florence, arriving around 6:30"
+        },
+        {
+          "time": "9:00 PM",
+          "text": "Dinner at Osteria Pastella, 5 minutes from the hotel, where the chef finishes our pasta in a cheese wheel at the table",
+          "booked": true
+        }
+      ],
+      "tip": "Keep lunch in Lucca light, because the bike tour includes tastings. Osteria Pastella charges €20 if you cancel less than 2 hours ahead."
+    },
+    {
+      "label": "Day 5",
+      "date": "Tue, Apr 7",
+      "place": "Rome",
+      "title": "Rome in a day: Colosseum, Pantheon & the Vatican",
+      "text": "A full day trip to Rome on the high-speed train. We tour the Colosseum, Forum and Palatine Hill in the morning, see the Pantheon after lunch and the Vatican Museums in the late afternoon, and finish with the Spanish Steps and Trevi Fountain before the late train home.",
+      "items": [
+        {
+          "time": "6:30 AM",
+          "text": "Leave the hotel for Firenze SMN"
+        },
+        {
+          "time": "7:05 AM",
+          "text": "Frecciarossa 9591 from Florence to Roma Termini, a 90-minute ride arriving 8:35",
+          "booked": true
+        },
+        {
+          "time": "8:35 AM",
+          "text": "Cappuccino and cornetto at Pasticceria Sessa 1930 by Termini, then the walk to the Colosseum"
+        },
+        {
+          "time": "9:45 AM",
+          "text": "Guided tour of the Colosseum, Roman Forum and Palatine Hill with The Tour Guide (be there by 9:30; it runs until about 1 PM)",
+          "booked": true
+        },
+        {
+          "time": "1:00 PM",
+          "text": "Lunch: sit down at Pasqualino Al Colosseo dal 1956 (reserved online), or grab a quick sandwich at Mizio's Street Food, Sto Bene Roma or All'Antico Vinaio",
+          "booked": true
+        },
+        {
+          "time": "After lunch",
+          "text": "Walk Via dei Fori Imperiali toward Piazza Venezia, past the Forum ruins"
+        },
+        {
+          "time": "2:00 PM",
+          "text": "The Pantheon, one of Rome's most impressive ancient interiors",
+          "booked": true
+        },
+        {
+          "time": "3:15 PM",
+          "text": "Taxi to the Vatican, booked in the Free Now app"
+        },
+        {
+          "time": "4:00 PM",
+          "text": "Vatican Museums guided tour: check-in at 4, tour at 4:30, covering the Sistine Chapel, the Raphael Rooms and the vast collection. Afterward we walk Via dei Coronari or take a taxi to the Spanish Steps",
+          "booked": true
+        },
+        {
+          "time": "7:00 PM",
+          "text": "The Spanish Steps and Piazza di Spagna in the evening light"
+        },
+        {
+          "time": "7:30 PM",
+          "text": "Trevi Fountain with ground-level access tickets, then gelato at Gelato in Trevi",
+          "booked": true
+        },
+        {
+          "time": "8:15 PM",
+          "text": "Walk or taxi to Roma Termini, arriving by 8:45"
+        },
+        {
+          "time": "9:10 PM",
+          "text": "Frecciarossa 9568 back to Florence, arriving 10:58 PM. We sleep on the train",
+          "booked": true
+        }
+      ],
+      "tip": "Eat a real lunch. We're inside the Vatican for hours after 4 PM, and there's little time for dinner before the train."
+    },
+    {
+      "label": "Day 6",
+      "date": "Wed, Apr 8",
+      "place": "Venice",
+      "title": "Florence to Venice & a first evening on the canals",
+      "text": "A slow morning, then the high-speed train to Venice. We spend the afternoon wandering with no plan and end the night in St. Mark's Square, lit up after dark.",
+      "items": [
+        {
+          "time": "9:00 AM",
+          "text": "A slow breakfast at the hotel"
+        },
+        {
+          "time": "10:45 AM",
+          "text": "Check out of Hotel L'Orologio and walk 10 minutes to Firenze SMN"
+        },
+        {
+          "time": "11:20 AM",
+          "text": "Frecciarossa 9414 from Florence to Venezia Santa Lucia, arriving 1:34 PM",
+          "booked": true
+        },
+        {
+          "time": "1:45 PM",
+          "text": "Walk or take a water taxi from the station and check in at Palazzo Veneziano",
+          "booked": true
+        },
+        {
+          "time": "3:00 PM",
+          "text": "Our first stroll: get pleasantly lost in the calli, stop for cicchetti and an early aperitivo at a bacaro, then walk to the Rialto Bridge and along the Grand Canal"
+        },
+        {
+          "time": "7:00 PM",
+          "text": "Dinner at Impronta Restaurant Venice, 15 minutes from the hotel",
+          "booked": true
+        },
+        {
+          "time": "8:30 PM",
+          "text": "An evening walk through Piazza San Marco, lit at night, before tomorrow's crowds"
+        }
+      ],
+      "tip": ""
+    },
+    {
+      "label": "Day 7",
+      "date": "Thu, Apr 9",
+      "place": "Venice",
+      "title": "St. Mark's, the Doge's Palace & the islands",
+      "text": "A morning inside St. Mark's Basilica and the Doge's Palace, then the vaporetto out to Murano for glass-blowing and Burano for its colorful houses and lace.",
+      "items": [
+        {
+          "time": "8:00 AM",
+          "text": "Breakfast at the hotel, leaving by 8:50 for the 20-minute walk to the tour"
+        },
+        {
+          "time": "9:30 AM",
+          "text": "Walks of Italy \"Legendary Venice\" tour of St. Mark's Basilica (including the terraces) and the full Doge's Palace, 9:30–12:30. We meet at the Correr Museum, Piazza San Marco 52, under the portico; look for the green Walks sign",
+          "booked": true
+        },
+        {
+          "time": "1:00 PM",
+          "text": "Lunch nearby or on the islands, then the vaporetto to Murano and Burano"
+        },
+        {
+          "time": "8:00 PM",
+          "text": "Dinner at San Silvestro Restaurant",
+          "booked": true
+        }
+      ],
+      "tip": "Take vaporetto Line 4.1 or 4.2 from Fondamente Nove to Murano, then continue to Burano. Budget 3–4 hours for both islands, including at least 90 minutes on Burano."
+    },
+    {
+      "label": "Day 8",
+      "date": "Fri, Apr 10",
+      "place": "Prosecco Hills",
+      "title": "A full day in the Prosecco Hills",
+      "text": "A full-day vineyard tour in the UNESCO-listed Conegliano Valdobbiadene region, with rolling hills, historic estates and tastings of Prosecco where it was born.",
+      "items": [
+        {
+          "time": "8:15 AM",
+          "text": "Walk to Venezia Santa Lucia. The tour company provides the train tickets to the meeting point (Viator)",
+          "booked": true
+        },
+        {
+          "time": "All day",
+          "text": "Prosecco Hills UNESCO tour through the Conegliano Valdobbiadene wine region",
+          "booked": true
+        },
+        {
+          "time": "5:00 PM",
+          "text": "Train back to Venice (tickets provided by the tour), arriving around 6 PM",
+          "booked": true
+        },
+        {
+          "time": "7:30 PM",
+          "text": "Dinner at a restaurant near the hotel"
+        }
+      ],
+      "tip": "Reserve dinner before the day starts. You'll be tired and hungry when you get back and won't want to search."
+    },
+    {
+      "label": "Day 9",
+      "date": "Sat, Apr 11",
+      "place": "Florence",
+      "title": "Venice to Florence & a final night",
+      "text": "We take the FlixBus from the mainland back to Florence for one last night at the Grand Hotel Cavour and a final dinner of our own choosing.",
+      "items": [
+        {
+          "time": "9:00 AM",
+          "text": "Breakfast at the hotel"
+        },
+        {
+          "time": "11:00 AM",
+          "text": "Check out of Palazzo Veneziano and head to Venice Mestre: vaporetto or walk to Piazzale Roma, then a local train or bus across the causeway. We pick up drinks and snacks for the ride"
+        },
+        {
+          "time": "12:10 PM",
+          "text": "FlixBus Route 466 from Venice Mestre (Stazione FS) to Florence Villa Costanza, arriving 3:40 PM"
+        },
+        {
+          "time": "3:40 PM",
+          "text": "Taxi or tram from Villa Costanza and check in at the Grand Hotel Cavour for one night"
+        },
+        {
+          "time": "Evening",
+          "text": "Final dinner in Florence. It's our last free evening, and most of the center is walkable from the hotel"
+        }
+      ],
+      "tip": "Venice Mestre is on the mainland, not in the historic center. Confirm your route there the night before."
+    },
+    {
+      "label": "Day 10",
+      "date": "Sun, Apr 12",
+      "place": "Florence",
+      "title": "Arrivederci, Italia",
+      "text": "A very early start for a 7 AM flight home from Florence. Ten days done.",
+      "items": [
+        {
+          "time": "4:30 AM",
+          "text": "Very early ride to Florence Airport"
+        },
+        {
+          "time": "7:00 AM",
+          "text": "Fly home from Florence, checking our bags at the counter"
+        }
+      ],
+      "tip": "Pack the night before, leave everything by the door and set multiple alarms. Check your bags, since they'll likely be overweight after ten days of shopping and souvenirs."
+    }
+  ],
+  "stays": [
+    {
+      "name": "Hotel L'Orologio Firenze",
+      "place": "Florence",
+      "nights": "5 nights",
+      "note": "On Piazza Santa Maria Novella, a short walk from Firenze SMN station and perfectly placed for exploring the center on foot. Apr 3–8."
+    },
+    {
+      "name": "Palazzo Veneziano",
+      "place": "Venice",
+      "nights": "3 nights",
+      "note": "A walk or water-taxi ride from Venezia Santa Lucia station. Apr 8–11."
+    },
+    {
+      "name": "Grand Hotel Cavour",
+      "place": "Florence",
+      "nights": "1 night",
+      "note": "Centrally located for our last night, with most of the city walkable. Apr 11."
+    }
+  ],
+  "eats": [
+    {
+      "name": "L'Osteria di Giovanni",
+      "place": "Florence",
+      "note": "Classic Florentine trattoria, with traditional cooking in a warm room. The ideal first dinner in the city.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Osteria Lucignolo",
+      "place": "Florence",
+      "note": "Booked through TheFork with 30% off food. Pair it with sunset at Piazzale Michelangelo or San Miniato first.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Osteria Pastella",
+      "place": "Florence",
+      "note": "The cheese-wheel pasta experience, finished at the table. Cancel more than 2 hours ahead or pay a €20 fee.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Il Bufalo Trippone",
+      "place": "Florence",
+      "note": "Small, authentic sandwich shop with rave reviews from locals.",
+      "type": "Sandwiches"
+    },
+    {
+      "name": "Pino's Sandwiches / Salumeria Verdi",
+      "place": "Florence",
+      "note": "Excellent classic panini. There's usually a line.",
+      "type": "Sandwiches"
+    },
+    {
+      "name": "Mercato Centrale",
+      "place": "Florence",
+      "note": "Food-court-style market near Santa Maria Novella, great for grazing.",
+      "type": "Market"
+    },
+    {
+      "name": "Hotel La Scaletta rooftop bar",
+      "place": "Florence",
+      "note": "Drinks with a view over the Ponte Vecchio, if it's open.",
+      "type": "Drinks"
+    },
+    {
+      "name": "Mister Pizza",
+      "place": "Florence",
+      "note": "No-fuss walk-in pizza for a light night.",
+      "type": "Pizza"
+    },
+    {
+      "name": "LiVio Pizzeria",
+      "place": "Florence",
+      "note": "Another easy walk-in pizza option.",
+      "type": "Pizza"
+    },
+    {
+      "name": "Pasticceria Salza",
+      "place": "Pisa",
+      "note": "Coffee and pastry near the Piazza dei Miracoli before the train to Lucca.",
+      "type": "Coffee & pastry"
+    },
+    {
+      "name": "In Pasta – Cibo e Convivio",
+      "place": "Lucca",
+      "note": "Highly rated local pasta and sandwiches near the station.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Fiaschetto",
+      "place": "Lucca",
+      "note": "Quick panini or a snack on the go.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Ciacco",
+      "place": "Lucca",
+      "note": "Casual sit-down bistro on Piazza Napoleone.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Pasticceria Sessa 1930",
+      "place": "Rome",
+      "note": "Traditional pastry shop right by Termini that opens early. Cappuccino and cornetto before the Colosseum.",
+      "type": "Breakfast"
+    },
+    {
+      "name": "Pasqualino Al Colosseo dal 1956",
+      "place": "Rome",
+      "note": "Classic Italian restaurant with pasta dishes by the Colosseum, for a sit-down lunch. Hard to fit in if you're also going inside the Pantheon.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Mizio's Street Food",
+      "place": "Rome",
+      "note": "Highly rated casual sandwiches in Monti.",
+      "type": "Sandwiches"
+    },
+    {
+      "name": "Sto Bene Roma",
+      "place": "Rome",
+      "note": "Excellent sandwiches near Trevi and Torre Argentina.",
+      "type": "Sandwiches"
+    },
+    {
+      "name": "All'Antico Vinaio",
+      "place": "Rome",
+      "note": "Famous hearty sandwiches near Piazza Maddalena.",
+      "type": "Sandwiches"
+    },
+    {
+      "name": "Gelato in Trevi",
+      "place": "Rome",
+      "note": "Gelato by the Trevi Fountain before the walk to the station.",
+      "type": "Gelato"
+    },
+    {
+      "name": "Impronta Restaurant Venice",
+      "place": "Venice",
+      "note": "Our first dinner in Venice, 15 minutes from Palazzo Veneziano.",
+      "type": "Dinner"
+    },
+    {
+      "name": "San Silvestro Restaurant",
+      "place": "Venice",
+      "note": "Dinner after our day on the islands.",
+      "type": "Dinner"
+    }
+  ],
+  "book_ahead": [
+    "Uffizi & Accademia small-group tour with Duomo walk (Viator)",
+    "Giotto's Campanile climb (timed entry)",
+    "Basilica of Santa Croce with audio tour",
+    "Bardini Gardens (timed tickets)",
+    "Palazzo Pitti Royal Apartments guided tour",
+    "Pasta & gelato cooking class with Towns of Italy",
+    "Leaning Tower of Pisa climb (timed entry)",
+    "Lucca Bikes & Bites tour (Viator)",
+    "Colosseum guided tour with the Roman Forum",
+    "Pantheon tickets",
+    "Vatican Museums guided tour",
+    "Trevi Fountain ground-level tickets",
+    "Walks of Italy St. Mark's Basilica & Doge's Palace tour",
+    "Prosecco Hills tour (Viator)",
+    "Frecciarossa high-speed trains",
+    "Dinner reservations, especially Osteria Pastella"
+  ],
+  "tips": [
+    {
+      "title": "Keep tickets on your phone",
+      "text": "Our train tickets were in Google Wallet and our tour tickets in Apple Wallet. Check each ticket for its check-in instructions, review them before every departure, and screenshot everything before you leave home. Bring passports, since you'll need them for all travel."
+    },
+    {
+      "title": "Respect the timed entries",
+      "text": "Some slots are strict and some are flexible, so know which is which. Be in line at Giotto's Campanile by 2:05 PM for a 2:15 slot, check in at the Vatican at 4 PM sharp, show your Palazzo Pitti ticket before 1 PM for priority access, and arrive at the cooking class by 2:45 PM for a 3 PM start."
+    },
+    {
+      "title": "Pack layers and good shoes",
+      "text": "April in Italy is mild but variable. Comfortable shoes are non-negotiable on the cobblestones, and you'll want a light jacket for Venice evenings."
+    },
+    {
+      "title": "Travel light on climb and bike days",
+      "text": "No big bags are allowed on the Campanile climb, and the Lucca bike tour calls for a small day bag. Leave everything else at the hotel."
+    },
+    {
+      "title": "Catch the sunset",
+      "text": "In early April the sun sets around 7:45 PM in Florence. Be at the viewpoint by 7. With two evenings, try both Piazzale Michelangelo and San Miniato al Monte. San Miniato is quieter and better for photos on a clear night."
+    },
+    {
+      "title": "Taxis and money",
+      "text": "Download the Free Now app for taxis in Rome. Uber works in some Italian cities. Cards are accepted almost everywhere, but small cash is handy for cafés and markets."
+    },
+    {
+      "title": "Eat like a local",
+      "text": "Aperitivo hour runs roughly 6–8 PM, so don't miss it. In Venice, cicchetti are snacks at a bacaro (wine bar). Coffee means espresso, and it's cheaper standing at the bar. Many restaurant kitchens don't open until 7:30 PM or later, and gelato is the perfect follow-up to a sandwich lunch."
+    },
+    {
+      "title": "Mind the fine print",
+      "text": "Check cancellation policies (Osteria Pastella charges €20 if you cancel within 2 hours) and check hotel breakfast hours before a late night."
+    },
+    {
+      "title": "Learn a few words of Italian",
+      "text": "Locals appreciate the effort. Buongiorno (good morning), buonasera (good evening), per favore (please), grazie (thank you), un tavolo per due (a table for two), il conto, per favore (the check, please) and cin cin! (cheers) go a long way."
+    }
+  ],
+  "map": {
+    "Florence": [
+      43.7696,
+      11.2558
+    ],
+    "Pisa & Lucca": [
+      43.723,
+      10.3966
+    ],
+    "Rome": [
+      41.9028,
+      12.4964
+    ],
+    "Venice": [
+      45.4408,
+      12.3155
+    ],
+    "Murano & Burano": [
+      45.47,
+      12.38
+    ],
+    "Prosecco Hills": [
+      45.9003,
+      11.9969
+    ]
+  }
+}
