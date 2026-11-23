@@ -30,6 +30,10 @@
   to = "/itineraries/london-paris-2025/"
   status = 301
 [[redirects]]
+  from = "/montreal"
+  to = "/itineraries/montreal-2024/"
+  status = 301
+[[redirects]]
   from = "/ireland"
   to = "/itineraries/ireland/"
   status = 301
