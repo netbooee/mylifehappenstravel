@@ -1,0 +1,412 @@
+{
+  "slug": "montreal-2024",
+  "title": "5 Days in Montreal",
+  "subtitle": "Old Montreal, Mount Royal & the Old Port",
+  "summary": "A late-summer family road trip to Montreal in August 2024: smoked meat at Schwartz's, the views from Mount Royal, a boat ride, the Ferris wheel and a zipline at the Old Port, a ghost tour of Old Montreal, a ferry to Parc Jean-Drapeau and a bagel taste-off on the drive home.",
+  "country": "Canada",
+  "region": "North America",
+  "start": "2024-08-21",
+  "end": "2024-08-25",
+  "days": 5,
+  "hero": "",
+  "glance": [
+    {
+      "label": "Dates",
+      "value": "Aug 21–25, 2024"
+    },
+    {
+      "label": "Bases",
+      "value": "Hyatt Place Saratoga/Malta (1 night on the way up), then Le Saint-Sulpice Hotel in Old Montreal (3 nights)"
+    },
+    {
+      "label": "Big tickets",
+      "value": "Le Petit Navire boat ride, La Grande Roue, MTL Zipline, the Old Montreal ghost tour, the ferry to Parc Jean-Drapeau"
+    },
+    {
+      "label": "Getting around",
+      "value": "Our car to get there, then on foot, Uber and the river ferry"
+    },
+    {
+      "label": "Don't forget",
+      "value": "Passports for everyone: we cross the Canadian border by car"
+    }
+  ],
+  "intro": [
+    "Montreal is close enough to drive, so we made it a family road trip. We left after work on Wednesday, slept in Saratoga County to break up the drive, and were in Old Montreal by lunchtime on Thursday. Le Saint-Sulpice Hotel, beside the Notre-Dame Basilica, put us within walking distance of almost everything we wanted to do.",
+    "Each day had one anchor. Thursday was the classic first-timer's loop: smoked meat at Schwartz's, a walk up Mount Royal for the views, the Museum of Fine Arts and an evening on Place Jacques-Cartier. Friday stayed at the Old Port with a boat ride, the Ferris wheel and a zipline for the boys, then a ghost tour after dinner. Saturday we took the ferry across to Parc Jean-Drapeau for a food festival before an evening in the Village.",
+    "We booked the dinners and the timed activities ahead and kept a rain plan and a few backup ideas in our pocket. On the way out of town on Sunday we settled the great Montreal bagel argument for ourselves."
+  ],
+  "route": [
+    "Old Montreal",
+    "The Plateau",
+    "Mount Royal",
+    "Old Port",
+    "Parc Jean-Drapeau",
+    "The Village",
+    "Mile End"
+  ],
+  "days_plan": [
+    {
+      "label": "Day 1",
+      "date": "Wed, Aug 21",
+      "place": "Malta, New York",
+      "title": "Head north and break up the drive",
+      "text": "A short evening drive to get a head start, so Thursday morning is only the last few hours to the border and Montreal.",
+      "items": [
+        {
+          "time": "6:30 PM",
+          "text": "Leave home and drive to the Hyatt Place Saratoga/Malta"
+        },
+        {
+          "time": "",
+          "text": "Check in at the Hyatt Place Saratoga/Malta and relax for the night",
+          "booked": true
+        }
+      ],
+      "tip": "Before leaving the house, make sure everyone has their passport. You need one for each person to cross into Canada by car."
+    },
+    {
+      "label": "Day 2",
+      "date": "Thu, Aug 22",
+      "place": "Montreal",
+      "title": "Schwartz's, Mount Royal & an evening in Old Montreal",
+      "text": "We arrive around lunchtime and spend the afternoon on foot: lunch on the Plateau, a climb up Mount Royal for the views over the city, the Museum of Fine Arts on the way back down, then dinner at the Old Port.",
+      "items": [
+        {
+          "time": "7:30 AM",
+          "text": "Breakfast at the hotel"
+        },
+        {
+          "time": "8:30 AM",
+          "text": "Leave the hotel and drive to Montreal, crossing the border on the way"
+        },
+        {
+          "time": "12:00 PM",
+          "text": "Arrive at Le Saint-Sulpice Hotel, 414 Rue Saint-Sulpice, check in and head out for lunch",
+          "booked": true
+        },
+        {
+          "time": "",
+          "text": "If it's raining: lunch in the Underground City, then the Montreal Museum of Fine Arts"
+        },
+        {
+          "time": "",
+          "text": "If it's dry: walk to Schwartz's Deli, 3895 Boulevard Saint-Laurent, for Montreal smoked meat sandwiches for lunch. It's a long walk, so take an Uber if we're really hungry"
+        },
+        {
+          "time": "",
+          "text": "If the line at Schwartz's is too long, walk about a mile to La Banquise for poutine instead, then walk around La Fontaine Park next door"
+        },
+        {
+          "time": "",
+          "text": "After Schwartz's, walk up into Mount Royal Park: the Kondiaronk Belvedere, the big paved lookout in front of the Mount Royal Chalet, for the best photo over downtown, then on to Beaver Lake"
+        },
+        {
+          "time": "",
+          "text": "Walk down to the Montreal Museum of Fine Arts (Musée des beaux-arts de Montréal, open 10 AM to 5 PM)"
+        },
+        {
+          "time": "",
+          "text": "Walk back to Le Saint-Sulpice Hotel along Saint Catherine Street"
+        },
+        {
+          "time": "",
+          "text": "If we still have time and energy: Uber to the Biodôme or the Montreal Botanical Garden (both open 9 AM to 6 PM)"
+        },
+        {
+          "time": "6:30 PM",
+          "text": "Walk to Place Jacques-Cartier, a lively square with street performers and cafés"
+        },
+        {
+          "time": "7:45 PM",
+          "text": "Dinner at Vieux-Port Steakhouse & Terrasse",
+          "booked": true
+        },
+        {
+          "time": "",
+          "text": "End the day with a slow walk along the Old Port promenade to see the city lights"
+        }
+      ],
+      "tip": "Watch the forecast. The Underground City and the Museum of Fine Arts make an easy rainy-day swap for the walk up Mount Royal."
+    },
+    {
+      "label": "Day 3",
+      "date": "Fri, Aug 23",
+      "place": "Montreal",
+      "title": "Boat, Ferris wheel & zipline at the Old Port, then a ghost tour",
+      "text": "A day at the water's edge. Everything at the Old Port is a short walk from the next thing, so we line up the boat ride, the Ferris wheel and the zipline back to back, then wander Bonsecours Market and Rue Saint-Paul before dinner and a ghost tour after dark.",
+      "items": [
+        {
+          "time": "9:00 AM",
+          "text": "Walk to breakfast at a café nearby: Olive et Gourmando or Le Petit Dep"
+        },
+        {
+          "time": "10:40 AM",
+          "text": "Arrive at the Old Port for our 11:00 AM boat ride on the river with Le Petit Navire",
+          "booked": true
+        },
+        {
+          "time": "12:30 PM",
+          "text": "Ride La Grande Roue de Montréal, the big Ferris wheel at the Old Port. We printed our tickets for four",
+          "booked": true
+        },
+        {
+          "time": "1:00 PM",
+          "text": "Tyrolienne MTL Zipline for the boys. The tickets aren't for a set time, so we go whenever it suits",
+          "booked": true
+        },
+        {
+          "time": "",
+          "text": "See the Clock Tower and Clock Tower Beach"
+        },
+        {
+          "time": "",
+          "text": "Lunch or snacks around Bonsecours Market"
+        },
+        {
+          "time": "",
+          "text": "Stroll Rue Saint-Paul from east to west, Old Montreal's oldest street"
+        },
+        {
+          "time": "",
+          "text": "Back to the hotel to get ready for dinner"
+        },
+        {
+          "time": "6:15 PM",
+          "text": "Dinner at Gaspar Brasserie Française",
+          "booked": true
+        },
+        {
+          "time": "",
+          "text": "Walk to the meeting point for the ghost tour"
+        },
+        {
+          "time": "8:30 PM",
+          "text": "Old Montreal ghost tour through the old streets after dark",
+          "booked": true
+        }
+      ],
+      "tip": "Get to Le Petit Navire about 20 minutes early. The Ferris wheel and the zipline are right next to each other, so the rest of the morning falls into place."
+    },
+    {
+      "label": "Day 4",
+      "date": "Sat, Aug 24",
+      "place": "Montreal",
+      "title": "Ferry to Parc Jean-Drapeau & a night in the Village",
+      "text": "We cross the river by ferry to Parc Jean-Drapeau, the island park left over from Expo 67, to see the Biosphère and catch Les Rendez-vous gourmands, a one-day food festival for the park's 150th anniversary. Back in town, we walk the car-free stretch of Saint Catherine Street East before dinner.",
+      "items": [
+        {
+          "time": "9:45 AM",
+          "text": "Leave for breakfast at a café nearby"
+        },
+        {
+          "time": "11:15 AM",
+          "text": "Walk to the ferry dock at the Old Port and be there 15 minutes early"
+        },
+        {
+          "time": "11:30 AM",
+          "text": "Ferry across to Parc Jean-Drapeau",
+          "booked": true
+        },
+        {
+          "time": "",
+          "text": "Walk around the park: Espace 67 and the Biosphère. The free Discovery Ride trams go across the island if we get tired of walking"
+        },
+        {
+          "time": "12:00 PM",
+          "text": "Les Rendez-vous gourmands in the Floralies Gardens, 25 Chemin des Floralies: an outdoor food festival with chefs, tastings, barbecues and music, on from noon to 11 PM"
+        },
+        {
+          "time": "3:45 PM",
+          "text": "Back at the ferry dock for the 4:00 PM ferry to the Old Port. Roads run close to the gardens, so an Uber back to the hotel works if we want to leave earlier or stay later",
+          "booked": true
+        },
+        {
+          "time": "",
+          "text": "Freshen up at the hotel if we're tired"
+        },
+        {
+          "time": "",
+          "text": "Walk to Saint Catherine Street East in the Village, closed to cars between Saint-Hubert and Papineau, with shops, food and street entertainment"
+        },
+        {
+          "time": "7:45 PM",
+          "text": "Dinner at Jacopo",
+          "booked": true
+        },
+        {
+          "time": "",
+          "text": "If we're still up for it: the bars on Crescent Street"
+        }
+      ],
+      "tip": "If the Village is too much fun to leave, cancel the Jacopo reservation on OpenTable in time and eat there instead."
+    },
+    {
+      "label": "Day 5",
+      "date": "Sun, Aug 25",
+      "place": "Montreal",
+      "title": "Bagel wars on the way home",
+      "text": "A slow morning, then the most important decision of the trip. Montreal has two famous bagel bakeries a few blocks apart in Mile End, and we stop at both on the drive out to see which one wins.",
+      "items": [
+        {
+          "time": "12:00 PM",
+          "text": "Check out of Le Saint-Sulpice Hotel"
+        },
+        {
+          "time": "",
+          "text": "Bagel wars: drive to Mile End and compare the bagels from Fairmount Bagel and St-Viateur Bagel"
+        },
+        {
+          "time": "",
+          "text": "Drive home"
+        }
+      ],
+      "tip": "Buy an extra dozen of the winner for the car. Montreal bagels are best warm, but they're still good the next morning."
+    }
+  ],
+  "stays": [
+    {
+      "name": "Hyatt Place Saratoga/Malta",
+      "place": "Malta, New York",
+      "nights": "1 night",
+      "note": "A stop on the way north so Thursday's drive is short. Breakfast at the hotel before we leave. Aug 21."
+    },
+    {
+      "name": "Le Saint-Sulpice Hotel Montréal",
+      "place": "Old Montreal",
+      "nights": "3 nights",
+      "note": "414 Rue Saint-Sulpice, beside the Notre-Dame Basilica. An easy walk to the Old Port, Place Jacques-Cartier and Rue Saint-Paul. Aug 22–25."
+    }
+  ],
+  "eats": [
+    {
+      "name": "Schwartz's Deli",
+      "place": "The Plateau",
+      "note": "3895 Boulevard Saint-Laurent. The famous Montreal smoked meat sandwich. Expect a line at lunchtime.",
+      "type": "Lunch"
+    },
+    {
+      "name": "La Banquise",
+      "place": "The Plateau",
+      "note": "Poutine with every topping you can think of, next to La Fontaine Park. Our backup if the line at Schwartz's is too long.",
+      "type": "Poutine"
+    },
+    {
+      "name": "Vieux-Port Steakhouse & Terrasse",
+      "place": "Old Montreal",
+      "note": "Steak dinner with a terrace, a short walk from Place Jacques-Cartier. Booked on OpenTable.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Gaspar Brasserie Française",
+      "place": "Old Montreal",
+      "note": "A French brasserie, close enough to walk to the ghost tour after dinner. Booked on OpenTable.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Jacopo",
+      "place": "Old Montreal",
+      "note": "Our Saturday dinner. Booked on OpenTable.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Olive et Gourmando",
+      "place": "Old Montreal",
+      "note": "A popular bakery and café for breakfast.",
+      "type": "Breakfast"
+    },
+    {
+      "name": "Le Petit Dep",
+      "place": "Old Montreal",
+      "note": "A café with two locations. Good for breakfast.",
+      "type": "Breakfast"
+    },
+    {
+      "name": "Café Olimpico Vieux-Montréal",
+      "place": "Old Montreal",
+      "note": "More about the coffee than the food.",
+      "type": "Coffee"
+    },
+    {
+      "name": "Café de Mercanti",
+      "place": "Old Montreal",
+      "note": "Another café option, a little farther from the hotel.",
+      "type": "Coffee"
+    },
+    {
+      "name": "Bonsecours Market",
+      "place": "Old Montreal",
+      "note": "Lunch or snacks between the Old Port and Rue Saint-Paul.",
+      "type": "Market"
+    },
+    {
+      "name": "Terrasse Nelligan",
+      "place": "Old Montreal",
+      "note": "A rooftop terrace that's good for lunch or drinks.",
+      "type": "Rooftop"
+    },
+    {
+      "name": "Nacarat Rooftop Bar",
+      "place": "Montreal",
+      "note": "Another rooftop option for lunch or drinks.",
+      "type": "Rooftop"
+    },
+    {
+      "name": "Fairmount Bagel",
+      "place": "Mile End",
+      "note": "One half of the great Montreal bagel debate.",
+      "type": "Bagels"
+    },
+    {
+      "name": "St-Viateur Bagel",
+      "place": "Mile End",
+      "note": "The other half. Taste them side by side and pick a winner.",
+      "type": "Bagels"
+    }
+  ],
+  "book_ahead": [
+    "Hyatt Place Saratoga/Malta and Le Saint-Sulpice Hotel",
+    "Dinners on OpenTable: Vieux-Port Steakhouse, Gaspar Brasserie Française and Jacopo",
+    "Le Petit Navire boat ride (we booked through Tripadvisor)",
+    "La Grande Roue de Montréal (we printed our tickets)",
+    "Tyrolienne MTL Zipline (open tickets, no set time)",
+    "Old Montreal ghost tour (we booked through Tripadvisor)",
+    "Ferry tickets to and from Parc Jean-Drapeau"
+  ],
+  "tips": [
+    {
+      "title": "Passports for everyone",
+      "text": "Driving into Canada means a border crossing, and every person in the car needs a passport. Check them before you leave home, not at the hotel the night before."
+    },
+    {
+      "title": "Break up the drive",
+      "text": "Leaving after work and sleeping halfway meant we reached Montreal by lunchtime on Thursday with a full afternoon ahead of us, instead of losing the whole first day to the car."
+    },
+    {
+      "title": "Stay in Old Montreal",
+      "text": "From Le Saint-Sulpice we walked to the Old Port, Place Jacques-Cartier, Rue Saint-Paul and most of our dinners. We used Uber for the farther sights, like the Biodôme and the Botanical Garden."
+    },
+    {
+      "title": "Have a rain plan",
+      "text": "The Underground City links shops and food courts below downtown, and the Museum of Fine Arts is nearby. Both are good swaps for a wet afternoon."
+    },
+    {
+      "title": "Look for the summer pedestrian streets",
+      "text": "In summer, Montreal closes several streets to cars, including Saint Catherine Street East in the Village. Check the city's list before you go for more places to wander."
+    },
+    {
+      "title": "More ideas for a Saturday with kids",
+      "text": "The Geordie Family Fair was on that Saturday from 11 AM to 6 PM, free and about a 15-minute drive from Old Montreal. Check for family events on the dates you visit."
+    }
+  ],
+  "map": {
+    "Old Montreal": [45.5032, -73.5563],
+    "The Plateau": [45.5162, -73.5776],
+    "Mount Royal": [45.5036, -73.5871],
+    "Old Port": [45.5107, -73.5455],
+    "Parc Jean-Drapeau": [45.5141, -73.5311],
+    "The Village": [45.5194, -73.5551],
+    "Mile End": [45.5227, -73.5986]
+  },
+  "videos": []
+}

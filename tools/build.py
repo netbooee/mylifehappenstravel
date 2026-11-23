@@ -243,7 +243,7 @@ ICONS = {
 KIND_RULES = [
     ("see", r"\btour\b|\bmuseum|\bclimb\b"),
     ("stay", r"\bcheck(?:ing)?[ -]?(?:in|out)\b(?! for)"),
-    ("eat", r"\b(?:breakfast|brunch|lunch|dinner|dine|caf[eé]|coffee|cappuccino|espresso|gelato|tapas|pizza|restaurant|trattoria|osteria|bistro|aperitivo|negroni|tastings?|wine|winery|drinks?|cocktails?|pub|pints?|donuts?|sandwich|snack|food|eat)\b"),
+    ("eat", r"\b(?:breakfast|brunch|lunch|dinner|dine|caf[eé]|coffee|cappuccino|espresso|gelato|tapas|pizza|restaurant|trattoria|osteria|bistro|brasserie|steakhouse|deli|poutine|bagels?|aperitivo|negroni|tastings?|wine|winery|drinks?|cocktails?|pub|pints?|donuts?|sandwich|snack|food|eat)\b"),
     ("move", r"\b(?:fly|flight|airport|train|frecciarossa|eurostar|tube|rer|metro|travel to|taxi|uber|drive|car|bus|flixbus|ferry|vaporetto|water taxi|cable car|shuttle|transfer|leave|depart|land)\b"),
 ]
 KIND_ICON = {"stay": "bed", "see": "pin", "eat": "fork", "move": "move"}
