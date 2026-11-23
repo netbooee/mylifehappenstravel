@@ -22,6 +22,14 @@
   to = "/itineraries/california-coast-2025/"
   status = 301
 [[redirects]]
+  from = "/london"
+  to = "/itineraries/london-paris-2025/"
+  status = 301
+[[redirects]]
+  from = "/paris"
+  to = "/itineraries/london-paris-2025/"
+  status = 301
+[[redirects]]
   from = "/ireland"
   to = "/itineraries/ireland/"
   status = 301

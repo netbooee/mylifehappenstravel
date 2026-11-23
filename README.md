@@ -89,7 +89,7 @@ Then open http://localhost:8000.
 
 ## Short links
 
-`mylifehappens.com/italy`, `/barcelona`, `/vegas`, `/california`, `/ireland` go straight to each
+`mylifehappens.com/italy`, `/barcelona`, `/vegas`, `/california`, `/london`, `/paris`, `/ireland` go straight to each
 trip (set in `netlify.toml`). Handy for an Instagram bio.
 
 ## Newsletter sign-up

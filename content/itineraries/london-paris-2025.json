@@ -1,0 +1,836 @@
+{
+  "slug": "london-paris-2025",
+  "title": "8 Days in London & Paris",
+  "subtitle": "Spring break by Eurostar",
+  "summary": "Spring break 2025: four nights in South Kensington with palaces, museums, Hamilton and the Harry Potter studio tour, then the Eurostar to Paris for the Louvre, the Eiffel Tower summit, a Seine dinner cruise and a day at Versailles.",
+  "country": "England & France",
+  "region": "Europe",
+  "start": "2025-04-12",
+  "end": "2025-04-19",
+  "days": 8,
+  "hero": "",
+  "glance": [
+    {
+      "label": "Dates",
+      "value": "Apr 12–19, 2025 (spring break)"
+    },
+    {
+      "label": "Bases",
+      "value": "London (Apr 12–16), then Paris (from Apr 16)"
+    },
+    {
+      "label": "Big tickets",
+      "value": "Hamilton, Harry Potter Studio Tour, Eiffel Tower summit, Versailles"
+    },
+    {
+      "label": "Passes",
+      "value": "Historic Royal Palaces membership in London, Paris Museum Pass in Paris"
+    },
+    {
+      "label": "Getting around",
+      "value": "On foot, the Tube, Uber, the Eurostar in Comfort First Class and the RER C to Versailles"
+    }
+  ],
+  "intro": [
+    "Two capitals, one spring break. We spent four nights at The Bailey's Hotel in South Kensington, close enough to walk to Kensington Palace, Hyde Park and the big museums, and used the days for the classics: the Churchill War Rooms, Westminster, Borough Market, the Tower of London, Tower Bridge and a night at Hamilton. One whole afternoon and evening went to the Warner Bros. Studio Tour, with dinner in the Great Hall.",
+    "Then the Eurostar took us from St Pancras to Paris in a little over two and a half hours. We based ourselves at Hotel Atmospheres in the Latin Quarter, walked to Sainte-Chapelle and Notre-Dame the afternoon we arrived, and used the Paris Museum Pass for the Louvre, the Orangerie, the Musée d'Orsay, Les Invalides and the Panthéon. The last full day was Versailles in the morning and the Latin Quarter in the afternoon.",
+    "We pre-booked everything with a fixed time (meals, timed museum entries, the Eiffel Tower, the cruise) and left the gaps loose, with a short list of options for lunch and shopping so we could decide on the day."
+  ],
+  "route": [
+    "Kensington",
+    "Westminster",
+    "Borough Market & South Bank",
+    "Tower of London",
+    "Notting Hill",
+    "Harry Potter Studio Tour",
+    "Kensington",
+    "Latin Quarter",
+    "Louvre & Tuileries",
+    "Eiffel Tower",
+    "Versailles",
+    "Latin Quarter"
+  ],
+  "days_plan": [
+    {
+      "label": "Day 1",
+      "date": "Sat, Apr 12",
+      "place": "London",
+      "title": "Hyde Park, Kensington Palace & the museums",
+      "text": "We land early and keep the first day entirely on foot around our hotel: the gardens of Kensington and Hyde Park, afternoon tea and a tour at Kensington Palace, then one of the big South Kensington museums before dinner around the corner.",
+      "items": [
+        {
+          "time": "8:00 AM",
+          "text": "Land in London and take a hired car to The Bailey's Hotel"
+        },
+        {
+          "time": "9:30 AM",
+          "text": "Check in at The Bailey's Hotel and leave our luggage, since the room won't be ready yet. Freshen up and head out",
+          "booked": true
+        },
+        {
+          "time": "10:00 AM",
+          "text": "Coffee and pastries at the hotel, or whatever we find on the walk"
+        },
+        {
+          "time": "10:20 AM",
+          "text": "Walk through Kensington Gardens: the Italian Gardens and their fountains, the Albert Memorial across from the Royal Albert Hall, and the spring flower displays in the Kensington Palace Gardens"
+        },
+        {
+          "time": "",
+          "text": "If there's time, carry on into Hyde Park for the swans on the Serpentine, the two free Serpentine Galleries, the Diana, Princess of Wales Memorial Fountain and the Rose Garden in the southeast corner"
+        },
+        {
+          "time": "12:00 PM",
+          "text": "Afternoon tea for lunch at The Orangery at Kensington Palace: scones, sandwiches and pastries in a royal setting",
+          "booked": true
+        },
+        {
+          "time": "1:30 PM",
+          "text": "Tour Kensington Palace (about 1.5 hours): Queen Victoria's childhood rooms, the King's and Queen's State Apartments, and the Princess Diana fashion exhibition if it's on. Our Historic Royal Palaces membership card gets us in, with no timed ticket needed"
+        },
+        {
+          "time": "3:00 PM",
+          "text": "Walk 15 minutes to South Kensington's museums"
+        },
+        {
+          "time": "3:15 PM",
+          "text": "Natural History Museum for the dinosaurs, gemstones and that architecture (free timed tickets, closes at 5:50 PM). The plan B is the Victoria & Albert Museum for fashion and design (free, no ticket needed, closes at 5:45 PM)",
+          "booked": true
+        },
+        {
+          "time": "5:30 PM",
+          "text": "Portuguese custard tarts and espresso at Café de Nata, 25 Cromwell Place"
+        },
+        {
+          "time": "5:45 PM",
+          "text": "Back to the hotel to rest"
+        },
+        {
+          "time": "7:00 PM",
+          "text": "Dinner at Rocca, 73 Old Brompton Road, for classic Italian comfort food, about a 10-minute walk. Honest Burger is the fallback if we're too tired for a sit-down meal",
+          "booked": true
+        },
+        {
+          "time": "9:00 PM",
+          "text": "Walk back to The Bailey's Hotel"
+        }
+      ],
+      "tip": "Even with an early arrival, a day of walking-distance sights is the best cure for jet lag. Nothing today needs a train."
+    },
+    {
+      "label": "Day 2",
+      "date": "Sun, Apr 13",
+      "place": "London",
+      "title": "Churchill War Rooms, Westminster, Borough Market & the South Bank",
+      "text": "Our biggest walking day in London. We start underground in Churchill's wartime bunker, walk through St. James's Park to Buckingham Palace and Westminster, eat our way around Borough Market, then follow the river past Tate Modern and the Globe and cross the Millennium Bridge to St. Paul's.",
+      "items": [
+        {
+          "time": "8:15 AM",
+          "text": "Breakfast at the hotel"
+        },
+        {
+          "time": "9:00 AM",
+          "text": "Take the Tube to the Churchill War Rooms, King Charles Street"
+        },
+        {
+          "time": "9:30 AM",
+          "text": "Tour the Churchill War Rooms: Winston Churchill's wartime bunker, the Cabinet War Rooms and the Churchill Museum (timed entry between 9:30 and 10:00 AM)",
+          "booked": true
+        },
+        {
+          "time": "11:30 AM",
+          "text": "Walk through St. James's Park to Buckingham Palace, about 15 minutes, and spend 20 minutes on photos at the Victoria Memorial and the palace gates"
+        },
+        {
+          "time": "12:00 PM",
+          "text": "Walk 12 minutes to Westminster Abbey for photos outside (we didn't have tickets to go in)"
+        },
+        {
+          "time": "12:30 PM",
+          "text": "The Houses of Parliament and Big Ben from Parliament Square, three minutes away, then out onto Westminster Bridge for the views along the Thames"
+        },
+        {
+          "time": "1:15 PM",
+          "text": "Uber to Borough Market"
+        },
+        {
+          "time": "1:30 PM",
+          "text": "Lunch by grazing around Borough Market: chorizo and rocket rolls from Brindisa, the legendary grilled cheese at Kappacasein, doughnuts from Bread Ahead and the chocolate-covered strawberry stand"
+        },
+        {
+          "time": "4:00 PM",
+          "text": "Walk 10 minutes along the river to Tate Modern"
+        },
+        {
+          "time": "4:15 PM",
+          "text": "Explore Tate Modern, one of the world's best modern art museums, with Picasso, Warhol, Hockney and more. Entry is free (some special exhibitions are ticketed) and it closes at 6:00 PM"
+        },
+        {
+          "time": "5:30 PM",
+          "text": "Photos outside Shakespeare's Globe"
+        },
+        {
+          "time": "5:45 PM",
+          "text": "Walk across the Millennium Bridge, about 10 minutes, stopping for the classic photo of the Thames and St. Paul's dome"
+        },
+        {
+          "time": "6:00 PM",
+          "text": "St. Paul's Cathedral from outside. There are no visitor tickets on Sundays and a 5:30 PM service is on, so this is a photo stop we can skip if we're tired"
+        },
+        {
+          "time": "6:15 PM",
+          "text": "Head back to the hotel to rest"
+        },
+        {
+          "time": "9:00 PM",
+          "text": "Dinner at Flat Iron, 17–18 Henrietta Street in Covent Garden, a steak place with great reviews. Our backup was a 7:15 PM table at the Cadogan Arms on King's Road, a 15-minute walk from the hotel",
+          "booked": true
+        },
+        {
+          "time": "10:30 PM",
+          "text": "Tube back to The Bailey's Hotel"
+        }
+      ],
+      "tip": "We held a second, closer dinner reservation in case we were worn out. The Cadogan Arms books through SevenRooms and charges if you don't cancel 24 hours ahead, so decide the day before."
+    },
+    {
+      "label": "Day 3",
+      "date": "Mon, Apr 14",
+      "place": "London",
+      "title": "The Tower of London, Tower Bridge & Hamilton",
+      "text": "History in the morning and theatre at night. We're at the Tower of London when it opens, see the Crown Jewels before the crowds, join a Yeoman Warder tour, then walk out onto Tower Bridge. After an early theatre-menu dinner near the hotel, it's Hamilton in the West End.",
+      "items": [
+        {
+          "time": "8:00 AM",
+          "text": "Breakfast at the hotel"
+        },
+        {
+          "time": "9:00 AM",
+          "text": "Half an hour by Tube or car to the Tower of London. Our Historic Royal Palaces membership card gets us in, with no timed ticket needed"
+        },
+        {
+          "time": "10:00 AM",
+          "text": "Tour the Tower when it opens, in this order: the Crown Jewels, a Yeoman Warder tour (the first is at 10:30, so we join the next one after the jewels), the White Tower, the Bloody Tower, Tower Green and the execution site, then the ravens and a last walk around the walls. Allow 2–3 hours"
+        },
+        {
+          "time": "1:00 PM",
+          "text": "Lunch at Byward Kitchen & Bar on Byward Street, three minutes from the Tower (booked on their website)",
+          "booked": true
+        },
+        {
+          "time": "2:00 PM",
+          "text": "Walk 10 minutes to Tower Bridge"
+        },
+        {
+          "time": "2:10 PM",
+          "text": "Tower Bridge Exhibition: the glass walkway with the Thames beneath your feet, the Victorian engine rooms that lift the bridge, and panoramic views for photos (2:10 PM tickets, entry until 2:30)",
+          "booked": true
+        },
+        {
+          "time": "3:30 PM",
+          "text": "Back to the hotel to rest before the theatre"
+        },
+        {
+          "time": "5:15 PM",
+          "text": "Dinner at Steak & Company, 152 Gloucester Road, two minutes from the hotel, on the theatre set menu with happy hour. We need to be done by 6:45",
+          "booked": true
+        },
+        {
+          "time": "6:45 PM",
+          "text": "Uber to the Victoria Palace Theatre"
+        },
+        {
+          "time": "7:30 PM",
+          "text": "Hamilton at the Victoria Palace Theatre",
+          "booked": true
+        },
+        {
+          "time": "10:30 PM",
+          "text": "Uber back to The Bailey's Hotel"
+        }
+      ],
+      "tip": "Go to the Crown Jewels first thing. The line grows fast once the tour groups arrive, and the Yeoman Warder tours run regularly, so you can always join the next one."
+    },
+    {
+      "label": "Day 4",
+      "date": "Tue, Apr 15",
+      "place": "London",
+      "title": "Notting Hill & the Harry Potter Studio Tour",
+      "text": "A slow morning among the pastel houses of Notting Hill, a rest at the hotel, then the afternoon and evening at the Warner Bros. Studio Tour in Leavesden, with dinner at the Hogwarts tables in the Great Hall.",
+      "items": [
+        {
+          "time": "8:00 AM",
+          "text": "Breakfast at the hotel"
+        },
+        {
+          "time": "9:00 AM",
+          "text": "Travel to Notting Hill"
+        },
+        {
+          "time": "9:30 AM",
+          "text": "Explore Notting Hill: the antique shops, boutiques and colorful storefronts of Portobello Road Market, the pastel houses of St. Luke's Mews (including the pink house from Love Actually), the Notting Hill Bookshop from the movie, and Hillgate Place, one of the best streets for photos of the painted houses"
+        },
+        {
+          "time": "11:30 AM",
+          "text": "Lunch in Notting Hill. Our shortlist: Gold for European-Mediterranean pastas, seafood and wood-fired pizza; Farmacy for organic, plant-based bowls and burgers; or Eggbreak for a relaxed all-day brunch"
+        },
+        {
+          "time": "12:45 PM",
+          "text": "Walk 5 minutes to Notting Hill Gate and take the Circle line eastbound to Gloucester Road (a 5-minute ride), then walk back to the hotel by 1:00 to rest and freshen up"
+        },
+        {
+          "time": "1:30 PM",
+          "text": "Travel to the Warner Bros. Studio Tour in Leavesden, arriving to check in around 3:00"
+        },
+        {
+          "time": "3:30 PM",
+          "text": "The Making of Harry Potter studio tour begins. Highlights: the Great Hall, the Forbidden Forest, Platform 9¾ and the Hogwarts Express, Diagon Alley with Ollivanders and Weasleys' Wizard Wheezes, Gringotts and its fire-breathing dragon, the Ministry of Magic, the 1:24 scale Hogwarts Castle model, the creature effects workshop and the green-screen broomstick ride",
+          "booked": true
+        },
+        {
+          "time": "6:30 PM",
+          "text": "Dinner at the Hogwarts tables in the Great Hall",
+          "booked": true
+        },
+        {
+          "time": "8:00 PM",
+          "text": "Back to exploring the studio tour"
+        },
+        {
+          "time": "9:00 PM",
+          "text": "Leave for London, back at The Bailey's Hotel around 10:30"
+        }
+      ],
+      "tip": "Book the studio tour with the Hogwarts dinner if it's offered for your date. Eating in the Great Hall is the highlight, and it splits a long visit nicely in two."
+    },
+    {
+      "label": "Day 5",
+      "date": "Wed, Apr 16",
+      "place": "London → Paris",
+      "title": "Breakfast in the Sky Garden, the Eurostar & a first evening in Paris",
+      "text": "A last breakfast with a view over London, then the Eurostar to Paris. We drop our bags in the Latin Quarter and walk straight out to Sainte-Chapelle, Notre-Dame and Île Saint-Louis, ending with a cheese-heavy dinner on Rue Mouffetard.",
+      "items": [
+        {
+          "time": "7:30 AM",
+          "text": "Uber to the Sky Garden, arriving early to go through security and take in the gardens and the views over the City"
+        },
+        {
+          "time": "8:30 AM",
+          "text": "Breakfast at Darwin Brasserie in the Sky Garden",
+          "booked": true
+        },
+        {
+          "time": "10:15 AM",
+          "text": "Uber back to the hotel"
+        },
+        {
+          "time": "10:45 AM",
+          "text": "Check out of The Bailey's Hotel"
+        },
+        {
+          "time": "11:00 AM",
+          "text": "Hired car from Cheam Limousines to St Pancras International",
+          "booked": true
+        },
+        {
+          "time": "12:31 PM",
+          "text": "Eurostar from London St Pancras to Paris Gare du Nord in Comfort First Class (printed tickets, Car 1, Seats 63 and 64)",
+          "booked": true
+        },
+        {
+          "time": "4:00 PM",
+          "text": "Arrive at Gare du Nord and take a car to the hotel"
+        },
+        {
+          "time": "4:30 PM",
+          "text": "Check in at Hotel Atmospheres in the Latin Quarter",
+          "booked": true
+        },
+        {
+          "time": "4:45 PM",
+          "text": "Walk 15 minutes to Sainte-Chapelle"
+        },
+        {
+          "time": "5:00 PM",
+          "text": "Sainte-Chapelle and its breathtaking stained glass (30–45 minutes; last entry 5:30 PM)"
+        },
+        {
+          "time": "5:45 PM",
+          "text": "Walk 5 minutes to Notre-Dame Cathedral, in time for the 6:00 PM Mass. We reserved a free entry slot online a day or two ahead; the archaeological crypt below is an optional extra"
+        },
+        {
+          "time": "6:30 PM",
+          "text": "Cross the Pont Saint-Louis to Île Saint-Louis, stroll Rue Saint-Louis en l'Île and get Berthillon ice cream (most of its counters close around 8:00 PM)"
+        },
+        {
+          "time": "7:30 PM",
+          "text": "Walk along the Seine toward the Pont Neuf"
+        },
+        {
+          "time": "7:45 PM",
+          "text": "Into the Latin Quarter: a photo outside Shakespeare and Company (closes at 8:00 PM). The Abbey Bookshop nearby is open 10–7 (Sundays 2–7), so we saved it for another day. Freshen up at the hotel if there's time"
+        },
+        {
+          "time": "9:00 PM",
+          "text": "Dinner at Le Vieux Bistrot, 54 Rue Mouffetard, where it's all about the cheese. A 10-minute walk from the hotel (booked on their website)",
+          "booked": true
+        },
+        {
+          "time": "10:30 PM",
+          "text": "Evening walk back to the hotel"
+        }
+      ],
+      "tip": "Eurostar check-in closes 30 minutes before departure, and there's passport control for both countries at St Pancras, so give yourself more time than that."
+    },
+    {
+      "label": "Day 6",
+      "date": "Thu, Apr 17",
+      "place": "Paris",
+      "title": "The Louvre, Rue Saint-Honoré & Monet's Water Lilies",
+      "text": "We're at the Louvre before it opens for the big hitters, then spend the afternoon on the elegant streets around it: lunch, shopping, the Water Lilies at the Orangerie and a sit in the Tuileries before a classic French dinner in Saint-Germain.",
+      "items": [
+        {
+          "time": "9:00 AM",
+          "text": "Arrive at the Louvre to be among the first inside"
+        },
+        {
+          "time": "9:30 AM",
+          "text": "The Louvre Museum with the Museum Pass and a reserved 9:30 entry. Our priorities: the Mona Lisa, the Venus de Milo, the Winged Victory of Samothrace and the Napoleon III Apartments",
+          "booked": true
+        },
+        {
+          "time": "12:30 PM",
+          "text": "Stroll through the Palais Royal Gardens"
+        },
+        {
+          "time": "1:00 PM",
+          "text": "Lunch near Rue Saint-Honoré. Our shortlist: Café Kitsuné at the Palais Royal or Le Fumoir across from the Louvre for something casual, Le Meurice or Bistrot Richelieu for classic French, or crêpes from a street stand"
+        },
+        {
+          "time": "2:30 PM",
+          "text": "Shopping and exploring. Options: the luxury houses of Rue Saint-Honoré, Fragonard and Diptyque for perfume, The Frankie Shop and Maison Kitsuné, the jewelers of Place Vendôme, the covered Passage Vivienne (10 minutes from the Louvre), or Saint-Germain-des-Prés for Maje, Sandro and Comptoir des Cotonniers"
+        },
+        {
+          "time": "4:30 PM",
+          "text": "Musée de l'Orangerie for Monet's Water Lilies and its impressionist collection (Museum Pass, no timed ticket needed)"
+        },
+        {
+          "time": "5:30 PM",
+          "text": "Relax in the Jardin des Tuileries"
+        },
+        {
+          "time": "7:30 PM",
+          "text": "Dinner at Joséphine Chez Dumonet, 117 Rue du Cherche-Midi. The no-reservations alternative is Le Relais de l'Entrecôte on Rue Saint-Benoît for steak frites, but expect a queue",
+          "booked": true
+        }
+      ],
+      "tip": "Even with a timed ticket and a Museum Pass, arrive at the Louvre 30 minutes early. Head straight for the Mona Lisa, then work outward while the rest of the museum is still quiet."
+    },
+    {
+      "label": "Day 7",
+      "date": "Fri, Apr 18",
+      "place": "Paris",
+      "title": "Musée d'Orsay, Les Invalides, the Eiffel Tower & a Seine dinner cruise",
+      "text": "Impressionists first thing, Napoleon's tomb before lunch on Rue Cler, the Eiffel Tower summit in the afternoon, and a dinner cruise on the Seine to finish, with the tower sparkling on the way home.",
+      "items": [
+        {
+          "time": "8:30 AM",
+          "text": "Arrive at the Musée d'Orsay 30 minutes before it opens (Museum Pass, no timed ticket needed)"
+        },
+        {
+          "time": "9:00 AM",
+          "text": "Explore the museum from the top floor down: Monet, Van Gogh, Degas and Renoir, and Van Gogh's Starry Night Over the Rhône (1888). There's a quick ground-floor café if we need a break"
+        },
+        {
+          "time": "11:00 AM",
+          "text": "Walk across the Pont Alexandre III, one of the most beautiful bridges in Paris"
+        },
+        {
+          "time": "11:30 AM",
+          "text": "Les Invalides and Napoleon's Tomb (Museum Pass)"
+        },
+        {
+          "time": "1:00 PM",
+          "text": "Lunch at Le Petit Cler, 29 Rue Cler, for charming, casual French classics. Afterward, pop into the cheese, chocolate and wine shops along Rue Cler",
+          "booked": true
+        },
+        {
+          "time": "2:30 PM",
+          "text": "Walk to the Eiffel Tower and go through security"
+        },
+        {
+          "time": "3:30 PM",
+          "text": "Eiffel Tower summit visit (3:30 PM tickets), about two hours at the top and on the way down",
+          "booked": true
+        },
+        {
+          "time": "5:30 PM",
+          "text": "A snack on the way to the cruise if we're hungry: pastries and apple tart at Boulangerie Poilâne, or hot chocolate at Carette in Trocadéro"
+        },
+        {
+          "time": "7:15 PM",
+          "text": "Arrive at Bateaux Mouches, Port de la Conférence"
+        },
+        {
+          "time": "7:30 PM",
+          "text": "Dinner cruise on the Seine with live music. We board at 7:30, the boat leaves at 8:30 and we're back around 10:45 (booked on Tripadvisor)",
+          "booked": true
+        },
+        {
+          "time": "11:00 PM",
+          "text": "Walk to see the Eiffel Tower sparkle, then back to the hotel"
+        }
+      ],
+      "tip": "The Eiffel Tower sparkles for five minutes at the start of every hour after dark, so you don't need to plan much to catch it."
+    },
+    {
+      "label": "Day 8",
+      "date": "Sat, Apr 19",
+      "place": "Versailles & Paris",
+      "title": "Versailles & the Latin Quarter",
+      "text": "An early train to Versailles for the palace, the Hall of Mirrors, the gardens and the Trianon, then back to our own neighborhood for the Panthéon, the Luxembourg Gardens and Rue Mouffetard, and a last dinner in Paris.",
+      "items": [
+        {
+          "time": "7:30 AM",
+          "text": "Breakfast at Hotel Atmospheres"
+        },
+        {
+          "time": "8:00 AM",
+          "text": "RER C train from Saint-Michel Notre-Dame to Versailles Château Rive Gauche, about an hour"
+        },
+        {
+          "time": "9:00 AM",
+          "text": "Tour the Palace of Versailles and the Hall of Mirrors with the audio guide (9:00 AM tickets), then the gardens and the musical garden show (it has its own entrance if you're re-entering)",
+          "booked": true
+        },
+        {
+          "time": "12:00 PM",
+          "text": "The Estate of Trianon (tickets from noon)",
+          "booked": true
+        },
+        {
+          "time": "1:15 PM",
+          "text": "RER C train back to Paris, about an hour"
+        },
+        {
+          "time": "2:30 PM",
+          "text": "Lunch near the Panthéon. Our shortlist: Le Coupe-Chou, a cozy historic French restaurant; La Maison de Verlaine, a charming bistro; or L'Avant Comptoir for lively, tapas-style plates"
+        },
+        {
+          "time": "3:30 PM",
+          "text": "The Panthéon (Museum Pass, no timed ticket; closes at 6:30 PM): the tombs of Voltaire, Rousseau and Marie Curie, and Foucault's Pendulum"
+        },
+        {
+          "time": "4:30 PM",
+          "text": "Walk 5 minutes to the Jardin du Luxembourg for a peaceful stroll past its fountains, the Medici Fountain and the gardens"
+        },
+        {
+          "time": "5:30 PM",
+          "text": "Rue Mouffetard market street: food shops, bakeries and specialty stores, plus a snack of cream puffs from Odette or a sweet or savory tart from La Maison des Tartes"
+        },
+        {
+          "time": "6:30 PM",
+          "text": "Free time for bookstores (the Abbey Bookshop is open until 7) or another neighborhood"
+        },
+        {
+          "time": "8:30 PM",
+          "text": "Dinner at La Maison de Verlaine, 39 Rue Descartes (booked on their website)",
+          "booked": true
+        },
+        {
+          "time": "10:30 PM",
+          "text": "Evening walk back to the hotel"
+        }
+      ],
+      "tip": "Get to the Versailles station 15–20 minutes before you need to leave, and buy RER tickets at the machines (some take contactless cards)."
+    }
+  ],
+  "stays": [
+    {
+      "name": "The Bailey's Hotel London",
+      "place": "London",
+      "nights": "4 nights",
+      "note": "In South Kensington, across from Gloucester Road Tube station. Kensington Palace, Hyde Park and the big museums are all walkable. Apr 12–16."
+    },
+    {
+      "name": "Hotel Atmospheres",
+      "place": "Paris",
+      "nights": "",
+      "note": "In the Latin Quarter, 15 minutes on foot from Sainte-Chapelle and Notre-Dame and 10 minutes from Rue Mouffetard. From Apr 16."
+    }
+  ],
+  "eats": [
+    {
+      "name": "The Orangery at Kensington Palace",
+      "place": "London",
+      "note": "Traditional afternoon tea with scones, sandwiches and pastries, right before our Kensington Palace tour.",
+      "type": "Afternoon tea"
+    },
+    {
+      "name": "Café de Nata",
+      "place": "London",
+      "note": "Portuguese custard tarts and espresso at 25 Cromwell Place, between the museums and the hotel.",
+      "type": "Coffee & pastry"
+    },
+    {
+      "name": "Rocca",
+      "place": "London",
+      "note": "Classic Italian comfort food at 73 Old Brompton Road, a 10-minute walk from The Bailey's.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Honest Burger",
+      "place": "London",
+      "note": "No reservations. Our backup for a fast, easy dinner when we're too tired for anything else.",
+      "type": "Burgers"
+    },
+    {
+      "name": "Borough Market",
+      "place": "London",
+      "note": "Brindisa's chorizo and rocket rolls, Kappacasein's grilled cheese, Bread Ahead's doughnuts and the chocolate strawberry stand.",
+      "type": "Market"
+    },
+    {
+      "name": "Flat Iron Covent Garden",
+      "place": "London",
+      "note": "Great-value steak at 17–18 Henrietta Street. We booked a late table.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Cadogan Arms",
+      "place": "London",
+      "note": "A gastropub on King's Road, 15 minutes from the hotel. Books through SevenRooms; cancel 24 hours ahead or you're charged.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Byward Kitchen & Bar",
+      "place": "London",
+      "note": "Three minutes from the Tower of London. Booked on their website.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Steak & Company",
+      "place": "London",
+      "note": "152 Gloucester Road, two minutes from the hotel. The theatre set menu and happy hour got us out by 6:45 for Hamilton.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Gold Notting Hill",
+      "place": "London",
+      "note": "Trendy European-Mediterranean spot at 95–97 Portobello Road for pasta, seafood and wood-fired pizza.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Farmacy",
+      "place": "London",
+      "note": "Organic, plant-based food in a chic room at 74 Westbourne Grove: smoothie bowls, salads, burgers and dairy-free desserts.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Eggbreak",
+      "place": "London",
+      "note": "Casual all-day brunch at 30 Uxbridge Street, known for eggs, burgers and sandwiches.",
+      "type": "Brunch"
+    },
+    {
+      "name": "Hogwarts Table Dinner",
+      "place": "London",
+      "note": "Dinner in the Great Hall in the middle of the Warner Bros. Studio Tour.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Darwin Brasserie",
+      "place": "London",
+      "note": "Breakfast at the top of the Sky Garden. As restaurant guests we went up early and saw the gardens before we ate.",
+      "type": "Breakfast"
+    },
+    {
+      "name": "Berthillon",
+      "place": "Paris",
+      "note": "The famous ice cream of Île Saint-Louis. Most counters close around 8 PM.",
+      "type": "Ice cream"
+    },
+    {
+      "name": "Le Vieux Bistrot",
+      "place": "Paris",
+      "note": "All about the cheese, at 54 Rue Mouffetard. Booked on their website.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Café Kitsuné",
+      "place": "Paris",
+      "note": "Coffee and a light lunch at the Palais Royal.",
+      "type": "Café"
+    },
+    {
+      "name": "Le Fumoir",
+      "place": "Paris",
+      "note": "Casual lunch across from the Louvre.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Joséphine Chez Dumonet",
+      "place": "Paris",
+      "note": "Classic French bistro at 117 Rue du Cherche-Midi.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Le Relais de l'Entrecôte",
+      "place": "Paris",
+      "note": "Steak frites at 20 Rue Saint-Benoît. No reservations, and there's often a queue.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Le Petit Cler",
+      "place": "Paris",
+      "note": "Charming and casual, with great French classics at 29 Rue Cler.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Boulangerie Poilâne",
+      "place": "Paris",
+      "note": "Famous for its pastries and apple tarts.",
+      "type": "Bakery"
+    },
+    {
+      "name": "Carette",
+      "place": "Paris",
+      "note": "Great hot chocolate and pastries at Trocadéro.",
+      "type": "Café"
+    },
+    {
+      "name": "Bateaux Mouches dinner cruise",
+      "place": "Paris",
+      "note": "Dinner with live music on the Seine from Port de la Conférence. Booked on Tripadvisor.",
+      "type": "Dinner cruise"
+    },
+    {
+      "name": "Café de la Nouvelle Mairie",
+      "place": "Paris",
+      "note": "An optional coffee break near the Panthéon and the Luxembourg Gardens.",
+      "type": "Café"
+    },
+    {
+      "name": "Le Coupe-Chou",
+      "place": "Paris",
+      "note": "Cozy, historic French restaurant near the Panthéon.",
+      "type": "Lunch"
+    },
+    {
+      "name": "L'Avant Comptoir",
+      "place": "Paris",
+      "note": "Lively, tapas-style small plates.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Odette",
+      "place": "Paris",
+      "note": "Cream puffs, for a snack on Rue Mouffetard.",
+      "type": "Pastry"
+    },
+    {
+      "name": "La Maison de Verlaine",
+      "place": "Paris",
+      "note": "Charming bistro at 39 Rue Descartes for our last dinner in Paris. Booked on their website.",
+      "type": "Dinner"
+    }
+  ],
+  "book_ahead": [
+    "Afternoon tea at The Orangery, Kensington Palace",
+    "Natural History Museum (free timed tickets)",
+    "Churchill War Rooms (timed entry)",
+    "Tower Bridge Exhibition (timed entry)",
+    "Hamilton at the Victoria Palace Theatre",
+    "Warner Bros. Studio Tour with the Hogwarts dinner",
+    "Darwin Brasserie at the Sky Garden",
+    "Eurostar London to Paris (we went Comfort First Class)",
+    "Hired cars to the hotel and to St Pancras",
+    "Notre-Dame free entry slot (a day or two ahead)",
+    "Louvre timed entry (even with the Museum Pass)",
+    "Eiffel Tower summit tickets",
+    "Bateaux Mouches Seine dinner cruise",
+    "Palace of Versailles with audio guide, plus the Estate of Trianon",
+    "Historic Royal Palaces membership (covers Kensington Palace and the Tower of London)",
+    "Paris Museum Pass",
+    "Dinner reservations, especially Flat Iron, Joséphine Chez Dumonet and La Maison de Verlaine"
+  ],
+  "tips": [
+    {
+      "title": "Consider a Historic Royal Palaces membership",
+      "text": "Kensington Palace and the Tower of London are both Historic Royal Palaces. Our membership card got us into both with no timed ticket, so we could walk in when it suited the day."
+    },
+    {
+      "title": "Let the Paris Museum Pass do the work",
+      "text": "It covered the Louvre, the Orangerie, the Musée d'Orsay, Les Invalides and the Panthéon. Some places, like the Louvre, still need a free timed reservation, so check each one before you go."
+    },
+    {
+      "title": "Use contactless on the Tube",
+      "text": "A contactless card or phone works on every London Underground line, with no Oyster card needed. Avoid the rush hours of about 8–9:30 AM and 5–6:30 PM on weekdays, and remember the last trains run around midnight (earlier on Sundays)."
+    },
+    {
+      "title": "Print the Eurostar tickets",
+      "text": "We kept printed tickets handy for boarding. Check-in closes 30 minutes before departure, and both UK and French passport checks happen at St Pancras before you board."
+    },
+    {
+      "title": "Download Citymapper",
+      "text": "It plans journeys in both cities. TfL Go is the official London app, and RATP and Bonjour RATP cover Paris. Uber works in both, which is handy late at night or with luggage."
+    },
+    {
+      "title": "Hold a backup dinner",
+      "text": "After a long day of walking, a reservation across town can feel like a lot. Where we could, we kept a closer option in our pocket. Just note each one's cancellation window."
+    },
+    {
+      "title": "Late nights in Paris",
+      "text": "The Paris Metro runs until about 1 AM, and until about 2 AM on Fridays and Saturdays. Dinner reservations at 8:30 or 9 PM are completely normal."
+    },
+    {
+      "title": "Budget-friendly shopping",
+      "text": "Beyond Rue Saint-Honoré, try the Marais for boutiques and vintage, Galeries Lafayette and Printemps for every price point, and Rue Montorgueil for local shops and pastries. In London, South Kensington, Covent Garden and Notting Hill were our favorites."
+    }
+  ],
+  "map": {
+    "Kensington": [
+      51.4946,
+      -0.1828
+    ],
+    "Westminster": [
+      51.5007,
+      -0.1246
+    ],
+    "Borough Market & South Bank": [
+      51.5055,
+      -0.091
+    ],
+    "Tower of London": [
+      51.5081,
+      -0.0759
+    ],
+    "Notting Hill": [
+      51.5152,
+      -0.2052
+    ],
+    "Harry Potter Studio Tour": [
+      51.6904,
+      -0.4181
+    ],
+    "Latin Quarter": [
+      48.8462,
+      2.3449
+    ],
+    "Louvre & Tuileries": [
+      48.8606,
+      2.3376
+    ],
+    "Eiffel Tower": [
+      48.8584,
+      2.2945
+    ],
+    "Versailles": [
+      48.8049,
+      2.1204
+    ]
+  },
+  "videos": [
+    "bkmfZITxA_I"
+  ]
+}
