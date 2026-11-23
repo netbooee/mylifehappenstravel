@@ -19,12 +19,15 @@ import datetime as dt
 import html
 import json
 import pathlib
+import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
 CONTENT = ROOT / "content" / "itineraries"
 DOMAIN = "https://mylifehappens.com"
 INSTAGRAM = "https://www.instagram.com/mylifehappenstravel"
+YOUTUBE = "https://www.youtube.com/@MyLifeHappensTravel"
+VIDEOS: list[dict] = []  # filled from content/videos.json in main()
 
 # ── Photos ────────────────────────────────────────────────────────────────────
 # key: (width, height of the 800px version, largest width available, alt text, credit or "")
@@ -104,7 +107,7 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
          '&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">')
 
 
-def head(title: str, desc: str, path: str, image: str = "valley-of-fire-1", noindex: bool = False) -> str:
+def head(title: str, desc: str, path: str, image: str = "valley-of-fire-1", noindex: bool = False, extra: str = "") -> str:
     full = title if "My Life Happens" in title else f"{title} · My Life Happens Travel"
     robots = '<meta name="robots" content="noindex">' if noindex else f'<link rel="canonical" href="{DOMAIN}{path}">'
     return f"""<!doctype html>
@@ -126,7 +129,7 @@ def head(title: str, desc: str, path: str, image: str = "valley-of-fire-1", noin
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 {FONTS}
 <link rel="stylesheet" href="/assets/css/site.css">
-<script src="/assets/js/site.js" defer></script>
+{extra}<script src="/assets/js/site.js" defer></script>
 </head>
 """
 
@@ -148,6 +151,7 @@ def header(current: str = "", over_photo: bool = False) -> str:
     <nav class="site-nav" id="site-nav" aria-label="Main">
       {links}
       <a class="nav-ig" href="{INSTAGRAM}" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="dot"/></svg><span class="sr-sm">Instagram</span></a>
+      <a class="nav-ig" href="{YOUTUBE}" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z" class="dot"/></svg><span class="sr-sm">YouTube</span></a>
     </nav>
   </div>
 </header>
@@ -188,6 +192,7 @@ def footer(trips: list[dict]) -> str:
         <li><a href="/about/">About us</a></li>
         <li><a href="/#gear">Gear we use</a></li>
         <li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li>
+        <li><a href="{YOUTUBE}" rel="noopener">YouTube</a></li>
       </ul>
     </div>
     <p class="footer-base">© {dt.date.today().year} My Life Happens Travel · Some links are affiliate links: we may earn a small commission at no extra cost to you.</p>
@@ -222,8 +227,44 @@ ICONS = {
     "ticket": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8a2 2 0 0 0 0 4v0a2 2 0 0 1 0 4v2h18v-2a2 2 0 0 1 0-4 2 2 0 0 0 0-4V6H3z"/><path d="M14 6v12" stroke-dasharray="2 2"/></svg>',
     "check": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>',
     "pin": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>',
+    "move": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>',
+    "play": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>',
+    "video": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z"/></svg>',
+    "map": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg>',
     "bulb": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></svg>',
 }
+
+
+# What kind of stop a timeline item is, for its icon (pattern from trip planners like
+# Mindtrip, Tripadvisor and KAYAK: a small category icon on every stop).
+KIND_RULES = [
+    ("see", r"\btour\b|\bmuseum|\bclimb\b"),
+    ("stay", r"\bcheck(?:ing)?[ -]?(?:in|out)\b(?! for)"),
+    ("eat", r"\b(?:breakfast|brunch|lunch|dinner|dine|caf[eé]|coffee|cappuccino|espresso|gelato|tapas|pizza|restaurant|trattoria|osteria|bistro|aperitivo|negroni|tastings?|wine|winery|drinks?|cocktails?|pub|pints?|donuts?|sandwich|snack|food|eat)\b"),
+    ("move", r"\b(?:fly|flight|airport|train|frecciarossa|taxi|uber|drive|car|bus|flixbus|ferry|vaporetto|water taxi|cable car|shuttle|transfer|leave|depart|land)\b"),
+]
+KIND_ICON = {"stay": "bed", "see": "pin", "eat": "fork", "move": "move"}
+KIND_LABEL = {"stay": "Hotel", "see": "Sight", "eat": "Food & drink", "move": "Getting there"}
+
+
+def item_kind(text: str) -> str:
+    low = text.lower()
+    for kind, rx in KIND_RULES:
+        if re.search(rx, low):
+            return kind
+    return "see"
+
+
+def video_card(v: dict, heading: str = "h3") -> str:
+    vid = e(v["id"])
+    return f"""<article class="video">
+  <a class="yt" href="https://www.youtube.com/watch?v={vid}" data-yt="{vid}" rel="noopener" aria-label="Play video: {e(v["title"])}">
+    <img src="https://i.ytimg.com/vi/{vid}/hqdefault.jpg" width="480" height="360" alt="" loading="lazy" decoding="async">
+    <span class="play">{ICONS["play"]}</span>
+  </a>
+  <p class="card-kicker">{e(v.get("place", ""))}</p>
+  <{heading} class="video-title">{e(v["title"])}</{heading}>
+</article>"""
 
 
 # ── Pages ─────────────────────────────────────────────────────────────────────
@@ -349,7 +390,14 @@ def home(trips: list[dict]) -> str:
     </div>
   </section>
 
-  <section class="section insta">
+  <section class="section" id="videos">
+    <div class="wrap">
+      <div class="section-head"><div><span class="eyebrow">YouTube · @MyLifeHappensTravel</span><h2>Watch the trips <em>come to life.</em></h2></div><a class="more" href="{YOUTUBE}" rel="noopener">Subscribe on YouTube →</a></div>
+      <div class="videos">{"".join(video_card(v) for v in VIDEOS[:3])}</div>
+    </div>
+  </section>
+
+  <section class="section tint insta">
     <div class="wrap">
       <div class="section-head"><div><span class="eyebrow">Instagram · @mylifehappenstravel</span><h2>Follow along <em>from the road.</em></h2></div><a class="more" href="{INSTAGRAM}" rel="noopener">Follow us on Instagram →</a></div>
       <div class="insta-grid">
@@ -399,7 +447,8 @@ def itinerary(t: dict, trips: list[dict]) -> str:
         did = f"day-{i}"
         toc.append((did, d["label"], d.get("place", "")))
         items = "".join(
-            f'<li><span class="time">{e(it.get("time", ""))}</span><span class="what">{e(it["text"])}'
+            f'<li class="k-{item_kind(it["text"])}"><span class="time">{e(it.get("time", ""))}</span>'
+            f'<span class="k" title="{KIND_LABEL[item_kind(it["text"])]}">{ICONS[KIND_ICON[item_kind(it["text"])]]}</span><span class="what">{e(it["text"])}'
             f'{" <span class=\"booked\">" + ICONS["check"] + "Booked ahead</span>" if it.get("booked") else ""}</span></li>'
             for it in d.get("items", []))
         days_html.append(f"""<section class="day" id="{did}">
@@ -417,6 +466,9 @@ def itinerary(t: dict, trips: list[dict]) -> str:
     if t.get("stays"):
         cards = "".join(f'<li><h4>{e(s["name"])}</h4><p class="sub">{ICONS["pin"]}{e(s.get("place", ""))}{" · " + e(s["nights"]) if s.get("nights") else ""}</p>{f"<p>{e(s["note"])}</p>" if s.get("note") else ""}</li>' for s in t["stays"])
         extra.append(("stay", "Where we stayed", f'<ul class="stays">{cards}</ul>', "bed"))
+    trip_videos = [v for v in VIDEOS if v["id"] in t.get("videos", [])]
+    if trip_videos:
+        extra.append(("video", "Watch the video", '<div class="videos one">' + "".join(video_card(v, "h4") for v in trip_videos) + "</div>", "video"))
     if t.get("eats"):
         groups: dict[str, list[dict]] = {}
         for x in t["eats"]:
@@ -440,15 +492,27 @@ def itinerary(t: dict, trips: list[dict]) -> str:
     route = ""
     if t.get("route"):
         route = '<ol class="route" aria-label="Route">' + "".join(f"<li>{e(r)}</li>" for r in t["route"]) + "</ol>"
+    route_map, map_head = "", ""
+    coords = t.get("map", {})
+    if t.get("route") and all(r in coords for r in t["route"]):
+        stops = []
+        for r in t["route"]:
+            if r not in [x[0] for x in stops]:
+                stops.append([r, *coords[r]])
+        data = json.dumps({"stops": stops, "path": [coords[r] for r in t["route"]]}, ensure_ascii=False)
+        route_map = (f'<div class="route-map" data-map="{e(data)}" role="img" aria-label="Map of the route: {e(", ".join(x[0] for x in stops))}"></div>'
+                     '<ol class="map-key">' + "".join(f"<li><span>{i}</span>{e(x[0])}</li>" for i, x in enumerate(stops, 1)) + "</ol>")
+        map_head = ('<link rel="stylesheet" href="/assets/vendor/leaflet/leaflet.css">\n'
+                    '<script src="/assets/vendor/leaflet/leaflet.js" defer></script>\n')
     gallery = ""
     if ph.get("gallery"):
-        gallery = '<div class="gallery">' + "".join(
+        gallery = f'<div class="gallery" data-count="{len(ph["gallery"])}">' + "".join(
             f'<figure>{picture(k, "(min-width: 960px) 280px, 45vw")}</figure>' for k in ph["gallery"]) + "</div>"
     credit = PHOTOS[ph["hero"]][4] if ph else ""
     others = [x for x in trips if x["slug"] != slug][:3]
     hero_media = picture(ph["hero"], "100vw", "hero-img", lazy=False, priority=True) if ph else ""
     return head(f'{t["title"]}: {t["subtitle"]}' if t.get("subtitle") else t["title"], t["summary"], f"/itineraries/{slug}/",
-                image=ph.get("hero", "valley-of-fire-1")) + f"""<body class="trip">
+                image=ph.get("hero", "valley-of-fire-1"), extra=map_head) + f"""<body class="trip">
 {header("/itineraries/", over_photo=bool(ph))}
 <main id="main">
   <section class="hero trip-hero{'' if ph else ' no-photo'}">
@@ -473,7 +537,7 @@ def itinerary(t: dict, trips: list[dict]) -> str:
       <p class="byline">By Tony &amp; Sharon{f" · Traveled {month_year(t)}" if month_year(t) else ""}</p>
       <div class="intro">{"".join(f"<p>{e(p)}</p>" for p in t.get("intro", []))}</div>
       {f'<dl class="glance"><p class="glance-title">At a glance</p>{glance}</dl>' if glance else ""}
-      {f'<div class="route-wrap"><p class="glance-title">The route</p>{route}</div>' if route else ""}
+      {f'<div class="route-wrap"><p class="glance-title">The route</p>{route}{route_map}</div>' if route else ""}
       {gallery}
       <h2 class="days-title">{ICONS["clock"]}The plan, day by day</h2>
       {"".join(days_html)}
@@ -542,6 +606,7 @@ def main() -> None:
     trips = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(CONTENT.glob("*.json"))]
     # newest first; trips without dates go last
     trips.sort(key=lambda t: t.get("start") or "0000", reverse=True)
+    VIDEOS[:] = sorted(json.loads((ROOT / "content" / "videos.json").read_text(encoding="utf-8")), key=lambda v: v["date"], reverse=True)
 
     def write(rel: str, text: str) -> None:
         p = SITE / rel

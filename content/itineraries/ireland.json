@@ -10,18 +10,43 @@
   "days": 7,
   "hero": "ireland",
   "glance": [
-    { "label": "Duration", "value": "7 days" },
-    { "label": "Base", "value": "Dublin city centre, near Grafton Street (6 nights)" },
-    { "label": "Day trips", "value": "3: Northern Ireland, the coast north of Dublin, Cliffs of Moher & Galway" },
-    { "label": "Pass", "value": "Go City Dublin Explorer Pass" },
-    { "label": "Getting around", "value": "Walking, DART trains, Uber and full-day coach tours" },
-    { "label": "Money", "value": "Euro in the Republic, British pounds in Northern Ireland" }
+    {
+      "label": "Duration",
+      "value": "7 days"
+    },
+    {
+      "label": "Base",
+      "value": "Dublin city centre, near Grafton Street (6 nights)"
+    },
+    {
+      "label": "Day trips",
+      "value": "3: Northern Ireland, the coast north of Dublin, Cliffs of Moher & Galway"
+    },
+    {
+      "label": "Pass",
+      "value": "Go City Dublin Explorer Pass"
+    },
+    {
+      "label": "Getting around",
+      "value": "Walking, DART trains, Uber and full-day coach tours"
+    },
+    {
+      "label": "Money",
+      "value": "Euro in the Republic, British pounds in Northern Ireland"
+    }
   ],
   "intro": [
     "We built this week in Ireland around the Go City Dublin Explorer Pass, a multi-attraction pass that pays for itself within a day or two. It pairs three full days exploring Dublin with carefully timed day trips to Northern Ireland, the coastal villages north of the city, and the wild Atlantic coast at the Cliffs of Moher.",
     "The pacing is intentional: active mornings, easier afternoons, and evenings close to the city centre, where the best restaurants and pubs are a short walk from Grafton Street. We never felt rushed, and we didn't waste time backtracking."
   ],
-  "route": ["Dublin", "Giant's Causeway & Belfast", "Howth, Malahide & Skerries", "Dublin", "Cliffs of Moher & Galway", "Dublin"],
+  "route": [
+    "Dublin",
+    "Giant's Causeway & Belfast",
+    "Howth, Malahide & Skerries",
+    "Dublin",
+    "Cliffs of Moher & Galway",
+    "Dublin"
+  ],
   "days_plan": [
     {
       "label": "Day 1",
@@ -30,13 +55,36 @@
       "title": "Landing & a first taste of Dublin",
       "text": "After the overnight transatlantic flight we resisted the urge to nap, dropped our bags at the hotel and kept moving: a food tour, two emigration museums along the Liffey and a stroll through Trinity College.",
       "items": [
-        { "time": "8:30 AM", "text": "Arrive at Dublin Airport (DUB), clear immigration and take an Uber to the city centre (30–45 minutes)" },
-        { "time": "10:00 AM", "text": "Check in at our hotel in the Grafton Street area and drop the bags; coffee at Bewley's Grafton Street Café if needed" },
-        { "time": "11:00 AM", "text": "Food on Foot Tour, meeting at St. Catherine's Church on Thomas Street: about 3 hours of Dublin's culinary history and neighbourhood gems, ending near Trinity College", "booked": true },
-        { "time": "2:00 PM", "text": "EPIC The Irish Emigration Museum (Go City; admissions every 15 minutes, last entry 5 PM; allow 60–90 minutes)" },
-        { "time": "3:30 PM", "text": "Jeanie Johnston Tallship & Famine Museum at Custom House Quay (Go City; guided tours every 30 minutes, open until 4:30 PM)" },
-        { "time": "4:30 PM", "text": "Walk the cobblestoned grounds of Trinity College (free), and the Little Museum of Dublin (Go City, open until 5 PM) on the way back toward St. Stephen's Green" },
-        { "time": "6:45 PM", "text": "Dinner at Nan Chinese Restaurant, a short walk from the hotel", "booked": true }
+        {
+          "time": "8:30 AM",
+          "text": "Arrive at Dublin Airport (DUB), clear immigration and take an Uber to the city centre (30–45 minutes)"
+        },
+        {
+          "time": "10:00 AM",
+          "text": "Check in at our hotel in the Grafton Street area and drop the bags; coffee at Bewley's Grafton Street Café if needed"
+        },
+        {
+          "time": "11:00 AM",
+          "text": "Food on Foot Tour, meeting at St. Catherine's Church on Thomas Street: about 3 hours of Dublin's culinary history and neighbourhood gems, ending near Trinity College",
+          "booked": true
+        },
+        {
+          "time": "2:00 PM",
+          "text": "EPIC The Irish Emigration Museum (Go City; admissions every 15 minutes, last entry 5 PM; allow 60–90 minutes)"
+        },
+        {
+          "time": "3:30 PM",
+          "text": "Jeanie Johnston Tallship & Famine Museum at Custom House Quay (Go City; guided tours every 30 minutes, open until 4:30 PM)"
+        },
+        {
+          "time": "4:30 PM",
+          "text": "Walk the cobblestoned grounds of Trinity College (free), and the Little Museum of Dublin (Go City, open until 5 PM) on the way back toward St. Stephen's Green"
+        },
+        {
+          "time": "6:45 PM",
+          "text": "Dinner at Nan Chinese Restaurant, a short walk from the hotel",
+          "booked": true
+        }
       ],
       "tip": "Stay awake until at least 8 PM local time on arrival day. The walk from Grafton Street to the food tour meeting point takes about 25 minutes, and EPIC and the Jeanie Johnston sit side by side on the north quays, so do them back to back."
     },
@@ -47,12 +95,33 @@
       "title": "Guinness, whiskey & a gastropub dinner",
       "text": "A full Go City day in the old city: the castle, the Guinness Storehouse, lunch in the Liberties, Teeling's distillery and St. Patrick's Cathedral, finished off with dinner at Spitalfields.",
       "items": [
-        { "time": "9:30 AM", "text": "Dublin Castle & Chester Beatty Library (Go City; both open at 9:45 AM, about a 10-minute walk from Grafton Street; allow 30–40 minutes each)" },
-        { "time": "11:00 AM", "text": "Guinness Storehouse guided tour (ticketed separately from Go City), about 90 minutes, ending at the Gravity Bar with panoramic views over Dublin", "booked": true },
-        { "time": "12:45 PM", "text": "Lunch in the Liberties: Two Pups Coffee (closes at 3 PM) or Liberties Gate Bar and Restaurant for something more substantial, then a wander around one of Dublin's oldest neighbourhoods" },
-        { "time": "3:00 PM", "text": "Teeling Whiskey Distillery tour and tasting (Go City), 60–75 minutes at Dublin's first new distillery in over 125 years", "booked": true },
-        { "time": "4:15 PM", "text": "St. Patrick's Cathedral (Go City; last admission 4:45 PM; budget about 45 minutes)" },
-        { "time": "6:30 PM", "text": "Dinner at Spitalfields, a traditional Irish gastropub (dress up a little; minimum of 3 dishes per person including a main)", "booked": true }
+        {
+          "time": "9:30 AM",
+          "text": "Dublin Castle & Chester Beatty Library (Go City; both open at 9:45 AM, about a 10-minute walk from Grafton Street; allow 30–40 minutes each)"
+        },
+        {
+          "time": "11:00 AM",
+          "text": "Guinness Storehouse guided tour (ticketed separately from Go City), about 90 minutes, ending at the Gravity Bar with panoramic views over Dublin",
+          "booked": true
+        },
+        {
+          "time": "12:45 PM",
+          "text": "Lunch in the Liberties: Two Pups Coffee (closes at 3 PM) or Liberties Gate Bar and Restaurant for something more substantial, then a wander around one of Dublin's oldest neighbourhoods"
+        },
+        {
+          "time": "3:00 PM",
+          "text": "Teeling Whiskey Distillery tour and tasting (Go City), 60–75 minutes at Dublin's first new distillery in over 125 years",
+          "booked": true
+        },
+        {
+          "time": "4:15 PM",
+          "text": "St. Patrick's Cathedral (Go City; last admission 4:45 PM; budget about 45 minutes)"
+        },
+        {
+          "time": "6:30 PM",
+          "text": "Dinner at Spitalfields, a traditional Irish gastropub (dress up a little; minimum of 3 dishes per person including a main)",
+          "booked": true
+        }
       ],
       "tip": "Spitalfields holds a credit card against reservations, so cancel ahead if plans change. The Northern Ireland tour leaves at 6:45 AM tomorrow, so aim for bed by 9:30 PM. For an alternative, swap Dublin Castle for the Big Bus from Nassau Street (Stop 2) to the stop near the Jameson Distillery, then walk to the Guinness Storehouse."
     },
@@ -63,12 +132,31 @@
       "title": "Game of Thrones locations & the Giant's Causeway",
       "text": "A 13-hour coach tour across the border: Dunluce Castle, the Dark Hedges, the Giant's Causeway, Titanic Belfast and Belfast City Hall. Bring passports, water, snacks and layers.",
       "items": [
-        { "time": "6:35 AM", "text": "Board the Game of Thrones & Giant's Causeway tour (Viator) at the Hugh Lane Gallery on Parnell Square North for a 6:45 AM departure", "booked": true },
-        { "time": "Morning", "text": "Dunluce Castle, the clifftop ruin that inspired House Greyjoy, then the Dark Hedges, a tunnel of ancient beech trees on Bregagh Road. Walk 100–200 metres down the lane and shoot upward from low down for the best canopy shot" },
-        { "time": "", "text": "Giant's Causeway (about 90 minutes): restroom and map at the Visitor Centre but skip the indoor exhibition, take the scenic Blue Trail down to the basalt columns and the Organ Pipes, and the shuttle back up; the Red Trail (162 steps) gives a panoramic view if you have the energy" },
-        { "time": "Afternoon", "text": "Titanic Belfast: don't miss the Shipyard Ride, the Sinking gallery or the Seabed Floor Theatre; the SS Nomadic outside is included. Budget 80–90 minutes" },
-        { "time": "Late afternoon", "text": "Photo stop at Belfast City Hall: the domed facade, the Titanic Memorial, the Queen Victoria statue and the gardens" },
-        { "time": "~7:40 PM", "text": "Drop-off at Aston Quay in Temple Bar, then dinner on the walk back: Bartley's Bar at The Grafton (food until 9:30 PM) or pizza" }
+        {
+          "time": "6:35 AM",
+          "text": "Board the Game of Thrones & Giant's Causeway tour (Viator) at the Hugh Lane Gallery on Parnell Square North for a 6:45 AM departure",
+          "booked": true
+        },
+        {
+          "time": "Morning",
+          "text": "Dunluce Castle, the clifftop ruin that inspired House Greyjoy, then the Dark Hedges, a tunnel of ancient beech trees on Bregagh Road. Walk 100–200 metres down the lane and shoot upward from low down for the best canopy shot"
+        },
+        {
+          "time": "",
+          "text": "Giant's Causeway (about 90 minutes): restroom and map at the Visitor Centre but skip the indoor exhibition, take the scenic Blue Trail down to the basalt columns and the Organ Pipes, and the shuttle back up; the Red Trail (162 steps) gives a panoramic view if you have the energy"
+        },
+        {
+          "time": "Afternoon",
+          "text": "Titanic Belfast: don't miss the Shipyard Ride, the Sinking gallery or the Seabed Floor Theatre; the SS Nomadic outside is included. Budget 80–90 minutes"
+        },
+        {
+          "time": "Late afternoon",
+          "text": "Photo stop at Belfast City Hall: the domed facade, the Titanic Memorial, the Queen Victoria statue and the gardens"
+        },
+        {
+          "time": "~7:40 PM",
+          "text": "Drop-off at Aston Quay in Temple Bar, then dinner on the walk back: Bartley's Bar at The Grafton (food until 9:30 PM) or pizza"
+        }
       ],
       "tip": "Northern Ireland uses British pounds, and the Giant's Causeway shuttle is cash only (about £1 each way). Walk down the Blue Trail and ride the shuttle back up."
     },
@@ -79,13 +167,35 @@
       "title": "Howth, Malahide & Skerries by DART",
       "text": "A coastal day north of the city: a cliff hike in Howth, Malahide Castle, cream tea at Skerries Mills and a harbourside dinner before the train home.",
       "items": [
-        { "time": "7:20 AM", "text": "Walk to Tara Street Station (about 10 minutes), buy paper tickets and take the northbound DART direct to Howth (about 30 minutes)" },
-        { "time": "8:30 AM", "text": "Howth hike: the Cliff Path Loop (3.7 miles, about 2 hours, green waymarkers) or the shorter Howth Summit Walk (1.2 miles, about 1 hour, yellow route from the summit car park)" },
-        { "time": "10:30 AM", "text": "Explore Howth village and harbour; coffee at Tram Coffee & Wine on Harbour Road or the Doghouse Café, and keep an eye out for fresh seafood" },
-        { "time": "12:00 PM", "text": "Uber to Malahide Castle (about 15 minutes; Go City). Gardens open 9:30 AM–5:30 PM, last castle tour around 4 PM; allow about 90 minutes" },
-        { "time": "~3:30 PM", "text": "Uber to Skerries Mills (20–25 minutes; Go City, cream tea included): a scone made with flour milled on site, then the 4 PM guided tour; mills and café close at 5 PM" },
-        { "time": "5:45 PM", "text": "Dinner at Stoop Your Head, the top-rated restaurant in Skerries, right on the harbour", "booked": true },
-        { "time": "8:10 PM", "text": "Direct train from Skerries back to Dublin (the next one, at 9:27 PM, isn't direct)" }
+        {
+          "time": "7:20 AM",
+          "text": "Walk to Tara Street Station (about 10 minutes), buy paper tickets and take the northbound DART direct to Howth (about 30 minutes)"
+        },
+        {
+          "time": "8:30 AM",
+          "text": "Howth hike: the Cliff Path Loop (3.7 miles, about 2 hours, green waymarkers) or the shorter Howth Summit Walk (1.2 miles, about 1 hour, yellow route from the summit car park)"
+        },
+        {
+          "time": "10:30 AM",
+          "text": "Explore Howth village and harbour; coffee at Tram Coffee & Wine on Harbour Road or the Doghouse Café, and keep an eye out for fresh seafood"
+        },
+        {
+          "time": "12:00 PM",
+          "text": "Uber to Malahide Castle (about 15 minutes; Go City). Gardens open 9:30 AM–5:30 PM, last castle tour around 4 PM; allow about 90 minutes"
+        },
+        {
+          "time": "~3:30 PM",
+          "text": "Uber to Skerries Mills (20–25 minutes; Go City, cream tea included): a scone made with flour milled on site, then the 4 PM guided tour; mills and café close at 5 PM"
+        },
+        {
+          "time": "5:45 PM",
+          "text": "Dinner at Stoop Your Head, the top-rated restaurant in Skerries, right on the harbour",
+          "booked": true
+        },
+        {
+          "time": "8:10 PM",
+          "text": "Direct train from Skerries back to Dublin (the next one, at 9:27 PM, isn't direct)"
+        }
       ],
       "tip": "Buy a return ticket at Tara Street in the morning to skip the evening queue at Skerries station. If the weather is clear, do the full Cliff Path Loop and save the summit walk for a cloudier morning."
     },
@@ -96,10 +206,25 @@
       "title": "Churches, whiskey & a drinks tour",
       "text": "Back in the city for a medieval cathedral, the Jameson Distillery, a hands-on silver ring workshop and a guided drinks tour through Smithfield.",
       "items": [
-        { "time": "9:00 AM", "text": "Christ Church Cathedral (Go City), one of Dublin's two medieval cathedrals, with origins in 1030; allow 30–40 minutes" },
-        { "time": "10:00 AM", "text": "Jameson Distillery tour with guided tasting (Go City; printed tickets required), about 15 minutes' walk from Christ Church", "booked": true },
-        { "time": "12:00 PM", "text": "Silver ring workshop at Silver Works on Drury Street (Viator): a 2-hour silversmithing class where we designed and made our own rings to take home", "booked": true },
-        { "time": "3:00 PM", "text": "Drinks on Foot Tour (Go City), about 3 hours, from the Utah Teapot in Smithfield to the Guinness Open Gate Brewery", "booked": true }
+        {
+          "time": "9:00 AM",
+          "text": "Christ Church Cathedral (Go City), one of Dublin's two medieval cathedrals, with origins in 1030; allow 30–40 minutes"
+        },
+        {
+          "time": "10:00 AM",
+          "text": "Jameson Distillery tour with guided tasting (Go City; printed tickets required), about 15 minutes' walk from Christ Church",
+          "booked": true
+        },
+        {
+          "time": "12:00 PM",
+          "text": "Silver ring workshop at Silver Works on Drury Street (Viator): a 2-hour silversmithing class where we designed and made our own rings to take home",
+          "booked": true
+        },
+        {
+          "time": "3:00 PM",
+          "text": "Drinks on Foot Tour (Go City), about 3 hours, from the Utah Teapot in Smithfield to the Guinness Open Gate Brewery",
+          "booked": true
+        }
       ],
       "tip": "Print the Jameson tickets the night before; the app alone won't do. At Silver Works, arrive on time and tell the instructor your ring size before you start. The drinks tour ends at the Guinness Open Gate Brewery, a good place to linger over a pint."
     },
@@ -110,12 +235,31 @@
       "title": "The Cliffs of Moher & Galway",
       "text": "Another early, full-day coach tour, this time west to the Atlantic: two hours at the Cliffs of Moher and two in Galway, then pizza back in Dublin.",
       "items": [
-        { "time": "6:00 AM", "text": "Leave the hotel and grab breakfast and snacks for the day (Stage Door Café opens at 6 AM)" },
-        { "time": "6:55 AM", "text": "Board the Wild Rover Tours bus at the Riu Plaza The Gresham on O'Connell Street (6:55 AM) or College Green (7:00 AM); seats aren't assigned, so arrive early", "booked": true },
-        { "time": "~11:00 AM", "text": "Cliffs of Moher (2 hours): walk south toward the quieter South Viewpoint, 30 minutes out and 30 back, then O'Brien's Tower for the classic panorama (no need to pay to climb)" },
-        { "time": "~2:30 PM", "text": "Galway (2 hours): from Eyre Square along Shop Street, High Street and Quay Street to the Spanish Arch and the River Corrib; Java's Crepes on Abbeygate Street for lunch" },
-        { "time": "4:30 PM", "text": "Bus back to Dublin from Eyre Square, arriving in Temple Bar around 7:40 PM" },
-        { "time": "~8:00 PM", "text": "Pizza: New York–style slices at BAMBINO on Stephen Street Lower, or DiFontaine's on Parliament Street in Temple Bar" }
+        {
+          "time": "6:00 AM",
+          "text": "Leave the hotel and grab breakfast and snacks for the day (Stage Door Café opens at 6 AM)"
+        },
+        {
+          "time": "6:55 AM",
+          "text": "Board the Wild Rover Tours bus at the Riu Plaza The Gresham on O'Connell Street (6:55 AM) or College Green (7:00 AM); seats aren't assigned, so arrive early",
+          "booked": true
+        },
+        {
+          "time": "~11:00 AM",
+          "text": "Cliffs of Moher (2 hours): walk south toward the quieter South Viewpoint, 30 minutes out and 30 back, then O'Brien's Tower for the classic panorama (no need to pay to climb)"
+        },
+        {
+          "time": "~2:30 PM",
+          "text": "Galway (2 hours): from Eyre Square along Shop Street, High Street and Quay Street to the Spanish Arch and the River Corrib; Java's Crepes on Abbeygate Street for lunch"
+        },
+        {
+          "time": "4:30 PM",
+          "text": "Bus back to Dublin from Eyre Square, arriving in Temple Bar around 7:40 PM"
+        },
+        {
+          "time": "~8:00 PM",
+          "text": "Pizza: New York–style slices at BAMBINO on Stephen Street Lower, or DiFontaine's on Parliament Street in Temple Bar"
+        }
       ],
       "tip": "At the Cliffs, go south, not north: fewer crowds and the most dramatic views. Pack tonight, because tomorrow is checkout."
     },
@@ -126,31 +270,113 @@
       "title": "Sláinte: heading home",
       "text": "An early start for the airport. Dublin has US pre-clearance, so we cleared US immigration before boarding and landed back home as domestic passengers.",
       "items": [
-        { "time": "8:00 AM", "text": "Check out of the hotel" },
-        { "time": "8:15 AM", "text": "Uber to Dublin Airport (30–45 minutes; book ahead on a Sunday morning if you can)" },
-        { "time": "~9:00 AM", "text": "US pre-clearance at Dublin Airport" },
-        { "time": "11:30 AM", "text": "Fly home from Dublin" }
+        {
+          "time": "8:00 AM",
+          "text": "Check out of the hotel"
+        },
+        {
+          "time": "8:15 AM",
+          "text": "Uber to Dublin Airport (30–45 minutes; book ahead on a Sunday morning if you can)"
+        },
+        {
+          "time": "~9:00 AM",
+          "text": "US pre-clearance at Dublin Airport"
+        },
+        {
+          "time": "11:30 AM",
+          "text": "Fly home from Dublin"
+        }
       ],
       "tip": "Be at the airport 3 hours before your flight. Pre-clearance queues on weekend mornings can be long."
     }
   ],
   "stays": [
-    { "name": "Hotel in the Grafton Street area", "place": "Dublin", "nights": "6 nights", "note": "A central base for the whole week; almost everything in Dublin was within walking distance." }
+    {
+      "name": "Hotel in the Grafton Street area",
+      "place": "Dublin",
+      "nights": "6 nights",
+      "note": "A central base for the whole week; almost everything in Dublin was within walking distance."
+    }
   ],
   "eats": [
-    { "name": "Nan Chinese Restaurant", "place": "Dublin (near Grafton Street)", "note": "Casual, well priced and close to the hotel: a no-fuss dinner after a long travel day.", "type": "Dinner" },
-    { "name": "Two Pups Coffee", "place": "The Liberties, Dublin", "note": "A popular café with a strong brunch menu. Closes at 3 PM, so time it around the Guinness Storehouse tour.", "type": "Lunch" },
-    { "name": "Liberties Gate Bar and Restaurant", "place": "The Liberties, Dublin", "note": "A solid alternative to Two Pups for a more substantial lunch.", "type": "Lunch" },
-    { "name": "Spitalfields", "place": "The Liberties, Dublin", "note": "A proper Irish gastropub. Dress well and come hungry: there's a minimum of 3 dishes per person, including a main.", "type": "Dinner" },
-    { "name": "Bartley's Bar at The Grafton", "place": "Grafton Street area, Dublin", "note": "Food until 9:30 PM: close and easy after the 13-hour Northern Ireland tour.", "type": "Dinner" },
-    { "name": "Tram Coffee & Wine", "place": "Howth", "note": "Highly rated, on Harbour Road. The Doghouse Café is also worth the wait.", "type": "Coffee" },
-    { "name": "Skerries Mills café", "place": "Skerries", "note": "Cream tea with a freshly baked scone made from flour milled on site.", "type": "Cream tea" },
-    { "name": "Stoop Your Head", "place": "Harbour Road, Skerries", "note": "The top-rated restaurant in Skerries, right on the harbour. Classic Irish food and a highlight of the coastal day trip.", "type": "Dinner" },
-    { "name": "Java's Crepes", "place": "Abbeygate Street, Galway", "note": "A standout lunch stop during the Galway stop on the Cliffs of Moher tour.", "type": "Lunch" },
-    { "name": "BAMBINO", "place": "Stephen Street Lower, Dublin", "note": "Big New York–style pizza slices, late hours, no fuss. The perfect end to a long tour day.", "type": "Pizza" },
-    { "name": "DiFontaine's", "place": "Parliament Street, Temple Bar, Dublin", "note": "Late-night pizza right on the walk back from the tour drop-off.", "type": "Pizza" },
-    { "name": "Pickle", "place": "Dublin city centre", "note": "Michelin-recommended modern Indian and one of Dublin's most acclaimed restaurants. Worth the splurge, but book well in advance.", "type": "Splurge" },
-    { "name": "Stage Door Café", "place": "Dublin city centre", "note": "Opens at 6 AM, a lifesaver on early tour days. Highly rated for coffee and breakfast.", "type": "Breakfast" }
+    {
+      "name": "Nan Chinese Restaurant",
+      "place": "Dublin (near Grafton Street)",
+      "note": "Casual, well priced and close to the hotel: a no-fuss dinner after a long travel day.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Two Pups Coffee",
+      "place": "The Liberties, Dublin",
+      "note": "A popular café with a strong brunch menu. Closes at 3 PM, so time it around the Guinness Storehouse tour.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Liberties Gate Bar and Restaurant",
+      "place": "The Liberties, Dublin",
+      "note": "A solid alternative to Two Pups for a more substantial lunch.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Spitalfields",
+      "place": "The Liberties, Dublin",
+      "note": "A proper Irish gastropub. Dress well and come hungry: there's a minimum of 3 dishes per person, including a main.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Bartley's Bar at The Grafton",
+      "place": "Grafton Street area, Dublin",
+      "note": "Food until 9:30 PM: close and easy after the 13-hour Northern Ireland tour.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Tram Coffee & Wine",
+      "place": "Howth",
+      "note": "Highly rated, on Harbour Road. The Doghouse Café is also worth the wait.",
+      "type": "Coffee"
+    },
+    {
+      "name": "Skerries Mills café",
+      "place": "Skerries",
+      "note": "Cream tea with a freshly baked scone made from flour milled on site.",
+      "type": "Cream tea"
+    },
+    {
+      "name": "Stoop Your Head",
+      "place": "Harbour Road, Skerries",
+      "note": "The top-rated restaurant in Skerries, right on the harbour. Classic Irish food and a highlight of the coastal day trip.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Java's Crepes",
+      "place": "Abbeygate Street, Galway",
+      "note": "A standout lunch stop during the Galway stop on the Cliffs of Moher tour.",
+      "type": "Lunch"
+    },
+    {
+      "name": "BAMBINO",
+      "place": "Stephen Street Lower, Dublin",
+      "note": "Big New York–style pizza slices, late hours, no fuss. The perfect end to a long tour day.",
+      "type": "Pizza"
+    },
+    {
+      "name": "DiFontaine's",
+      "place": "Parliament Street, Temple Bar, Dublin",
+      "note": "Late-night pizza right on the walk back from the tour drop-off.",
+      "type": "Pizza"
+    },
+    {
+      "name": "Pickle",
+      "place": "Dublin city centre",
+      "note": "Michelin-recommended modern Indian and one of Dublin's most acclaimed restaurants. Worth the splurge, but book well in advance.",
+      "type": "Splurge"
+    },
+    {
+      "name": "Stage Door Café",
+      "place": "Dublin city centre",
+      "note": "Opens at 6 AM, a lifesaver on early tour days. Highly rated for coffee and breakfast.",
+      "type": "Breakfast"
+    }
   ],
   "book_ahead": [
     "Guinness Storehouse guided tour",
@@ -164,13 +390,55 @@
     "Pickle, if you want the splurge dinner"
   ],
   "tips": [
-    { "title": "Stay near Grafton Street", "text": "Almost everything in central Dublin is within a 20-minute walk, and the best restaurants and pubs are close by." },
-    { "title": "Get the Go City app before you land", "text": "The Go City Dublin Explorer Pass covers EPIC, Malahide Castle, the Little Museum of Dublin, Jameson, Teeling, the Big Bus and more. Add the pass to the app before arrival; most venues scan straight from your phone. A few, like Jameson, need printed tickets." },
-    { "title": "Start early", "text": "Most Go City attractions close by 5 PM, so we front-loaded our sightseeing into the mornings." },
-    { "title": "DART needs paper tickets", "text": "Buy DART tickets at the station; don't assume you can tap a card. Uber is reliable for early mornings and late nights." },
-    { "title": "Bring passports for Northern Ireland", "text": "The Giant's Causeway tour crosses the border. Northern Ireland uses British pounds, and the Causeway shuttle is cash only." },
-    { "title": "Pack for long tour days", "text": "Both day tours are full-day (around 13 hours), and the Cliffs of Moher tour departs around 7 AM. Snacks and water are your best friends, and Stage Door Café opens at 6 AM for early departures." },
-    { "title": "Layer up", "text": "Irish weather is famously changeable. A compact waterproof jacket and comfortable walking shoes are essential, and the Giant's Causeway and Cliffs of Moher can be very windy." },
-    { "title": "Use US pre-clearance", "text": "Dublin Airport has US pre-clearance, so you clear immigration before boarding and arrive home as a domestic passenger. Allow 3 hours at the airport." }
-  ]
+    {
+      "title": "Stay near Grafton Street",
+      "text": "Almost everything in central Dublin is within a 20-minute walk, and the best restaurants and pubs are close by."
+    },
+    {
+      "title": "Get the Go City app before you land",
+      "text": "The Go City Dublin Explorer Pass covers EPIC, Malahide Castle, the Little Museum of Dublin, Jameson, Teeling, the Big Bus and more. Add the pass to the app before arrival; most venues scan straight from your phone. A few, like Jameson, need printed tickets."
+    },
+    {
+      "title": "Start early",
+      "text": "Most Go City attractions close by 5 PM, so we front-loaded our sightseeing into the mornings."
+    },
+    {
+      "title": "DART needs paper tickets",
+      "text": "Buy DART tickets at the station; don't assume you can tap a card. Uber is reliable for early mornings and late nights."
+    },
+    {
+      "title": "Bring passports for Northern Ireland",
+      "text": "The Giant's Causeway tour crosses the border. Northern Ireland uses British pounds, and the Causeway shuttle is cash only."
+    },
+    {
+      "title": "Pack for long tour days",
+      "text": "Both day tours are full-day (around 13 hours), and the Cliffs of Moher tour departs around 7 AM. Snacks and water are your best friends, and Stage Door Café opens at 6 AM for early departures."
+    },
+    {
+      "title": "Layer up",
+      "text": "Irish weather is famously changeable. A compact waterproof jacket and comfortable walking shoes are essential, and the Giant's Causeway and Cliffs of Moher can be very windy."
+    },
+    {
+      "title": "Use US pre-clearance",
+      "text": "Dublin Airport has US pre-clearance, so you clear immigration before boarding and arrive home as a domestic passenger. Allow 3 hours at the airport."
+    }
+  ],
+  "map": {
+    "Dublin": [
+      53.3498,
+      -6.2603
+    ],
+    "Giant's Causeway & Belfast": [
+      55.2408,
+      -6.5116
+    ],
+    "Howth, Malahide & Skerries": [
+      53.4509,
+      -6.1544
+    ],
+    "Cliffs of Moher & Galway": [
+      52.9715,
+      -9.4309
+    ]
+  }
 }

@@ -45,6 +45,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { rootMargin: '-20% 0px -70% 0px' });
     byId.forEach((_a, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
   }
+
+  // YouTube: load the player only when someone presses play
+  document.querySelectorAll('a.yt[data-yt]').forEach((a) => {
+    a.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      const f = document.createElement('div');
+      f.className = 'yt-frame';
+      const i = document.createElement('iframe');
+      i.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(a.dataset.yt) + '?autoplay=1&rel=0';
+      i.title = a.getAttribute('aria-label') || 'YouTube video';
+      i.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      i.allowFullscreen = true;
+      f.appendChild(i);
+      a.replaceWith(f);
+    });
+  });
+
+  // itinerary route map (Leaflet + OpenStreetMap tiles; light use with attribution is allowed)
+  const mapEl = document.querySelector('.route-map');
+  if (mapEl && window.L) {
+    const d = JSON.parse(mapEl.dataset.map);
+    const map = L.map(mapEl, { scrollWheelZoom: false });
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+    L.polyline(d.path, { color: '#c2502b', weight: 3, opacity: 0.85, dashArray: '6 8' }).addTo(map);
+    d.stops.forEach((s, i) => {
+      L.marker([s[1], s[2]], {
+        title: s[0],
+        icon: L.divIcon({ className: 'pin', html: '<span>' + (i + 1) + '</span>', iconSize: [28, 28], iconAnchor: [14, 14] }),
+      }).bindTooltip(s[0]).addTo(map);
+    });
+    map.fitBounds(L.latLngBounds(d.stops.map((s) => [s[1], s[2]])), { padding: [36, 36] });
+  }
   const pb = document.querySelector('.print-btn');
   if (pb) pb.addEventListener('click', () => window.print());
 });

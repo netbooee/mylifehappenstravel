@@ -41,9 +41,18 @@ All text is plain text (no HTML). Keep the writing in our own voice ("we", "us")
   "stays": [ { "name": "L'Orologio Firenze", "place": "Florence", "nights": "5 nights", "note": "Right on Piazza Santa Maria Novella." } ],
   "eats":  [ { "name": "L'Osteria di Giovanni", "place": "Florence", "note": "Classic Florentine trattoria.", "type": "Dinner" } ],
   "book_ahead": ["Uffizi & Accademia tour", "Campanile climb (timed entry)"],
-  "tips": [ { "title": "Pack light for the trains", "text": "..." } ]
+  "tips": [ { "title": "Pack light for the trains", "text": "..." } ],
+  "map": {                                   // coordinates for every stop in "route" → the route map
+    "Florence": [43.7696, 11.2558],
+    "Rome": [41.9028, 12.4964]
+  },
+  "videos": ["4GLtHpa4wJE"]                  // YouTube ids from content/videos.json to show on this trip
 }
 ```
+
+Each timeline item gets an icon automatically from its wording (meal, sight, hotel or getting
+around); see `KIND_RULES` in `tools/build.py`. The route map only appears when every stop in
+`route` has coordinates in `map` (right-click a place in Google Maps to copy its coordinates).
 
 Fields other than `slug`, `title`, `summary`, `country`, `region`, `start`, `end`, `days` and
 `days_plan` may be empty (`""` or `[]`); the template simply leaves those sections out.

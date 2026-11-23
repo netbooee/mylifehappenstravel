@@ -58,6 +58,27 @@ Five photos are currently free Unsplash stock (Barcelona, Golden Gate, Ireland, 
 the Colosseum). Swap them for your own whenever you can: your own photos are what make a travel
 site feel real.
 
+### Instagram photos
+
+Instagram doesn't allow other sites to pull photos automatically, so export them once:
+Instagram app → **Settings → Accounts Center → Your information and permissions → Download your
+information** → choose *Media*, format *HTML*, high quality. Instagram emails a zip; drop the photos
+you like into a folder in this repo (or send them to Claude) and they can be resized and added
+with the snippet above.
+
+## Videos
+
+`content/videos.json` lists the YouTube videos shown on the home page (newest three) and on trip
+pages (a trip lists the ids it wants in `"videos"`). Videos only load when someone presses play,
+so pages stay fast. The channel's public feed lists every video:
+`https://www.youtube.com/feeds/videos.xml?channel_id=UChGwHSH0eNh_fp6XNtfj5jg`
+
+## Maps
+
+Each trip's route map uses [Leaflet](https://leafletjs.com) (bundled in `site/assets/vendor/`) with
+OpenStreetMap's free tiles, which only ask for the attribution shown on the map. If the site ever
+gets a lot of traffic, switch to a paid tile provider in `site/assets/js/site.js`.
+
 ## Previewing locally
 
 ```
