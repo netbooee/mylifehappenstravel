@@ -487,3 +487,10 @@ svg { flex: none; }
 .card-img.placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(150deg, var(--teal), var(--teal-dk)); color: #fff; padding: 20px; text-align: center; }
 .card-img.placeholder svg { width: 30px; height: 30px; fill: none; stroke: var(--sun); stroke-width: 1.8; }
 .card-img.placeholder span { font: 500 clamp(28px, 3vw, 38px)/1.05 var(--display); letter-spacing: -.01em; }
+
+/* phones: maps never trap a scrolling finger, and skip the tile colour filter (it forces the
+   whole map to be redrawn on every scrolled frame) */
+@media (hover: none) and (pointer: coarse) {
+  .route-map, .flight-map { touch-action: pan-x pan-y pinch-zoom; }
+  .route-map .leaflet-tile-pane, .flight-map .leaflet-tile-pane { filter: none; }
+}

@@ -76,11 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Maps on phones: one finger always scrolls the page; pinch or the +/- buttons zoom the map.
+  // (Leaflet's default one-finger drag swallowed swipes that started on a map, so the page stuck.)
+  const touchMap = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+  const mapOptions = (extra) => Object.assign({ scrollWheelZoom: false, dragging: !touchMap, tap: false }, extra);
+
   // itinerary route map (Leaflet + OpenStreetMap tiles; light use with attribution is allowed)
   const mapEl = document.querySelector('.route-map');
   if (mapEl && window.L) {
     const d = JSON.parse(mapEl.dataset.map);
-    const map = L.map(mapEl, { scrollWheelZoom: false });
+    const map = L.map(mapEl, mapOptions({}));
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -114,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       return pts;
     };
-    const map = L.map(fm, { scrollWheelZoom: false, worldCopyJump: true });
+    const map = L.map(fm, mapOptions({ worldCopyJump: true }));
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 12,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
