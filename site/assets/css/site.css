@@ -121,15 +121,33 @@ svg { flex: none; }
 .stats-more:hover { text-decoration: underline; }
 
 /* ── by the numbers (about page) ── */
-.number-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin: 0 0 clamp(28px, 4vw, 44px); background: var(--line); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
-.number-grid div { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 6px; background: var(--card); padding: clamp(18px, 2.4vw, 28px); }
-.number-grid dd { margin: 0; font: 500 clamp(32px, 4vw, 46px)/1 var(--display); color: var(--accent-dk); font-variant-numeric: tabular-nums; }
-.number-grid dt { font-size: 14.5px; line-height: 1.4; color: var(--ink-soft); }
-@media (max-width: 760px) { .number-grid { grid-template-columns: 1fr 1fr; } }
-.flight-map { aspect-ratio: 2 / 1; max-height: 520px; width: 100%; border-radius: var(--r); overflow: hidden; background: var(--tint); box-shadow: var(--shadow); z-index: 0; }
+/* a boarding-pass card: map, totals, a torn line, then the longest flight as the stub */
+.pass { max-width: 980px; margin: 0 auto; background: var(--card); border: 1px solid var(--line); border-radius: calc(var(--r) + 6px); box-shadow: var(--shadow); overflow: hidden; }
+.flight-map { width: 100%; background: var(--tint); z-index: 0; }
 .flight-map .leaflet-control-attribution { font-size: 10.5px; }
 .flight-map .leaflet-tile-pane { filter: saturate(.6) sepia(.15); }
-@media (max-width: 640px) { .flight-map { aspect-ratio: 4 / 3; } }
+.pass-map { aspect-ratio: 2.4 / 1; }
+.pass-top span:last-child { white-space: nowrap; }
+.pass-top { display: flex; justify-content: space-between; gap: 12px; padding: 22px clamp(20px, 3vw, 36px) 0; font: 600 12.5px/1.3 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--accent-dk); }
+.pass-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px 28px; margin: 0; padding: 22px clamp(20px, 3vw, 36px) 28px; }
+.pass-grid div { display: flex; flex-direction: column; gap: 6px; }
+.pass-grid dt, .pass-label { font: 600 12px/1.3 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
+.pass-grid dt { order: -1; }
+.pass-grid dd { margin: 0; font: 500 clamp(28px, 3.4vw, 42px)/1 var(--display); font-variant-numeric: tabular-nums; }
+.pass-tear { position: relative; border-top: 2px dashed var(--line); margin: 0 18px; }
+.pass-tear::before, .pass-tear::after { content: ""; position: absolute; top: -15px; width: 28px; height: 28px; border-radius: 50%; background: var(--bg); box-shadow: inset 0 0 0 1px var(--line); }
+.pass-tear::before { left: -33px; }
+.pass-tear::after { right: -33px; }
+.pass-stub { padding: 22px clamp(20px, 3vw, 36px) 28px; }
+.pass-label { margin: 0 0 10px; }
+.pass-route { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 20px; }
+.pass-route strong { display: block; font: 500 clamp(44px, 6vw, 72px)/1 var(--display); color: var(--teal); }
+.pass-route span { font-size: 15px; color: var(--ink-soft); }
+.pass-route .to { text-align: right; }
+.pass-mid { position: relative; z-index: 0; display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: -26px; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.pass-mid::before { content: ""; position: absolute; left: 0; right: 0; top: 15px; border-top: 2px dotted var(--line); z-index: -1; }
+.pass-mid span { font-size: 22px; line-height: 1.4; color: var(--accent); background: var(--card); padding: 0 8px; }
+@media (max-width: 760px) { .pass-grid { grid-template-columns: 1fr 1fr; } .pass-map { aspect-ratio: 4 / 3; } .pass-route { gap: 10px; } }
 .ranked-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 4vw, 48px); margin-top: clamp(32px, 4vw, 48px); }
 @media (max-width: 900px) { .ranked-row { grid-template-columns: 1fr; } }
 .ranked h3 { font-size: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--ink); margin-bottom: 4px; }
