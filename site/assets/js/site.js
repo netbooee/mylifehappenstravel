@@ -26,27 +26,36 @@ document.addEventListener('DOMContentLoaded', () => {
     if ([...chips].some((c) => c.dataset.filter === f)) apply(f);
   }
 
-  // itinerary: highlight the section you're reading, print button
+  // itinerary: highlight the section you're reading in the day list / phone day strip.
+  // Kept deliberately light so scrolling never stutters:
+  //  - the highlight is a single class swap, done only when the day actually changes;
+  //  - on phones the strip is slid sideways only once the reader stops scrolling, so it never
+  //    animates at the same time as their swipe (and never with scrollIntoView, which would
+  //    also move the page and cut a swipe short on iOS).
   const links = [...document.querySelectorAll('.toc a')];
   if (links.length && 'IntersectionObserver' in window) {
     const byId = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
+    const strip = document.querySelector('.toc ol');
+    let current = null;
+    let idle = 0;
+
+    const centreStrip = () => {
+      if (!current || !strip || strip.scrollWidth <= strip.clientWidth) return;
+      const left = current.offsetLeft - (strip.clientWidth - current.offsetWidth) / 2;
+      if (Math.abs(strip.scrollLeft - left) > 4) strip.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+    };
+    const whenScrollStops = () => { clearTimeout(idle); idle = setTimeout(centreStrip, 140); };
+    window.addEventListener('scroll', whenScrollStops, { passive: true });
+
     const io = new IntersectionObserver((entries) => {
-      entries.forEach((en) => {
-        if (!en.isIntersecting) return;
-        links.forEach((a) => a.classList.remove('active'));
+      for (const en of entries) {
+        if (!en.isIntersecting) continue;
         const a = byId.get(en.target.id);
-        if (a) {
-          a.classList.add('active');
-          // On phones the day list is a horizontal strip. Slide only the strip so the active day
-          // is centred. Never use scrollIntoView here: it also scrolls the page, which cuts off
-          // the reader's swipe mid-flick on iOS.
-          const strip = a.closest('ol');
-          if (strip && strip.scrollWidth > strip.clientWidth) {
-            const left = a.offsetLeft - (strip.clientWidth - a.offsetWidth) / 2;
-            strip.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
-          }
-        }
-      });
+        if (!a || a === current) continue;
+        if (current) current.classList.remove('active');
+        a.classList.add('active');
+        current = a;
+      }
     }, { rootMargin: '-20% 0px -70% 0px' });
     byId.forEach((_a, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
   }
