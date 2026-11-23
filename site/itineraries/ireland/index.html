@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Seven days in Ireland — Dublin, Northern Ireland and the Cliffs of Moher. Culture, whiskey, wild coasts and ancient stone, day by day.">
+<title>Dublin & Beyond – My Life Happens Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Ireland Green Theme — My Life Happens Travel */
+    --navy:        #1b3d2f;
+    --navy-mid:    #2e6b4f;
+    --navy-light:  #4a9970;
+    --terra:       #c9933a;
+    --terra-light: #e8b96a;
+    --terra-pale:  #f5edda;
+    --sand:        #f7f2e9;
+    --sand-dark:   #ede6d6;
+    --gold:        #c9933a;
+    --gold-light:  #e8b96a;
+    --ink:         #1e1e1e;
+    --ink-soft:    #3d3d3d;
+    --ink-muted:   #7a7a7a;
+    --white:       #ffffff;
+    --alert:       #8b2828;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--sand);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  /* ===== BRAND HEADER BAR ===== */
+  .brand-bar {
+    background: var(--navy);
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .brand-wordmark {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .brand-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--terra);
+    flex-shrink: 0;
+  }
+
+  .brand-tagline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* Brand links — inherit their context, subtle hover only */
+  a.brand-link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s, opacity 0.2s;
+  }
+  a.brand-link:hover {
+    border-bottom-color: currentColor;
+    opacity: 0.85;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: var(--navy);
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 40px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 15% 60%, rgba(196,97,58,0.15) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 25%, rgba(58,80,128,0.3) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 100%, rgba(26,39,68,0.8) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(196,97,58,0.15);
+    border: 1px solid rgba(196,97,58,0.35);
+    border-radius: 100px;
+    padding: 6px 18px;
+    margin-bottom: 36px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+
+  .hero-badge span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--terra-light);
+  }
+
+  .hero-badge-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--terra-light);
+    opacity: 0.6;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 9vw, 7.5rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 0.95;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.4s forwards;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--terra-light);
+  }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    color: rgba(246,241,233,0.6);
+    margin-top: 20px;
+    margin-bottom: 56px;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.55s forwards;
+  }
+
+  .hero-rule {
+    width: 48px;
+    height: 2px;
+    background: var(--terra);
+    margin: 0 auto 40px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.5s forwards;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 56px;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.7s forwards;
+  }
+
+  .hero-stat .label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--terra-light);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .hero-stat .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  .hero-brand-footer {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    animation: fadeUp 1s 1s forwards;
+  }
+
+  .hero-brand-footer .mlht-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .hero-brand-footer::after {
+    content: '';
+    width: 1px;
+    height: 36px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2), transparent);
+  }
+
+  /* ===== STICKY NAV ===== */
+  .day-nav {
+    background: var(--navy);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .day-nav::-webkit-scrollbar { display: none; }
+
+  .day-nav a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.67rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(246,241,233,0.45);
+    text-decoration: none;
+    padding: 15px 16px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .day-nav a:hover,
+  .day-nav a.active {
+    color: var(--white);
+    border-bottom-color: var(--terra);
+  }
+
+  /* ===== INTRO ===== */
+  .intro-section {
+    max-width: 820px;
+    margin: 80px auto;
+    padding: 0 40px;
+  }
+
+  .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.67rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 14px;
+  }
+
+  .intro-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .intro-section p {
+    font-size: 0.98rem;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 44px;
+  }
+
+  .intro-card {
+    background: var(--white);
+    border-radius: 3px;
+    padding: 26px;
+    border-top: 3px solid var(--terra);
+  }
+
+  .intro-card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 14px;
+  }
+
+  .intro-card ul { list-style: none; padding: 0; }
+
+  .intro-card li {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    padding: 5px 0;
+    border-bottom: 1px solid var(--sand-dark);
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+
+  .intro-card li:last-child { border-bottom: none; }
+
+  .intro-card li::before {
+    content: '→';
+    color: var(--terra);
+    font-size: 0.78rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ===== BEFORE YOU GO ===== */
+  .before-section {
+    background: var(--navy);
+    padding: 72px 40px;
+    margin-bottom: 80px;
+  }
+
+  .before-inner { max-width: 960px; margin: 0 auto; }
+
+  .before-section .eyebrow { color: var(--terra-light); }
+
+  .before-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 44px;
+    line-height: 1.15;
+  }
+
+  .before-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+  }
+
+  .before-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 3px;
+    padding: 26px 22px;
+  }
+
+  .before-card .icon { font-size: 1.7rem; display: block; margin-bottom: 12px; }
+
+  .before-card h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terra-light);
+    margin-bottom: 10px;
+  }
+
+  .before-card p, .before-card li {
+    font-size: 0.86rem;
+    color: rgba(246,241,233,0.7);
+    line-height: 1.65;
+  }
+
+  .before-card ul { list-style: none; padding: 0; }
+  .before-card li { padding: 3px 0; }
+  .before-card li::before { content: '· '; color: var(--terra-light); }
+
+  /* ===== DAY SECTIONS ===== */
+  .day-section {
+    max-width: 1060px;
+    margin: 0 auto 100px;
+    padding: 0 40px;
+    scroll-margin-top: 52px;
+  }
+
+  .day-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--sand-dark);
+  }
+
+  .day-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: var(--sand-dark);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .day-date {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.67rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 6px;
+  }
+
+  .day-header-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.9rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.1;
+  }
+
+  .day-header-text h2 em {
+    font-style: italic;
+    color: var(--navy-light);
+  }
+
+  .day-layout {
+    display: grid;
+    grid-template-columns: 1fr 275px;
+    gap: 48px;
+    align-items: start;
+  }
+
+  /* ===== TIMELINE ===== */
+  .timeline { position: relative; }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--sand-dark), transparent);
+  }
+
+  .tl-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .tl-time {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--ink-muted);
+    text-align: right;
+    padding-top: 2px;
+    padding-right: 22px;
+    position: relative;
+  }
+
+  .tl-time::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--navy-mid);
+    border: 2px solid var(--sand);
+    box-shadow: 0 0 0 1px var(--navy-mid);
+  }
+
+  .tl-time.hi::after {
+    background: var(--terra);
+    box-shadow: 0 0 0 1px var(--terra);
+  }
+
+  .tl-content h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.97rem;
+    color: var(--ink);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+
+  .tl-content p {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  .tags { margin-bottom: 7px; display: flex; flex-wrap: wrap; gap: 5px; }
+
+  .tag {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 2px;
+  }
+
+  .tag-gocity  { background: rgba(26,39,68,0.08); color: var(--navy-mid); border: 1px solid rgba(26,39,68,0.2); }
+  .tag-booked  { background: rgba(196,97,58,0.1); color: var(--terra); border: 1px solid rgba(196,97,58,0.25); }
+  .tag-food    { background: rgba(201,162,74,0.1); color: #9a7430; border: 1px solid rgba(201,162,74,0.3); }
+  .tag-transport { background: rgba(30,30,30,0.06); color: var(--ink-muted); border: 1px solid rgba(30,30,30,0.12); }
+
+  /* ===== SIDEBAR ===== */
+  .callout {
+    border-radius: 3px;
+    padding: 20px 18px;
+    margin-bottom: 16px;
+  }
+
+  .callout-pro   { background: rgba(26,39,68,0.06); border-left: 3px solid var(--navy-mid); }
+  .callout-warn  { background: rgba(201,162,74,0.1); border-left: 3px solid var(--gold); }
+  .callout-alert { background: rgba(139,58,42,0.08); border-left: 3px solid var(--alert); }
+
+  .callout-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 7px;
+  }
+
+  .callout-pro .callout-label   { color: var(--navy-mid); }
+  .callout-warn .callout-label  { color: #8a6e20; }
+  .callout-alert .callout-label { color: var(--alert); }
+
+  .callout p, .callout li {
+    font-size: 0.83rem;
+    color: var(--ink-soft);
+    line-height: 1.62;
+  }
+
+  .callout ul { list-style: none; padding: 0; }
+  .callout li { padding: 2px 0; }
+  .callout li::before { content: '→ '; opacity: 0.5; font-size: 0.78rem; }
+
+  /* ===== DINING SECTION ===== */
+  .food-section {
+    background: var(--navy);
+    padding: 72px 40px;
+    margin-bottom: 0;
+  }
+
+  .food-inner { max-width: 980px; margin: 0 auto; }
+  .food-section .eyebrow { color: var(--terra-light); }
+
+  .food-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 44px;
+  }
+
+  .food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+  }
+
+  .food-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 3px;
+    padding: 22px;
+  }
+
+  .meal-type {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--terra-light);
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .food-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .food-card .address {
+    font-size: 0.75rem;
+    color: rgba(246,241,233,0.42);
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .food-card p {
+    font-size: 0.84rem;
+    color: rgba(246,241,233,0.68);
+    line-height: 1.6;
+  }
+
+  .res-tag {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    background: rgba(196,97,58,0.18);
+    color: var(--terra-light);
+    border: 1px solid rgba(196,97,58,0.3);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #111827;
+    padding: 48px 40px 36px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--white);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .footer-tagline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.28);
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .footer-terra-rule {
+    width: 40px;
+    height: 2px;
+    background: var(--terra);
+    margin: 0 auto 20px;
+    border-radius: 1px;
+  }
+
+  footer p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.22);
+    line-height: 1.8;
+  }
+
+  /* ===== ORNAMENT ===== */
+  .ornament {
+    text-align: center;
+    color: var(--terra);
+    font-size: 1rem;
+    letter-spacing: 0.6em;
+    margin: 56px 0;
+    opacity: 0.35;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== PRINT ===== */
+  @media print {
+    .day-nav, .hero-brand-footer { display: none; }
+    .hero { min-height: auto; padding: 36px; page-break-after: always; }
+    .day-layout { grid-template-columns: 1fr; }
+    .sidebar { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .day-section { page-break-before: always; }
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .brand-bar { padding: 12px 20px; flex-wrap: wrap; gap: 8px; }
+    .brand-tagline { display: none; }
+    .day-layout { grid-template-columns: 1fr; }
+    .intro-grid { grid-template-columns: 1fr; }
+    .before-grid { grid-template-columns: 1fr; }
+    .day-header { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .day-number { font-size: 3.5rem; }
+    .tl-item { grid-template-columns: 72px 1fr; }
+    .timeline::before { left: 35px; }
+    .hero-stats { gap: 28px; }
+    .intro-section, .day-section { padding: 0 24px; }
+    .before-section, .food-section { padding: 52px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- BRAND BAR -->
+<div class="brand-bar">
+  <div class="brand-dot"></div>
+  <a href="/" class="brand-link brand-wordmark" >My Life Happens Travel</a>
+  <div class="brand-dot"></div>
+  <span class="brand-tagline">A travel guide series</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">
+    <span><a href="/" class="brand-link" >My Life Happens Travel</a></span>
+    <div class="hero-badge-dot"></div>
+    <span>Destination Guide</span>
+  </div>
+  <h1>Dublin <em>&amp;</em><br>Beyond</h1>
+  <div class="hero-rule"></div>
+  <p class="hero-sub">Seven days in Ireland — culture, whiskey, wild coasts &amp; ancient stone</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="label">Duration</span><span class="value">7 Days</span></div>
+    <div class="hero-stat"><span class="label">Base</span><span class="value">Dublin City Centre</span></div>
+    <div class="hero-stat"><span class="label">Day Trips</span><span class="value">3 (inc. N. Ireland)</span></div>
+    <div class="hero-stat"><span class="label">Pass</span><span class="value">Go City Dublin</span></div>
+  </div>
+  <div class="hero-brand-footer">
+    <a href="/" class="brand-link mlht-name" >My Life Happens Travel</a>
+  </div>
+</section>
+
+<!-- STICKY NAV -->
+<nav class="day-nav">
+  <a href="#intro">Overview</a>
+  <a href="#day1">Day 1</a>
+  <a href="#day2">Day 2</a>
+  <a href="#day3">Day 3</a>
+  <a href="#day4">Day 4</a>
+  <a href="#day5">Day 5</a>
+  <a href="#day6">Day 6</a>
+  <a href="#day7">Day 7</a>
+  <a href="#food">Dining</a>
+</nav>
+
+<!-- INTRO -->
+<section class="intro-section" id="intro">
+  <p class="eyebrow">About This Guide</p>
+  <h2>A week in Ireland, done right.</h2>
+  <p>This itinerary was built around the <strong>Go City Dublin Explorer Pass</strong> — a multi-attraction pass that pays for itself within a day or two. It pairs three full days of Dublin exploration with carefully timed day trips to Northern Ireland, the coastal villages north of the city, and the wild Atlantic at the Cliffs of Moher.</p>
+  <p>The pacing is intentional: active mornings, leisurely afternoons, and evenings close to the city centre where the best restaurants and pubs are within a short walk of Grafton Street. You won't feel rushed — but you also won't waste time backtracking.</p>
+  <div class="intro-grid">
+    <div class="intro-card">
+      <h4>Book in Advance</h4>
+      <ul>
+        <li>Guinness Storehouse Guided Tour</li>
+        <li>Food on Foot Tour (Day 1)</li>
+        <li>Drinks on Foot Tour (Day 5)</li>
+        <li>Silver Ring Workshop at Silver Works</li>
+        <li>Teeling Whiskey Distillery Tour</li>
+        <li>Game of Thrones &amp; Giant's Causeway (Viator)</li>
+        <li>Cliffs of Moher &amp; Galway (Wild Rover Tours)</li>
+        <li>Dinner: Spitalfields &amp; Stoop Your Head</li>
+      </ul>
+    </div>
+    <div class="intro-card">
+      <h4>Practical Tips</h4>
+      <ul>
+        <li>Stay near Grafton Street — everything is walkable</li>
+        <li>Use Uber; public DART trains are great for coastal trips</li>
+        <li>Buy DART tickets at the station (paper tickets required)</li>
+        <li>Most Go City attractions close by 5 PM — start early</li>
+        <li>Bring passports on the Northern Ireland day</li>
+        <li>Carry snacks &amp; water on full-day tours</li>
+        <li>Stage Door Café opens at 6 AM for early departures</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE YOU GO -->
+<section class="before-section">
+  <div class="before-inner">
+    <p class="eyebrow">Before You Leave Home</p>
+    <h2>What to Know Before You Go</h2>
+    <div class="before-grid">
+      <div class="before-card">
+        <span class="icon">🎟️</span>
+        <h4>Go City Pass</h4>
+        <p>The Go City Dublin Explorer Pass covers dozens of attractions including EPIC, Malahide Castle, Little Museum of Dublin, Jameson Distillery, Teeling, and more. Download the app before arrival and add your pass — most venues scan directly from your phone.</p>
+      </div>
+      <div class="before-card">
+        <span class="icon">✈️</span>
+        <h4>Getting There</h4>
+        <p>Flying into Dublin Airport (DUB). Clear immigration on arrival and take an Uber or taxi directly to your accommodation in the city centre. Allow 30–45 minutes depending on traffic.</p>
+      </div>
+      <div class="before-card">
+        <span class="icon">🚂</span>
+        <h4>Getting Around</h4>
+        <ul>
+          <li>Walk — most central attractions within 20 min</li>
+          <li>DART — coastal rail; paper tickets at station</li>
+          <li>Uber — reliable for early mornings &amp; late nights</li>
+          <li>Big Bus — hop-on/hop-off, covered by Go City</li>
+        </ul>
+      </div>
+      <div class="before-card">
+        <span class="icon">🌦️</span>
+        <h4>Weather &amp; Packing</h4>
+        <ul>
+          <li>Irish weather is famously changeable — layer up</li>
+          <li>Compact waterproof jacket is essential</li>
+          <li>Comfortable walking shoes are non-negotiable</li>
+          <li>Giant's Causeway and Cliffs of Moher can be windy</li>
+        </ul>
+      </div>
+      <div class="before-card">
+        <span class="icon">💷</span>
+        <h4>Money</h4>
+        <ul>
+          <li>Republic of Ireland: Euro (€)</li>
+          <li>Northern Ireland: British Pounds (£)</li>
+          <li>Cards accepted nearly everywhere</li>
+          <li>Giant's Causeway shuttle: cash only (~£1 each way)</li>
+        </ul>
+      </div>
+      <div class="before-card">
+        <span class="icon">📋</span>
+        <h4>Day Trip Notes</h4>
+        <ul>
+          <li>Northern Ireland = passport required</li>
+          <li>Cliffs of Moher tour departs ~7 AM</li>
+          <li>Both tours are full-day (~13 hours) — pack accordingly</li>
+          <li>Snacks are your best friend on bus tour days</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 1 -->
+<section class="day-section" id="day1">
+  <div class="day-header">
+    <div class="day-number">01</div>
+    <div class="day-header-text">
+      <p class="day-date">Monday · Arrival Day</p>
+      <h2>Landing &amp; <em>First Taste of Dublin</em></h2>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">8:30 AM</div>
+        <div class="tl-content">
+          <h3>Arrive at Dublin Airport</h3>
+          <p>Clear immigration and passport control. After a transatlantic overnight flight you'll be tempted to nap — resist. Get to the hotel, drop bags, and keep moving. The jet lag disappears faster if you stay awake until at least 8 PM local time.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">10:00 AM</div>
+        <div class="tl-content">
+          <h3>Check In at Your Hotel</h3>
+          <div class="tags"><span class="tag tag-transport">Grafton Street Area</span></div>
+          <p>Drop your bags even if your room isn't ready. The Grafton Street area is brilliantly central — almost everything on this itinerary is within walking distance. Grab a coffee at Bewley's Grafton Street Café if you need a boost before the tour.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">11:00 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Pre-Booked</span></div>
+          <h3>Food on Foot Tour</h3>
+          <p>Meet at St. Catherine's Church of Ireland on Thomas Street. This guided food tour takes you through Dublin's culinary history and hidden neighbourhood gems. Runs approximately 3 hours and ends near Trinity College — perfectly positioned for the afternoon.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">2:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-gocity">Go City</span></div>
+          <h3>EPIC The Irish Emigration Museum</h3>
+          <p>One of Dublin's most acclaimed museums. Go City customers don't need to pre-book but may wait for the next available slot — admissions run every 15 minutes with last entry at 5 PM. Allow 60–90 minutes.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">3:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-gocity">Go City</span></div>
+          <h3>Jeanie Johnston Tallship &amp; Famine Museum</h3>
+          <p>A replica 19th-century emigrant vessel at Custom House Quay with guided tours every 30 minutes. Open 10 AM – 4:30 PM. A powerful complement to the Emigration Museum just across the quay.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">4:30 PM</div>
+        <div class="tl-content">
+          <h3>Trinity College Grounds &amp; Little Museum</h3>
+          <p>Walk the cobblestoned grounds of one of Europe's finest universities — free to enter. If time allows, stop into the Little Museum of Dublin (Go City, open until 5 PM) on the walk back toward St. Stephen's Green.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">6:45 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span><span class="tag tag-booked">Reservation</span></div>
+          <h3>Nan Chinese Restaurant</h3>
+          <p>A short walk from the hotel with approachable prices and reliably good food. A welcome, no-fuss dinner after a long travel day. Many other restaurants are nearby if you'd rather window-shop first.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-pro">
+        <span class="callout-label">💡 Jet Lag Tip</span>
+        <p>Stay awake until at least 8 PM local time on arrival day. Resisting the nap is the single best thing you can do to beat jet lag quickly.</p>
+      </div>
+      <div class="callout callout-warn">
+        <span class="callout-label">⏱ Timing Note</span>
+        <p>The walk from Grafton Street to the Food on Foot Tour meeting point at St. Catherine's Church takes about 25 minutes. Factor this into your morning.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">📍 Location Tip</span>
+        <p>EPIC and the Jeanie Johnston are both on the north side of the River Liffey at Custom House Quay — easy to combine back-to-back in one sweep.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<!-- DAY 2 -->
+<section class="day-section" id="day2">
+  <div class="day-header">
+    <div class="day-number">02</div>
+    <div class="day-header-text">
+      <p class="day-date">Tuesday · Go City Day 2</p>
+      <h2>Guinness, Whiskey <em>&amp; a Gastropub Dinner</em></h2>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">9:30 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-gocity">Go City</span></div>
+          <h3>Dublin Castle &amp; Chester Beatty Library</h3>
+          <p>About a 10-minute walk from Grafton Street. Both open at 9:45 AM. The Chester Beatty Library — on the castle grounds — holds a world-class collection of manuscripts and art and is consistently rated one of Europe's best free museums. Allow 30–40 minutes each.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">11:00 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Pre-Booked · Not Go City</span></div>
+          <h3>Guinness Storehouse Guided Tour</h3>
+          <p>The most visited attraction in Ireland. Your guided tour ticket is pre-booked separately from Go City. The tour runs approximately 90 minutes, covering brewing history and culminating at the famous Gravity Bar with panoramic views over Dublin.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">12:45 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Lunch</span></div>
+          <h3>Lunch in the Liberties</h3>
+          <p>Two Pups Coffee is popular, casual and closes at 3 PM. Liberties Gate Bar and Restaurant is a solid alternative for something more substantial. Walk around the Liberties — one of Dublin's oldest and most characterful neighbourhoods.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">3:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-gocity">Go City</span><span class="tag tag-booked">Pre-Booked</span></div>
+          <h3>Teeling Whiskey Distillery Tour</h3>
+          <p>Less than 10 minutes' walk from Two Pups. Dublin's first new whiskey distillery in over 125 years. The tour runs 60–75 minutes and includes a tasting. A genuine highlight — even for those who don't consider themselves whiskey drinkers.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">4:15 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-gocity">Go City</span></div>
+          <h3>St. Patrick's Cathedral</h3>
+          <p>Ireland's largest cathedral, standing here since the 12th century. Last admission is 4:45 PM. Budget about 45 minutes — the architecture and history reward a slow, unhurried visit.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">6:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span><span class="tag tag-booked">Reservation · Credit Card Held</span></div>
+          <h3>Spitalfields</h3>
+          <p>A traditional Irish gastropub experience. Come dressed as nicely as you can. There is a minimum order of 3 dishes per person including a main course. Cancel in advance if plans change — they hold a credit card.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-alert">
+        <span class="callout-label">🗓 Must Cancel</span>
+        <p>Spitalfields holds a credit card reservation. Cancel in advance if your plans change to avoid a charge.</p>
+      </div>
+      <div class="callout callout-warn">
+        <span class="callout-label">⚠️ Tomorrow</span>
+        <p>The Northern Ireland tour departs at 6:45 AM. Go to bed early — aim for 9:30 PM and set multiple alarms.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">💡 Big Bus Alternative</span>
+        <p>You can swap Dublin Castle for the Big Bus — board at Stop 2 on Nassau Street at 9:10 AM and ride to Stop 23 near Jameson Distillery, then walk to Guinness Storehouse.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<!-- DAY 3 -->
+<section class="day-section" id="day3">
+  <div class="day-header">
+    <div class="day-number">03</div>
+    <div class="day-header-text">
+      <p class="day-date">Wednesday · All-Day Tour · Bring Your Passport</p>
+      <h2>Game of Thrones Locations <em>&amp; Giant's Causeway</em></h2>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time hi">6:35 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Viator · Pre-Booked</span></div>
+          <h3>Board Tour Bus at Hugh Lane Gallery</h3>
+          <p>Walk or Uber to the Hugh Lane Gallery on Parnell Square North. Arrive by 6:35 AM for a 6:45 pickup. Seats are reserved in the first three rows. The tour runs approximately 13 hours — pack water, snacks, and layers. You are crossing into Northern Ireland: <strong>passports are required.</strong></p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Morning</div>
+        <div class="tl-content">
+          <h3>Dunluce Castle &amp; Dark Hedges</h3>
+          <p>Dunluce Castle is the dramatic clifftop ruin that inspired Game of Thrones' House Greyjoy. Then the Dark Hedges — a haunting tunnel of ancient beech trees lining Bregagh Road. Walk 100–200 metres down the lane; crouch low and shoot upward for the most dramatic canopy effect. Try a backward shot with the path trailing behind for added atmosphere.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">~90 min</div>
+        <div class="tl-content">
+          <h3>Giant's Causeway</h3>
+          <p>Start at the Visitor Centre — use the restroom and grab a map but skip the full indoor exhibition to save time. Walk down to the iconic hexagonal basalt columns: consider taking the scenic Blue Trail down for clifftop views and the shuttle bus back up (cash only, approx. £1 each way). Key photo spots include low angles looking up from the columns, the "Organ Pipes" formation, and the outer edge facing the ocean. If you have energy, the Red Trail (162 steps) offers panoramic views of the whole formation.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Afternoon</div>
+        <div class="tl-content">
+          <h3>Titanic Belfast</h3>
+          <p>Don't miss the Shipyard Ride (Gallery 2) or the Sinking gallery. The Seabed Floor Theatre — where you stand on glass above footage of the actual wreck — is the emotional highlight of the experience. The SS Nomadic (included) is right outside. Budget 80–90 minutes carefully; it goes fast.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Late Afternoon</div>
+        <div class="tl-content">
+          <h3>Belfast City Hall Photo Stop</h3>
+          <p>A brief stop at the imposing City Hall. Key shots: the domed facade, the Titanic Memorial bronze, Queen Victoria statue, and the ornate gardens. Step inside briefly for the marble stairs and stained glass if time allows.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">~7:40 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span></div>
+          <h3>Drop-Off in Temple Bar — Find Dinner</h3>
+          <p>The bus returns to 12 Aston Quay in Temple Bar. Walk back toward your hotel and find dinner along the way. Bartley's Bar at The Grafton serves food until 9:30 PM if you want something close and easy. Pizza is also a great call after a long day — see the Dining Guide below.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-alert">
+        <span class="callout-label">🛂 Passport Required</span>
+        <p>You are crossing the border into Northern Ireland today. Bring your passport — no exceptions.</p>
+      </div>
+      <div class="callout callout-warn">
+        <span class="callout-label">💷 Cash Note</span>
+        <p>Northern Ireland uses British Pounds (£). The Giant's Causeway shuttle is cash only at approx. £1 each way.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">💡 Causeway Strategy</span>
+        <p>Walk down the Blue Trail (scenic views going down), take the shuttle bus back up. Best of both worlds without draining your energy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<!-- DAY 4 -->
+<section class="day-section" id="day4">
+  <div class="day-header">
+    <div class="day-number">04</div>
+    <div class="day-header-text">
+      <p class="day-date">Thursday · Day Trip by DART</p>
+      <h2>Howth, Malahide <em>&amp; Skerries</em></h2>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">7:20 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-transport">DART Train</span></div>
+          <h3>Walk to Tara Street Station</h3>
+          <p>About 10 minutes from Grafton Street. Buy a paper ticket at the station (required — don't assume you can tap a card). Board a northbound DART directly to Howth. The ride takes about 30 minutes with no transfers.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">8:30 AM</div>
+        <div class="tl-content">
+          <h3>Howth Coastal Hike</h3>
+          <p>Two options: the <strong>Cliff Path Loop</strong> (3.7 miles, ~2 hours, green waymarkers — more scenic, dramatic ocean views) or the <strong>Howth Summit Walk</strong> (1.2 miles, ~1 hour, yellow route, starting from the summit car park). Both are rewarding — pick based on energy and weather.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">10:30 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Coffee / Snack</span></div>
+          <h3>Explore Howth Village</h3>
+          <p>Wander the harbour. Tram Coffee &amp; Wine on Harbour Road is highly rated. The Doghouse Café is worth the wait if you've finished the hike early. Howth is famous for fresh seafood — keep an eye out on your walk through the village.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">12:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-gocity">Go City</span></div>
+          <h3>Uber to Malahide Castle</h3>
+          <p>About 15 minutes by Uber from Howth. Show your Go City pass for entry. Gardens open 9:30 AM – 5:30 PM; last castle tour departs around 4 PM. Allow about 90 minutes to walk the grounds and take the castle tour.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">~3:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-gocity">Go City · Cream Tea Included</span></div>
+          <h3>Skerries Mills</h3>
+          <p>Uber from Malahide to Skerries (about 20–25 min). Arrive by 3:30 PM — have a cream tea with a freshly baked scone in the on-site café first (the flour is milled on site), then join the 4 PM guided tour. Mills and café close at 5 PM.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">5:45 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span><span class="tag tag-booked">Reservation</span></div>
+          <h3>Stoop Your Head, Skerries</h3>
+          <p>The top-rated restaurant in Skerries, right at the harbour. Walk from Skerries Mills toward the water for a nicer approach. A wonderful spot for dinner before the train back to Dublin.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">8:10 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-transport">Train — Do Not Miss</span></div>
+          <h3>Train: Skerries → Dublin</h3>
+          <p>The 8:10 PM is a direct service back to the city. The next train is not until 9:27 PM and is not direct. Buy your return ticket in the morning to avoid the queue at Skerries station in the evening.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-alert">
+        <span class="callout-label">🚂 Do Not Miss</span>
+        <p>The 8:10 PM from Skerries is the last direct train back. The next departure at 9:27 PM requires a transfer.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">🥾 Hike Advice</span>
+        <p>If the weather is clear, do the full Cliff Path Loop — the views are worth the extra distance. Save the shorter summit walk for a cloudier morning.</p>
+      </div>
+      <div class="callout callout-warn">
+        <span class="callout-label">🎟️ Tickets</span>
+        <p>Buy a return DART ticket at Tara Street in the morning. Paper tickets only — saves time and stress at Skerries station before your train.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<!-- DAY 5 -->
+<section class="day-section" id="day5">
+  <div class="day-header">
+    <div class="day-number">05</div>
+    <div class="day-header-text">
+      <p class="day-date">Friday · Go City Day 5</p>
+      <h2>Churches, Whiskey <em>&amp; Craft Cocktails</em></h2>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">9:00 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-gocity">Go City</span></div>
+          <h3>Christ Church Cathedral</h3>
+          <p>A 10-minute walk from Grafton Street. One of Dublin's two medieval cathedrals, with origins dating to 1030. Present your Go City pass at the welcome desk. Allow 30–40 minutes to walk through at a relaxed pace.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">10:00 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-gocity">Go City</span><span class="tag tag-booked">Print Paper Tickets</span></div>
+          <h3>Jameson Distillery Tour</h3>
+          <p>About 15 minutes' walk from Christ Church. Print your Go City booking tickets in advance — the Jameson requires paper tickets. A well-produced tour covering Irish whiskey history with a guided tasting. A nice contrast to Teeling's craft distillery experience from Day 2.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">12:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Viator · Pre-Booked</span></div>
+          <h3>Silver Ring Workshop at Silver Works</h3>
+          <p>24 Drury Street, about a 20-minute walk from Jameson. A 2-hour hands-on silversmithing class where you design and craft your own silver ring to take home. One of the most tactile and memorable experiences of the week. Leave by 2:30 PM for the walk to Smithfield.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">3:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-gocity">Go City</span><span class="tag tag-booked">Pre-Booked</span></div>
+          <h3>Drinks on Foot Tour</h3>
+          <p>Starts at Utah Teapot in Smithfield and ends at the Guinness Open Gate Brewery. A guided tour of Dublin's bar and craft drinks culture. Runs approximately 3 hours. If you weren't happy with the Food on Foot Tour format, you can skip this and explore the evening independently.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-warn">
+        <span class="callout-label">🖨️ Print Your Tickets</span>
+        <p>The Jameson Distillery requires printed Go City tickets. Do not rely on the app alone — print them the night before.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">💍 Silver Works Tip</span>
+        <p>Arrive on time and let the instructor know your ring size preference before you start. The ring you make is yours to keep — a uniquely personal souvenir.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">🍺 Tour End Point</span>
+        <p>The Drinks on Foot Tour ends at the Guinness Open Gate Brewery — a great spot to linger over a craft pour if you have energy left in the evening.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<!-- DAY 6 -->
+<section class="day-section" id="day6">
+  <div class="day-header">
+    <div class="day-number">06</div>
+    <div class="day-header-text">
+      <p class="day-date">Saturday · Full Day Tour</p>
+      <h2>Cliffs of Moher <em>&amp; Galway</em></h2>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">6:00 AM</div>
+        <div class="tl-content">
+          <h3>Early Start — Breakfast on the Way</h3>
+          <p>Leave the hotel and pick up a quick breakfast and snacks for the day. Have everything packed the night before — this is an early departure with a long day ahead.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">6:55 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Wild Rover Tours</span></div>
+          <h3>Board at Hotel Riu Plaza or College Green</h3>
+          <p>Board at Hotel Riu Plaza The Gresham (23 Upper O'Connell St) at 6:55 AM or the Ulster Bank bus stop at College Green at 7:00 AM. Arrive 10 minutes early with your voucher ready on your phone. Look for the grey Wild Rover Tours bus. Seats are not assigned — first on, best choice.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">~11:00 AM</div>
+        <div class="tl-content">
+          <h3>Cliffs of Moher — 2 Hours</h3>
+          <p>Use restrooms at the Visitor Centre, then walk <strong>south</strong> toward the South Viewpoint — less crowded and dramatically beautiful. Walk 30 minutes out, 30 minutes back. Then head to O'Brien's Tower (10 minutes from the Visitor Centre) for the classic panoramic shot. You don't need to pay to climb; the view from the base is excellent. Use the final 10–15 minutes for the café or gift shop near the entrance.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">~2:30 PM</div>
+        <div class="tl-content">
+          <h3>Galway — 2 Hours</h3>
+          <p>The bus parks near Eyre Square. Your guide may offer a complimentary 20-minute walking tour including the Spanish Arch and Lynch's Castle. Walk Shop Street → High Street → Quay Street toward the river. Stop at the Spanish Arch and River Corrib for great photos. Java's Crepes on Abbeygate Street is a standout food stop if you need lunch.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">4:30 PM</div>
+        <div class="tl-content">
+          <h3>Board Bus for Return to Dublin</h3>
+          <p>Return from Eyre Square. Approximate arrival back in Dublin (Temple Bar area) is 7:40 PM.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">~8:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span></div>
+          <h3>Pizza — Quick &amp; Satisfying</h3>
+          <p>After a long day on the road, simple is smart. BAMBINO on Stephen Street Lower is well regarded for large New York–style slices. DiFontaine's on Parliament Street in Temple Bar is an excellent alternative right on the walk back to your hotel.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-alert">
+        <span class="callout-label">📦 Pack Tonight</span>
+        <p>You check out tomorrow morning. Use tonight to pack your bags so departure is smooth. Keep toiletries accessible for the morning.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">📸 Cliffs Strategy</span>
+        <p>Go south, not north. The southward walk is less crowded and gives you the raw, dramatic views without the crowds near the main entrance.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">🌊 Galway Tip</span>
+        <p>Quay Street is one of Ireland's liveliest pedestrian strips. Even a brief wander captures the city's independent culture and street music scene.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<!-- DAY 7 -->
+<section class="day-section" id="day7">
+  <div class="day-header">
+    <div class="day-number">07</div>
+    <div class="day-header-text">
+      <p class="day-date">Sunday · Departure Day</p>
+      <h2><em>Sláinte —</em> See You Next Time</h2>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">8:00 AM</div>
+        <div class="tl-content">
+          <h3>Check Out of Your Hotel</h3>
+          <p>Settle your bill and arrange bags. Leave promptly — you need to be at Dublin Airport at least 3 hours before your flight to allow time for US pre-clearance.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">8:15 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-transport">Uber to Airport</span></div>
+          <h3>Travel to Dublin Airport (DUB)</h3>
+          <p>Take an Uber directly to Dublin Airport. The journey is approximately 30–45 minutes depending on traffic. Book in advance if possible, especially on a Sunday morning.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">~9:00 AM</div>
+        <div class="tl-content">
+          <h3>US Pre-Clearance at Dublin Airport</h3>
+          <p>Dublin Airport has US Customs and Border Protection pre-clearance — a major travel advantage. You clear US immigration before boarding, arriving at your US destination as a domestic passenger. Allow extra time as queues can be long, especially on weekend mornings.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">11:30 AM</div>
+        <div class="tl-content">
+          <h3>Depart Dublin</h3>
+          <p>Flight departs Dublin. Thanks to pre-clearance, you'll land at your US destination and walk straight out — no immigration queues on the other side. Safe travels.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-pro">
+        <span class="callout-label">✅ Pre-Clearance Advantage</span>
+        <p>Dublin is one of only a handful of airports worldwide with US pre-clearance. You arrive back in the US as a domestic passenger — no immigration lines after a long flight.</p>
+      </div>
+      <div class="callout callout-warn">
+        <span class="callout-label">⏰ Arrive Early</span>
+        <p>Pre-clearance queues on busy Sunday mornings can be substantial. Being at the airport 3 hours early is not excessive — it's the right call.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DINING GUIDE -->
+<section class="food-section" id="food">
+  <div class="food-inner">
+    <p class="eyebrow"><a href="/" class="brand-link" >My Life Happens Travel</a> · Dining Guide</p>
+    <h2>Where to Eat in Dublin</h2>
+    <div class="food-grid">
+      <div class="food-card">
+        <span class="meal-type">Day 1 · Dinner</span>
+        <h4>Nan Chinese Restaurant</h4>
+        <span class="address">Near Grafton Street, Dublin</span>
+        <p>Casual, well-priced, and close to the hotel. A reliable option after a long travel day when you want something satisfying without a fuss.</p>
+        <span class="res-tag">Reservation via OpenTable</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Day 2 · Lunch</span>
+        <h4>Two Pups Coffee</h4>
+        <span class="address">The Liberties, Dublin</span>
+        <p>A beloved Dublin café with a strong brunch menu. Closes at 3 PM — time your arrival after the Guinness Storehouse tour accordingly.</p>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Day 2 · Dinner</span>
+        <h4>Spitalfields</h4>
+        <span class="address">Near the Liberties, Dublin</span>
+        <p>A proper Irish gastropub experience. Dress well, come hungry — minimum 3 dishes per person including a main is required.</p>
+        <span class="res-tag">Reservation · Credit Card Held</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Day 3 · After Tour</span>
+        <h4>Bartley's Bar / BAMBINO / DiFontaine's</h4>
+        <span class="address">Grafton Area &amp; Temple Bar</span>
+        <p>After 13 hours on a bus, simple and close is the right call. Bartley's serves food until 9:30 PM. BAMBINO and DiFontaine's are both great for late-night pizza.</p>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Day 4 · Dinner</span>
+        <h4>Stoop Your Head</h4>
+        <span class="address">Harbour Road, Skerries</span>
+        <p>The top-rated restaurant in Skerries, right on the harbour. Classic Irish food in a wonderful setting — a highlight of the coastal day trip.</p>
+        <span class="res-tag">Reservation via OpenTable</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Day 6 · Dinner</span>
+        <h4>BAMBINO</h4>
+        <span class="address">37 Stephen Street Lower, Dublin</span>
+        <p>New York–style pizza slices, late hours, no fuss. Perfect end to a long tour day. DiFontaine's on Parliament Street is a solid alternative.</p>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Worth the Splurge</span>
+        <h4>Pickle</h4>
+        <span class="address">Dublin City Centre</span>
+        <p>Michelin-recommended modern Indian. One of Dublin's most acclaimed restaurants. Book well in advance — this one fills up fast.</p>
+        <span class="res-tag">Advance Reservation Required</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Early Mornings</span>
+        <h4>Stage Door Café</h4>
+        <span class="address">Dublin City Centre</span>
+        <p>Opens at 6 AM — a lifesaver on early tour departure days. Highly rated for coffee and breakfast. Note the location before your Northern Ireland and Cliffs of Moher days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="/" class="brand-link footer-brand" >My Life Happens Travel</a>
+  <span class="footer-tagline">Guides for the curious traveller</span>
+  <div class="footer-terra-rule"></div>
+  <p>Dublin &amp; Beyond · A 7-Day Ireland Travel Guide</p>
+  <p style="margin-top: 6px;">Built around the Go City Dublin Explorer Pass · Day tours via Viator &amp; Wild Rover Tours</p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('[id]');
+  const navLinks = document.querySelectorAll('.day-nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + entry.target.id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { rootMargin: '-50% 0px -50% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

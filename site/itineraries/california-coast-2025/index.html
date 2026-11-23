@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Eighteen days on the California coast, from Carmel Valley to Mendocino — wine, whales, redwoods and Pacific sunsets.">
+<title>California Coast 2025 – My Life Happens Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* California Pacific Coast Palette */
+    --ocean:        #1a3550;
+    --ocean-mid:    #1e5872;
+    --ocean-light:  #2a7898;
+    --coral:        #d45c30;
+    --coral-light:  #ee8055;
+    --coral-pale:   #fce8dc;
+    --sage:         #4a7a50;
+    --sage-light:   #6a9a6a;
+    --gold:         #d4a030;
+    --gold-light:   #f0c050;
+    --sand:         #f6f1e6;
+    --sand-dark:    #ece5d2;
+    --ink:          #1c1c1c;
+    --ink-soft:     #3c3c3c;
+    --ink-muted:    #7a7a7a;
+    --white:        #ffffff;
+    --alert:        #9a2e20;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--sand);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  a.brand-link {
+    color: inherit; text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s, opacity 0.2s;
+  }
+  a.brand-link:hover { border-bottom-color: currentColor; opacity: 0.85; }
+
+  /* ===== BRAND BAR ===== */
+  .brand-bar {
+    background: var(--ocean);
+    padding: 14px 40px;
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+  }
+  .brand-wordmark {
+    font-family: 'Cinzel', serif; font-size: 0.9rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--white);
+  }
+  .brand-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--coral-light); flex-shrink: 0; }
+  .brand-tagline {
+    font-family: 'DM Sans', sans-serif; font-size: 0.68rem; font-weight: 300;
+    letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.38);
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: var(--ocean);
+    min-height: 92vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; padding: 60px 40px 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 10% 80%, rgba(212,92,48,0.22) 0%, transparent 55%),
+      radial-gradient(ellipse at 90% 20%, rgba(74,122,80,0.18) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 100%, rgba(26,53,80,0.9) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 0%, rgba(42,120,152,0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  /* Wave texture overlay */
+  .hero::after {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 20% 30%, rgba(240,192,80,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 15%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 40% 70%, rgba(212,92,48,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 85% 60%, rgba(255,255,255,0.2) 0%, transparent 100%),
+      radial-gradient(2px 2px at 15% 50%, rgba(74,122,80,0.4) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(212,92,48,0.15); border: 1px solid rgba(212,92,48,0.35);
+    border-radius: 100px; padding: 6px 18px; margin-bottom: 36px;
+    opacity: 0; animation: fadeUp 0.8s 0.2s forwards; position: relative; z-index: 1;
+  }
+  .hero-badge span {
+    font-family: 'DM Sans', sans-serif; font-size: 0.65rem; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--coral-light);
+  }
+  .hero-badge-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--coral-light); opacity: 0.6; }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 9vw, 8rem); font-weight: 700;
+    color: var(--white); line-height: 0.92; margin-bottom: 12px;
+    opacity: 0; animation: fadeUp 0.9s 0.4s forwards;
+    position: relative; z-index: 1;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold-light); }
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem); color: rgba(246,241,230,0.58);
+    margin-top: 20px; margin-bottom: 52px;
+    opacity: 0; animation: fadeUp 0.9s 0.55s forwards; position: relative; z-index: 1;
+  }
+  .hero-rule {
+    width: 52px; height: 2px;
+    background: linear-gradient(to right, var(--coral), var(--gold-light));
+    margin: 0 auto 40px;
+    opacity: 0; animation: fadeUp 0.8s 0.5s forwards; position: relative; z-index: 1;
+  }
+  .hero-stats {
+    display: flex; gap: 52px; justify-content: center; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp 0.9s 0.7s forwards; position: relative; z-index: 1;
+  }
+  .hero-stat .label {
+    font-family: 'DM Sans', sans-serif; font-size: 0.62rem; font-weight: 500;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--coral-light); display: block; margin-bottom: 4px;
+  }
+  .hero-stat .value {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: var(--white);
+  }
+  .hero-brand-footer {
+    position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    opacity: 0; animation: fadeUp 1s 1s forwards; z-index: 1;
+  }
+  .hero-brand-footer .mlht-name {
+    font-family: 'Cinzel', serif; font-size: 0.68rem;
+    letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.25);
+  }
+  .hero-brand-footer::after {
+    content: ''; width: 1px; height: 36px;
+    background: linear-gradient(to bottom, rgba(212,92,48,0.4), transparent);
+  }
+
+  /* ===== NAV ===== */
+  .day-nav {
+    background: var(--ocean); position: sticky; top: 0; z-index: 100;
+    padding: 0 32px; display: flex; align-items: center; justify-content: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08); overflow-x: auto; scrollbar-width: none;
+  }
+  .day-nav::-webkit-scrollbar { display: none; }
+  .day-nav a {
+    font-family: 'DM Sans', sans-serif; font-size: 0.67rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.42);
+    text-decoration: none; padding: 15px 15px; white-space: nowrap;
+    border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s;
+  }
+  .day-nav a:hover, .day-nav a.active { color: var(--gold-light); border-bottom-color: var(--coral); }
+
+  /* ===== INTRO ===== */
+  .intro-section { max-width: 840px; margin: 80px auto; padding: 0 40px; }
+  .eyebrow {
+    font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 0.67rem;
+    letter-spacing: 0.3em; text-transform: uppercase; color: var(--coral); margin-bottom: 14px;
+  }
+  .intro-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 700;
+    color: var(--ocean); line-height: 1.1; margin-bottom: 24px;
+  }
+  .intro-section p { font-size: 0.98rem; color: var(--ink-soft); margin-bottom: 18px; }
+  .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 44px; }
+  .intro-card {
+    background: var(--white); border-radius: 3px; padding: 26px; border-top: 3px solid var(--coral);
+  }
+  .intro-card h4 {
+    font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.7rem;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--coral); margin-bottom: 14px;
+  }
+  .intro-card ul { list-style: none; padding: 0; }
+  .intro-card li {
+    font-size: 0.88rem; color: var(--ink-soft); padding: 5px 0;
+    border-bottom: 1px solid var(--sand-dark); display: flex; gap: 10px;
+    align-items: flex-start; line-height: 1.5;
+  }
+  .intro-card li:last-child { border-bottom: none; }
+  .intro-card li::before { content: '→'; color: var(--coral); font-size: 0.78rem; flex-shrink: 0; margin-top: 2px; }
+
+  /* ===== REGION SECTIONS (dark) ===== */
+  .region-header {
+    background: var(--ocean);
+    padding: 56px 40px 48px; margin: 80px 0 0;
+    position: relative; overflow: hidden;
+  }
+  .region-header::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 85% 20%, rgba(212,92,48,0.14) 0%, transparent 50%),
+      radial-gradient(ellipse at 10% 80%, rgba(74,122,80,0.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .region-header-inner { max-width: 1060px; margin: 0 auto; position: relative; z-index: 1; }
+  .region-header .eyebrow { color: var(--coral-light); }
+  .region-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700;
+    color: var(--white); line-height: 1.1;
+  }
+  .region-header h2 em { font-style: italic; color: var(--gold-light); }
+  .region-header .region-desc {
+    font-size: 0.92rem; color: rgba(246,241,230,0.62);
+    margin-top: 14px; max-width: 600px; line-height: 1.7;
+  }
+  .region-meta {
+    display: flex; gap: 36px; margin-top: 24px; flex-wrap: wrap;
+  }
+  .region-meta-item .r-label {
+    font-family: 'DM Sans', sans-serif; font-size: 0.6rem; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--coral-light);
+    display: block; margin-bottom: 3px;
+  }
+  .region-meta-item .r-value {
+    font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; color: var(--white);
+  }
+
+  /* ===== DAY SECTIONS ===== */
+  .day-section {
+    max-width: 1060px; margin: 0 auto 80px;
+    padding: 48px 40px 0; scroll-margin-top: 52px;
+  }
+  .day-header {
+    display: flex; align-items: flex-end; gap: 22px;
+    margin-bottom: 40px; padding-bottom: 22px;
+    border-bottom: 1px solid var(--sand-dark);
+  }
+  .day-number {
+    font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 700;
+    color: var(--sand-dark); line-height: 1; flex-shrink: 0;
+  }
+  .day-date {
+    font-family: 'DM Sans', sans-serif; font-size: 0.67rem; font-weight: 500;
+    letter-spacing: 0.28em; text-transform: uppercase; color: var(--coral); margin-bottom: 5px;
+  }
+  .day-header-text h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 3vw, 2.5rem); font-weight: 700;
+    color: var(--ocean); line-height: 1.15;
+  }
+  .day-header-text h3 em { font-style: italic; color: var(--sage); }
+  .day-layout { display: grid; grid-template-columns: 1fr 270px; gap: 44px; align-items: start; }
+
+  /* ===== TIMELINE ===== */
+  .timeline { position: relative; }
+  .timeline::before {
+    content: ''; position: absolute; left: 50px; top: 0; bottom: 0; width: 1px;
+    background: linear-gradient(to bottom, var(--sand-dark), transparent);
+  }
+  .tl-item { display: grid; grid-template-columns: 100px 1fr; gap: 18px; margin-bottom: 28px; }
+  .tl-time {
+    font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 600;
+    color: var(--ink-muted); text-align: right; padding-top: 2px;
+    padding-right: 22px; position: relative;
+  }
+  .tl-time::after {
+    content: ''; position: absolute; right: -5px; top: 7px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--ocean-mid); border: 2px solid var(--sand);
+    box-shadow: 0 0 0 1px var(--ocean-mid);
+  }
+  .tl-time.hi::after {
+    background: var(--coral); box-shadow: 0 0 0 1px var(--coral), 0 0 6px rgba(212,92,48,0.35);
+  }
+  .tl-content h4 {
+    font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.95rem;
+    color: var(--ink); margin-bottom: 5px; line-height: 1.4;
+  }
+  .tl-content p { font-size: 0.87rem; color: var(--ink-soft); line-height: 1.7; }
+  .tags { margin-bottom: 6px; display: flex; flex-wrap: wrap; gap: 5px; }
+  .tag {
+    display: inline-block; font-family: 'DM Sans', sans-serif;
+    font-size: 0.6rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; padding: 2px 7px; border-radius: 2px;
+  }
+  .tag-booked  { background: rgba(212,92,48,0.1); color: var(--coral); border: 1px solid rgba(212,92,48,0.25); }
+  .tag-food    { background: rgba(74,122,80,0.1); color: var(--sage); border: 1px solid rgba(74,122,80,0.25); }
+  .tag-drive   { background: rgba(30,88,114,0.08); color: var(--ocean-mid); border: 1px solid rgba(30,88,114,0.2); }
+  .tag-free    { background: rgba(212,160,48,0.1); color: #9a7010; border: 1px solid rgba(212,160,48,0.28); }
+  .tag-nature  { background: rgba(74,122,80,0.08); color: var(--sage); border: 1px solid rgba(74,122,80,0.2); }
+  .tag-wine    { background: rgba(120,40,60,0.08); color: #8a2a40; border: 1px solid rgba(120,40,60,0.2); }
+
+  /* ===== SIDEBAR ===== */
+  .callout { border-radius: 3px; padding: 18px 17px; margin-bottom: 14px; }
+  .callout-pro   { background: rgba(30,88,114,0.07); border-left: 3px solid var(--ocean-mid); }
+  .callout-warn  { background: rgba(212,92,48,0.08); border-left: 3px solid var(--coral); }
+  .callout-alert { background: rgba(154,46,32,0.07); border-left: 3px solid var(--alert); }
+  .callout-tip   { background: rgba(74,122,80,0.08); border-left: 3px solid var(--sage); }
+  .callout-label {
+    font-family: 'DM Sans', sans-serif; font-size: 0.62rem; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 6px;
+  }
+  .callout-pro .callout-label   { color: var(--ocean-mid); }
+  .callout-warn .callout-label  { color: var(--coral); }
+  .callout-alert .callout-label { color: var(--alert); }
+  .callout-tip .callout-label   { color: var(--sage); }
+  .callout p, .callout li { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.6; }
+  .callout ul { list-style: none; padding: 0; }
+  .callout li { padding: 2px 0; }
+  .callout li::before { content: '→ '; opacity: 0.5; font-size: 0.78rem; }
+
+  /* ===== DINING SECTION ===== */
+  .food-section {
+    background: var(--ocean); padding: 72px 40px;
+    position: relative; overflow: hidden;
+  }
+  .food-section::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 80% 10%, rgba(212,92,48,0.18) 0%, transparent 45%),
+      radial-gradient(ellipse at 10% 85%, rgba(74,122,80,0.15) 0%, transparent 45%);
+    pointer-events: none;
+  }
+  .food-inner { max-width: 980px; margin: 0 auto; position: relative; z-index: 1; }
+  .food-section .eyebrow { color: var(--coral-light); }
+  .food-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--white); margin-bottom: 44px;
+  }
+  .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
+  .food-card {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 3px; padding: 22px;
+  }
+  .meal-type {
+    font-family: 'DM Sans', sans-serif; font-size: 0.62rem; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--coral-light);
+    display: block; margin-bottom: 5px;
+  }
+  .food-card h4 {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700;
+    color: var(--white); margin-bottom: 4px;
+  }
+  .food-card .address { font-size: 0.75rem; color: rgba(246,241,230,0.38); display: block; margin-bottom: 10px; }
+  .food-card p { font-size: 0.84rem; color: rgba(246,241,230,0.65); line-height: 1.6; }
+  .res-tag {
+    display: inline-block; margin-top: 10px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px;
+    background: rgba(212,92,48,0.18); color: var(--coral-light); border: 1px solid rgba(212,92,48,0.3);
+  }
+  .free-tag {
+    display: inline-block; margin-top: 10px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px;
+    background: rgba(212,160,48,0.12); color: var(--gold-light); border: 1px solid rgba(212,160,48,0.3);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--ocean); padding: 48px 40px 36px; text-align: center;
+    border-top: 1px solid rgba(212,92,48,0.2);
+  }
+  .footer-brand {
+    font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--white);
+    display: block; margin-bottom: 6px;
+  }
+  .footer-tagline {
+    font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 300;
+    letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.25);
+    display: block; margin-bottom: 24px;
+  }
+  .footer-rule {
+    width: 40px; height: 2px;
+    background: linear-gradient(to right, var(--coral), var(--gold-light));
+    margin: 0 auto 20px; border-radius: 1px;
+  }
+  footer p { font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.22); line-height: 1.8; }
+
+  /* ===== ORNAMENT ===== */
+  .ornament {
+    text-align: center; font-size: 1rem; letter-spacing: 0.6em; margin: 48px 0;
+    background: linear-gradient(to right, var(--coral), var(--gold-light), var(--sage));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; opacity: 0.45;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== BEFORE YOU GO ===== */
+  .before-section {
+    background: var(--ocean); padding: 72px 40px; margin-bottom: 0;
+    position: relative; overflow: hidden;
+  }
+  .before-section::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 90% 10%, rgba(74,122,80,0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 10% 90%, rgba(212,92,48,0.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .before-inner { max-width: 980px; margin: 0 auto; position: relative; z-index: 1; }
+  .before-section .eyebrow { color: var(--gold-light); }
+  .before-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem); font-weight: 700;
+    color: var(--white); margin-bottom: 44px; line-height: 1.15;
+  }
+  .before-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; }
+  .before-card {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 3px; padding: 24px 20px;
+  }
+  .before-card .icon { font-size: 1.6rem; display: block; margin-bottom: 12px; }
+  .before-card h4 {
+    font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.72rem;
+    letter-spacing: 0.15em; text-transform: uppercase; color: var(--coral-light); margin-bottom: 10px;
+  }
+  .before-card p, .before-card li { font-size: 0.85rem; color: rgba(246,241,230,0.62); line-height: 1.65; }
+  .before-card ul { list-style: none; padding: 0; }
+  .before-card li { padding: 3px 0; }
+  .before-card li::before { content: '· '; color: var(--coral-light); }
+
+  /* ===== PRINT ===== */
+  @media print {
+    .day-nav, .hero-brand-footer { display: none; }
+    .hero { min-height: auto; page-break-after: always; }
+    .day-layout { grid-template-columns: 1fr; }
+    .region-header { page-break-before: always; }
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .brand-bar { padding: 12px 20px; flex-wrap: wrap; gap: 8px; }
+    .brand-tagline { display: none; }
+    .day-layout { grid-template-columns: 1fr; }
+    .intro-grid { grid-template-columns: 1fr; }
+    .before-grid { grid-template-columns: 1fr; }
+    .day-header { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .day-number { font-size: 3.5rem; }
+    .tl-item { grid-template-columns: 72px 1fr; }
+    .timeline::before { left: 35px; }
+    .hero-stats { gap: 28px; }
+    .intro-section, .day-section { padding-left: 24px; padding-right: 24px; }
+    .before-section, .food-section, .region-header { padding: 52px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- BRAND BAR -->
+<div class="brand-bar">
+  <div class="brand-dot"></div>
+  <a href="/" class="brand-link brand-wordmark" >My Life Happens Travel</a>
+  <div class="brand-dot"></div>
+  <span class="brand-tagline">A travel guide series</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">
+    <span><a href="/" class="brand-link" >My Life Happens Travel</a></span>
+    <div class="hero-badge-dot"></div>
+    <span>Destination Guide</span>
+  </div>
+  <h1>California<br><em>Coast</em></h1>
+  <div class="hero-rule"></div>
+  <p class="hero-sub">18 days from Carmel Valley to Mendocino — wine, whales, redwoods &amp; Pacific sunsets</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="label">Duration</span><span class="value">18 Days</span></div>
+    <div class="hero-stat"><span class="label">Route</span><span class="value">SFO → Carmel → Cambria → Monterey → Napa → Mendocino</span></div>
+    <div class="hero-stat"><span class="label">Car</span><span class="value">Alamo SUV Rental</span></div>
+    <div class="hero-stat"><span class="label">Best For</span><span class="value">Coast, Wine &amp; Nature</span></div>
+  </div>
+  <div class="hero-brand-footer">
+    <a href="/" class="brand-link mlht-name" >My Life Happens Travel</a>
+  </div>
+</section>
+
+<!-- STICKY NAV -->
+<nav class="day-nav">
+  <a href="#intro">Overview</a>
+  <a href="#carmel-valley">Carmel Valley</a>
+  <a href="#carmel-cambria">Carmel + Cambria</a>
+  <a href="#monterey">Monterey</a>
+  <a href="#half-moon-bay">Half Moon Bay</a>
+  <a href="#calistoga">Calistoga</a>
+  <a href="#mendocino">Mendocino</a>
+  <a href="#napa">Napa Valley</a>
+  <a href="#san-francisco">San Francisco</a>
+  <a href="#dining">Dining Guide</a>
+</nav>
+
+<!-- INTRO -->
+<section class="intro-section" id="intro">
+  <p class="eyebrow">About This Guide</p>
+  <h2>The full California Coast — from ranch to redwoods.</h2>
+  <p>This itinerary traces the California coast in all its variety: the pastoral calm of Carmel Valley Ranch, the dramatic cliffs of Big Sur and Cambria, the maritime wonder of Monterey, the rolling fog of Half Moon Bay, the wine caves of Calistoga and Napa, the wild headlands of Mendocino, and finally San Francisco to close the loop.</p>
+  <p>Eighteen days is enough to slow down and actually feel each place — not just drive through it. Every region on this route deserves at least two nights, and the pacing here reflects that. The rental car is essential; the coast is meant to be driven on your own schedule.</p>
+  <div class="intro-grid">
+    <div class="intro-card">
+      <h4>Already Booked</h4>
+      <ul>
+        <li>Alaska Airlines flight (EWR → SFO, departs 9 AM)</li>
+        <li>Alamo SUV — Costco reservation</li>
+        <li>Carmel Valley Ranch — Valley Kitchen dinner (Tock)</li>
+        <li>Folktale Winery — dinner reservation (Tock)</li>
+        <li>Cambria Beach Lodge</li>
+        <li>Robin's Restaurant, Cambria (reservation)</li>
+        <li>The Black Cat Bistro, Cambria (OpenTable)</li>
+        <li>Hearst Castle Tour — confirmation + ID required</li>
+        <li>Intercontinental The Clement Monterey</li>
+        <li>Monterey Bay Whale Watch — 9 AM tour</li>
+        <li>Beach House Hotel, Half Moon Bay (Marriott)</li>
+        <li>Sam's Chowder House — 7:30 PM reservation</li>
+        <li>Inn on Pine, Calistoga</li>
+        <li>Bennett Lane Winery tasting (11:30 AM)</li>
+        <li>Tamber Bey Winery tasting (3:30 PM, booked online)</li>
+        <li>Brewery Gulch Inn, Mendocino</li>
+        <li>Alila Napa Valley</li>
+        <li>Salva Terrace &amp; Bar — dinner (OpenTable)</li>
+        <li>Palace Hotel San Francisco</li>
+        <li>United flight home (SFO, departs 4:20 PM)</li>
+      </ul>
+    </div>
+    <div class="intro-card">
+      <h4>Practical Tips</h4>
+      <ul>
+        <li>Route 1 is closed in sections south of Big Sur — plan back roads</li>
+        <li>Muir Woods: bring parking pass (8–8:30 AM window) and National Park pass</li>
+        <li>Whale watch: dress in warm layers, bring snacks, binoculars, and sunscreen</li>
+        <li>Hearst Castle: bring printed confirmation letter and photo ID</li>
+        <li>Hearst Ranch Winery tasting fee waived with 2 bottle purchase ($35)</li>
+        <li>San Simeon Pier lunch: order online ahead of time for 1 PM pickup</li>
+        <li>Barbara's Fishtrap: cash only, no reservations, arrive by 6 PM</li>
+        <li>Monterey Bay Aquarium: tickets in Apple Wallet</li>
+        <li>Brewery Gulch Inn: complimentary wine hour 5:30–6:30 PM daily</li>
+        <li>Beach House Hotel + Palace Hotel: free continental breakfast included</li>
+        <li>Alila Napa Valley: welcome wine provided in room</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE YOU GO -->
+<section class="before-section">
+  <div class="before-inner">
+    <p class="eyebrow">Before You Leave Home</p>
+    <h2>What to Know Before You Go</h2>
+    <div class="before-grid">
+      <div class="before-card">
+        <span class="icon">🚗</span>
+        <h4>The Rental Car</h4>
+        <p>An intermediate SUV from Alamo (booked via Costco) is your vehicle for the entire 18 days. This trip is highway-centric — Route 1 along the coast and 101 inland. Good storage space matters; you're moving hotels frequently.</p>
+      </div>
+      <div class="before-card">
+        <span class="icon">🗺️</span>
+        <h4>Route Notes</h4>
+        <ul>
+          <li>Route 1 is closed in sections south of Big Sur — use inland alternatives (Carmel Valley Rd, Hwy 46, etc.)</li>
+          <li>Download offline maps before leaving for Mendocino — cell service is patchy</li>
+          <li>Muir Woods: parking pass required for the 8–8:30 AM slot</li>
+        </ul>
+      </div>
+      <div class="before-card">
+        <span class="icon">🌊</span>
+        <h4>Weather &amp; Packing</h4>
+        <ul>
+          <li>Coastal California in summer: 55–70°F, frequently foggy mornings</li>
+          <li>Inland (Napa, Calistoga): hot — 85–100°F in July/August</li>
+          <li>Always pack a light jacket for coastal evenings</li>
+          <li>Layers are essential — temperature changes dramatically</li>
+        </ul>
+      </div>
+      <div class="before-card">
+        <span class="icon">🎟️</span>
+        <h4>Key Tickets &amp; Passes</h4>
+        <ul>
+          <li>Monterey Bay Aquarium — tickets ready in Apple Wallet</li>
+          <li>Muir Woods parking pass — 8 to 8:30 AM slot</li>
+          <li>National Park Pass — bring for Muir Woods</li>
+          <li>Hearst Castle — print confirmation + bring photo ID</li>
+          <li>Whale Watch — 9 AM, check in at 8:30 AM</li>
+        </ul>
+      </div>
+      <div class="before-card">
+        <span class="icon">🍷</span>
+        <h4>Wine Country Notes</h4>
+        <ul>
+          <li>Bennett Lane: tasting at 11:30 AM</li>
+          <li>Tamber Bey: booked online, 3:30 PM</li>
+          <li>Hearst Ranch Winery: $35 Legacy Tasting, waived with 2 bottle purchase</li>
+          <li>Brewery Gulch Inn: complimentary wine hour nightly 5:30–6:30 PM</li>
+          <li>Alila Napa Valley: welcome wine in room on arrival</li>
+        </ul>
+      </div>
+      <div class="before-card">
+        <span class="icon">🏨</span>
+        <h4>Hotel Highlights</h4>
+        <ul>
+          <li>Carmel Valley Ranch: ranch activities, pool, infinity hot tub, lavender field</li>
+          <li>Cambria Beach Lodge: steps from Moonstone Beach boardwalk</li>
+          <li>Intercontinental Clement Monterey: historic Cannery Row location</li>
+          <li>Beach House + Palace + Brewery Gulch: free breakfast included</li>
+          <li>Alila Napa: poolside dining, balcony, outdoor seating</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- REGION 1: CARMEL VALLEY        -->
+<!-- ============================== -->
+<div class="region-header" id="carmel-valley">
+  <div class="region-header-inner">
+    <p class="eyebrow">Days 1–2 · July 24–25</p>
+    <h2>Carmel Valley Ranch — <em>Arrive &amp; Unwind</em></h2>
+    <p class="region-desc">Your introduction to California begins at Carmel Valley Ranch — a luxury resort tucked into the Santa Lucia mountains with a working organic garden, lavender fields, infinity hot tub, and vineyard views. Two nights here set the perfect tone before the coastal drive begins.</p>
+    <div class="region-meta">
+      <div class="region-meta-item"><span class="r-label">Stay</span><span class="r-value">Carmel Valley Ranch</span></div>
+      <div class="region-meta-item"><span class="r-label">Drive from SFO</span><span class="r-value">~2 hours</span></div>
+      <div class="region-meta-item"><span class="r-label">Dinner</span><span class="r-value">Valley Kitchen (Tock) · Folktale Winery (Tock)</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">01</div>
+    <div class="day-header-text">
+      <p class="day-date">Thursday · July 24</p>
+      <h3>Arrival Day — <em>SFO to Carmel Valley</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">9:00 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Alaska Airlines 373</span></div>
+          <h4>Depart EWR for San Francisco</h4>
+          <p>Flight departs Newark at 9 AM, arriving SFO at 12:15 PM (PST). Allow time for baggage claim — then head to the Alamo counter for your rental SUV.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">12:15 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-drive">Alamo · Costco</span></div>
+          <h4>Pick Up Rental Car at SFO</h4>
+          <p>Alamo is at the consolidated rental car facility accessible via the AirTrain from the terminals. The intermediate SUV reservation was made through Costco — payment happens at pickup.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">1:30 PM</div>
+        <div class="tl-content">
+          <h4>Grab Lunch &amp; Supplies Near Millbrae</h4>
+          <p>Stop near the Millbrae/Burlingame area for lunch and supplies — water, snacks, and anything you need for the drive south. The Safeway on El Camino Real is easy and well-stocked.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">~4:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Carmel Valley Ranch</span></div>
+          <h4>Check In — Carmel Valley Ranch</h4>
+          <p>About 2 hours south on US-101. Free parking on property. Check in, get your room, and take a first walk around the grounds — the views over the valley and vineyards are immediate and impressive. Check the front desk for a schedule of ranch activities and events during your stay.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">7:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span><span class="tag tag-booked">Tock Reservation</span></div>
+          <h4>Valley Kitchen at Carmel Valley Ranch</h4>
+          <p>The resort's signature restaurant — farm-to-table cooking with produce from the organic garden on property. A relaxed and excellent dinner to kick off the trip without having to drive anywhere.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">After Dinner</div>
+        <div class="tl-content">
+          <h4>Balcony &amp; First Night in California</h4>
+          <p>Head back to your room and enjoy the balcony. The Carmel Valley air in the evening is soft and warm with a slight hill breeze — a very different experience from the foggy coast you'll see later in the trip.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-pro">
+        <span class="callout-label">🗓 Ranch Activities</span>
+        <p>Ask the front desk for the current schedule of complimentary ranch activities — guided hikes, the Ranch Roundup with farm animals, stargazing, and archery are often available.</p>
+      </div>
+      <div class="callout callout-warn">
+        <span class="callout-label">🚗 Drive Time</span>
+        <p>SFO to Carmel Valley Ranch is about 2 hours. Traffic leaving the Bay Area on a Thursday afternoon can add 30–45 minutes — plan accordingly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">02</div>
+    <div class="day-header-text">
+      <p class="day-date">Friday · July 25</p>
+      <h3>Ranch Day — <em>Hike, Pool &amp; Folktale Winery</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">8:00 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Breakfast</span></div>
+          <h4>Coffee &amp; Morning Snack</h4>
+          <p>Free coffee in the lobby — pick up a pastry at The Market &amp; Creamery on the ranch grounds or use something you brought from the previous day's supply stop.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Morning</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-nature">Choose Your Adventure</span></div>
+          <h4>Morning Activity — Hike, Gym, or Garden</h4>
+          <p>Three good options depending on your energy and the weather. The <strong>Corral Hike</strong> is gentle with shady sections and ranch overlooks — ideal for a relaxed morning. The <strong>Huff 'N' Puff + Horseshoe Trail Loop</strong> is a moderate 3-mile circuit with panoramic vineyard views. Or visit the <strong>organic garden</strong> and <strong>lavender field</strong> for a more leisurely morning with excellent photography opportunities.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Afternoon</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-free">Complimentary</span></div>
+          <h4>Pool &amp; Infinity Hot Tub</h4>
+          <p>The ranch has several pools — ask which is currently the warmest or most scenic. The infinity hot tub overlooking the valley is one of the genuine highlights of this property. A long afternoon here is not a waste of time.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">3:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-free">Complimentary</span></div>
+          <h4>Ranch Roundup</h4>
+          <p>Complimentary ranch activity at the Lodge Lobby — meet the farm animals, a charming and genuinely fun 20-minute experience that's part of the ranch's character.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">6:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span><span class="tag tag-booked">Tock Reservation</span></div>
+          <h4>Folktale Winery &amp; Vineyards</h4>
+          <p>A short drive from the ranch. Dinner in the wine garden with live music until 7 PM — a lovely outdoor California evening. Folktale is known for its estate wines, light bites, and laid-back atmosphere. Can be cancelled if you'd prefer to stay on the ranch property and find dinner there.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-tip">
+        <span class="callout-label">📸 Lavender Field</span>
+        <p>The lavender field is at its peak in July. Early morning light gives the best shots before the midday sun flattens the color. Bring a wide-angle if you have one.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">🏊 Pool Tip</span>
+        <p>There are multiple pools on the ranch property. Ask the concierge which one is heated and most scenic on your specific day — conditions vary.</p>
+      </div>
+      <div class="callout callout-warn">
+        <span class="callout-label">🍷 Folktale Tip</span>
+        <p>If you'd rather not drive, the ranch may be able to arrange transportation. Ask the concierge — it's a short trip but a glass or two of wine makes driving less appealing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- REGION 2: CARMEL + CAMBRIA     -->
+<!-- ============================== -->
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<div class="region-header" id="carmel-cambria">
+  <div class="region-header-inner">
+    <p class="eyebrow">Days 3–4 · July 26–27</p>
+    <h2>Carmel by the Sea <em>&amp; Cambria</em></h2>
+    <p class="region-desc">Saturday moves from the ranch to the coast — a morning in the storybook village of Carmel-by-the-Sea before driving south to Cambria Beach Lodge for two nights. Sunday brings Hearst Castle, elephant seals, a pier lunch, and a winery tasting.</p>
+    <div class="region-meta">
+      <div class="region-meta-item"><span class="r-label">Stay</span><span class="r-value">Cambria Beach Lodge</span></div>
+      <div class="region-meta-item"><span class="r-label">Highlights</span><span class="r-value">Carmel Beach · Hearst Castle · Elephant Seals · Moonstone Beach</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">03</div>
+    <div class="day-header-text">
+      <p class="day-date">Saturday · July 26</p>
+      <h3>Carmel-by-the-Sea <em>&amp; Drive to Cambria</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">Morning</div>
+        <div class="tl-content">
+          <h4>Coffee at the Ranch, Then Check Out</h4>
+          <p>Have coffee at Carmel Valley Ranch and a light snack before checking out at 11 AM. Leave luggage with the concierge — they'll hold it while you explore Carmel-by-the-Sea. Pick it up on your return drive south.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">11:30 AM</div>
+        <div class="tl-content">
+          <h4>Drive to Carmel-by-the-Sea</h4>
+          <p>About 20–25 minutes via Carmel Valley Road to Ocean Avenue. Park near Ocean Ave &amp; Lincoln Street — this puts you close to the shops, beach access, and lunch spots.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Noon</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Lunch</span></div>
+          <h4>Lunch in Carmel</h4>
+          <p>Café Carmel is a local classic with sandwiches, paninis, quiche, pastries, and espresso — great for a quick sit-down or grab-and-go. Alternatively, explore Ocean Avenue first and eat when hunger strikes — there are good options throughout the village.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Afternoon</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-free">Free</span></div>
+          <h4>Explore Carmel Village &amp; Beach</h4>
+          <p>Walk Ocean Avenue from top to bottom — unique art galleries, local boutiques, and artisan food shops line the route. Carmel Plaza has a mix of local and familiar brands including Anthropologie. At the bottom of Ocean Avenue: <strong>Carmel Beach</strong>, with white sand and sweeping views of the rocky headlands. Walk the <strong>Scenic Bluff Path</strong> for breathtaking coastline views along the cliffs above the beach.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">3:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-drive">~2 Hours</span></div>
+          <h4>Drive South to Cambria</h4>
+          <p>Return to Carmel Valley Ranch to pick up luggage, then drive approximately 2 hours south on Route 1 (some sections closed — use back roads as needed). Check in to Cambria Beach Lodge — ideally located just steps from the Moonstone Beach boardwalk.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Evening</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-nature">Free</span></div>
+          <h4>Moonstone Beach &amp; Boardwalk</h4>
+          <p>Steps from the hotel, the 1-mile wooden boardwalk runs along clifftops with panoramic Pacific views — perfect for a sunset stroll. Look for sea otters, pelicans, and harbor seals. Walk down to the beach itself to look for smooth moonstones, jade, and driftwood. Bring a light jacket — it gets breezy in the evening.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">7:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span><span class="tag tag-booked">Reservation</span></div>
+          <h4>Robin's Restaurant</h4>
+          <p>A Cambria institution with a diverse menu and lovely garden setting. Requires a short drive. Alternatively, Sea Chest Oyster Bar is directly across from the hotel — no reservations, cash only, but excellent for fresh seafood. If Sea Chest has seating, it may be the better choice given the location.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-pro">
+        <span class="callout-label">🐾 Carmel Tip</span>
+        <p>Carmel-by-the-Sea is famously dog-friendly — dogs on beaches, in shops, and even some restaurants. The town itself is walkable end to end in under 30 minutes.</p>
+      </div>
+      <div class="callout callout-warn">
+        <span class="callout-label">🛣️ Route 1 Closures</span>
+        <p>Check current Caltrans road closure status before driving south. Some sections of Route 1 between Big Sur and Cambria have been intermittently closed — take Hwy 101 to Hwy 46 West if needed.</p>
+      </div>
+      <div class="callout callout-tip">
+        <span class="callout-label">🦦 Moonstone Beach</span>
+        <p>Sea otters are frequently spotted in the kelp beds just offshore at Moonstone Beach — scan the water with binoculars in the early evening for the best chance of a sighting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">04</div>
+    <div class="day-header-text">
+      <p class="day-date">Sunday · July 27</p>
+      <h3>Hearst Castle, <em>Elephant Seals &amp; Winery</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">8:30 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Breakfast</span></div>
+          <h4>Continental Breakfast at the Hotel</h4>
+          <p>Start early — Hearst Castle tours begin at 9:20 AM and it's a 30-minute drive north on Route 1.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">9:20 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Confirmation + ID Required</span></div>
+          <h4>Hearst Castle Tour</h4>
+          <p>Bring your printed confirmation letter and photo ID to the Visitor Center ticket window. A bus takes you from the visitors center up the hill to the castle. The Grand Rooms Tour is the classic first-time visit — the Neptune Pool, Casa Grande, and Celestial Suite are among the highlights. Truly one of the most extraordinary private residences ever built in the United States.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">11:00 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-nature">Free</span></div>
+          <h4>Piedras Blancas Elephant Seal Rookery</h4>
+          <p>4 miles north of Hearst Castle. A colony of hundreds of northern elephant seals hauls out on this beach year-round — in summer you'll see juveniles and sub-adult males. Walk the Boucher Trail from the parking lot north toward the lighthouse (about 1.9 miles one way). An extraordinary and completely free wildlife experience.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">12:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Lunch</span></div>
+          <h4>San Simeon Pier — 1 PM Pickup</h4>
+          <p>Drive south to San Simeon Pier. Walk the pier until your lunch order is ready. Food is ordered online in advance for 1 PM pickup — the pier partners with Seaside Foods, located inside Sebastian's General Store, a historic building adjacent to the pier. A classic California coastal lunch experience.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">1:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-wine">Wine Tasting</span></div>
+          <h4>Hearst Ranch Winery — San Simeon Tasting Room</h4>
+          <p>The $35 Legacy Tasting fee is waived with the purchase of 2 bottles. The wines are estate-grown on the Hearst Ranch and the tasting room has views of the coast. A unique tasting experience given the historic property it's connected to. Allow about 90 minutes.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">3:30 PM</div>
+        <div class="tl-content">
+          <h4>Cambria Main Street (Optional)</h4>
+          <p>Drive into Cambria and find parking near Robin's Restaurant — it marks the beginning of the shopping area. Both the West and East Villages offer a mix of boutiques, galleries, and restaurants. Worth a browse if you still have energy.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">7:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span><span class="tag tag-booked">OpenTable</span></div>
+          <h4>The Black Cat Bistro</h4>
+          <p>A warmly regarded Cambria bistro with an interesting menu of seasonal California cuisine. Requires a short drive into town. A fitting finale to a very full day.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-alert">
+        <span class="callout-label">📄 Castle Tickets</span>
+        <p>You must present your printed confirmation letter and a photo ID at the Visitor Center ticket window — not just a phone screen. Print before leaving home.</p>
+      </div>
+      <div class="callout callout-tip">
+        <span class="callout-label">🦭 Elephant Seals</span>
+        <p>Stay on the boardwalk and don't approach the seals — they're large and can move surprisingly fast. Binoculars give excellent views from a safe distance.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">🍷 Hearst Winery</span>
+        <p>Buy 2 bottles to waive the $35 tasting fee — this is good value if you enjoy the wines. They'll box them for easy transport in the car.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- REGION 3: MONTEREY             -->
+<!-- ============================== -->
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<div class="region-header" id="monterey">
+  <div class="region-header-inner">
+    <p class="eyebrow">Days 5–7 · July 28–30</p>
+    <h2>Monterey — <em>Whales, Aquarium &amp; Cannery Row</em></h2>
+    <p class="region-desc">Three nights at the Intercontinental The Clement Monterey put you at the epicenter of one of California's most beautiful coastal cities. Whale watching on Monterey Bay, the world-renowned aquarium, Cannery Row, and miles of coastal trail all within walking distance.</p>
+    <div class="region-meta">
+      <div class="region-meta-item"><span class="r-label">Stay</span><span class="r-value">Intercontinental The Clement Monterey</span></div>
+      <div class="region-meta-item"><span class="r-label">Must-Do</span><span class="r-value">Whale Watch · Monterey Bay Aquarium · Coastal Trail</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">05</div>
+    <div class="day-header-text">
+      <p class="day-date">Monday · July 28</p>
+      <h3>Arrive Monterey — <em>Cannery Row &amp; Coastal Trail</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">Morning</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Breakfast</span></div>
+          <h4>Breakfast &amp; Check Out at Cambria Beach Lodge</h4>
+          <p>Continental breakfast at the hotel, then check out and head north on Route 1 toward Monterey. The drive takes about 90 minutes and is scenic the entire way.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">Noon</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Intercontinental The Clement</span></div>
+          <h4>Check In — Monterey</h4>
+          <p>Check in early if possible. If the room isn't ready, leave bags with the concierge and head straight out to Cannery Row — the hotel is right on it. Stroll the historic waterfront, browse the boutique shops and galleries, and get your bearings for the next three days.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Afternoon</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-nature">Free</span></div>
+          <h4>Cannery Row &amp; Pool</h4>
+          <p>After settling in, relax by the pool if it's a warm afternoon, or walk the Monterey Bay Coastal Trail. The trail runs directly past the hotel — go southwest toward Lovers Point Park for harbor seals, otters, tide pools, and rocky coves. Or head northeast toward Fisherman's Wharf and the Coast Guard Pier (excellent for sea lions). No dinner plans tonight — explore the area and find something that looks good.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-pro">
+        <span class="callout-label">🦦 Otter Watching</span>
+        <p>The kelp beds around Cannery Row are prime sea otter habitat. Early morning and late afternoon are the best times to spot them floating on their backs. Walk the coastal trail slowly and scan the surface.</p>
+      </div>
+      <div class="callout callout-tip">
+        <span class="callout-label">🍽️ Dinner Tonight</span>
+        <p>No reservation needed tonight. Walk Cannery Row and Fisherman's Wharf for options — Old Fisherman's Grotto and Monterey Fish House are local favorites for fresh seafood.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">06</div>
+    <div class="day-header-text">
+      <p class="day-date">Tuesday · July 29</p>
+      <h3>Whale Watch &amp; <em>Coastal Afternoon</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">7:45 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Breakfast</span></div>
+          <h4>Starbucks on Cannery Row</h4>
+          <p>Walk to the Starbucks on Cannery Row — very close to the hotel. Order ahead online if possible to avoid waiting. You need to be checked in for the whale watch by 8:30 AM.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">8:30 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">9 AM Departure</span></div>
+          <h4>Monterey Bay Whale Watch</h4>
+          <p>Check in at 8:30 AM for the 9 AM departure. Dress in warm layers regardless of the weather — it's always colder on the ocean. Long pants, a jacket, and closed shoes. Bring snacks, water, binoculars, camera, and sunscreen. Monterey Bay is one of the best whale watching locations in the world — humpbacks, blue whales, orcas, dolphins, and sea birds are all possible. The tour runs approximately 3–4 hours.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">1:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Lunch</span></div>
+          <h4>Lunch on Cannery Row</h4>
+          <p>After the tour, grab lunch near the wharf and walk back to the hotel. You'll likely be tired and slightly wind-blown — a relaxed lunch is the right call.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">2:30 PM</div>
+        <div class="tl-content">
+          <h4>Rest or Pool</h4>
+          <p>A few hours in the room or by the pool before the afternoon walk. An early whale watch morning earns a proper rest.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">4:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-nature">Free</span></div>
+          <h4>Monterey Bay Coastal Trail</h4>
+          <p>Walk southwest toward Lovers Point Park in Pacific Grove — a flat, gorgeous 2-mile stretch with harbor seals, otters, tide pools, art benches, small beaches and coves. Or head northeast toward Fisherman's Wharf past the Monterey Bay Aquarium, McAbee Beach, and the Coast Guard Pier (sea lions are reliably present here).</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-alert">
+        <span class="callout-label">🐋 Whale Watch Packing</span>
+        <p>Layers are essential — the bay is significantly colder than shore. Bring: thermal base layer, fleece or sweater, windproof jacket, closed shoes. Dress warmer than you think you need to.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">📸 Photography Tip</span>
+        <p>Use burst mode for whale surfacing shots — they breach fast and disappear quickly. A telephoto lens is ideal; the crew usually keeps a safe but close distance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">07</div>
+    <div class="day-header-text">
+      <p class="day-date">Wednesday · July 30</p>
+      <h3>Monterey Bay Aquarium <em>&amp; Drive to Half Moon Bay</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">9:00 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Breakfast</span></div>
+          <h4>Breakfast Walk — Tidal Coffee</h4>
+          <p>Tidal Coffee is a well-regarded local coffee shop with food. If time is short, Starbucks on Cannery Row is the backup option. Check out of the hotel and have them hold your bags.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">10:00 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Tickets in Apple Wallet</span></div>
+          <h4>Monterey Bay Aquarium</h4>
+          <p>One of the finest aquariums in the world — and walking distance from the hotel. The Kelp Forest tank (three stories tall, the first of its kind), the Open Sea exhibit with sharks and tuna, the sea otters, and the jellyfish galleries are the standouts. Allow 2.5–3 hours. Don't skip the tide pool touch tanks.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">1:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-drive">~2 Hours</span></div>
+          <h4>Collect Bags &amp; Drive North to Half Moon Bay</h4>
+          <p>Grab a snack if hungry, collect bags from the hotel, and head north on Route 1. The drive takes about 2 hours and follows the coast the entire way — pull over at any turnout that looks interesting. Half Moon Bay's fog-draped headlands are a striking contrast to sunny Monterey.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">3:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Marriott Property</span></div>
+          <h4>Check In — Beach House Hotel, Half Moon Bay</h4>
+          <p>Marriott property with free parking and free continental breakfast. Relax after the drive. The Coastside Trail runs right past the property — a short walk gives you the feel of the Half Moon Bay headlands.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Evening</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span></div>
+          <h4>Dinner Options Near the Hotel</h4>
+          <p><strong>Barbara's Fishtrap</strong> is a 15-minute walk — cash only, no reservations, arrive by 6 PM for a chance at a table. <strong>Half Moon Bay Brewing Company</strong> is also a 15-minute walk — call ahead to check wait times. Both are excellent for fresh coastal seafood in a casual setting.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-pro">
+        <span class="callout-label">🐙 Aquarium Must-Sees</span>
+        <p>Don't miss the Kelp Forest (best viewed from the upper level first), the sea otters in the Great Tide Pool outside, and the Open Sea exhibit. The jellyfish galleries are unexpectedly hypnotic.</p>
+      </div>
+      <div class="callout callout-warn">
+        <span class="callout-label">💵 Barbara's Fishtrap</span>
+        <p>Cash only and no reservations — arrive early (by 5:30–6 PM) if you want a table. It's a Half Moon Bay institution and well worth the wait.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- REGION 4: HALF MOON BAY        -->
+<!-- ============================== -->
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<div class="region-header" id="half-moon-bay">
+  <div class="region-header-inner">
+    <p class="eyebrow">Days 8–9 · July 31 – August 1</p>
+    <h2>Half Moon Bay — <em>Coastal Trails &amp; Chowder</em></h2>
+    <p class="region-desc">Two relaxed days on the San Mateo coast with easy access to walking trails, kayaking, the harbor, and one of the Bay Area's best casual seafood restaurants just steps from the hotel.</p>
+    <div class="region-meta">
+      <div class="region-meta-item"><span class="r-label">Stay</span><span class="r-value">Beach House Hotel (Marriott)</span></div>
+      <div class="region-meta-item"><span class="r-label">Must-Do</span><span class="r-value">Coastside Trail · Sam's Chowder House · Pillar Point Harbor</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">08</div>
+    <div class="day-header-text">
+      <p class="day-date">Thursday · July 31</p>
+      <h3>Half Moon Bay Day — <em>Trail, Harbor &amp; Sam's</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">Morning</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Breakfast Included</span></div>
+          <h4>Continental Breakfast at the Hotel</h4>
+          <p>Free continental breakfast at the Beach House Hotel. A relaxed morning before choosing your day activity.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Morning</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-nature">Choose Your Day</span></div>
+          <h4>Coastside Trail or Pillar Point Harbor</h4>
+          <p>The <strong>Coastside Trail</strong> runs 3 miles each way along the cliffs — walk or rent bikes for the full out-and-back. <strong>Pillar Point Harbor</strong> is reachable from the trail and is home to Half Moon Bay Kayak Co. — kayaks and bikes available to rent online in advance. If the weather is good, the pool at the hotel is another option. Main Street is about 5 miles away if shopping interests you.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">7:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span><span class="tag tag-booked">Reservation</span></div>
+          <h4>Sam's Chowder House</h4>
+          <p>Right next to the hotel — a 2-minute walk. Sam's is one of the Bay Area's most celebrated seafood restaurants with stunning headland views, a lobster bisque that people drive hours for, and an excellent clam chowder. The outdoor deck is spectacular on a clear evening.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-pro">
+        <span class="callout-label">🚲 Bike Rentals</span>
+        <p>Renting bikes for the Coastside Trail makes the 3-mile each-way distance much more manageable and fun. Book Half Moon Bay Kayak Co. online in advance if you want kayaks at the harbor.</p>
+      </div>
+      <div class="callout callout-tip">
+        <span class="callout-label">🦞 Sam's Tip</span>
+        <p>The Maine Lobster Roll and the award-winning New England clam chowder are the signature orders. The outdoor deck tables book fast — confirm your seating preference when making the reservation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">09</div>
+    <div class="day-header-text">
+      <p class="day-date">Friday · August 1</p>
+      <h3>Half Moon Bay Morning, <em>Then Drive to Vrbo</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">Morning</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Breakfast Included</span></div>
+          <h4>Continental Breakfast, Then a Relaxed Morning</h4>
+          <p>Enjoy the hotel's free breakfast and take a morning walk on the Coastside Trail or along the beach before checking out. A relaxed morning before transitioning to the next accommodation.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">4:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Vrbo Check-In</span></div>
+          <h4>Check In to Vrbo Property</h4>
+          <p>Address provided 4 days before check-in. Use the day to fill time between Half Moon Bay and the Vrbo check-in — explore the area, run any errands, or find a spot for lunch.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-pro">
+        <span class="callout-label">📍 Vrbo Address</span>
+        <p>The Vrbo address is provided 4 days before your check-in date. Confirm it's been sent and save it offline in case of spotty cell service in the area.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- REGION 5: MUIR WOODS & SF      -->
+<!-- ============================== -->
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<div class="region-header" id="calistoga">
+  <div class="region-header-inner">
+    <p class="eyebrow">Days 10–11 · August 2–3</p>
+    <h2>Muir Woods <em>&amp; San Francisco</em></h2>
+    <p class="region-desc">An early morning start for Muir Woods — one of the most awe-inspiring old-growth redwood groves in Northern California. Then an afternoon transition to Calistoga for wine country.</p>
+    <div class="region-meta">
+      <div class="region-meta-item"><span class="r-label">Highlight</span><span class="r-value">Muir Woods National Monument</span></div>
+      <div class="region-meta-item"><span class="r-label">Parking</span><span class="r-value">Pass required · 8–8:30 AM slot · Bring National Park Pass</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">10</div>
+    <div class="day-header-text">
+      <p class="day-date">Saturday · August 2</p>
+      <h3>Muir Woods — <em>Redwoods at Dawn</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time hi">7:45 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Parking Pass · 8–8:30 AM</span></div>
+          <h4>Leave for Muir Woods</h4>
+          <p>Leave by 7:45 AM to arrive for your parking window. Bring your parking reservation, National Park Pass, and layers — the redwood grove stays cool and shaded even in August. The Cathedral Grove trail is the iconic walk through the tallest trees. Arrive early to enjoy the quiet before the crowds build.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Morning</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-nature">National Monument</span></div>
+          <h4>Explore Muir Woods</h4>
+          <p>The Main Trail loop (2 miles) takes about 90 minutes at a comfortable pace through old-growth coast redwoods, some over 1,000 years old and 250 feet tall. The Bohemian and Cathedral Groves are the quieter sections with the most towering trees. Follow it with a side trail up the hillside for perspective and filtered light through the canopy.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Afternoon</div>
+        <div class="tl-content">
+          <h4>Flexible Afternoon — Plan Around Available Activities</h4>
+          <p>Use the afternoon based on what's nearby your Vrbo location and what interests the group. The Marin Headlands, Sausalito waterfront, and Point Reyes area are all nearby and scenic.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-alert">
+        <span class="callout-label">🌲 Parking is Mandatory</span>
+        <p>Muir Woods requires a timed parking reservation — you cannot drive in without one. Have the QR code ready and the National Park Pass visible. No parking pass means no entry to the lot.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">📸 Best Light</span>
+        <p>The 8 AM arrival puts you in the grove during the magical morning light — shafts of sun filter through the canopy in a way that's impossible to replicate later in the day. The earliest slot is always the best slot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">11</div>
+    <div class="day-header-text">
+      <p class="day-date">Sunday · August 3</p>
+      <h3>Check Out &amp; <em>Drive to Calistoga</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">10:00 AM</div>
+        <div class="tl-content">
+          <h4>Check Out of Vrbo</h4>
+          <p>Check out by 10 AM and load the car. You're transitioning to the Inn on Pine in Calistoga — about a 90-minute drive north through the wine country.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Midday</div>
+        <div class="tl-content">
+          <h4>Bag Drop at Fairfield Inn, Millbrae</h4>
+          <p>Pick up any stored luggage at the Fairfield Inn &amp; Suites (250 El Camino Real, Millbrae) by noon if needed, before heading north to Calistoga.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">~6:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Inn on Pine · Calistoga</span></div>
+          <h4>Arrive at Inn on Pine, Calistoga</h4>
+          <p>It's a roughly 2-hour drive from the Bay Area to Calistoga. Call ahead to let them know you'll arrive after 6 PM — the lobby is open until 10 PM. Settle in, then take a walk to Calistoga Creamery for ice cream (open until 9:30 PM).</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-pro">
+        <span class="callout-label">🍦 Calistoga Creamery</span>
+        <p>A short walk from the Inn on Pine and open until 9:30 PM — a perfect low-key first evening in Napa wine country. The ice cream is local and excellent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- REGION 6: CALISTOGA / NAPA     -->
+<!-- ============================== -->
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<div class="region-header">
+  <div class="region-header-inner">
+    <p class="eyebrow">Day 12 · August 4</p>
+    <h2>Calistoga Wine Country — <em>Bennett Lane &amp; Tamber Bey</em></h2>
+    <p class="region-desc">A full day of tastings in Napa Valley's northernmost wine town. Bennett Lane in the morning, lunch in Calistoga, and Tamber Bey in the afternoon — with ice cream to close the evening.</p>
+  </div>
+</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">12</div>
+    <div class="day-header-text">
+      <p class="day-date">Monday · August 4</p>
+      <h3>Calistoga Tastings — <em>Two Wineries &amp; Creamery</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">Morning</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Breakfast Included</span></div>
+          <h4>Breakfast at the Inn</h4>
+          <p>Continental breakfast at the Inn on Pine. A relaxed morning before the first winery tasting.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">11:30 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-wine">Wine Tasting</span></div>
+          <h4>Bennett Lane Winery</h4>
+          <p>A well-regarded Calistoga winery known for its Maximus red blend and Cabernet Sauvignon. The tasting experience is relaxed and unpretentious — a good introduction to the northern Napa style. Scenic property with vineyard views from the tasting room.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">1:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Lunch</span></div>
+          <h4>Lunch in Calistoga Town</h4>
+          <p>Calistoga's main street has several good lunch options. Brannan's Grill and Sam's Social Club at Indian Springs are both reliable choices. Take a walk through the town's boutiques and geothermal spa storefronts after eating.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">3:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-wine">Wine Tasting · Pre-Booked</span></div>
+          <h4>Tamber Bey Winery</h4>
+          <p>A unique Calistoga winery located on a working equestrian estate — horses roam the grounds while you taste. The estate Cabernets and Bordeaux blends are excellent. Booked online in advance. One of the more memorable tasting experiences in Napa.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Evening</div>
+        <div class="tl-content">
+          <h4>Relax &amp; Ice Cream</h4>
+          <p>Return to the inn and relax. Dinner in town or at a nearby spot depending on appetite. Close the night at Calistoga Creamery — open until 9:30 PM and completely worth two visits.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-tip">
+        <span class="callout-label">🐴 Tamber Bey</span>
+        <p>Tamber Bey is an equestrian winery — if you're lucky, you'll taste with horses grazing in the adjacent paddock. It's a genuinely distinctive setting for a wine tasting.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">💧 Hot Springs</span>
+        <p>Calistoga sits above a geothermal field and is famous for its mud baths and mineral spring spas. If time allows, a 60-minute mud bath at Indian Springs or Dr. Wilkinson's is a quintessential Calistoga experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- REGION 7: MENDOCINO            -->
+<!-- ============================== -->
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<div class="region-header" id="mendocino">
+  <div class="region-header-inner">
+    <p class="eyebrow">Days 13–15 · August 5–7</p>
+    <h2>Mendocino — <em>Wild Headlands &amp; Redwood Canyons</em></h2>
+    <p class="region-desc">Two nights at the acclaimed Brewery Gulch Inn puts you in one of California's most atmospheric coastal towns. Mendocino is rugged, quiet, and genuinely beautiful — cliff-top state parks, fern-lined canyon hikes, kayaking on Big River, and a complimentary wine hour each evening at the inn.</p>
+    <div class="region-meta">
+      <div class="region-meta-item"><span class="r-label">Stay</span><span class="r-value">Brewery Gulch Inn</span></div>
+      <div class="region-meta-item"><span class="r-label">Wine Hour</span><span class="r-value">5:30–6:30 PM nightly · Complimentary</span></div>
+      <div class="region-meta-item"><span class="r-label">Drive from Calistoga</span><span class="r-value">~2.5 hours via Hwy 128</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">13</div>
+    <div class="day-header-text">
+      <p class="day-date">Tuesday · August 5</p>
+      <h3>Drive to Mendocino — <em>Through the Anderson Valley</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">Morning</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Breakfast Included</span></div>
+          <h4>Breakfast, Then Check Out of Inn on Pine</h4>
+          <p>Continental breakfast at the hotel. Check out at 11 AM and head north. Download offline maps before you leave — cell service along the Mendocino coast and Hwy 128 can be unreliable.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Midday</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Lunch Stop</span></div>
+          <h4>Stop in Boonville for Lunch</h4>
+          <p>Boonville is a small town in the Anderson Valley wine region about halfway to Mendocino — a perfect lunch stop on Hwy 128. The Boonville Hotel Restaurant is a local favorite. Grab something before the final hour of driving to the coast.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">~3:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Brewery Gulch Inn</span></div>
+          <h4>Arrive at Brewery Gulch Inn</h4>
+          <p>Check in or leave bags if the room isn't ready. The inn is on the south edge of Mendocino — step outside and you're immediately in the headlands. Explore the town if there's time before the evening wine hour.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">5:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-free">Complimentary</span></div>
+          <h4>Wine Hour at Brewery Gulch Inn</h4>
+          <p>Complimentary wine hour in the lobby from 5:30–6:30 PM — local Mendocino coast wines, light snacks, and excellent conversation with the inn staff about what to do in the area. Don't skip this; the innkeepers are a genuine resource.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-warn">
+        <span class="callout-label">📡 Download Maps</span>
+        <p>Download offline maps for the Mendocino coast before leaving Calistoga. Hwy 128 and the Mendocino headlands have spotty or no cell service in many stretches.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">🍷 Wine Hour</span>
+        <p>The wine hour at Brewery Gulch Inn is a genuine highlight — the staff curate Mendocino county wines and love to talk about them. Ask for recommendations on where to eat and what trails to walk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">14</div>
+    <div class="day-header-text">
+      <p class="day-date">Wednesday · August 6</p>
+      <h3>Mendocino Outdoors — <em>Ferns, Cliffs &amp; Big River</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">Morning</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Breakfast Included</span></div>
+          <h4>Breakfast at Brewery Gulch Inn</h4>
+          <p>Full breakfast is included — one of the best included hotel breakfasts on the California coast. Take your time and plan the day's activities over the meal.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Morning</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-nature">Choose Your Adventure</span></div>
+          <h4>Morning Outdoor Activity</h4>
+          <p>Four excellent options depending on energy and preference. <strong>Van Damme State Park</strong> (2 miles south): lush Fern Canyon Trail to a pygmy forest — one of the most unusual hikes in California. <strong>Mendocino Headlands State Park</strong> (walkable from town): dramatic bluff-top walks with sea cave views and whale watching in season. <strong>Russian Gulch State Park</strong> (7 min north): 3-mile round-trip hike to a 36-foot waterfall via forest trail. <strong>Big River Kayaking</strong>: rent from Catch a Canoe &amp; Bicycles Too and paddle the calm estuary through redwoods and wildlife habitat — absolutely serene.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Afternoon</div>
+        <div class="tl-content">
+          <h4>Mendocino Town &amp; Lunch</h4>
+          <p>Walk into Mendocino village for lunch and a browse of the galleries and shops. The town sits on a headland surrounded on three sides by the Pacific — the light here in the afternoon is extraordinary for photography.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">5:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-free">Complimentary</span></div>
+          <h4>Wine Hour at Brewery Gulch Inn</h4>
+          <p>Second evening of the complimentary wine hour. A ritual worth honoring both nights.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-tip">
+        <span class="callout-label">🚣 Big River Kayaking</span>
+        <p>The Big River estuary is flat, calm, and lined with redwoods — paddling it feels completely removed from civilization. Rent from Catch a Canoe &amp; Bicycles Too, just south of the Mendocino bridge.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">🌊 Headlands Photography</span>
+        <p>The Mendocino Headlands in the afternoon offer some of the most dramatic Pacific cliff photography in Northern California. Bring a wide angle and walk the full bluff loop from town.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- REGION 8: NAPA VALLEY (ALILA)  -->
+<!-- ============================== -->
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<div class="region-header" id="napa">
+  <div class="region-header-inner">
+    <p class="eyebrow">Days 15–16 · August 7–8</p>
+    <h2>Alila Napa Valley — <em>Luxury in Wine Country</em></h2>
+    <p class="region-desc">Check out of Mendocino and drive southeast into Napa Valley for one night at Alila Napa Valley — a resort-style property with a pool, infinity hot tub, and exceptional outdoor dining at Salva Terrace &amp; Bar.</p>
+    <div class="region-meta">
+      <div class="region-meta-item"><span class="r-label">Stay</span><span class="r-value">Alila Napa Valley</span></div>
+      <div class="region-meta-item"><span class="r-label">Dinner</span><span class="r-value">Salva Terrace &amp; Bar (OpenTable · 7:30 PM)</span></div>
+      <div class="region-meta-item"><span class="r-label">Perk</span><span class="r-value">Welcome wine in room</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">15</div>
+    <div class="day-header-text">
+      <p class="day-date">Thursday · August 7</p>
+      <h3>Mendocino to Napa — <em>Arrive &amp; Dine Outdoors</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">Morning</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Breakfast Included</span></div>
+          <h4>Breakfast at Brewery Gulch Inn, Then Check Out</h4>
+          <p>Final breakfast at the inn. Check out at 11 AM and say goodbye to the coast. The drive southeast to Napa Valley takes about 2.5 hours via Hwy 128 through the Anderson Valley.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Midday</div>
+        <div class="tl-content">
+          <h4>Morning Park Visit or Town Shopping (Optional)</h4>
+          <p>If there are sights still on the list, use the morning before departure. Or drive straight to Napa with a lunch stop somewhere scenic along Hwy 128.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">~2:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Alila Napa Valley</span></div>
+          <h4>Check In — Alila Napa Valley</h4>
+          <p>Leave bags if the room isn't ready and head to the pool or explore the property. The welcome wine is waiting in your room. Poolside dining is available 11 AM–2 PM — you may be arriving just within that window.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Afternoon</div>
+        <div class="tl-content">
+          <h4>Pool, Infinity Hot Tub &amp; Rest</h4>
+          <p>A proper resort afternoon after 15 days of movement. The pool and infinity hot tub at Alila are exceptional. Let the Napa Valley sun do its work.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">7:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span><span class="tag tag-booked">OpenTable · Outside Seating</span></div>
+          <h4>Salva Terrace &amp; Bar at Alila Napa Valley</h4>
+          <p>Outside seating has been requested and confirmed. A sophisticated outdoor dining experience at one of Napa Valley's most beautifully designed resort restaurants. After dinner, open the welcome wine on your balcony — a fitting end to the wine country chapter of the trip.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-pro">
+        <span class="callout-label">🍷 Welcome Wine</span>
+        <p>The welcome wine is in the room on arrival — save it for after dinner on the balcony rather than opening it immediately. An evening ritual that makes this property special.</p>
+      </div>
+      <div class="callout callout-tip">
+        <span class="callout-label">🏊 Poolside Dining</span>
+        <p>Alila's poolside dining runs 11 AM–2 PM — if you arrive in time, lunch by the pool is a lovely transition from the coastal drive. Check availability when you check in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- REGION 9: SAN FRANCISCO        -->
+<!-- ============================== -->
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<div class="region-header" id="san-francisco">
+  <div class="region-header-inner">
+    <p class="eyebrow">Days 16–18 · August 8–10</p>
+    <h2>San Francisco — <em>The Palace Hotel &amp; Final Days</em></h2>
+    <p class="region-desc">Three nights at the legendary Palace Hotel — one of San Francisco's grand historic properties with a free breakfast and $100 hotel credit. Explore the city, dine out, and close a remarkable California adventure.</p>
+    <div class="region-meta">
+      <div class="region-meta-item"><span class="r-label">Stay</span><span class="r-value">Palace Hotel, San Francisco</span></div>
+      <div class="region-meta-item"><span class="r-label">Perks</span><span class="r-value">Free breakfast · $100 hotel credit</span></div>
+      <div class="region-meta-item"><span class="r-label">Departure</span><span class="r-value">United 2626 · SFO 4:20 PM → EWR 1:05 AM</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">16</div>
+    <div class="day-header-text">
+      <p class="day-date">Friday · August 8</p>
+      <h3>Check In to The Palace Hotel — <em>Explore San Francisco</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">Morning</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Breakfast Included</span></div>
+          <h4>Final Alila Breakfast &amp; Check Out</h4>
+          <p>Breakfast at Alila (not included — use the dining credit or pay separately), then check out at 11 AM. Drive about 2 hours south to San Francisco.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">1:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Palace Hotel · $100 Credit</span></div>
+          <h4>Check In — Palace Hotel, San Francisco</h4>
+          <p>The Palace is one of San Francisco's iconic grand hotels — opened in 1875, with the magnificent Garden Court restaurant at its center. Free breakfast and a $100 hotel credit are included with the booking. Explore Union Square, SoMa, and the surrounding neighborhood on foot.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Evening</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span></div>
+          <h4>Dinner in San Francisco</h4>
+          <p>San Francisco has extraordinary dining options at every price point. The Ferry Building Marketplace (15-minute walk) is excellent for casual, high-quality bites. Bix, Zuni Café, and Foreign Cinema are excellent full-service restaurant options nearby. No plan needed tonight — walk and find something that looks good.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-pro">
+        <span class="callout-label">🏨 Palace Hotel</span>
+        <p>Use the $100 hotel credit toward dinner at the Garden Court or brunch — it's one of the most architecturally spectacular dining rooms in the country, worth experiencing at least once during your stay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<section class="day-section">
+  <div class="day-header">
+    <div class="day-number">17–18</div>
+    <div class="day-header-text">
+      <p class="day-date">Saturday–Sunday · August 9–10</p>
+      <h3>Final Days in San Francisco <em>&amp; Departure</em></h3>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">Saturday</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Breakfast Included</span></div>
+          <h4>Free Day in San Francisco</h4>
+          <p>Breakfast at the hotel, then a full day to explore. The Palace is well-positioned for SoMa, the Embarcadero, the Ferry Building, and Union Square. Chinatown, North Beach, and the waterfront are all reachable on foot or by cable car. No plans required — San Francisco rewards wandering.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">Sunday</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Breakfast Included</span></div>
+          <h4>Final Morning, Then Departure</h4>
+          <p>Breakfast at the hotel. Check out at 11 AM. Use the morning for any last sights or errands. Leave for SFO by 1 PM to return the rental car and check in for your flight.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">4:20 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">United 2626 · Terminal 3</span></div>
+          <h4>Depart SFO for Newark</h4>
+          <p>United flight 2626 departs from Terminal 3 at 4:20 PM, arriving EWR at 1:05 AM. Return the rental car at the Alamo counter before checking in. Allow at least 2.5–3 hours at the airport for car return and security.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-alert">
+        <span class="callout-label">✈️ Car Return</span>
+        <p>Return the Alamo rental car to the SFO consolidated rental car facility before checking in. Allow extra time — the facility is off-site and requires the AirTrain from Terminal 3. Budget at least 30–45 minutes for the car return process.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">🌉 San Francisco Tips</span>
+        <p>The Ferry Building on Saturday morning has one of the best farmers' markets in California. The Embarcadero is a spectacular waterfront walk. Take the Powell-Hyde cable car for the classic San Francisco hilltop experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DINING GUIDE -->
+<section class="food-section" id="dining">
+  <div class="food-inner">
+    <p class="eyebrow"><a href="/" class="brand-link" >My Life Happens Travel</a> · Dining Guide</p>
+    <h2>Where to Eat Along the California Coast</h2>
+    <div class="food-grid">
+      <div class="food-card">
+        <span class="meal-type">Carmel Valley · Dinner</span>
+        <h4>Valley Kitchen</h4>
+        <span class="address">Carmel Valley Ranch Resort</span>
+        <p>Farm-to-table cooking using produce from the resort's organic garden. The most convenient dinner option of the trip — no driving required on arrival night.</p>
+        <span class="res-tag">Tock Reservation</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Carmel Valley · Dinner</span>
+        <h4>Folktale Winery</h4>
+        <span class="address">Carmel Valley</span>
+        <p>Wine garden dining with live music until 7 PM on Friday evenings. Estate wines, light bites, and a laid-back California outdoor vibe. Short drive from the ranch.</p>
+        <span class="res-tag">Tock Reservation</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Carmel · Lunch</span>
+        <h4>Café Carmel</h4>
+        <span class="address">Carmel-by-the-Sea</span>
+        <p>A local classic on Ocean Avenue — sandwiches, paninis, quiche, pastries, and excellent espresso. Good for a quick lunch before walking the town and beach.</p>
+        <span class="free-tag">Walk In</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Cambria · Dinner</span>
+        <h4>Robin's Restaurant</h4>
+        <span class="address">Cambria</span>
+        <p>A Cambria institution with a diverse, globally inspired menu and a lovely garden setting. An alternative to Sea Chest if you want a seated dinner experience.</p>
+        <span class="res-tag">Reservation</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Cambria · Seafood</span>
+        <h4>Sea Chest Oyster Bar</h4>
+        <span class="address">Across from Cambria Beach Lodge</span>
+        <p>Steps from the hotel, fresh Pacific seafood, cash only, and no reservations. Arrive early for the best chance at a table. If it's available, it may be the best dinner of the Cambria stay.</p>
+        <span class="free-tag">Cash Only · Walk In</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Cambria · Dinner</span>
+        <h4>The Black Cat Bistro</h4>
+        <span class="address">Cambria</span>
+        <p>A warmly regarded Cambria restaurant with seasonal California cuisine. A more refined option for Sunday night after the full day of Hearst Castle and wine tasting.</p>
+        <span class="res-tag">OpenTable</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">San Simeon · Lunch</span>
+        <h4>Seaside Foods at Sebastian's</h4>
+        <span class="address">San Simeon Pier</span>
+        <p>Order online ahead of time for 1 PM pickup at the pier. Partnered with Sebastian's General Store — a historic building with great views of San Simeon Cove.</p>
+        <span class="res-tag">Order Online in Advance</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Half Moon Bay · Dinner</span>
+        <h4>Sam's Chowder House</h4>
+        <span class="address">2 min walk from Beach House Hotel</span>
+        <p>One of the Bay Area's most celebrated seafood restaurants. The Maine Lobster Roll and New England clam chowder are award-winning. The outdoor deck has sweeping headland views.</p>
+        <span class="res-tag">7:30 PM Reservation</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Half Moon Bay · Casual</span>
+        <h4>Barbara's Fishtrap</h4>
+        <span class="address">15 min walk from Beach House Hotel</span>
+        <p>A Half Moon Bay institution for fresh fried seafood. Cash only, no reservations — arrive by 5:30–6 PM. Unpretentious and delicious with harbor views.</p>
+        <span class="free-tag">Cash Only · No Reservations</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Napa Valley · Dinner</span>
+        <h4>Salva Terrace &amp; Bar</h4>
+        <span class="address">Alila Napa Valley</span>
+        <p>Outdoor terrace dining at one of Napa's most beautiful resort properties. Outside seating requested and confirmed. Pair with the welcome wine on your balcony afterward.</p>
+        <span class="res-tag">OpenTable · 7:30 PM</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Calistoga · Ice Cream</span>
+        <h4>Calistoga Creamery</h4>
+        <span class="address">Calistoga Town · Walking Distance</span>
+        <p>Open until 9:30 PM — the perfect low-key evening close for both Calistoga nights. Local, excellent ice cream in a charming wine country town setting.</p>
+        <span class="free-tag">Walk In</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Mendocino · Lunch Stop</span>
+        <h4>Boonville Hotel Restaurant</h4>
+        <span class="address">Boonville, Anderson Valley</span>
+        <p>A natural stopping point on the drive from Calistoga to Mendocino. The Anderson Valley is Pinot Noir country — a glass with lunch is entirely appropriate.</p>
+        <span class="free-tag">Walk In</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="/" class="brand-link footer-brand" >My Life Happens Travel</a>
+  <span class="footer-tagline">Guides for the curious traveller</span>
+  <div class="footer-rule"></div>
+  <p>California Coast 2025 · July 24 – August 10</p>
+  <p style="margin-top: 6px;">Carmel Valley · Cambria · Monterey · Half Moon Bay · Calistoga · Mendocino · Napa Valley · San Francisco</p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('[id]');
+  const navLinks = document.querySelectorAll('.day-nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + entry.target.id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { rootMargin: '-50% 0px -50% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

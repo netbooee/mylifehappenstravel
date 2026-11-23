@@ -1,0 +1,268 @@
+/* My Life Happens Travel — shared styles for the home page and site pages.
+   Itinerary pages under /itineraries/ are self-contained and carry their own styles.
+
+   Look: "Modern · Coastal" from the design prototype (design/prototype/).
+   Instrument Serif display, DM Sans text, JetBrains Mono labels. */
+
+:root {
+  color-scheme: light;
+  --cream: #f3eee6;
+  --paper: #e7ddc9;
+  --sand: #e9b551;
+  --coral: #e16a4d;
+  --coral-dk: #b8472d;
+  --ocean: #0e3a4c;
+  --ocean-dk: #062330;
+  --seafoam: #5a7d6e;
+  --ink: #1a2026;
+  --ink-soft: #5a6770;
+  --line: rgba(26, 32, 38, .1);
+
+  --display: "Instrument Serif", "Newsreader", Georgia, serif;
+  --body: "DM Sans", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --gutter: clamp(16px, 4vw, 56px);
+  --max: 1240px;
+  --section: clamp(64px, 9vw, 112px);
+  --radius: 12px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font: 400 16px/1.6 var(--body);
+  overflow-x: clip;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; color: var(--ocean); margin: 0; letter-spacing: -0.01em; }
+h1 em, h2 em, h3 em { color: var(--coral); }
+p { margin: 0; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 16px; top: 12px; z-index: 100; background: var(--ocean); color: var(--cream); padding: 8px 14px; border-radius: 8px; }
+
+:focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; border-radius: 4px; }
+
+/* ── labels, buttons ── */
+.tag {
+  display: inline-block;
+  font: 500 11px/1 var(--mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--coral-dk);
+}
+.tag.subtle { color: var(--ink-soft); }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  font: 600 14px/1 var(--body);
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background-color .2s, color .2s, border-color .2s, transform .2s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn.primary { background: var(--coral-dk); color: #fff; }
+.btn.primary:hover { background: var(--ocean); }
+.btn.ghost { border-color: rgba(26, 32, 38, .2); color: var(--ocean); }
+.btn.ghost:hover { border-color: var(--ocean); }
+.btn.dark { background: var(--ocean); color: var(--cream); }
+.btn.dark:hover { background: var(--ocean-dk); }
+
+.more { font-weight: 600; font-size: 14px; color: var(--coral-dk); text-decoration: none; white-space: nowrap; }
+.more:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* ── header ── */
+.site-header {
+  position: sticky; top: 0; z-index: 30;
+  background: rgba(243, 238, 230, .94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ocean); flex: 0 0 auto; }
+.brand-mark {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--ocean); color: var(--cream);
+  display: grid; place-items: center;
+  font: italic 18px/1 var(--display);
+  padding-bottom: 2px;
+}
+.brand-name { font: 19px/1 var(--display); letter-spacing: -.01em; }
+.brand-name span { color: var(--ink-soft); }
+.site-nav { display: flex; align-items: center; gap: 4px; }
+.site-nav a {
+  padding: 8px 12px; border-radius: 999px;
+  font-size: 14px; font-weight: 500; text-decoration: none; color: var(--ink);
+}
+.site-nav a:hover { color: var(--coral-dk); }
+.site-nav a[aria-current="page"] { color: var(--coral-dk); font-weight: 600; }
+@media (max-width: 560px) {
+  .brand-name span { display: none; }
+  .site-nav a { padding: 8px 8px; font-size: 13.5px; }
+  .site-nav .hide-sm { display: none; }
+}
+
+/* ── hero ── */
+.hero { padding: clamp(40px, 6vw, 72px) 0 var(--section); }
+.hero h1 {
+  font-size: clamp(52px, 10vw, 128px);
+  line-height: .98;
+  letter-spacing: -.02em;
+  margin: 22px 0 24px;
+  max-width: 11ch;
+}
+.hero-lede { font-size: clamp(17px, 2vw, 20px); color: var(--ink-soft); max-width: 36em; margin-bottom: 32px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-photo { margin: clamp(40px, 6vw, 64px) 0 0; }
+.hero-photo img {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+@media (max-width: 720px) { .hero-photo img { aspect-ratio: 4 / 3; } }
+figcaption {
+  margin-top: 14px;
+  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  font: 500 11.5px/1.4 var(--mono); letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* ── sections ── */
+.section { padding: var(--section) 0; }
+.section.alt { background: var(--paper); border-block: 1px solid var(--line); }
+.section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: clamp(28px, 4vw, 44px); }
+.section-head h2 { font-size: clamp(38px, 5.5vw, 60px); line-height: 1.02; margin-top: 12px; }
+.section-head p { color: var(--ink-soft); max-width: 34em; margin-top: 12px; }
+
+/* ── itinerary cards ── */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 3vw, 32px); }
+.cards .card.feature { grid-column: span 2; }
+@media (max-width: 960px) {
+  .cards { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .cards { grid-template-columns: 1fr; }
+  .cards .card.feature { grid-column: auto; }
+}
+
+.card { position: relative; display: flex; flex-direction: column; }
+.card-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--paper);
+  transition: transform .3s ease;
+}
+.card.feature .card-media { aspect-ratio: auto; flex: 1; min-height: 280px; }
+.card:hover .card-media { transform: translateY(-4px); }
+.card-media img { width: 100%; height: 100%; object-fit: cover; }
+
+/* trips without a photo yet get a poster-style panel in the trip's own colours */
+.poster {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; justify-content: space-between;
+  padding: clamp(18px, 3vw, 28px);
+  color: var(--fg, #fff);
+  background: var(--bg, var(--ocean));
+}
+.poster .poster-place { font: clamp(40px, 6vw, 72px)/.95 var(--display); letter-spacing: -.02em; }
+.poster .poster-place em { color: var(--hi, var(--sand)); }
+.poster .poster-meta { font: 500 11px/1.4 var(--mono); letter-spacing: .14em; text-transform: uppercase; opacity: .85; }
+.poster-spain   { --bg: #c8102e; --hi: #ffc400; }
+.poster-spain::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 22%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23fffaf0'/%3E%3Cpath d='M24 4 L44 24 L24 44 L4 24Z' fill='none' stroke='%231d5fc4' stroke-width='3'/%3E%3Ccircle cx='24' cy='24' r='7' fill='%23ffc400' stroke='%23c8102e' stroke-width='2'/%3E%3Cpath d='M0 0 Q8 8 0 16 M48 0 Q40 8 48 16 M0 48 Q8 40 0 32 M48 48 Q40 40 48 32' fill='none' stroke='%231d5fc4' stroke-width='3'/%3E%3Ccircle cx='24' cy='0' r='4' fill='%231d5fc4'/%3E%3Ccircle cx='24' cy='48' r='4' fill='%231d5fc4'/%3E%3Ccircle cx='0' cy='24' r='4' fill='%231d5fc4'/%3E%3Ccircle cx='48' cy='24' r='4' fill='%231d5fc4'/%3E%3C/svg%3E") repeat-x left center / auto 100%;
+}
+.poster-spain .poster-meta { position: relative; z-index: 1; }
+.poster-spain .poster-top { position: relative; z-index: 1; }
+.poster-spain { padding-bottom: calc(22% + 20px); }
+.poster-ireland { --bg: #1f4d3a; --hi: #e9c46a; }
+.poster-ireland::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 45%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 120' preserveAspectRatio='none'%3E%3Cpath d='M0 70 C60 30 120 30 180 60 S300 20 400 50 V120 H0Z' fill='%232f6b4f'/%3E%3Cpath d='M0 95 C80 60 150 75 220 90 S340 70 400 80 V120 H0Z' fill='%233d7d5c'/%3E%3C/svg%3E") no-repeat bottom / 100% 100%;
+}
+.poster-ireland > * { position: relative; z-index: 1; }
+
+.card-body { padding-top: 16px; }
+.card-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+.card-meta .when { font: 500 11px/1.4 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+.card h3 { font-size: clamp(24px, 2.6vw, 30px); line-height: 1.08; margin: 4px 0 8px; }
+.card.feature h3 { font-size: clamp(28px, 3.4vw, 40px); }
+.card p { color: var(--ink-soft); font-size: 15px; }
+.card a.stretch { text-decoration: none; }
+.card a.stretch::after { content: ""; position: absolute; inset: 0; z-index: 2; }
+.card a.stretch:focus-visible { outline: none; }
+.card:has(a.stretch:focus-visible) { outline: 2px solid var(--coral); outline-offset: 6px; border-radius: var(--radius); }
+
+/* ── split panels (gear, instagram) ── */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 72px); align-items: center; }
+@media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
+.split h2 { font-size: clamp(38px, 5.5vw, 60px); line-height: 1.02; margin: 12px 0 18px; }
+.split p { color: var(--ink-soft); max-width: 32em; }
+
+.gear-card {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(22px, 3vw, 32px);
+}
+.gear-card .cat { margin-bottom: 10px; }
+.gear-card h3 { font-size: clamp(24px, 2.6vw, 30px); line-height: 1.1; margin-bottom: 10px; }
+.gear-card p { margin-bottom: 22px; font-size: 15px; }
+.gear-card .note { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; margin-bottom: 0; }
+
+.insta { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.insta a { position: relative; display: block; border-radius: var(--radius); overflow: hidden; background: var(--paper); text-decoration: none; }
+.insta img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; transition: transform .4s ease; }
+.insta a:hover img { transform: scale(1.03); }
+.insta span {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 40px 14px 12px;
+  background: linear-gradient(transparent, rgba(6, 35, 48, .78));
+  color: #fff; font-size: 13.5px; line-height: 1.35;
+}
+
+/* ── list page ── */
+.page-head { padding: clamp(40px, 6vw, 72px) 0 clamp(28px, 4vw, 40px); }
+.page-head h1 { font-size: clamp(48px, 8vw, 96px); line-height: 1; letter-spacing: -.02em; margin: 18px 0 18px; }
+.page-head p { color: var(--ink-soft); font-size: clamp(16px, 1.8vw, 19px); max-width: 36em; }
+
+/* ── footer ── */
+.site-footer { background: var(--ocean); color: rgba(243, 238, 230, .8); padding: clamp(48px, 7vw, 80px) 0 32px; }
+.site-footer .wrap { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
+@media (max-width: 720px) { .site-footer .wrap { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+.footer-brand .brand { color: var(--cream); }
+.footer-brand .brand-mark { background: var(--cream); color: var(--ocean); }
+.footer-brand .brand-name span { color: rgba(243, 238, 230, .6); display: inline; }
+.footer-brand p { margin-top: 16px; max-width: 26em; font-size: 15px; }
+.site-footer h4 { font: 500 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--sand); margin: 6px 0 14px; }
+.site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 15px; }
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.footer-base { grid-column: 1 / -1; border-top: 1px solid rgba(243, 238, 230, .15); padding-top: 22px; margin-top: 16px; font-size: 13px; color: rgba(243, 238, 230, .6); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+}
+.poster-italy { --bg: #b8472d; --hi: #f3d9a4; }
+.poster-italy::after {
+  content: ""; position: absolute; right: -6%; bottom: -8%; width: 46%; aspect-ratio: 1;
+  border-radius: 50%; background: #e9b551; opacity: .9;
+}
+.poster-italy > * { position: relative; z-index: 1; }
+
+/* card titles on the itineraries page are h2s for document outline but look like card h3s */
+.card h2.h3 { font-size: clamp(24px, 2.6vw, 30px); line-height: 1.08; margin: 4px 0 8px; }
+.card.feature h2.h3 { font-size: clamp(28px, 3.4vw, 40px); }

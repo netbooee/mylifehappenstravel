@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Four days in Las Vegas — neon, desert, live music and unforgettable dining, plus a day trip to Valley of Fire.">
+<title>Las Vegas 2026 – My Life Happens Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black:        #09090f;
+    --black-mid:    #131320;
+    --black-soft:   #1c1c2c;
+    --gold:         #f0c040;
+    --gold-light:   #ffe085;
+    --gold-dim:     #9a7820;
+    --magenta:      #d4286a;
+    --magenta-light:#f05090;
+    --purple:       #7b3fb5;
+    --purple-light: #a86de0;
+    --neon-teal:    #00c8f0;
+    --sand:         #f5f0e8;
+    --sand-dark:    #e8e0d0;
+    --ink:          #1a1a1a;
+    --ink-soft:     #3a3a3a;
+    --ink-muted:    #7a7a7a;
+    --white:        #ffffff;
+    --alert:        #b83030;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--sand);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  a.brand-link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s, opacity 0.2s;
+  }
+  a.brand-link:hover { border-bottom-color: currentColor; opacity: 0.85; }
+
+  /* ===== BRAND BAR ===== */
+  .brand-bar {
+    background: var(--black);
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .brand-wordmark {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+  .brand-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .brand-tagline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: var(--black);
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 40px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 70%, rgba(212,40,106,0.22) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(123,63,181,0.2) 0%, transparent 50%),
+      radial-gradient(ellipse at 55% 50%, rgba(240,192,64,0.07) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 15% 25%, rgba(240,192,64,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 35% 65%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 60% 20%, rgba(240,192,64,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 75% 75%, rgba(212,40,106,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 88% 40%, rgba(255,255,255,0.25) 0%, transparent 100%),
+      radial-gradient(2px 2px at 10% 80%, rgba(123,63,181,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 50% 10%, rgba(255,255,255,0.2) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(240,192,64,0.1);
+    border: 1px solid rgba(240,192,64,0.3);
+    border-radius: 100px;
+    padding: 6px 18px;
+    margin-bottom: 36px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+    position: relative; z-index: 1;
+  }
+  .hero-badge span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold-light);
+  }
+  .hero-badge-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold-light); opacity: 0.6; }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.5rem, 10vw, 8.5rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 0.9;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.4s forwards;
+    position: relative; z-index: 1;
+    text-shadow: 0 0 80px rgba(240,192,64,0.12);
+  }
+  .hero h1 em { font-style: italic; color: var(--gold); text-shadow: 0 0 40px rgba(240,192,64,0.4); }
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    color: rgba(255,255,255,0.5);
+    margin-top: 22px; margin-bottom: 56px;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.55s forwards;
+    position: relative; z-index: 1;
+  }
+  .hero-rule {
+    width: 48px; height: 2px;
+    background: linear-gradient(to right, var(--magenta), var(--gold));
+    margin: 0 auto 40px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.5s forwards;
+    position: relative; z-index: 1;
+  }
+  .hero-stats {
+    display: flex; gap: 56px;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.7s forwards;
+    position: relative; z-index: 1;
+  }
+  .hero-stat .label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.62rem; font-weight: 500;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold); display: block; margin-bottom: 4px;
+  }
+  .hero-stat .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; font-weight: 600;
+    color: var(--white);
+  }
+  .hero-brand-footer {
+    position: absolute; bottom: 28px;
+    left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column;
+    align-items: center; gap: 10px;
+    opacity: 0; animation: fadeUp 1s 1s forwards;
+    z-index: 1;
+  }
+  .hero-brand-footer .mlht-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.68rem; letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+  }
+  .hero-brand-footer::after {
+    content: '';
+    width: 1px; height: 36px;
+    background: linear-gradient(to bottom, rgba(240,192,64,0.3), transparent);
+  }
+
+  /* ===== NAV ===== */
+  .day-nav {
+    background: var(--black);
+    position: sticky; top: 0; z-index: 100;
+    padding: 0 32px;
+    display: flex; align-items: center; justify-content: center;
+    border-bottom: 1px solid rgba(240,192,64,0.1);
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .day-nav::-webkit-scrollbar { display: none; }
+  .day-nav a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.67rem; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    padding: 15px 16px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .day-nav a:hover, .day-nav a.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+  /* ===== INTRO ===== */
+  .intro-section { max-width: 820px; margin: 80px auto; padding: 0 40px; }
+  .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500; font-size: 0.67rem;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--magenta); margin-bottom: 14px;
+  }
+  .intro-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 700;
+    color: var(--black-mid); line-height: 1.1; margin-bottom: 24px;
+  }
+  .intro-section p { font-size: 0.98rem; color: var(--ink-soft); margin-bottom: 18px; }
+  .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 44px; }
+  .intro-card {
+    background: var(--white); border-radius: 3px;
+    padding: 26px; border-top: 3px solid var(--gold);
+  }
+  .intro-card h4 {
+    font-family: 'DM Sans', sans-serif; font-weight: 600;
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold-dim); margin-bottom: 14px;
+  }
+  .intro-card ul { list-style: none; padding: 0; }
+  .intro-card li {
+    font-size: 0.88rem; color: var(--ink-soft);
+    padding: 5px 0; border-bottom: 1px solid var(--sand-dark);
+    display: flex; gap: 10px; align-items: flex-start; line-height: 1.5;
+  }
+  .intro-card li:last-child { border-bottom: none; }
+  .intro-card li::before { content: '→'; color: var(--magenta); font-size: 0.78rem; flex-shrink: 0; margin-top: 2px; }
+
+  /* ===== BEFORE YOU GO ===== */
+  .before-section {
+    background: var(--black);
+    padding: 72px 40px; margin-bottom: 80px;
+    position: relative; overflow: hidden;
+  }
+  .before-section::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 90% 10%, rgba(123,63,181,0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 10% 90%, rgba(212,40,106,0.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .before-inner { max-width: 960px; margin: 0 auto; position: relative; z-index: 1; }
+  .before-section .eyebrow { color: var(--gold); }
+  .before-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem); font-weight: 700;
+    color: var(--white); margin-bottom: 44px; line-height: 1.15;
+  }
+  .before-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+  .before-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(240,192,64,0.12);
+    border-radius: 3px; padding: 26px 22px;
+  }
+  .before-card .icon { font-size: 1.7rem; display: block; margin-bottom: 12px; }
+  .before-card h4 {
+    font-family: 'DM Sans', sans-serif; font-weight: 600;
+    font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 10px;
+  }
+  .before-card p, .before-card li { font-size: 0.86rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+  .before-card ul { list-style: none; padding: 0; }
+  .before-card li { padding: 3px 0; }
+  .before-card li::before { content: '· '; color: var(--gold); }
+
+  /* ===== DAY SECTIONS ===== */
+  .day-section {
+    max-width: 1060px; margin: 0 auto 100px;
+    padding: 0 40px; scroll-margin-top: 52px;
+  }
+  .day-header {
+    display: flex; align-items: flex-end; gap: 24px;
+    margin-bottom: 48px; padding-bottom: 24px;
+    border-bottom: 1px solid var(--sand-dark);
+  }
+  .day-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5.5rem; font-weight: 700;
+    color: var(--sand-dark); line-height: 1; flex-shrink: 0;
+  }
+  .day-date {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.67rem; font-weight: 500;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--magenta); margin-bottom: 6px;
+  }
+  .day-header-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.9rem); font-weight: 700;
+    color: var(--black-mid); line-height: 1.1;
+  }
+  .day-header-text h2 em { font-style: italic; color: var(--purple); }
+  .day-layout {
+    display: grid; grid-template-columns: 1fr 275px;
+    gap: 48px; align-items: start;
+  }
+
+  /* ===== TIMELINE ===== */
+  .timeline { position: relative; }
+  .timeline::before {
+    content: ''; position: absolute;
+    left: 50px; top: 0; bottom: 0; width: 1px;
+    background: linear-gradient(to bottom, var(--sand-dark), transparent);
+  }
+  .tl-item {
+    display: grid; grid-template-columns: 100px 1fr;
+    gap: 20px; margin-bottom: 30px; position: relative;
+  }
+  .tl-time {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem; font-weight: 600;
+    color: var(--ink-muted);
+    text-align: right; padding-top: 2px; padding-right: 22px;
+    position: relative;
+  }
+  .tl-time::after {
+    content: ''; position: absolute;
+    right: -5px; top: 7px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--black-soft);
+    border: 2px solid var(--sand);
+    box-shadow: 0 0 0 1px var(--black-soft);
+  }
+  .tl-time.hi::after {
+    background: var(--gold);
+    box-shadow: 0 0 0 1px var(--gold), 0 0 8px rgba(240,192,64,0.4);
+  }
+  .tl-content h3 {
+    font-family: 'DM Sans', sans-serif; font-weight: 600;
+    font-size: 0.97rem; color: var(--ink); margin-bottom: 6px; line-height: 1.4;
+  }
+  .tl-content p { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.7; }
+  .tags { margin-bottom: 7px; display: flex; flex-wrap: wrap; gap: 5px; }
+  .tag {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 2px 7px; border-radius: 2px;
+  }
+  .tag-booked  { background: rgba(212,40,106,0.1); color: var(--magenta); border: 1px solid rgba(212,40,106,0.25); }
+  .tag-food    { background: rgba(123,63,181,0.1); color: var(--purple); border: 1px solid rgba(123,63,181,0.25); }
+  .tag-free    { background: rgba(240,192,64,0.1); color: var(--gold-dim); border: 1px solid rgba(240,192,64,0.28); }
+  .tag-drive   { background: rgba(30,30,30,0.07); color: var(--ink-muted); border: 1px solid rgba(30,30,30,0.14); }
+  .tag-show    { background: rgba(0,200,240,0.08); color: #0090b0; border: 1px solid rgba(0,200,240,0.2); }
+  .tag-wallet  { background: rgba(240,192,64,0.08); color: var(--gold-dim); border: 1px solid rgba(240,192,64,0.2); }
+
+  /* ===== SIDEBAR ===== */
+  .callout { border-radius: 3px; padding: 20px 18px; margin-bottom: 16px; }
+  .callout-pro   { background: rgba(240,192,64,0.07); border-left: 3px solid var(--gold); }
+  .callout-warn  { background: rgba(212,40,106,0.07); border-left: 3px solid var(--magenta); }
+  .callout-alert { background: rgba(192,57,43,0.07); border-left: 3px solid var(--alert); }
+  .callout-tip   { background: rgba(123,63,181,0.07); border-left: 3px solid var(--purple); }
+  .callout-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.62rem; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    display: block; margin-bottom: 7px;
+  }
+  .callout-pro .callout-label   { color: var(--gold-dim); }
+  .callout-warn .callout-label  { color: var(--magenta); }
+  .callout-alert .callout-label { color: var(--alert); }
+  .callout-tip .callout-label   { color: var(--purple); }
+  .callout p, .callout li { font-size: 0.83rem; color: var(--ink-soft); line-height: 1.62; }
+  .callout ul { list-style: none; padding: 0; }
+  .callout li { padding: 2px 0; }
+  .callout li::before { content: '→ '; opacity: 0.5; font-size: 0.78rem; }
+
+  /* ===== DINING SECTION ===== */
+  .food-section {
+    background: var(--black);
+    padding: 72px 40px; margin-bottom: 0;
+    position: relative; overflow: hidden;
+  }
+  .food-section::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 85% 15%, rgba(212,40,106,0.18) 0%, transparent 45%),
+      radial-gradient(ellipse at 15% 85%, rgba(123,63,181,0.15) 0%, transparent 45%);
+    pointer-events: none;
+  }
+  .food-inner { max-width: 980px; margin: 0 auto; position: relative; z-index: 1; }
+  .food-section .eyebrow { color: var(--gold); }
+  .food-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem); font-weight: 700;
+    color: var(--white); margin-bottom: 44px;
+  }
+  .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
+  .food-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(240,192,64,0.1);
+    border-radius: 3px; padding: 22px;
+  }
+  .meal-type {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.62rem; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); display: block; margin-bottom: 5px;
+  }
+  .food-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--white); margin-bottom: 4px;
+  }
+  .food-card .address { font-size: 0.75rem; color: rgba(255,255,255,0.35); display: block; margin-bottom: 10px; }
+  .food-card p { font-size: 0.84rem; color: rgba(255,255,255,0.62); line-height: 1.6; }
+  .res-tag {
+    display: inline-block; margin-top: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px;
+    background: rgba(212,40,106,0.15); color: var(--magenta-light);
+    border: 1px solid rgba(212,40,106,0.3);
+  }
+  .free-tag {
+    display: inline-block; margin-top: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px;
+    background: rgba(240,192,64,0.1); color: var(--gold);
+    border: 1px solid rgba(240,192,64,0.25);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--black);
+    padding: 48px 40px 36px; text-align: center;
+    border-top: 1px solid rgba(240,192,64,0.1);
+  }
+  .footer-brand {
+    font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--white); display: block; margin-bottom: 6px;
+  }
+  .footer-tagline {
+    font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 300;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(255,255,255,0.25); display: block; margin-bottom: 24px;
+  }
+  .footer-rule {
+    width: 40px; height: 2px;
+    background: linear-gradient(to right, var(--magenta), var(--gold));
+    margin: 0 auto 20px; border-radius: 1px;
+  }
+  footer p { font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.2); line-height: 1.8; }
+
+  /* ===== ORNAMENT ===== */
+  .ornament {
+    text-align: center; font-size: 1rem; letter-spacing: 0.6em; margin: 56px 0;
+    background: linear-gradient(to right, var(--magenta), var(--gold), var(--purple));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; opacity: 0.5;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== PRINT ===== */
+  @media print {
+    .day-nav, .hero-brand-footer { display: none; }
+    .hero { min-height: auto; padding: 36px; page-break-after: always; }
+    .day-layout { grid-template-columns: 1fr; }
+    .day-section { page-break-before: always; }
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .brand-bar { padding: 12px 20px; flex-wrap: wrap; gap: 8px; }
+    .brand-tagline { display: none; }
+    .day-layout { grid-template-columns: 1fr; }
+    .intro-grid { grid-template-columns: 1fr; }
+    .before-grid { grid-template-columns: 1fr; }
+    .day-header { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .day-number { font-size: 3.5rem; }
+    .tl-item { grid-template-columns: 72px 1fr; }
+    .timeline::before { left: 35px; }
+    .hero-stats { gap: 28px; }
+    .intro-section, .day-section { padding: 0 24px; }
+    .before-section, .food-section { padding: 52px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- BRAND BAR -->
+<div class="brand-bar">
+  <div class="brand-dot"></div>
+  <a href="/" class="brand-link brand-wordmark" >My Life Happens Travel</a>
+  <div class="brand-dot"></div>
+  <span class="brand-tagline">A travel guide series</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">
+    <span><a href="/" class="brand-link" >My Life Happens Travel</a></span>
+    <div class="hero-badge-dot"></div>
+    <span>Destination Guide</span>
+  </div>
+  <h1><em>Las</em><br>Vegas</h1>
+  <div class="hero-rule"></div>
+  <p class="hero-sub">Four days of neon, desert, live music &amp; unforgettable dining — January 2026</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="label">Dates</span><span class="value">Jan 30 – Feb 2</span></div>
+    <div class="hero-stat"><span class="label">Base</span><span class="value">The Venetian</span></div>
+    <div class="hero-stat"><span class="label">Day Trip</span><span class="value">Valley of Fire</span></div>
+    <div class="hero-stat"><span class="label">Car</span><span class="value">Alamo Rental</span></div>
+  </div>
+  <div class="hero-brand-footer">
+    <a href="/" class="brand-link mlht-name" >My Life Happens Travel</a>
+  </div>
+</section>
+
+<!-- NAV -->
+<nav class="day-nav">
+  <a href="#intro">Overview</a>
+  <a href="#day1">Fri Jan 30</a>
+  <a href="#day2">Sat Jan 31</a>
+  <a href="#day3">Sun Feb 1</a>
+  <a href="#day4">Mon Feb 2</a>
+  <a href="#dining">Dining Guide</a>
+  <a href="#extras">Extras</a>
+</nav>
+
+<!-- INTRO -->
+<section class="intro-section" id="intro">
+  <p class="eyebrow">About This Trip</p>
+  <h2>The Strip, the desert &amp; everything in between.</h2>
+  <p>This Las Vegas trip balances the iconic with the unexpected — a Styx concert at the Venetian Theater, immersive art at Meow Wolf's Omega Mart, the jaw-dropping red rock landscape of Valley of Fire, steakhouse dinners, ice bars, and the best free spectacles on the Strip. Four days, three nights, one rental car, and a lot of ground to cover.</p>
+  <p>The Venetian is the perfect home base — Grand Canal Shoppes, Grand Lux Café, and Rosina Cocktail Lounge are all steps from your room, and the Strip in both directions is walkable from the front entrance.</p>
+  <div class="intro-grid">
+    <div class="intro-card">
+      <h4>Already Booked ✓</h4>
+      <ul>
+        <li>The Venetian Hotel</li>
+        <li>Alamo Rental Car (via Costco)</li>
+        <li>EWR Parking — Terminal A</li>
+        <li>Styx Concert — Venetian Theater (Sec 9, Row NN)</li>
+        <li>Meow Wolf Omega Mart — 2nd slot, 10 AM</li>
+        <li>Area 15 — Access Level 0 Passes</li>
+        <li>Smith &amp; Wollensky's — OpenTable (4:30 PM Sun)</li>
+        <li>Delmonico Steakhouse — OpenTable (Mon 7 PM)</li>
+        <li>Esther's Kitchen — OpenTable (Mon 1 PM)</li>
+      </ul>
+    </div>
+    <div class="intro-card">
+      <h4>Still To Book</h4>
+      <ul>
+        <li>Omega Mart — confirm 10 AM reservation at Area 15</li>
+        <li>Mat Franco Show — The LINQ (Sun Feb 1, 7 PM)</li>
+        <li>High Roller — The LINQ (Sun Feb 1, 10 PM)</li>
+        <li>Minus 5 Ice Bar — 8–10 PM slot (Sun Feb 1) — or skip</li>
+        <li>PlayPlayground at Luxor — buy tickets online in advance</li>
+        <li>Sphere — Wizard of Oz at 5 PM Mon (last-minute option)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE YOU GO -->
+<section class="before-section">
+  <div class="before-inner">
+    <p class="eyebrow">Before You Leave Home</p>
+    <h2>What to Know Before You Go</h2>
+    <div class="before-grid">
+      <div class="before-card">
+        <span class="icon">🚗</span>
+        <h4>The Rental Car</h4>
+        <p>Pick up your Alamo rental after landing at Harry Reid (LAS) via the hotel shuttle. You'll need the car for Valley of Fire (Sunday), Seven Magic Mountains (Monday), and Jean Dry Lake Bed. Park free at the Venetian self-park garage — it's connected to the property.</p>
+      </div>
+      <div class="before-card">
+        <span class="icon">🎟️</span>
+        <h4>Tickets to Have Ready</h4>
+        <ul>
+          <li>Styx Concert — TicketMaster (Sec 9, Row NN)</li>
+          <li>Meow Wolf Omega Mart — 2nd slot, 10 AM (timed entry)</li>
+          <li>Area 15 — Access Level 0 Passes</li>
+        </ul>
+      </div>
+      <div class="before-card">
+        <span class="icon">🍽️</span>
+        <h4>Dining Notes</h4>
+        <ul>
+          <li>Gordon Ramsay Burger — casual, great pre-concert dinner at the Flamingo</li>
+          <li>Smith &amp; Wollensky's — note lunch vs. dinner menu: dinner starts at 5 PM</li>
+          <li>Esther's Kitchen — one of Vegas's best non-casino restaurants, off-Strip</li>
+          <li>Delmonico Steakhouse — inside the Venetian, perfect final night dinner</li>
+        </ul>
+      </div>
+      <div class="before-card">
+        <span class="icon">🏜️</span>
+        <h4>Valley of Fire Prep</h4>
+        <ul>
+          <li>Pack water and snacks before leaving Sunday — it's 1 hour from the Strip</li>
+          <li>Stop at Walgreens Saturday if you haven't yet</li>
+          <li>Bring sunscreen even in January — desert sun is strong</li>
+          <li>Comfortable walking shoes required for Fire Wave hike</li>
+        </ul>
+      </div>
+      <div class="before-card">
+        <span class="icon">🌡️</span>
+        <h4>January Weather</h4>
+        <ul>
+          <li>Days: 55–62°F — comfortable for outdoor exploring</li>
+          <li>Nights: Can drop to 38°F — bring a proper jacket</li>
+          <li>Desert: Cold mornings, warm afternoons — layer up</li>
+          <li>Pool: Check if heated before planning Monday swim</li>
+        </ul>
+      </div>
+      <div class="before-card">
+        <span class="icon">📍</span>
+        <h4>Key Locations</h4>
+        <ul>
+          <li>Home base: The Venetian, 3355 Las Vegas Blvd S</li>
+          <li>Area 15 / Omega Mart: 3215 S Rancho Dr (10 min drive)</li>
+          <li>Valley of Fire: 1 hour northeast of the Strip</li>
+          <li>Seven Magic Mountains: 30 min south on I-15</li>
+          <li>Jean Dry Lake Bed: Near Seven Magic Mountains</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 1 -->
+<section class="day-section" id="day1">
+  <div class="day-header">
+    <div class="day-number">01</div>
+    <div class="day-header-text">
+      <p class="day-date">Friday · January 30, 2026</p>
+      <h2>Arrival Day — <em>Welcome to Vegas</em></h2>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">4:45 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-drive">Drive to EWR</span></div>
+          <h3>Leave for Newark Airport</h3>
+          <p>Parking booked for Terminal A. Give yourself plenty of time — EWR traffic can be unpredictable in the late afternoon. Have your confirmation ready.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">Evening</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">JetBlue · EWR → LAS</span></div>
+          <h3>Fly to Las Vegas</h3>
+          <p>JetBlue flight from Newark to Harry Reid International. Once you land, head to baggage claim and then the rental car shuttle for Alamo.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">On Arrival</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Alamo · Costco</span></div>
+          <h3>Pick Up Rental Car</h3>
+          <p>Take the hotel/car rental shuttle from the terminal to the Alamo counter. Booking is through Costco Travel. Once you have the car, you're set for all three day trips — Valley of Fire, Seven Magic Mountains, and Jean Dry Lake Bed.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">Late Evening</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">The Venetian</span></div>
+          <h3>Check In &amp; First Look at the Strip</h3>
+          <p>Check into The Venetian. Drop your bags and take a short walk through the Grand Canal Shoppes or along the Strip — even a 20-minute stroll will set the tone for the weekend. Get to bed at a reasonable hour; Saturday is a full day.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-pro">
+        <span class="callout-label">🚗 Parking at the Venetian</span>
+        <p>The Venetian has self-parking in the attached garage — free for hotel guests. Park here rather than using valet to keep the car accessible for early morning departures.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<!-- DAY 2 -->
+<section class="day-section" id="day2">
+  <div class="day-header">
+    <div class="day-number">02</div>
+    <div class="day-header-text">
+      <p class="day-date">Saturday · January 31, 2026</p>
+      <h2>Omega Mart, The Strip <em>&amp; Styx</em></h2>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">8:30 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Breakfast</span></div>
+          <h3>Grand Lux Cafe at the Venetian</h3>
+          <p>Right in your hotel — no Ubering required. Grand Lux is the Cheesecake Factory's upscale sibling with an extensive all-day menu. A proper sit-down start before a packed day.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">10:00 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Timed Entry · Pre-Booked</span></div>
+          <h3>Meow Wolf Omega Mart</h3>
+          <p>10-minute drive to Area 15 (3215 S Rancho Dr). You have the 2nd slot timed tickets — be there a few minutes before 10 AM. Omega Mart is a fully immersive art experience hidden inside a surreal supermarket that breaks into a sprawling narrative world. Give yourself at least 90 minutes to explore properly. Follow the story, open every door, and don't rush.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">12:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Pre-Booked · Level 0 Access</span></div>
+          <h3>Area 15 — Explore If Interested</h3>
+          <p>Your Level 0 passes give you access to the broader Area 15 grounds after Omega Mart. There are additional immersive installations, an axe throwing venue, VR experiences, and more. See how you feel after Omega Mart — it can be its own extended afternoon if you're into it.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">1:00 PM</div>
+        <div class="tl-content">
+          <h3>Supply Run + Hotel Freshen Up</h3>
+          <p>Stop for water and snacks — both for the hotel room and for Valley of Fire tomorrow if you didn't stop at Walgreens yet. Return to the hotel, freshen up, and check the forecast for Monday's pool plans.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">2:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-free">Free</span></div>
+          <h3>Strip Walk — Palazzo → Wynn → Caesars → Flamingo</h3>
+          <p>Walk south along the Strip. The route: through the Palazzo shops → across to the Wynn Conservatory (free, seasonal floral display — especially worth seeing in January) → coffee at Urth Caffé → enter Caesars via the Forum Shops (Trevi Fountain replica inside, animated Roman statues) → end at the Flamingo Casino and Flamingo Wildlife Habitat. The wildlife habitat behind the casino has live flamingos, penguins, and koi — and it's completely free.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">5:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span></div>
+          <h3>Gordon Ramsay Burger at the Flamingo</h3>
+          <p>Gordon Ramsay Burger is casual but excellent — the Hell's Kitchen burger and truffle fries are the standouts. Perfect pre-concert meal: satisfying but not too heavy.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">7:00 PM</div>
+        <div class="tl-content">
+          <h3>More Strip Exploring</h3>
+          <p>Walk or Uber back toward the Venetian. Use this window to see the Bellagio Fountains if you haven't yet — they run every 15 minutes after 8 PM. Ryan and Josh can roam independently during the concert window.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">8:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-show">Concert</span><span class="tag tag-booked">Pre-Booked · Sec 9 Row NN</span></div>
+          <h3>Styx at the Venetian Theater</h3>
+          <p>Section 9, Row NN, Seats 60–61–62. Tickets are in Apple Wallet. Note: Ryan's seat couldn't be booked nearby — he and Josh can explore the casino or Strip during the 2-hour show. Meet up after at a designated spot in the Venetian lobby.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">10:30 PM</div>
+        <div class="tl-content">
+          <h3>Regroup &amp; Casino</h3>
+          <p>Meet the group after the concert. A round on the Venetian casino floor or a drink at Rosina Cocktail Lounge (classic cocktails, relaxed upscale vibe — perfect for a birthday toast) before calling it a night. Early departure tomorrow for Valley of Fire.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-pro">
+        <span class="callout-label">🌺 Wynn Conservatory</span>
+        <p>In January the Wynn Conservatory typically features a winter garden or New Year display. Free to walk through — one of the most underrated stops on the Strip.</p>
+      </div>
+      <div class="callout callout-warn">
+        <span class="callout-label">⏰ Early Tomorrow</span>
+        <p>Valley of Fire is an hour's drive and you want to arrive early for the best desert light. Aim for 9 AM departure — set an alarm and don't stay up too late.</p>
+      </div>
+      <div class="callout callout-tip">
+        <span class="callout-label">🦩 Flamingo Wildlife Habitat</span>
+        <p>Free and genuinely surprising — real Chilean flamingos, African penguins, and koi in a lush habitat behind a casino. Easy to spend 20 minutes here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<!-- DAY 3 -->
+<section class="day-section" id="day3">
+  <div class="day-header">
+    <div class="day-number">03</div>
+    <div class="day-header-text">
+      <p class="day-date">Sunday · February 1, 2026</p>
+      <h2>Valley of Fire <em>&amp; A Night to Remember</em></h2>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">8:30 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Quick Breakfast</span></div>
+          <h3>Starbucks &amp; Hit the Road</h3>
+          <p>Quick Starbucks run before departure. Pack all your water and snacks — Valley of Fire has limited facilities. The drive is about an hour northeast of the Strip on I-15. Desert light in the morning is extraordinary; the earlier you arrive the better the photos.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">9:00 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-drive">1 Hour Drive</span></div>
+          <h3>Drive to Valley of Fire State Park</h3>
+          <p>Head northeast on I-15, then Route 169 into the park. Stop to pick up any remaining snacks if you haven't yet. Entry fee required at the gate — have cash or card ready.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">10:00 AM</div>
+        <div class="tl-content">
+          <h3>Beehive Rock (~15 min)</h3>
+          <p>Your first stop in the park. These sandstone formations showcase remarkable geologic cross-bedding — grooves that shift direction as you look at them. Follow the short scenic path through rocky dunes. Excellent photography subject at any time of day.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">10:20 AM</div>
+        <div class="tl-content">
+          <h3>Atlatl Rock (~20 min)</h3>
+          <p>One of the most significant stops in the park — petroglyphs etched into red sandstone between 2,000 and 4,000 years ago. Climb the metal staircase for a closer look at the carvings. An extraordinary window into the lives of the people who lived here long before anyone imagined a city nearby.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">10:45 AM</div>
+        <div class="tl-content">
+          <h3>Seven Sisters — Lunch Stop (~40 min)</h3>
+          <p>A scenic outdoor lunch spot nestled among towering sandstone formations. This is your designated picnic stop — break out the snacks you packed and take 40 minutes to eat, rest, and absorb the landscape. No rush here.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">11:30 AM</div>
+        <div class="tl-content">
+          <h3>Rainbow Vista (~15 min)</h3>
+          <p>A panoramic wonder — vibrant, swirling rock formations that look painted. The family-friendly loop trail leads to a Fire Canyon overlook. Don't skip this one: on a sunny winter morning the colors are extraordinary.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">11:50 AM</div>
+        <div class="tl-content">
+          <h3>Fire Canyon Overlook (~10 min)</h3>
+          <p>Pull into the overlook parking area for panoramic views of the red-and-white sandstone formations. Silica Dome is visible in the distance. Quick stop but visually very strong.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">12:05 PM</div>
+        <div class="tl-content">
+          <h3>Elephant Rock (~20 min)</h3>
+          <p>A sandstone formation that unmistakably resembles an elephant — trunk, body, and all. Short hike to the best vantage point. One of the park's most photogenic landmarks and a crowd favorite for a reason.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">12:30 PM</div>
+        <div class="tl-content">
+          <h3>Fire Wave (~60 min)</h3>
+          <p>Save your legs for this one — it's the highlight of the park. The Fire Wave is a sweeping striped sandstone formation resembling an ocean wave in red, white, and pink. Easy-to-moderate hike (about 1.5 miles round trip). Arrive, hike, take your time at the formation — this is the shot you came for.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">2:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-drive">1 Hour Drive</span></div>
+          <h3>Drive Back to the Venetian</h3>
+          <p>Head back to the Strip. With an early dinner at 4:30 you have just enough time to shower and change. Stop at the Grand Canal Shoppes after checking in — Smith &amp; Wollensky's is located right there.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">4:30 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span><span class="tag tag-booked">OpenTable</span></div>
+          <h3>Smith &amp; Wollensky's at the Venetian</h3>
+          <p>Booked via OpenTable. Note: 4:30 PM is the lunch menu — the full dinner menu starts at 5 PM. You may want to time your arrival closer to 5 PM or ask the host about menu availability when you check in. Classic American steakhouse, excellent cuts, and an impressive wine list.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">7:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-show">Show</span><span class="tag tag-booked">Still to Book</span></div>
+          <h3>Mat Franco — Magic Reinvented Nightly at The LINQ</h3>
+          <p>America's Got Talent winner Mat Franco performs an intimate and genuinely impressive magic show. Book tickets in advance — this show sells out regularly. The LINQ is a short walk or quick Uber from the Venetian.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">8:45 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Still to Book — or Skip</span></div>
+          <h3>Minus 5 Ice Bar (Optional)</h3>
+          <p>The ice bar at The LINQ keeps everything — walls, glasses, sculptures — at -5°C (23°F). You're provided with a thermal coat and gloves. It's a 45-minute experience and genuinely fun, but if you're not feeling the cold, the Speakeasy experience next door is a warm, fun alternative. Book the 8–10 PM slot if going.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">10:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-booked">Still to Book</span></div>
+          <h3>High Roller Observation Wheel</h3>
+          <p>The world's tallest observation wheel at 550 feet. Each cabin holds up to 40 people and the rotation takes 30 minutes — plenty of time to take in the full panorama of the Strip lit up at night. This is the best view of Las Vegas you'll get at eye level. Book tickets at the LINQ ahead of time.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">11:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-free">Free</span></div>
+          <h3>Bellagio Fountains &amp; Conservatory</h3>
+          <p>End the night at the Bellagio — fountains run every 15 minutes at night, and the Conservatory inside is open 24/7 and free. January's theme is Lunar New Year — the floral installations for this display are particularly elaborate and colorful. The perfect late-night wind-down.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-alert">
+        <span class="callout-label">💧 Pack Water</span>
+        <p>Valley of Fire has minimal facilities. Bring at least 2 liters of water per person and snacks for the full morning. The desert is dehydrating even in January.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">📸 Fire Wave Tip</span>
+        <p>The Fire Wave is best photographed in the morning or late afternoon when the sun is low and the colors are richest. Midday light flattens the texture of the rock.</p>
+      </div>
+      <div class="callout callout-warn">
+        <span class="callout-label">🍽️ Dinner Timing</span>
+        <p>Smith &amp; Wollensky's switches from lunch to dinner menu at 5 PM. Arriving at 4:30 may limit your options — consider asking to be seated closer to 5 PM.</p>
+      </div>
+      <div class="callout callout-tip">
+        <span class="callout-label">🌙 Bellagio Lunar New Year</span>
+        <p>The Conservatory's Lunar New Year display is one of their most celebrated seasonal themes — lanterns, large-scale floral animals, and intricate arrangements. Free, open all night, worth the late stop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ · ✦ · ✦</div>
+
+<!-- DAY 4 -->
+<section class="day-section" id="day4">
+  <div class="day-header">
+    <div class="day-number">04</div>
+    <div class="day-header-text">
+      <p class="day-date">Monday · February 2, 2026</p>
+      <h2>Desert Art, Fremont Street <em>&amp; Final Dinner</em></h2>
+    </div>
+  </div>
+  <div class="day-layout">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">8:00 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Quick Breakfast</span></div>
+          <h3>Starbucks, Then Go Early</h3>
+          <p>Quick Starbucks before departing — the earlier you get to Seven Magic Mountains the fewer people are there and the better the light for photos.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">8:30 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-drive">30 Min Drive</span></div>
+          <h3>Seven Magic Mountains</h3>
+          <p>A striking public art installation by Swiss artist Ugo Rondinone — seven neon-painted boulder towers rising up to 35 feet from the Mojave Desert floor along I-15, south of Vegas. Best in the soft morning light. Take your time composing shots — wide angle against the sky, portraits in front of the colors, and detail shots of the stacked boulders. Free and open 24 hours.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">9:30 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-free">Free</span></div>
+          <h3>Jean Dry Lake Bed</h3>
+          <p>A short drive from Seven Magic Mountains. The vast white playa of Jean Dry Lake Bed offers an otherworldly flat expanse perfect for creative photography — long shadows in the morning, mirror-flat reflections after rain, and a surreal sense of scale. Take some wide open desert shots before heading back toward the Strip.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">11:00 AM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-free">Free — Parking Dependent</span></div>
+          <h3>Welcome to Las Vegas Sign</h3>
+          <p>If parking is available at the dedicated lot on the south end of the Strip, stop for the classic photo. If the lot is full, the Pinball Hall of Fame is nearby — walk here from the sign if parking allows.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">11:30 AM</div>
+        <div class="tl-content">
+          <h3>Pinball Hall of Fame or PlayPlayground at Luxor</h3>
+          <p><strong>Pinball Hall of Fame</strong> (free to enter, pay per game) has an enormous collection of vintage and modern pinball machines — a genuinely fun hour. <strong>PlayPlayground at Luxor</strong> is a multi-story interactive entertainment venue — buy tickets online in advance. Choose based on energy and group interest.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">1:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Lunch</span><span class="tag tag-booked">Reservation</span></div>
+          <h3>Esther's Kitchen</h3>
+          <p>Esther's is one of the most acclaimed non-casino restaurants in Las Vegas: wood-fired Italian-influenced dishes, excellent pasta, and a genuinely lively atmosphere in the Arts District. It's off-Strip (around 1405 S Main St) so drive or Uber.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">2:30 PM</div>
+        <div class="tl-content">
+          <h3>Arts District Exploration (Optional)</h3>
+          <p>Esther's is already in the Arts District — worth a stroll after lunch. Container Park (nearby open-air shopping with food trucks, local boutiques, and a treehouse play structure) and Ferguson's Motel (Etsy-style eclectic shopping at a converted roadside motel) are both within a short walk or drive.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">3:00 PM</div>
+        <div class="tl-content">
+          <h3>Back to the Venetian — Pool or Sphere?</h3>
+          <p>Is the pool heated and open? If so, this is your window to relax poolside. Alternatively: last-minute Sphere tickets for the Wizard of Oz at 5 PM — check availability at the Sphere box office.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time hi">7:00 PM</div>
+        <div class="tl-content">
+          <div class="tags"><span class="tag tag-food">Dinner</span><span class="tag tag-booked">OpenTable</span></div>
+          <h3>Delmonico Steakhouse at the Venetian</h3>
+          <p>Emeril Lagasse's flagship steakhouse inside the Venetian — steps from your room. Excellent aged beef, signature Creole-influenced sides, and a warm, richly designed dining room. If last night's dinner at Smith &amp; Wollensky's was exceptional and you want a cheaper alternative, scout the Strip for options — but Delmonico is a strong finish to the trip.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">8:30 PM</div>
+        <div class="tl-content">
+          <h3>Fremont Street Experience</h3>
+          <p>Uber downtown for the night. The Fremont Street LED canopy light shows run on the hour after dark and are free. Explore: Don't Tell Mama (piano bar, fun and unpretentious), Vegas Vickie's Cocktail Lounge, a photo with $1 million at Binion's, the Silver Strike machine at The Plaza for a souvenir coin, Pink Box Donuts inside The Plaza, and the large gold nugget on display at the Golden Nugget. End the night here before the Uber back.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="callout callout-pro">
+        <span class="callout-label">📸 Seven Magic Mountains</span>
+        <p>Go as early as possible — morning light hits the neon-painted boulders at a low angle that makes the colors pop. By 10 AM there are often tour groups. Early = best shots.</p>
+      </div>
+      <div class="callout callout-tip">
+        <span class="callout-label">🎡 Sphere Check</span>
+        <p>Last-minute Sphere tickets for the Wizard of Oz at 5 PM are sometimes available — check the Sphere website or box office Monday afternoon. If available, it's one of the most extraordinary visual experiences anywhere.</p>
+      </div>
+      <div class="callout callout-pro">
+        <span class="callout-label">🎹 Don't Tell Mama</span>
+        <p>Don't Tell Mama on Fremont is a piano bar (21+) with a fun, participatory energy — guests often sing along and perform. Perfect low-key final night out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DINING GUIDE -->
+<section class="food-section" id="dining">
+  <div class="food-inner">
+    <p class="eyebrow"><a href="/" class="brand-link" >My Life Happens Travel</a> · Dining Guide</p>
+    <h2>Where to Eat &amp; Drink</h2>
+    <div class="food-grid">
+      <div class="food-card">
+        <span class="meal-type">Saturday Breakfast</span>
+        <h4>Grand Lux Cafe</h4>
+        <span class="address">The Venetian, Las Vegas Blvd</span>
+        <p>The Cheesecake Factory's upscale concept with an extensive all-day menu. Convenient — it's right inside your hotel. Ideal for a proper breakfast before a full day.</p>
+        <span class="free-tag">Walk In</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Saturday Dinner</span>
+        <h4>Gordon Ramsay Burger</h4>
+        <span class="address">The Flamingo, Las Vegas Blvd</span>
+        <p>Casual, satisfying, and exactly right before a 2-hour concert. The Hell's Kitchen burger and truffle fries are the go-to order.</p>
+        <span class="free-tag">Walk In Friendly</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Sunday Dinner</span>
+        <h4>Smith &amp; Wollensky's</h4>
+        <span class="address">Grand Canal Shoppes, The Venetian</span>
+        <p>Classic American steakhouse inside your hotel. Note: booked at 4:30 PM but dinner menu starts at 5 PM — aim to arrive closer to 5 or confirm menu timing with the host.</p>
+        <span class="res-tag">OpenTable Reservation</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Monday Lunch</span>
+        <h4>Esther's Kitchen</h4>
+        <span class="address">1405 S Main St, Arts District</span>
+        <p>One of Las Vegas's most acclaimed non-casino restaurants. Wood-fired Italian-influenced cooking, excellent pasta, and a lively atmosphere. Off-Strip — drive or Uber.</p>
+        <span class="res-tag">Reservation Recommended</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Monday Dinner</span>
+        <h4>Delmonico Steakhouse</h4>
+        <span class="address">The Venetian</span>
+        <p>Emeril Lagasse's flagship steakhouse — aged beef, Creole-influenced sides, and a beautifully designed room. Inside the Venetian, which makes it a no-Uber-needed final dinner.</p>
+        <span class="res-tag">OpenTable Reservation</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Late Night Option</span>
+        <h4>Milk Bar at The Cosmopolitan</h4>
+        <span class="address">The Cosmopolitan, Las Vegas Blvd</span>
+        <p>Famous for Cereal Milk soft serve ice cream. Open late, inexpensive, and genuinely delicious. A fun late-night dessert stop after the Bellagio fountains or a Strip walk.</p>
+        <span class="free-tag">Walk In</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Drinks — Venetian</span>
+        <h4>Rosina Cocktail Lounge</h4>
+        <span class="address">The Venetian</span>
+        <p>Steps from your room. Classic cocktails, relaxed but upscale atmosphere — ideal for a birthday toast or a wind-down drink. Not a club; not a dive. Exactly the right vibe after a long day.</p>
+        <span class="free-tag">No Reservation Needed</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Drinks — Strip</span>
+        <h4>The Chandelier Lounge</h4>
+        <span class="address">The Cosmopolitan</span>
+        <p>A stunning three-story lounge suspended inside a massive chandelier installation at The Cosmopolitan. Craft cocktails, beautiful design, and a grown-up energy that isn't a nightclub. One of the best bars in Las Vegas.</p>
+        <span class="free-tag">Walk In</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXTRAS -->
+<section class="food-section" id="extras" style="margin-top: 2px;">
+  <div class="food-inner">
+    <p class="eyebrow">If You Have Extra Time</p>
+    <h2>More to Explore</h2>
+    <div class="food-grid">
+      <div class="food-card">
+        <span class="meal-type">Off-Strip Adventure</span>
+        <h4>Lion Habitat Ranch</h4>
+        <span class="address">Off the Strip, Henderson</span>
+        <p>A nonprofit sanctuary home to over 40 African lions. Get up-close access to lions and cubs in an intimate non-zoo setting. Unique and genuinely memorable — especially for wildlife lovers.</p>
+        <span class="res-tag">Book in Advance</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Entertainment</span>
+        <h4>Red Door Escape Rooms</h4>
+        <span class="address">Grand Bazaar Shops</span>
+        <p>Private escape room experiences — Declassified, Enchantment, or Survive are the three options. A great group activity for a night when you want something hands-on and interactive. Book at reddoorescape.com.</p>
+        <span class="res-tag">Book Online in Advance</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Iconic Pizza</span>
+        <h4>Giordano's Deep Dish</h4>
+        <span class="address">Las Vegas Strip</span>
+        <p>Chicago-style deep dish pizza — perfect if you're craving something hearty and familiar. A good option for a casual group dinner when nobody wants another steakhouse.</p>
+        <span class="free-tag">Walk In Friendly</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Quick Eats</span>
+        <h4>Earl of Sandwich</h4>
+        <span class="address">Planet Hollywood</span>
+        <p>Hot pressed sandwiches, fast service, low prices. A reliable grab-and-go option inside Planet Hollywood for when you need something quick between activities on the Strip.</p>
+        <span class="free-tag">Walk In</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Views</span>
+        <h4>Skyfall Lounge</h4>
+        <span class="address">Delano Las Vegas</span>
+        <p>64th floor lounge at the Delano with some of the best panoramic Strip views available from a bar. Calm, grown-up energy — not a club. Ideal for a sunset cocktail or a quiet late-night drink.</p>
+        <span class="free-tag">Walk In</span>
+      </div>
+      <div class="food-card">
+        <span class="meal-type">Fremont Favorite</span>
+        <h4>Pink Box Donuts at The Plaza</h4>
+        <span class="address">The Plaza Hotel, Fremont St</span>
+        <p>Creative donut flavors inside The Plaza during the Fremont Street evening. A fun and inexpensive stop during the Monday night Fremont exploration — also check out the Silver Strike souvenir coin machine here.</p>
+        <span class="free-tag">Walk In</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="/" class="brand-link footer-brand" >My Life Happens Travel</a>
+  <span class="footer-tagline">Guides for the curious traveller</span>
+  <div class="footer-rule"></div>
+  <p>Las Vegas · January 30 – February 2, 2026</p>
+  <p style="margin-top: 6px;">The Venetian · Valley of Fire · Area 15 · Fremont Street</p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('[id]');
+  const navLinks = document.querySelectorAll('.day-nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + entry.target.id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { rootMargin: '-50% 0px -50% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
