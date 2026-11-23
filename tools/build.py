@@ -256,6 +256,23 @@ PHOTOS = {
     "cal-sf-fog": (800, 450, 1200, "San Francisco under a bank of fog, seen across the bay from Sausalito", ""),
     "cal-mendocino-cove": (800, 1200, 1200, "A cove on the Mendocino coast", ""),
     "cal-point-cabrillo-wide": (800, 533, 2400, "Point Cabrillo Light Station across the golden headland", ""),
+    # 5 Days in Montreal: our own photos (resized, no EXIF/GPS)
+    "mtl-sangria": (800, 1422, 1200, "Sharon with a carafe of sangria at lunch on the Plateau", ""),
+    "mtl-plateau-restaurant": (800, 1422, 1200, "The front of a restaurant on the Plateau", ""),
+    "mtl-beaver-lake": (800, 450, 1200, "Beaver Lake on Mount Royal under a grey sky", ""),
+    "mtl-old-montreal-night": (800, 1422, 1200, "Sharon, Josh and Ryan under a flower-covered doorway in Old Montreal at night", ""),
+    "mtl-terrace-lunch": (800, 450, 1200, "Sharon, Josh and Ryan at lunch on a sunny terrace", ""),
+    "mtl-zipline": (800, 600, 1200, "Josh and Ryan in blue helmets at the MTL Zipline, the Ferris wheel behind them", ""),
+    "mtl-family-selfie": (800, 1422, 1200, "Tony, Sharon, Josh and Ryan squeezed into a selfie before dinner", ""),
+    "mtl-casino": (800, 450, 1200, "Sharon, Josh and Ryan at the Casino de Montréal", ""),
+    "mtl-selfie": (800, 1000, 1200, "Tony and Sharon in a selfie in Montreal", ""),
+    "mtl-jacopo-dinner": (800, 450, 1200, "Tony, Sharon, Josh and Ryan at dinner at Jacopo", ""),
+    "mtl-aperol-toast": (800, 1422, 1200, "Tony and Sharon raising Aperol Spritzes at Jacopo", ""),
+    "mtl-beaver-lake-hero": (800, 450, 2400, "Beaver Lake curving through the lawns of Mount Royal", ""),
+    "mtl-scooter": (800, 1005, 1200, "A bright orange Aperol scooter on a cobblestone street in Old Montreal", ""),
+    "mtl-sandwich": (800, 450, 1200, "A grilled sandwich and croquettes on a wooden board at lunch", ""),
+    "mtl-slots": (800, 1422, 1200, "Sharon at the slot machines at the Casino de Montréal", ""),
+    "mtl-calligraphy": (800, 1422, 1200, "Black calligraphy art on a white wall above green shrubs", ""),
 }
 
 # Per-trip photos: the hero (big photo at the top) and an optional gallery.
@@ -281,6 +298,8 @@ TRIP_PHOTOS = {
                  "gallery": ["nca-tahoe-shore", "nca-lombard-hydrangeas", "nca-alcatraz-skyline",
                              "nca-muir-woods-trail", "nca-mendocino-beach", "nca-cypress-cove", "nca-tahoe-from-above",
                              "nca-tahoe-pines"]},
+    "montreal": {"hero": "mtl-beaver-lake-hero", "place": "Beaver Lake, Mount Royal",
+                 "gallery": ["mtl-scooter", "mtl-selfie", "mtl-sandwich", "mtl-slots", "mtl-calligraphy"]},
 }
 
 e = html.escape
