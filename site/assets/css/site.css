@@ -413,3 +413,11 @@ svg { flex: none; }
 @media (max-width: 980px) {
   .toc ol { touch-action: pan-x pan-y; overscroll-behavior-x: contain; position: relative; }
 }
+
+/* phone day strip: keep it cheap to draw while the page scrolls under it.
+   A solid background instead of the frosted-glass blur (which iOS has to recompute on every
+   scrolled frame), its own compositing layer, and no colour transitions on the buttons. */
+@media (max-width: 980px) {
+  .toc { background: var(--bg); backdrop-filter: none; -webkit-backdrop-filter: none; contain: layout paint style; transform: translateZ(0); box-shadow: 0 6px 12px -10px rgba(34, 27, 21, .35); }
+  .toc a { transition: none; }
+}
