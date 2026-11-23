@@ -146,7 +146,8 @@
       "tip": "If the cable car line is long, skip it and taxi back; if you're running early, add Montjuïc Castle (check it's still open).",
       "photos": [
         "bcn-first-afternoon",
-        "bcn-arc-de-triomf"
+        "bcn-arc-de-triomf",
+        "bcn-gothic-quarter-lane"
       ]
     },
     {
@@ -217,7 +218,13 @@
           "booked": true
         }
       ],
-      "tip": "Sagrada Família dress code: shoulders and knees covered, hats and caps off."
+      "tip": "Sagrada Família dress code: shoulders and knees covered, hats and caps off.",
+      "photos": [
+        "bcn-park-guell-view",
+        "bcn-passion-tower-stairs",
+        "bcn-sagrada-windows",
+        "bcn-sant-pau"
+      ]
     },
     {
       "label": "Day 3",
@@ -245,7 +252,12 @@
           "booked": true
         }
       ],
-      "tip": "Book the early airport taxi the day before."
+      "tip": "Book the early airport taxi the day before.",
+      "photos": [
+        "bcn-airport-sunrise",
+        "mallorca-camp-de-mar-bay",
+        "mallorca-first-night"
+      ]
     },
     {
       "label": "Days 4–6",
@@ -258,7 +270,8 @@
       "photos": [
         "mallorca-sunset",
         "zafiro-cocktail",
-        "zafiro-sunhat"
+        "zafiro-sunhat",
+        "mallorca-seaside-rocks"
       ]
     },
     {
@@ -266,7 +279,7 @@
       "date": "Wed, Jul 8",
       "place": "Mallorca",
       "title": "Our one tour of the week",
-      "text": "",
+      "text": "Our one booked day out was a tour of the Serra de Tramuntana on Mallorca's west coast: the cobbled, flower-lined lanes of Valldemossa, the Sa Foradada lookout at Son Marroig, the hillside village of Deià, lunch by the harbour in Port de Sóller and a wander round Sóller's main square, then one last view over the Bay of Palma on the way back.",
       "items": [
         {
           "time": "",
@@ -274,7 +287,13 @@
           "booked": true
         }
       ],
-      "tip": "Confirm the tour pickup details ahead of time."
+      "tip": "Confirm the tour pickup details ahead of time.",
+      "photos": [
+        "mallorca-tour-coast",
+        "mallorca-tour-lane",
+        "mallorca-tour-village",
+        "mallorca-tour-streamers"
+      ]
     },
     {
       "label": "Day 8",
@@ -283,7 +302,10 @@
       "title": "Back to Barcelona for a last night",
       "text": "We left Camp de Mar and flew back to Barcelona for one more night in the city.",
       "items": [],
-      "tip": ""
+      "tip": "",
+      "photos": [
+        "bcn-last-night-shopfront"
+      ]
     },
     {
       "label": "Day 9",
@@ -292,7 +314,10 @@
       "title": "Flying home",
       "text": "Home from Barcelona's El Prat airport.",
       "items": [],
-      "tip": ""
+      "tip": "",
+      "photos": [
+        "bcn-flight-home"
+      ]
     }
   ],
   "stays": [
