@@ -71,7 +71,13 @@
           "booked": true
         }
       ],
-      "tip": "Don't overdo the first night: the Uffizi tour starts at 8:30 AM sharp."
+      "tip": "Don't overdo the first night: the Uffizi tour starts at 8:30 AM sharp.",
+      "photos": [
+        "ita-first-aperitivo",
+        "ita-arno-sharon",
+        "florence-arno",
+        "ita-giovanni-dinner"
+      ]
     },
     {
       "label": "Day 2",
@@ -130,7 +136,13 @@
           "booked": true
         }
       ],
-      "tip": "Timed entry at the Campanile is strict. Be in line by 2:05 PM and leave backpacks and large bags at the hotel."
+      "tip": "Timed entry at the Campanile is strict. Be in line by 2:05 PM and leave backpacks and large bags at the hotel.",
+      "photos": [
+        "ita-uffizi-selfie",
+        "ita-david",
+        "ita-ponte-vecchio",
+        "ita-lunch-spritz"
+      ]
     },
     {
       "label": "Day 3",
@@ -185,7 +197,10 @@
       ],
       "tip": "Once you leave any museum in the Pitti complex you can't re-enter. Some Oltrarno shops may be closed on Easter Sunday.",
       "photos": [
-        "ita-easter-gelato"
+        "ita-easter-gelato",
+        "ita-bardini-stairs",
+        "ita-cooking-class",
+        "ita-rolling-pasta"
       ]
     },
     {
@@ -245,7 +260,13 @@
           "booked": true
         }
       ],
-      "tip": "Keep lunch in Lucca light, because the bike tour includes tastings. Osteria Pastella charges €20 if you cancel less than 2 hours ahead."
+      "tip": "Keep lunch in Lucca light, because the bike tour includes tastings. Osteria Pastella charges €20 if you cancel less than 2 hours ahead.",
+      "photos": [
+        "ita-pisa-sharon",
+        "ita-pisa-tony",
+        "ita-lucca-bikes",
+        "ita-lucca-walls"
+      ]
     },
     {
       "label": "Day 5",
@@ -318,7 +339,8 @@
       "photos": [
         "ita-colosseum",
         "ita-pantheon",
-        "ita-trevi"
+        "ita-trevi",
+        "ita-spanish-steps"
       ]
     },
     {
@@ -362,7 +384,10 @@
       ],
       "tip": "",
       "photos": [
-        "ita-venice-canal"
+        "ita-venice-canal",
+        "ita-grand-canal-spritz",
+        "ita-accademia-bridge",
+        "ita-gondola-sharon"
       ]
     },
     {
@@ -391,7 +416,13 @@
           "booked": true
         }
       ],
-      "tip": "Take vaporetto Line 4.1 or 4.2 from Fondamente Nove to Murano, then continue to Burano. Budget 3–4 hours for both islands, including at least 90 minutes on Burano."
+      "tip": "Take vaporetto Line 4.1 or 4.2 from Fondamente Nove to Murano, then continue to Burano. Budget 3–4 hours for both islands, including at least 90 minutes on Burano.",
+      "photos": [
+        "ita-st-marks-loggia",
+        "ita-murano-canal",
+        "ita-murano-sharon",
+        "ita-venice-sunset"
+      ]
     },
     {
       "label": "Day 8",
@@ -420,7 +451,13 @@
           "text": "Dinner at a restaurant near the hotel"
         }
       ],
-      "tip": "Reserve dinner before the day starts. You'll be tired and hungry when you get back and won't want to search."
+      "tip": "Reserve dinner before the day starts. You'll be tired and hungry when you get back and won't want to search.",
+      "photos": [
+        "ita-prosecco-vines",
+        "ita-prosecco-tree",
+        "ita-prosecco-slopes",
+        "ita-prosecco-castle"
+      ]
     },
     {
       "label": "Day 9",
@@ -452,7 +489,10 @@
       ],
       "tip": "Venice Mestre is on the mainland, not in the historic center. Confirm your route there the night before.",
       "photos": [
-        "ita-venice-boat"
+        "ita-venice-boat",
+        "ita-florence-steps",
+        "ita-florence-wine",
+        "ita-duomo-night"
       ]
     },
     {
