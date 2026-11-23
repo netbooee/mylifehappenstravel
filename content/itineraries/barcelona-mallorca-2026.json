@@ -2,7 +2,7 @@
   "slug": "barcelona-mallorca-2026",
   "title": "Barcelona to Mallorca",
   "subtitle": "Two days in Gaudí's city, then a slow week at Camp de Mar",
-  "summary": "Two packed days on foot through Montjuïc, the Gothic Quarter and Gaudí's Barcelona, then an early flight to Mallorca for a slow week at Zafiro Palace Andratx in Camp de Mar.",
+  "summary": "Two packed days on foot through Montjuïc, the Gothic Quarter and Gaudí's Barcelona, an early flight to Mallorca for five slow days at Zafiro Palace Andratx in Camp de Mar, then a last night back in Barcelona.",
   "country": "Spain",
   "region": "Europe",
   "start": "2026-07-02",
@@ -16,7 +16,7 @@
     },
     {
       "label": "Bases",
-      "value": "Barcelona (2 nights, InterContinental), Camp de Mar, Mallorca (a week, Zafiro Palace Andratx)"
+      "value": "Barcelona (2 nights, InterContinental), Camp de Mar, Mallorca (5 nights, Zafiro Palace Andratx), then a last night back in Barcelona"
     },
     {
       "label": "Pace",
@@ -24,16 +24,16 @@
     },
     {
       "label": "Getting around",
-      "value": "On foot, plus taxis, Uber and the Port Cable Car in Barcelona; Ryanair to Mallorca"
+      "value": "On foot, plus taxis, Uber and the Port Cable Car in Barcelona; flights to and from Mallorca"
     },
     {
       "label": "Booked ahead",
-      "value": "Dinner tables, timed tickets, the flight and one tour"
+      "value": "Dinner tables, timed tickets, the flights and one tour"
     }
   ],
   "intro": [
     "We gave Barcelona two packed days and saw as much of it as we could on foot: Montjuïc, La Rambla and the Gothic Quarter, El Born, Passeig de Gràcia and the port on the first day, then Sagrada Família, the Passion Tower, Sant Pau and Park Güell on the second.",
-    "Then we took an early flight to the island for a slow week at Zafiro Palace Andratx on Mallorca's southwest coast. We booked a single tour for the week and left every other day open."
+    "Then we took an early flight to the island for five slow days at Zafiro Palace Andratx on Mallorca's southwest coast. We booked a single tour for the week and left every other day open, then flew back to Barcelona for one last night in the city before heading home."
   ],
   "route": [
     "Montjuïc",
@@ -45,7 +45,8 @@
     "Sant Pau",
     "Park Güell",
     "Bunkers del Carmel",
-    "Camp de Mar, Mallorca"
+    "Camp de Mar, Mallorca",
+    "Barcelona"
   ],
   "days_plan": [
     {
@@ -276,11 +277,20 @@
       "tip": "Confirm the tour pickup details ahead of time."
     },
     {
-      "label": "Days 8–9",
-      "date": "Thu, Jul 9 – Fri, Jul 10",
-      "place": "Camp de Mar, Mallorca",
-      "title": "One more open day, then the last day",
-      "text": "",
+      "label": "Day 8",
+      "date": "Thu, Jul 9",
+      "place": "Mallorca to Barcelona",
+      "title": "Back to Barcelona for a last night",
+      "text": "We left Camp de Mar and flew back to Barcelona for one more night in the city.",
+      "items": [],
+      "tip": ""
+    },
+    {
+      "label": "Day 9",
+      "date": "Fri, Jul 10",
+      "place": "Barcelona",
+      "title": "Flying home",
+      "text": "Home from Barcelona's El Prat airport.",
       "items": [],
       "tip": ""
     }
@@ -295,8 +305,8 @@
     {
       "name": "Zafiro Palace Andratx",
       "place": "Camp de Mar, Mallorca",
-      "nights": "A week",
-      "note": "Our base for a slow week on Mallorca's southwest coast."
+      "nights": "5 nights",
+      "note": "Our base for five slow days on Mallorca's southwest coast."
     }
   ],
   "eats": [
@@ -354,7 +364,7 @@
     "Passion Tower climb (timed ticket)",
     "Recinte Modernista de Sant Pau (timed entry)",
     "Dinner at La Gastronómica Tapas (via TheFork) and Casa Amàlia 1950",
-    "The flight from Barcelona to Mallorca",
+    "The flights between Barcelona and Mallorca",
     "An early-morning taxi to Barcelona airport",
     "A Viator tour on Mallorca"
   ],
@@ -436,6 +446,10 @@
     "Camp de Mar, Mallorca": [
       39.5378,
       2.4227
+    ],
+    "Barcelona": [
+      41.3851,
+      2.1734
     ]
   },
   "videos": [
