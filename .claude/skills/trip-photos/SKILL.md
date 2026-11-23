@@ -14,6 +14,20 @@ next to the repo). Never put any of it in the repo.
 If no slug was given, list the itineraries and ask which trip. If the trip has no itinerary yet, add it
 first ("Adding a trip" in `README.md`).
 
+## 0. Start from the latest site
+
+Before anything else, bring the repo up to date with GitHub, so you work on what's live and the
+pull request merges cleanly:
+
+```
+git status --short          # must be empty
+git switch main && git pull --ff-only
+```
+
+If `git status` shows uncommitted changes, or the pull can't fast-forward, stop and tell them what's
+there; don't stash, reset or discard anything. If the pull asks for a password, they need to sign in
+to GitHub once (see step 6).
+
 ## Rules (always)
 
 - **The Photos library is read-only.** Use only the toolkit's commands on it. Never import, edit, add
