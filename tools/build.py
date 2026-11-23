@@ -51,6 +51,22 @@ PHOTOS = {
     "ireland-castle": (800, 533, 1600, "An ivy-covered castle ruin in the green Irish countryside", "Unsplash"),
     "barcelona-montjuic": (800, 450, 1600, "Montjuïc and the National Palace in Barcelona under a fiery sunset", "Unsplash"),
     "in-flight": (800, 800, 800, "A window seat, ready for take-off", ""),
+    # our own photos of the two of us, from the travel-selfies folder (GPS removed)
+    "bcn-first-afternoon": (800, 1422, 1200, "Tony and Sharon on their first afternoon in Barcelona", ""),
+    "bcn-arc-de-triomf": (800, 1422, 1200, "Tony and Sharon in front of the Arc de Triomf, Barcelona", ""),
+    "mallorca-sunset": (800, 1422, 1200, "Tony and Sharon at sunset over Camp de Mar, Mallorca", ""),
+    "ita-easter-gelato": (800, 1422, 1200, "Easter Sunday gelato in Florence", ""),
+    "ita-colosseum": (800, 1422, 1200, "Tony and Sharon at the Colosseum, Rome", ""),
+    "ita-pantheon": (800, 1422, 1200, "Tony and Sharon in front of the Pantheon, Rome", ""),
+    "ita-trevi": (800, 1422, 1200, "Tony and Sharon at the Trevi Fountain, Rome", ""),
+    "ita-venice-canal": (800, 1422, 1200, "Tony and Sharon beside a canal in Venice", ""),
+    "ita-venice-boat": (800, 1422, 1200, "Tony and Sharon on a boat on a Venice canal", ""),
+    "cal-mount-tamalpais": (800, 1422, 1200, "Tony and Sharon on the Mount Tamalpais and Muir Woods day", ""),
+    "cal-vineyard": (800, 1422, 1200, "Tony and Sharon in a Calistoga vineyard", ""),
+    "cal-wine": (800, 1067, 1200, "Tony and Sharon with a glass of wine each in Calistoga", ""),
+    "veg-casino": (800, 1422, 1200, "Tony and Sharon on a Saturday night in Las Vegas", ""),
+    "veg-sign": (800, 1422, 1200, "Tony and Sharon by a Welcome to Fabulous Las Vegas sign at the Grand Canal Shoppes", ""),
+    "veg-neon": (800, 1422, 1200, "Tony and Sharon under the neon at the Grand Canal Shoppes", ""),
     "zafiro-pool": (800, 533, 1086, "Relaxing by our private plunge pool at Zafiro Palace Andratx, with the hills of Camp de Mar beyond", ""),
     "zafiro-cocktail": (724, 1086, 724, "A cocktail and a book on the sun deck at Zafiro Palace Andratx", ""),
     "zafiro-sunhat": (724, 1086, 724, "Sun hat on, by the pool at Zafiro Palace Andratx, Mallorca", ""),
@@ -59,7 +75,7 @@ PHOTOS = {
 # Per-trip photos: the hero (big photo at the top) and an optional gallery.
 TRIP_PHOTOS = {
     "barcelona": {"hero": "zafiro-pool", "place": "Zafiro Palace Andratx, Mallorca", "gallery": []},
-    "italy": {"hero": "florence-arno", "place": "The Arno, Florence", "gallery": ["florence-street", "florence-coffee", "rome-colosseum"]},
+    "italy": {"hero": "florence-arno", "place": "The Arno, Florence", "gallery": ["florence-street", "florence-coffee"]},
     "vegas": {"hero": "valley-of-fire-3", "place": "Valley of Fire, Nevada",
               "gallery": ["valley-of-fire-1", "valley-of-fire-6", "valley-of-fire-2", "valley-of-fire-7", "vegas-sign"]},
     "california": {"hero": "golden-gate", "place": "Golden Gate Bridge, San Francisco", "gallery": ["calistoga"]},
@@ -354,8 +370,8 @@ def home(trips: list[dict]) -> str:
   <section class="section tint about-band">
     <div class="wrap split">
       <div class="about-photos">
-        {picture("valley-of-fire-6", "(min-width: 960px) 260px, 45vw", "ap1")}
-        {picture("calistoga", "(min-width: 960px) 320px, 55vw", "ap2")}
+        {picture("mallorca-sunset", "(min-width: 960px) 260px, 45vw", "ap1")}
+        {picture("ita-trevi", "(min-width: 960px) 320px, 55vw", "ap2")}
       </div>
       <div>
         <span class="eyebrow">Hi, we're Tony &amp; Sharon</span>
@@ -562,7 +578,7 @@ def itinerary(t: dict, trips: list[dict]) -> str:
 def about(trips: list[dict]) -> str:
     countries = sorted({t["country"] for t in trips})
     return head("About us", "We're Tony & Sharon, and this is where we keep the plans from every trip we take.", "/about/",
-                image="valley-of-fire-6") + f"""<body>
+                image="ita-trevi") + f"""<body>
 {header("/about/")}
 <main id="main">
   <section class="page-head">
@@ -572,7 +588,7 @@ def about(trips: list[dict]) -> str:
         <h1>Hi, we're <em>Tony &amp; Sharon.</em></h1>
         <p class="lede">We travel together, and we plan together: flights, hotels, tours, and above all the dinner reservations. My Life Happens Travel is where we keep those plans and share them.</p>
       </div>
-      <div class="about-photos solo">{picture("valley-of-fire-7", "(min-width: 960px) 360px, 70vw", "ap1", lazy=False)}</div>
+      <div class="about-photos solo">{picture("cal-wine", "(min-width: 960px) 360px, 70vw", "ap1", lazy=False)}</div>
     </div>
   </section>
   <section class="section tint">

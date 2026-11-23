@@ -183,7 +183,10 @@
           "text": "A light dinner: drinks over the Ponte Vecchio at the Hotel La Scaletta rooftop bar if it's open, or walk-in pizza at Mister Pizza or LiVio Pizzeria"
         }
       ],
-      "tip": "Once you leave any museum in the Pitti complex you can't re-enter. Some Oltrarno shops may be closed on Easter Sunday."
+      "tip": "Once you leave any museum in the Pitti complex you can't re-enter. Some Oltrarno shops may be closed on Easter Sunday.",
+      "photos": [
+        "ita-easter-gelato"
+      ]
     },
     {
       "label": "Day 4",
@@ -311,7 +314,12 @@
           "booked": true
         }
       ],
-      "tip": "Eat a real lunch. We're inside the Vatican for hours after 4 PM, and there's little time for dinner before the train."
+      "tip": "Eat a real lunch. We're inside the Vatican for hours after 4 PM, and there's little time for dinner before the train.",
+      "photos": [
+        "ita-colosseum",
+        "ita-pantheon",
+        "ita-trevi"
+      ]
     },
     {
       "label": "Day 6",
@@ -352,7 +360,10 @@
           "text": "An evening walk through Piazza San Marco, lit at night, before tomorrow's crowds"
         }
       ],
-      "tip": ""
+      "tip": "",
+      "photos": [
+        "ita-venice-canal"
+      ]
     },
     {
       "label": "Day 7",
@@ -439,7 +450,10 @@
           "text": "Final dinner in Florence. It's our last free evening, and most of the center is walkable from the hotel"
         }
       ],
-      "tip": "Venice Mestre is on the mainland, not in the historic center. Confirm your route there the night before."
+      "tip": "Venice Mestre is on the mainland, not in the historic center. Confirm your route there the night before.",
+      "photos": [
+        "ita-venice-boat"
+      ]
     },
     {
       "label": "Day 10",

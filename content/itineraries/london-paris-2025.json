@@ -6,17 +6,17 @@
   "country": "England & France",
   "region": "Europe",
   "start": "2025-04-12",
-  "end": "2025-04-19",
+  "end": "2025-04-20",
   "days": 8,
   "hero": "",
   "glance": [
     {
       "label": "Dates",
-      "value": "Apr 12–19, 2025 (spring break)"
+      "value": "Apr 12–20, 2025 (spring break), flying home on Sunday the 20th"
     },
     {
       "label": "Bases",
-      "value": "London (Apr 12–16), then Paris (from Apr 16)"
+      "value": "London (4 nights), Paris (4 nights)"
     },
     {
       "label": "Big tickets",
@@ -555,8 +555,8 @@
     {
       "name": "Hotel Atmospheres",
       "place": "Paris",
-      "nights": "",
-      "note": "In the Latin Quarter, 15 minutes on foot from Sainte-Chapelle and Notre-Dame and 10 minutes from Rue Mouffetard. From Apr 16."
+      "nights": "4 nights",
+      "note": "In the Latin Quarter, 15 minutes on foot from Sainte-Chapelle and Notre-Dame and 10 minutes from Rue Mouffetard. Apr 16–20."
     }
   ],
   "eats": [
