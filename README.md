@@ -1,71 +1,99 @@
 # My Life Happens Travel
 
-The website for **mylifehappens.com**: our home page plus a day-by-day itinerary for every trip.
+The website for **mylifehappens.com**: Tony & Sharon's real trips, written up day by day.
 
-It is a plain static site. There is no build step and nothing to install: every page is an HTML file, and Netlify publishes the `site/` folder exactly as it is.
+Every itinerary is stored as data (one JSON file per trip) and turned into web pages by a small
+Python script. All trips share one design, the way the big travel blogs do, so adding a trip is
+"write the data, run the build", not "design a new page".
 
 ## What's where
 
 ```
-site/                         ← everything Netlify publishes
-  index.html                  home page
-  itineraries/
-    index.html                list of all itineraries
-    barcelona-mallorca-2026/  one folder per trip, each with its own index.html
-    italy-2026/
-    las-vegas-2026/
-    california-coast-2025/
-    ireland/
-  assets/
-    css/site.css              styles for the home page, itinerary list and 404 page
-    img/                      web-sized photos (.jpg + .webp)
-    favicon.svg
-  404.html                    "page not found"
-  robots.txt, sitemap.xml     for search engines
-netlify.toml                  Netlify settings: publish folder, short links, redirects
-design/prototype/             the original design mock-up (not published; kept for reference)
+content/
+  SCHEMA.md                  the itinerary data format, with an example
+  itineraries/*.json         one file per trip  ← edit these
+tools/
+  build.py                   turns content/ into HTML in site/ (also holds the photo list)
+site/                        ← everything Netlify publishes (generated + assets)
+  index.html                 home page
+  itineraries/               list page + one folder per trip
+  about/, thanks/, 404.html, sitemap.xml, robots.txt
+  assets/css/site.css        all styles
+  assets/js/site.js          mobile menu, region filter, "on this page" highlight
+  assets/img/                photos at web sizes (800 / 1600 / 2400 px, .jpg + .webp)
+netlify.toml                 Netlify settings: publish folder, short links, redirects
+design/prototype/            the original design mock-up (not published; kept for reference)
 ```
 
-Each itinerary page is **self-contained**: its styles live inside the page, so every trip can have its own look (Barcelona is a Spanish festival poster, Italy is Renaissance serif, and so on). The home page and the list page share `site/assets/css/site.css`.
+## Adding a trip
 
-## Adding a new trip
+1. Copy an existing file in `content/itineraries/` (e.g. `italy-2026.json`) to `<place>-<year>.json`
+   and fill it in. `content/SCHEMA.md` explains every field.
+2. Add photos (see below) and point the trip's `hero` at them in `TRIP_PHOTOS` in `tools/build.py`.
+3. Run `python3 tools/build.py`. It regenerates the home page, the list, the trip page and the sitemap.
+4. Preview, then commit everything (including the generated files in `site/`).
 
-1. Create `site/itineraries/<place>-<year>/index.html` (for example `japan-2027`). Link back home with `href="/"`.
-2. Add a card for it near the top of the cards in **both** `site/index.html` and `site/itineraries/index.html` (newest first), and a line in each page's footer list.
-3. Add its address to `site/sitemap.xml`.
-4. Optional: add a short link like `/japan` in `netlify.toml`.
-5. Photos: resize to about 1200px wide before adding them to `site/assets/img/`. Camera originals (20–30 MB) make pages slow.
+Or just ask Claude: *"Add our Japan trip"* and paste your plan or booking notes.
 
-Or just ask Claude: *"Add an itinerary for our Japan trip"* with your notes and bookings.
+### Photos
 
-## Short links
+Resize camera originals before adding them (20–30 MB files make pages crawl). From the repo root:
 
-| Link | Goes to |
-| --- | --- |
-| mylifehappens.com/barcelona | Barcelona & Mallorca 2026 |
-| mylifehappens.com/italy | Florence, Venice & Rome 2026 |
-| mylifehappens.com/vegas | Las Vegas 2026 |
-| mylifehappens.com/california | California Coast 2025 |
-| mylifehappens.com/ireland | Dublin & Beyond |
+```
+python3 - <<'EOF'
+from PIL import Image, ImageOps
+src, key = "path/to/photo.jpg", "japan-kyoto"          # key = name used in build.py
+im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
+for w in (800, 1600):
+    r = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS) if im.width > w else im
+    r.save(f"site/assets/img/{key}-{w}.jpg", quality=80, optimize=True, progressive=True)
+    r.save(f"site/assets/img/{key}-{w}.webp", quality=76, method=6)
+EOF
+```
+
+Then add the key to `PHOTOS` in `tools/build.py` with its 800px width/height, the largest width
+you made, a short description (alt text) and a credit (`"Unsplash"` for stock, `""` for your own).
+
+Five photos are currently free Unsplash stock (Barcelona, Golden Gate, Ireland, the Las Vegas sign,
+the Colosseum). Swap them for your own whenever you can: your own photos are what make a travel
+site feel real.
 
 ## Previewing locally
 
 ```
-cd site && python3 -m http.server 8000
+python3 tools/build.py && cd site && python3 -m http.server 8000
 ```
 
 Then open http://localhost:8000.
 
+## Short links
+
+`mylifehappens.com/italy`, `/barcelona`, `/vegas`, `/california`, `/ireland` go straight to each
+trip (set in `netlify.toml`). Handy for an Instagram bio.
+
+## Newsletter sign-up
+
+The sign-up box at the bottom of every page uses **Netlify Forms**: no setup needed. After the
+first deploy, sign-ups appear in Netlify under **Forms → newsletter**. You can turn on email
+notifications there, or export the list into Mailchimp, Kit or similar later.
+
 ## Going live on Netlify
 
-1. In Netlify: **Add new site → Import an existing project → GitHub**, and pick this repository. Netlify reads `netlify.toml`, so leave the build command empty; the publish directory is `site`.
-2. Check the new `*.netlify.app` address works.
-3. **Domain:** in the site's **Domain management**, add `mylifehappens.com` (and `www`). Netlify then tells you which DNS records to set, or offers to manage DNS for you. Make the change at wherever the domain is registered (Squarespace Domains if you bought it through Squarespace). HTTPS is set up automatically once DNS points at Netlify.
-4. **Before cancelling Squarespace:** the old Squarespace site also has the 2009–2015 journal, family blogs and the banner, sticker and 3D-print shops. None of that is moved here. Export anything you want to keep (Squarespace: *Settings → Import & Export*) first.
+1. Netlify is already deploying this repository to `mylifehappenstravel.netlify.app` from the
+   `main` branch. Merge this work into `main` and it goes live there. `netlify.toml` tells Netlify
+   to publish `site/`, with no build command.
+2. **Domain:** in the site's **Domain management**, add `mylifehappens.com` (and `www`), then set the
+   DNS records Netlify shows you at wherever the domain is registered (Squarespace Domains if you
+   bought it there). HTTPS is set up automatically.
+3. **Before cancelling Squarespace:** the old site also holds the 2009–2015 journal, family blogs
+   and the banner, sticker and 3D-print shops. None of that is moved here. Export anything you
+   want to keep first (Squarespace: *Settings → Import & Export*).
 
 ### The old one-page Netlify sites
 
-The trips used to live on separate Netlify sites (`mlkitaly`, `mlhireland`, `mlhvegas`, `mlhcalifornia`, `barcelonamallorca`). To keep links you've already shared working, replace each one's contents with a single `_redirects` file, for example for `mlkitaly.netlify.app`:
+To keep links you've already shared working, replace the contents of each old site
+(`mlkitaly`, `mlhireland`, `mlhvegas`, `mlhcalifornia`, `barcelonamallorca`) with a single
+`_redirects` file, for example for `mlkitaly.netlify.app`:
 
 ```
 /*  https://mylifehappens.com/itineraries/italy-2026/  301!
