@@ -51,11 +51,14 @@ PHOTOS = {
     "ireland-castle": (800, 533, 1600, "An ivy-covered castle ruin in the green Irish countryside", "Unsplash"),
     "barcelona-montjuic": (800, 450, 1600, "Montjuïc and the National Palace in Barcelona under a fiery sunset", "Unsplash"),
     "in-flight": (800, 800, 800, "A window seat, ready for take-off", ""),
+    "zafiro-pool": (800, 533, 1086, "Relaxing by our private plunge pool at Zafiro Palace Andratx, with the hills of Camp de Mar beyond", ""),
+    "zafiro-cocktail": (724, 1086, 724, "A cocktail and a book on the sun deck at Zafiro Palace Andratx", ""),
+    "zafiro-sunhat": (724, 1086, 724, "Sun hat on, by the pool at Zafiro Palace Andratx, Mallorca", ""),
 }
 
 # Per-trip photos: the hero (big photo at the top) and an optional gallery.
 TRIP_PHOTOS = {
-    "barcelona": {"hero": "barcelona-montjuic", "place": "Montjuïc, Barcelona", "gallery": []},
+    "barcelona": {"hero": "zafiro-pool", "place": "Zafiro Palace Andratx, Mallorca", "gallery": []},
     "italy": {"hero": "florence-arno", "place": "The Arno, Florence", "gallery": ["florence-street", "florence-coffee", "rome-colosseum"]},
     "vegas": {"hero": "valley-of-fire-3", "place": "Valley of Fire, Nevada",
               "gallery": ["valley-of-fire-1", "valley-of-fire-6", "valley-of-fire-2", "valley-of-fire-7", "vegas-sign"]},
@@ -68,7 +71,7 @@ e = html.escape
 
 def picture(key: str, sizes: str, cls: str = "", lazy: bool = True, alt: str | None = None, priority: bool = False) -> str:
     w, h, big, default_alt, _credit = PHOTOS[key]
-    widths = [x for x in (800, 1600, 2400) if x <= big] or [800]
+    widths = sorted({x for x in (800, 1600, 2400) if x <= big} | {big}) if big >= 800 else [800]
     src = lambda ext: ", ".join(f"/assets/img/{key}-{x}.{ext} {x if x > 800 else w}w" for x in widths)
     loading = ' loading="lazy" decoding="async"' if lazy else ""
     fp = ' fetchpriority="high"' if priority else ""
@@ -458,6 +461,7 @@ def itinerary(t: dict, trips: list[dict]) -> str:
   </header>
   <h3>{e(d["title"])}</h3>
   {f'<p class="day-text">{e(d["text"])}</p>' if d.get("text") else ""}
+  {'<div class="day-photos">' + "".join(f"<figure>{picture(k, '(min-width: 980px) 400px, 50vw')}</figure>" for k in d["photos"]) + "</div>" if d.get("photos") else ""}
   {f'<ol class="timeline">{items}</ol>' if items else ""}
   {f'<p class="tip">{ICONS["bulb"]}<span><strong>Tip:</strong> {e(d["tip"])}</span></p>' if d.get("tip") else ""}
 </section>""")

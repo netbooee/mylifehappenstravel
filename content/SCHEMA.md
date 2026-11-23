@@ -35,7 +35,8 @@ All text is plain text (no HTML). Keep the writing in our own voice ("we", "us")
         { "time": "4:00 PM", "text": "Land in Florence, check in at L'Orologio", "booked": true },
         { "time": "", "text": "Dinner at L'Osteria di Giovanni" }
       ],
-      "tip": "Optional one-line tip for this day."
+      "tip": "Optional one-line tip for this day.",
+      "photos": ["zafiro-cocktail"]          // optional photo keys (see PHOTOS in tools/build.py)
     }
   ],
   "stays": [ { "name": "L'Orologio Firenze", "place": "Florence", "nights": "5 nights", "note": "Right on Piazza Santa Maria Novella." } ],
