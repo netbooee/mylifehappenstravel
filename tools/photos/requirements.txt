@@ -1,0 +1,5 @@
+# tools/photos/run installs these into its own environment in the work folder.
+# osxphotos reads the Photos library (it needs Python 3.10+; this toolkit uses 3.12, which tools/build.py also needs).
+osxphotos>=0.78.1
+pillow>=11
+pillow-heif>=0.18

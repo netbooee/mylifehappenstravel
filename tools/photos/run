@@ -1,0 +1,23 @@
+#!/bin/bash
+# Run the trip-photos toolkit: tools/photos/run <command> <trip-slug>
+# First run sets up its own Python 3.12 + osxphotos inside the work folder (nothing system-wide, no sudo).
+set -euo pipefail
+HERE="$(cd "$(dirname "$0")" && pwd)"
+REPO="$(cd "$HERE/../.." && pwd)"
+WORK="${TRIP_PHOTOS_WORK:-$(dirname "$REPO")/trip-photos-work}"
+ENV="$WORK/.env"
+
+if [ ! -x "$ENV/venv/bin/osxphotos" ] || [ "$HERE/requirements.txt" -nt "$ENV/venv/.installed" ]; then
+  echo "Setting up the photo tools in $ENV (one time, a few minutes)…" >&2
+  mkdir -p "$ENV"
+  export UV_CACHE_DIR="$ENV/uv-cache" UV_PYTHON_INSTALL_DIR="$ENV/uv-python" \
+         UV_PYTHON_PREFERENCE=only-managed UV_NO_CONFIG=1
+  [ -x "$ENV/bootstrap/bin/uv" ] || { /usr/bin/python3 -m venv "$ENV/bootstrap" && "$ENV/bootstrap/bin/pip" install -q uv; }
+  [ -x "$ENV/venv/bin/python" ] || "$ENV/bootstrap/bin/uv" venv -q --python 3.12 "$ENV/venv"
+  "$ENV/bootstrap/bin/uv" pip install -q --python "$ENV/venv/bin/python" -r "$HERE/requirements.txt"
+  touch "$ENV/venv/.installed"
+  rm -rf "$ENV/uv-cache"   # the download cache isn't needed once installed
+fi
+
+export TRIP_PHOTOS_WORK="$WORK"
+exec "$ENV/venv/bin/python" "$HERE/tripphotos.py" "$@"

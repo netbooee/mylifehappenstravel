@@ -58,6 +58,18 @@ Five photos are currently free Unsplash stock (Barcelona, Golden Gate, Ireland, 
 the Colosseum). Swap them for your own whenever you can: your own photos are what make a travel
 site feel real.
 
+### Our own photos from Apple Photos
+
+Ask Claude **`/trip-photos <trip>`** (for example `/trip-photos italy-2026`). It finds the trip's
+photos in Photos by the itinerary's dates, fixes camera clocks, shortlists the best, and opens a review
+page where you tick your favourites and choose where each goes. Then it exports full size for just
+those, resizes them (no GPS or EXIF), adds them to the page, checks it on phone and desktop, and opens
+a pull request.
+
+The tools are in `tools/photos/` (`tools/photos/run --help`); the steps are in
+`.claude/skills/trip-photos/SKILL.md`. Working files stay in a `trip-photos-work` folder next to the
+repo, never in it. Photos needs **Full Disk Access** turned on for the Claude app while you do this.
+
 ### Instagram photos
 
 Instagram doesn't allow other sites to pull photos automatically, so export them once:

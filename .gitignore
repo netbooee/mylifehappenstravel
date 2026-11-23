@@ -5,3 +5,7 @@ node_modules/
 
 # Flighty exports hold booking codes and seats; keep them out of the repo
 *.csv
+
+# Python caches, and a local preview config for Claude
+__pycache__/
+.claude/launch.json
