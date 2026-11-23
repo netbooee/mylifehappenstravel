@@ -134,3 +134,11 @@ To keep links you've already shared working, replace the contents of each old si
 ```
 /*  https://mylifehappens.com/itineraries/italy-2026/  301!
 ```
+
+## Gear
+
+`content/gear.json` lists the products on the Gear page (`/gear/`); the first one also appears on the
+home page. Each item has a `name`, a short `category` (e.g. "Sleep · on the plane"), a one-line
+`note` in our voice, the affiliate `url`, and an optional `photo` key from `PHOTOS` (our own photos
+only, not Amazon's product images). Items with no `name` yet are skipped, so a link can be parked
+there until we've written it up. Run `python3 tools/build.py` after editing.
