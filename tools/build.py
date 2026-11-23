@@ -345,9 +345,7 @@ def numbers_section(st: dict) -> str:
     end = lambda c, cls="": (f'<div class="{cls}"><strong>{c}</strong><span>{e(ap[c]["name"])}</span></div>')
     name = lambda c: f'{e(ap[c]["name"])} <small>{c}</small>'
     def ranked(title: str, rows: list[tuple[int, str]], label) -> str:
-        top = rows[0][0]
-        lis = "".join(f'<li><span class="what">{label(x)}</span><span class="bar" style="--w:{k / top:.3f}"></span><span class="num">{k}</span></li>'
-                      for k, x in rows[:5])
+        lis = "".join(f'<li><span class="what">{label(x)}</span><span class="num">{k}</span></li>' for k, x in rows[:5])
         return f'<div class="ranked"><h3>{title}</h3><ol>{lis}</ol></div>'
     route_name = lambda r: " ↔ ".join(e(ap[c]["name"]) for c in r.split(" ↔ "))
     return f"""<section class="section numbers" id="numbers">
