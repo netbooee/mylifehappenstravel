@@ -384,13 +384,18 @@ def footer(trips: list[dict]) -> str:
 
 
 # ── Cards ─────────────────────────────────────────────────────────────────────
-def trip_card(t: dict, size: str = "", heading: str = "h3") -> str:
+def trip_card(t: dict, size: str = "", heading: str = "h3", latest: bool = False) -> str:
     ph = TRIP_PHOTOS.get(t.get("hero", ""), {})
     sizes = "(min-width: 1100px) 560px, (min-width: 700px) 50vw, 100vw" if size == "lg" else "(min-width: 1100px) 380px, (min-width: 700px) 50vw, 100vw"
-    media = picture(ph["hero"], sizes, "card-img") if ph else '<div class="card-img placeholder"></div>'
+    if ph:
+        media = picture(ph["hero"], sizes, "card-img")
+    else:  # no photo yet: the place name, set large, instead of an empty box
+        place = t["title"].split(" in ", 1)[-1]
+        media = f'<div class="card-img placeholder" aria-hidden="true">{ICONS["pin"]}<span>{e(place)}</span></div>'
     when = date_range(t) or f'{t["days"]} days'
+    flag = '<span class="badge latest">Latest trip</span>' if latest else ""
     return f"""<article class="card {size}" data-region="{e(t["region"])}">
-  <div class="card-media">{media}<span class="badge">{t["days"]} days</span></div>
+  <div class="card-media">{media}<span class="badge">{t["days"]} days</span>{flag}</div>
   <div class="card-body">
     <p class="card-kicker">{e(t["country"])} · {e(month_year(t) or t["region"])}</p>
     <{heading} class="card-title"><a href="/itineraries/{t["slug"]}/">{e(t["title"])}</a></{heading}>
@@ -582,10 +587,33 @@ def home_stats(trips: list[dict], total_days: int) -> str:
         '<a class="stats-more" href="/about/#numbers">All our travel stats →</a>'
 
 
+def trips_by_year(trips: list[dict]) -> str:
+    """Trips under year headings, newest first, three across.
+
+    The newest year and any year with 2+ trips get their own heading. Older one-trip years and
+    undated trips are gathered into a final "Earlier trips" row, so the page never ends in a run
+    of single, stranded cards. Years split back out on their own as more trips are added.
+    """
+    groups: dict[str, list[dict]] = {}
+    for t in trips:  # trips arrive newest first
+        groups.setdefault(t["start"][:4] if t.get("start") else "", []).append(t)
+    years = sorted((y for y in groups if y), reverse=True)
+    own = [y for i, y in enumerate(years) if i == 0 or len(groups[y]) >= 2]
+    rest_years = [y for y in years if y not in own]
+    earlier = [t for y in rest_years for t in groups[y]] + groups.get("", [])
+    sections = [(y, f'{len(groups[y])} trip{"s" if len(groups[y]) != 1 else ""}', groups[y], f"y{y}") for y in own]
+    if earlier:
+        sub = " · ".join(rest_years) if rest_years else "Dates to come"
+        sections.append(("Earlier trips", sub, earlier, "earlier"))
+    out = []
+    for label, sub, ts, anchor in sections:
+        cards = "".join(trip_card(t, heading="h4", latest=(t is trips[0])) for t in ts)
+        out.append(f'<div class="year-group" id="{anchor}"><h3 class="year-label"><span>{e(label)}</span><small>{e(sub)}</small></h3>'
+                   f'<div class="cards three">{cards}</div></div>')
+    return "".join(out)
+
+
 def home(trips: list[dict]) -> str:
-    latest, rest = trips[0], trips[1:]
-    lph = TRIP_PHOTOS[latest["hero"]]
-    glance = "".join(f'<div><dt>{e(g["label"])}</dt><dd>{e(g["value"])}</dd></div>' for g in latest.get("glance", [])[:4])
     regions: dict[str, list[dict]] = {}
     for t in trips:
         regions.setdefault(t["region"], []).append(t)
@@ -618,30 +646,13 @@ def home(trips: list[dict]) -> str:
     <div class="wrap stats-row">{home_stats(trips, total_days)}</div>
   </section>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head"><div><span class="eyebrow">Latest trip</span><h2>Just back from <em>{e(latest["country"])}.</em></h2></div></div>
-      <article class="feature">
-        <a class="feature-media" href="/itineraries/{latest["slug"]}/" tabindex="-1" aria-hidden="true">{picture(lph["hero"], "(min-width: 960px) 60vw, 100vw", "feature-img")}<span class="badge">{latest["days"]} days</span></a>
-        <div class="feature-body">
-          <p class="card-kicker">{e(latest["country"])} · {e(date_range(latest))}</p>
-          <h3><a href="/itineraries/{latest["slug"]}/">{e(latest["title"])}</a></h3>
-          <p class="feature-sub">{e(latest.get("subtitle", ""))}</p>
-          <p>{e(latest["summary"])}</p>
-          <dl class="mini-glance">{glance}</dl>
-          <a class="btn dark" href="/itineraries/{latest["slug"]}/">Read the itinerary →</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="section tint">
+  <section class="section tint" id="trips">
     <div class="wrap">
       <div class="section-head">
-        <div><span class="eyebrow">Itineraries</span><h2>Where we've <em>been lately.</em></h2></div>
-        <a class="more" href="/itineraries/">See all {len(trips)} itineraries →</a>
+        <div><span class="eyebrow">Itineraries</span><h2>Every trip, <em>by year.</em></h2><p>All {len(trips)} of our trips, newest first. Each one is the plan we actually used, day by day.</p></div>
+        <a class="more" href="/itineraries/">Filter by region →</a>
       </div>
-      <div class="cards two">{"".join(trip_card(t, "lg") for t in rest)}</div>
+      {trips_by_year(trips)}
     </div>
   </section>
 
