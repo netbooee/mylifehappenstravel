@@ -8,19 +8,44 @@
   "start": "2023-06-23",
   "end": "2023-07-04",
   "days": 12,
-  "hero": "",
+  "hero": "northern",
   "glance": [
-    { "label": "When", "value": "June 23 – July 4, 2023 (12 days)" },
-    { "label": "Bases", "value": "San Francisco (3 nights), Calistoga (2), Mendocino (2), San Francisco (1), Lake Tahoe (3)" },
-    { "label": "Getting around", "value": "Rental car from SFO, plus walking, a ferry and bikes in the city" },
-    { "label": "Best for", "value": "City sights, redwoods, wine country & the coast" },
-    { "label": "Highlights", "value": "Alcatraz at night, biking the Golden Gate Bridge, Muir Woods, Old Faithful Geyser, Skunk Train railbikes, canoeing Sand Harbor" }
+    {
+      "label": "When",
+      "value": "June 23 – July 4, 2023 (12 days)"
+    },
+    {
+      "label": "Bases",
+      "value": "San Francisco (3 nights), Calistoga (2), Mendocino (2), San Francisco (1), Lake Tahoe (3)"
+    },
+    {
+      "label": "Getting around",
+      "value": "Rental car from SFO, plus walking, a ferry and bikes in the city"
+    },
+    {
+      "label": "Best for",
+      "value": "City sights, redwoods, wine country & the coast"
+    },
+    {
+      "label": "Highlights",
+      "value": "Alcatraz at night, biking the Golden Gate Bridge, Muir Woods, Old Faithful Geyser, Skunk Train railbikes, canoeing Sand Harbor"
+    }
   ],
   "intro": [
     "This was a big loop through Northern California: four nights on Fisherman's Wharf in San Francisco, the redwoods and the Marin coast, two nights of wine tasting in Calistoga, the wild Mendocino coast, and a few days on Lake Tahoe before heading home on the Fourth of July.",
     "The San Francisco days were packed on foot, from Lombard Street to Chinatown, with an early dinner before the evening ferry to Alcatraz. Once we picked up the car the pace slowed down: one or two big plans a day, lots of coastline, and a good dinner at the end of it. We still ran out of time for a few things, so we've left those in as ideas for next time."
   ],
-  "route": ["San Francisco", "Muir Woods", "Point Reyes", "Calistoga", "Mendocino", "Fort Bragg", "San Francisco", "Lake Tahoe", "Sand Harbor"],
+  "route": [
+    "San Francisco",
+    "Muir Woods",
+    "Point Reyes",
+    "Calistoga",
+    "Mendocino",
+    "Fort Bragg",
+    "San Francisco",
+    "Lake Tahoe",
+    "Sand Harbor"
+  ],
   "days_plan": [
     {
       "label": "Day 1",
@@ -29,11 +54,30 @@
       "title": "Newark to San Francisco",
       "text": "An afternoon flight across the country, a rental car at SFO, and our first night at the Argonaut Hotel on Fisherman's Wharf.",
       "items": [
-        { "time": "12:30 PM", "text": "Lyft to Newark airport", "booked": true },
-        { "time": "3:29 PM", "text": "Fly Alaska Airlines 293 Newark → San Francisco, landing at SFO at 6:53 PM", "booked": true },
-        { "time": "7:30 PM", "text": "Pick up the rental car at the Hertz counter", "booked": true },
-        { "time": "Evening", "text": "Check in at the Argonaut Hotel on Fisherman's Wharf", "booked": true },
-        { "time": "", "text": "A late, easy dinner near the hotel" }
+        {
+          "time": "12:30 PM",
+          "text": "Lyft to Newark airport",
+          "booked": true
+        },
+        {
+          "time": "3:29 PM",
+          "text": "Fly Alaska Airlines 293 Newark → San Francisco, landing at SFO at 6:53 PM",
+          "booked": true
+        },
+        {
+          "time": "7:30 PM",
+          "text": "Pick up the rental car at the Hertz counter",
+          "booked": true
+        },
+        {
+          "time": "Evening",
+          "text": "Check in at the Argonaut Hotel on Fisherman's Wharf",
+          "booked": true
+        },
+        {
+          "time": "",
+          "text": "A late, easy dinner near the hotel"
+        }
       ]
     },
     {
@@ -43,19 +87,59 @@
       "title": "Lombard Street to Chinatown, then Alcatraz at night",
       "text": "A full day on foot: the crooked street, chocolate, the maritime park, the sea lions on Pier 39, the Ferry Building farmers market and Chinatown. An early dinner on the wharf set us up for the evening ferry to Alcatraz.",
       "items": [
-        { "time": "8:30 AM", "text": "Walk from the hotel to a coffee shop for breakfast" },
-        { "time": "Morning", "text": "Walk Lombard Street, the \"crookedest street in the world\"" },
-        { "time": "9:00 AM", "text": "Ghirardelli Chocolate Experience at Ghirardelli Square" },
-        { "time": "10:00 AM", "text": "San Francisco Maritime National Historical Park (included with the National Park Pass)" },
-        { "time": "Late morning", "text": "The sea lions and the shops on Pier 39" },
-        { "time": "Midday", "text": "Graze our way through the Ferry Building farmers market (Saturdays 8 AM – 2 PM) to hold us until an early dinner" },
-        { "time": "Afternoon", "text": "Golden Gate Fortune Cookie Factory, then a walk around Chinatown" },
-        { "time": "", "text": "Walk to Union Square for a little shopping" },
-        { "time": "4:00 PM", "text": "Early dinner at Scoma's on Fisherman's Wharf, a 10-minute walk from the Alcatraz ferry at Pier 33" },
-        { "time": "5:55 PM", "text": "Alcatraz Night Tour ferry from Pier 33 (be there by 5:30)", "booked": true },
-        { "time": "Late", "text": "Ice cream at Ben & Jerry's on the way back to the hotel" }
+        {
+          "time": "8:30 AM",
+          "text": "Walk from the hotel to a coffee shop for breakfast"
+        },
+        {
+          "time": "Morning",
+          "text": "Walk Lombard Street, the \"crookedest street in the world\""
+        },
+        {
+          "time": "9:00 AM",
+          "text": "Ghirardelli Chocolate Experience at Ghirardelli Square"
+        },
+        {
+          "time": "10:00 AM",
+          "text": "San Francisco Maritime National Historical Park (included with the National Park Pass)"
+        },
+        {
+          "time": "Late morning",
+          "text": "The sea lions and the shops on Pier 39"
+        },
+        {
+          "time": "Midday",
+          "text": "Graze our way through the Ferry Building farmers market (Saturdays 8 AM – 2 PM) to hold us until an early dinner"
+        },
+        {
+          "time": "Afternoon",
+          "text": "Golden Gate Fortune Cookie Factory, then a walk around Chinatown"
+        },
+        {
+          "time": "",
+          "text": "Walk to Union Square for a little shopping"
+        },
+        {
+          "time": "4:00 PM",
+          "text": "Early dinner at Scoma's on Fisherman's Wharf, a 10-minute walk from the Alcatraz ferry at Pier 33"
+        },
+        {
+          "time": "5:55 PM",
+          "text": "Alcatraz Night Tour ferry from Pier 33 (be there by 5:30)",
+          "booked": true
+        },
+        {
+          "time": "Late",
+          "text": "Ice cream at Ben & Jerry's on the way back to the hotel"
+        }
       ],
-      "tip": "Book the Alcatraz night tour well ahead: it sells out weeks in advance, and they want you at Pier 33 25 minutes before your ferry."
+      "tip": "Book the Alcatraz night tour well ahead: it sells out weeks in advance, and they want you at Pier 33 25 minutes before your ferry.",
+      "photos": [
+        "nca-lombard-top",
+        "nca-lombard-street",
+        "nca-fishermans-wharf",
+        "nca-alcatraz-tower"
+      ]
     },
     {
       "label": "Day 3",
@@ -64,31 +148,92 @@
       "title": "Muir Woods, Point Bonita & biking the Golden Gate",
       "text": "An early start for the redwoods at Muir Woods and the Point Bonita Lighthouse, a rest at the hotel, then rental bikes out to the Golden Gate Bridge and the Palace of Fine Arts.",
       "items": [
-        { "time": "7:30 AM", "text": "Leave the hotel in the rental car and pick up Starbucks on the way" },
-        { "time": "8:30 AM", "text": "Muir Woods National Monument: our parking reservation was for 8:30 (bring the printed parking pass and the National Park Pass)", "booked": true },
-        { "time": "1:00 PM", "text": "A quick lunch at In-N-Out Burger" },
-        { "time": "Afternoon", "text": "Point Bonita Lighthouse in the Marin Headlands" },
-        { "time": "", "text": "Back to the hotel to rest" },
-        { "time": "4:00 PM", "text": "Pick up bikes from Blazing Saddles at Pier 41 and ride out to the Golden Gate Bridge", "booked": true },
-        { "time": "", "text": "Ride back past the Palace of Fine Arts" },
-        { "time": "Evening", "text": "Dinner outside at The Buena Vista, home of the famous Irish coffee" }
+        {
+          "time": "7:30 AM",
+          "text": "Leave the hotel in the rental car and pick up Starbucks on the way"
+        },
+        {
+          "time": "8:30 AM",
+          "text": "Muir Woods National Monument: our parking reservation was for 8:30 (bring the printed parking pass and the National Park Pass)",
+          "booked": true
+        },
+        {
+          "time": "1:00 PM",
+          "text": "A quick lunch at In-N-Out Burger"
+        },
+        {
+          "time": "Afternoon",
+          "text": "Point Bonita Lighthouse in the Marin Headlands"
+        },
+        {
+          "time": "",
+          "text": "Back to the hotel to rest"
+        },
+        {
+          "time": "4:00 PM",
+          "text": "Pick up bikes from Blazing Saddles at Pier 41 and ride out to the Golden Gate Bridge",
+          "booked": true
+        },
+        {
+          "time": "",
+          "text": "Ride back past the Palace of Fine Arts"
+        },
+        {
+          "time": "Evening",
+          "text": "Dinner outside at The Buena Vista, home of the famous Irish coffee"
+        }
       ],
-      "tip": "Muir Woods parking is by reservation only, and the early slots are much quieter. Download a hiking app (and the trail map) before you go: cell service in the canyon is spotty."
+      "tip": "Muir Woods parking is by reservation only, and the early slots are much quieter. Download a hiking app (and the trail map) before you go: cell service in the canyon is spotty.",
+      "photos": [
+        "nca-muir-woods-sign",
+        "nca-muir-woods-redwoods",
+        "nca-point-bonita",
+        "nca-bikes-palace"
+      ]
     },
     {
       "label": "Day 4",
       "date": "Mon, Jun 26",
       "place": "Point Reyes & Calistoga",
       "title": "Point Reyes, then into wine country",
-      "text": "We checked out of the Argonaut and took the long way to Calistoga: a morning at Point Reyes National Seashore, an afternoon tasting, and dinner on the main street in town.",
+      "text": "We checked out of the Argonaut and took the long way to Calistoga. Point Reyes was fogged in, so we went with Plan B and spent the morning on Sonoma Plaza, then an afternoon tasting at Madrigal and dinner on the main street in town.",
       "items": [
-        { "time": "9:00 AM", "text": "Check out of the Argonaut, grab something to eat and drive north" },
-        { "time": "10:00 AM", "text": "Explore Point Reyes National Seashore and have lunch there" },
-        { "time": "", "text": "Plan B if Point Reyes is fogged in: Sonoma Plaza for shops and lunch, or Mission San Francisco de Solano (about an hour from Point Reyes)" },
-        { "time": "3:00 PM", "text": "Tasting at Madrigal Family Winery (about 1.5 hours from Point Reyes)", "booked": true },
-        { "time": "", "text": "Check in at the Inn on Pine in Calistoga, five minutes from the winery", "booked": true },
-        { "time": "", "text": "Walk the Calistoga shops (Copperfield's Books is open until 7 PM)" },
-        { "time": "6:30 PM", "text": "Dinner outside at Calistoga Inn & Brewery, walkable from the inn", "booked": true }
+        {
+          "time": "9:00 AM",
+          "text": "Check out of the Argonaut, grab something to eat and drive north"
+        },
+        {
+          "time": "10:00 AM",
+          "text": "Explore Point Reyes National Seashore and have lunch there"
+        },
+        {
+          "time": "",
+          "text": "Plan B if Point Reyes is fogged in: Sonoma Plaza for shops and lunch, or Mission San Francisco de Solano (about an hour from Point Reyes)"
+        },
+        {
+          "time": "3:00 PM",
+          "text": "Tasting at Madrigal Family Winery (about 1.5 hours from Point Reyes)",
+          "booked": true
+        },
+        {
+          "time": "",
+          "text": "Check in at the Inn on Pine in Calistoga, five minutes from the winery",
+          "booked": true
+        },
+        {
+          "time": "",
+          "text": "Walk the Calistoga shops (Copperfield's Books is open until 7 PM)"
+        },
+        {
+          "time": "6:30 PM",
+          "text": "Dinner outside at Calistoga Inn & Brewery, walkable from the inn",
+          "booked": true
+        }
+      ],
+      "photos": [
+        "nca-sonoma-plaza",
+        "nca-madrigal-vineyard",
+        "nca-madrigal-toast"
       ]
     },
     {
@@ -98,12 +243,33 @@
       "title": "Old Faithful Geyser & two wineries",
       "text": "Calistoga's own geyser in the morning, then an afternoon of tastings without anyone having to drive.",
       "items": [
-        { "time": "9:00 AM", "text": "Old Faithful Geyser of California after breakfast (it opens at 8:30)", "booked": true },
-        { "time": "1:00 PM", "text": "Tasting at Bennett Lane Winery, five minutes away on the free Calistoga Shuttle", "booked": true },
-        { "time": "3:30 PM", "text": "Tasting at Tank Garage Winery, a short walk from the inn", "booked": true },
-        { "time": "6:30 PM", "text": "Dinner at Evangeline, walkable from the inn", "booked": true }
+        {
+          "time": "9:00 AM",
+          "text": "Old Faithful Geyser of California after breakfast (it opens at 8:30)",
+          "booked": true
+        },
+        {
+          "time": "1:00 PM",
+          "text": "Tasting at Bennett Lane Winery, five minutes away on the free Calistoga Shuttle",
+          "booked": true
+        },
+        {
+          "time": "3:30 PM",
+          "text": "Tasting at Tank Garage Winery, a short walk from the inn",
+          "booked": true
+        },
+        {
+          "time": "6:30 PM",
+          "text": "Dinner at Evangeline, walkable from the inn",
+          "booked": true
+        }
       ],
-      "tip": "The Calistoga Shuttle is free and picks you up door to door around town. Call ahead to book a pickup so tasting days don't need a designated driver."
+      "tip": "The Calistoga Shuttle is free and picks you up door to door around town. Call ahead to book a pickup so tasting days don't need a designated driver.",
+      "photos": [
+        "nca-old-faithful",
+        "nca-geyser-sign",
+        "nca-tank-garage"
+      ]
     },
     {
       "label": "Day 6",
@@ -112,15 +278,41 @@
       "title": "The winding road to Mendocino",
       "text": "We checked out of the Inn on Pine and took the long, windy drive through Anderson Valley to the coast and the Brewery Gulch Inn.",
       "items": [
-        { "time": "Morning", "text": "Check out of the Inn on Pine and drive toward the coast" },
-        { "time": "Lunch", "text": "Lunch at Mosswood Market in Boonville" },
-        { "time": "Afternoon", "text": "Coffee in Mendocino village" },
-        { "time": "", "text": "Check in at the Brewery Gulch Inn", "booked": true },
-        { "time": "", "text": "A walk at Big River Beach" },
-        { "time": "", "text": "Stock up at the grocery store in town" },
-        { "time": "Evening", "text": "Dinner and the evening wine hour at the Brewery Gulch Inn" }
+        {
+          "time": "Morning",
+          "text": "Check out of the Inn on Pine and drive toward the coast"
+        },
+        {
+          "time": "Lunch",
+          "text": "Lunch at Mosswood Market in Boonville"
+        },
+        {
+          "time": "Afternoon",
+          "text": "Coffee in Mendocino village"
+        },
+        {
+          "time": "",
+          "text": "Check in at the Brewery Gulch Inn",
+          "booked": true
+        },
+        {
+          "time": "",
+          "text": "A walk at Big River Beach"
+        },
+        {
+          "time": "",
+          "text": "Stock up at the grocery store in town"
+        },
+        {
+          "time": "Evening",
+          "text": "Dinner and the evening wine hour at the Brewery Gulch Inn"
+        }
       ],
-      "tip": "Route 128 through Anderson Valley is curvy for the last stretch to the coast. Anyone who gets carsick should take something before Boonville."
+      "tip": "Route 128 through Anderson Valley is curvy for the last stretch to the coast. Anyone who gets carsick should take something before Boonville.",
+      "photos": [
+        "nca-big-river",
+        "nca-redwood-hug"
+      ]
     },
     {
       "label": "Day 7",
@@ -129,17 +321,51 @@
       "title": "Skunk Train railbikes, Glass Beach & the headlands",
       "text": "A day up and down the coast: pedal-powered railbikes through the redwoods out of Fort Bragg, Glass Beach and Laguna Point, then the Mendocino Headlands with the drone.",
       "items": [
-        { "time": "Morning", "text": "Breakfast at the Brewery Gulch Inn" },
-        { "time": "10:00 AM", "text": "Drive about 20 minutes to Fort Bragg and check in for the Skunk Train railbike tour" },
-        { "time": "10:30 AM", "text": "Skunk Train Railbike Tour along the old logging line", "booked": true },
-        { "time": "", "text": "The model train museum" },
-        { "time": "Afternoon", "text": "Coffee and a walk along Fort Bragg's Main Street" },
-        { "time": "", "text": "Glass Beach, with sea glass smoothed by decades of waves" },
-        { "time": "", "text": "Laguna Point in MacKerricher State Park, a short boardwalk to the harbor seals" },
-        { "time": "", "text": "Mendocino Headlands State Park, where Tony flew the drone over the bluffs" },
-        { "time": "Evening", "text": "Back to the Brewery Gulch Inn for dinner" }
+        {
+          "time": "Morning",
+          "text": "Breakfast at the Brewery Gulch Inn"
+        },
+        {
+          "time": "10:00 AM",
+          "text": "Drive about 20 minutes to Fort Bragg and check in for the Skunk Train railbike tour"
+        },
+        {
+          "time": "10:30 AM",
+          "text": "Skunk Train Railbike Tour along the old logging line",
+          "booked": true
+        },
+        {
+          "time": "",
+          "text": "The model train museum"
+        },
+        {
+          "time": "Afternoon",
+          "text": "Coffee and a walk along Fort Bragg's Main Street"
+        },
+        {
+          "time": "",
+          "text": "Glass Beach, with sea glass smoothed by decades of waves"
+        },
+        {
+          "time": "",
+          "text": "Laguna Point in MacKerricher State Park, a short boardwalk to the harbor seals"
+        },
+        {
+          "time": "",
+          "text": "Mendocino Headlands State Park, where Tony flew the drone over the bluffs"
+        },
+        {
+          "time": "Evening",
+          "text": "Back to the Brewery Gulch Inn for dinner"
+        }
       ],
-      "tip": "The railbikes are electric-assisted, so there's no real pedaling effort. Check in on time: the tour leaves right on schedule."
+      "tip": "The railbikes are electric-assisted, so there's no real pedaling effort. Check in on time: the tour leaves right on schedule.",
+      "photos": [
+        "nca-railbikes",
+        "nca-skunk-train",
+        "nca-fort-bragg-coast",
+        "nca-headlands-arch"
+      ]
     },
     {
       "label": "Day 8",
@@ -148,12 +374,33 @@
       "title": "Russian Gulch & the coast road south",
       "text": "One last coastal hike, then the long drive back down Highway 1 to San Francisco for a night in the city.",
       "items": [
-        { "time": "Morning", "text": "Breakfast at the Brewery Gulch Inn" },
-        { "time": "", "text": "Russian Gulch State Park: the Headlands Trail to the sea cave and the Devil's Punch Bowl" },
-        { "time": "", "text": "Check out and drive south on Highway 1" },
-        { "time": "Afternoon", "text": "Stops along the way: Salt Point State Park, Jenner, or Bodega Bay if the drive runs long" },
-        { "time": "", "text": "Something to eat on the road" },
-        { "time": "Evening", "text": "Dinner in San Francisco: Boa or ramen" }
+        {
+          "time": "Morning",
+          "text": "Breakfast at the Brewery Gulch Inn"
+        },
+        {
+          "time": "",
+          "text": "Russian Gulch State Park: the Headlands Trail to the sea cave and the Devil's Punch Bowl"
+        },
+        {
+          "time": "",
+          "text": "Check out and drive south on Highway 1"
+        },
+        {
+          "time": "Afternoon",
+          "text": "Stops along the way: Salt Point State Park, Jenner, or Bodega Bay if the drive runs long"
+        },
+        {
+          "time": "",
+          "text": "Something to eat on the road"
+        },
+        {
+          "time": "Evening",
+          "text": "Dinner in San Francisco: Boa or ramen"
+        }
+      ],
+      "photos": [
+        "nca-devils-punch-bowl"
       ]
     },
     {
@@ -163,8 +410,18 @@
       "title": "Over the mountains to Lake Tahoe",
       "text": "We drove east from San Francisco to South Lake Tahoe and checked in at Marriott's Timber Lodge, right in Heavenly Village.",
       "items": [
-        { "time": "", "text": "Drive about 3.5 hours from San Francisco to South Lake Tahoe" },
-        { "time": "", "text": "Check in at Marriott's Timber Lodge in Heavenly Village", "booked": true }
+        {
+          "time": "",
+          "text": "Drive about 3.5 hours from San Francisco to South Lake Tahoe"
+        },
+        {
+          "time": "",
+          "text": "Check in at Marriott's Timber Lodge in Heavenly Village",
+          "booked": true
+        }
+      ],
+      "photos": [
+        "nca-tahoe-car-show"
       ]
     },
     {
@@ -173,20 +430,40 @@
       "place": "Lake Tahoe",
       "title": "A free day at the lake",
       "text": "No plans on purpose: time by the water and around Heavenly Village.",
-      "items": []
+      "items": [],
+      "photos": [
+        "nca-tahoe-boulders",
+        "nca-tahoe-sharon-josh",
+        "nca-tahoe-sunset"
+      ]
     },
     {
       "label": "Day 11",
       "date": "Mon, Jul 3",
       "place": "Lake Tahoe",
       "title": "Canoeing at Sand Harbor",
-      "text": "An early start to beat the crowds at Sand Harbor on the Nevada shore, with its clear water and granite boulders, and a canoe out on the lake.",
+      "text": "An early start to beat the crowds at Sand Harbor on the Nevada shore, with its clear water and granite boulders, and a canoe out on the lake. We also hiked up to an overlook high above the lake for the view.",
       "items": [
-        { "time": "6:15 AM", "text": "Leave the hotel and drive about 35 minutes to Sand Harbor (the lot opens at 7 AM)" },
-        { "time": "8:00 AM", "text": "Clearly Tahoe three-person clear-bottom canoe (get there by 7:30)", "booked": true },
-        { "time": "6:45 PM", "text": "Italian dinner at Izabella, walkable from the hotel", "booked": true }
+        {
+          "time": "6:15 AM",
+          "text": "Leave the hotel and drive about 35 minutes to Sand Harbor (the lot opens at 7 AM)"
+        },
+        {
+          "time": "8:00 AM",
+          "text": "Clearly Tahoe three-person clear-bottom canoe (get there by 7:30)",
+          "booked": true
+        },
+        {
+          "time": "6:45 PM",
+          "text": "Italian dinner at Izabella, walkable from the hotel",
+          "booked": true
+        }
       ],
-      "tip": "Sand Harbor's parking lot fills up very early on summer holiday weekends. Arrive when it opens or you may be turned away."
+      "tip": "Sand Harbor's parking lot fills up very early on summer holiday weekends. Arrive when it opens or you may be turned away.",
+      "photos": [
+        "nca-tahoe-overlook",
+        "nca-tahoe-overlook-three"
+      ]
     },
     {
       "label": "Day 12",
@@ -195,29 +472,111 @@
       "title": "Back to San Francisco and home",
       "text": "We checked out of the Timber Lodge and drove back to San Francisco on the Fourth of July.",
       "items": [
-        { "time": "", "text": "Check out of Marriott's Timber Lodge" },
-        { "time": "", "text": "Drive back to San Francisco" }
+        {
+          "time": "",
+          "text": "Check out of Marriott's Timber Lodge"
+        },
+        {
+          "time": "",
+          "text": "Drive back to San Francisco"
+        }
+      ],
+      "photos": [
+        "nca-painted-ladies"
       ]
     }
   ],
   "stays": [
-    { "name": "Argonaut Hotel", "place": "Fisherman's Wharf, San Francisco", "nights": "3 nights", "note": "A nautical-themed hotel in an old cannery, an easy walk to the piers, Ghirardelli Square and the Alcatraz ferry." },
-    { "name": "The Inn on Pine", "place": "Calistoga", "nights": "2 nights", "note": "Walkable to the Calistoga shops, restaurants and Tank Garage Winery." },
-    { "name": "Brewery Gulch Inn", "place": "Mendocino", "nights": "2 nights", "note": "Breakfast, an evening wine hour and dinner on site, a few minutes south of Mendocino village." },
-    { "name": "Marriott's Timber Lodge", "place": "South Lake Tahoe", "nights": "3 nights", "note": "In Heavenly Village, walkable to restaurants and shops." }
+    {
+      "name": "Argonaut Hotel",
+      "place": "Fisherman's Wharf, San Francisco",
+      "nights": "3 nights",
+      "note": "A nautical-themed hotel in an old cannery, an easy walk to the piers, Ghirardelli Square and the Alcatraz ferry."
+    },
+    {
+      "name": "The Inn on Pine",
+      "place": "Calistoga",
+      "nights": "2 nights",
+      "note": "Walkable to the Calistoga shops, restaurants and Tank Garage Winery."
+    },
+    {
+      "name": "Brewery Gulch Inn",
+      "place": "Mendocino",
+      "nights": "2 nights",
+      "note": "Breakfast, an evening wine hour and dinner on site, a few minutes south of Mendocino village."
+    },
+    {
+      "name": "Marriott's Timber Lodge",
+      "place": "South Lake Tahoe",
+      "nights": "3 nights",
+      "note": "In Heavenly Village, walkable to restaurants and shops."
+    }
   ],
   "eats": [
-    { "name": "Ferry Building farmers market", "place": "San Francisco", "note": "Saturdays 8 AM – 2 PM. We grazed here instead of a sit-down lunch.", "type": "Lunch" },
-    { "name": "Scoma's", "place": "San Francisco", "note": "Seafood on Fisherman's Wharf, a 10-minute walk from the Alcatraz ferry at Pier 33.", "type": "Dinner" },
-    { "name": "The Buena Vista", "place": "San Francisco", "note": "Dinner outside and the famous Irish coffee.", "type": "Dinner" },
-    { "name": "Calistoga Inn & Brewery", "place": "Calistoga", "note": "Outdoor dining by the river, walkable from the Inn on Pine.", "type": "Dinner" },
-    { "name": "Evangeline", "place": "Calistoga", "note": "New Orleans-inspired, walkable from the inn.", "type": "Dinner" },
-    { "name": "Madrigal Family Winery", "place": "Calistoga", "type": "Tasting" },
-    { "name": "Bennett Lane Winery", "place": "Calistoga", "type": "Tasting" },
-    { "name": "Tank Garage Winery", "place": "Calistoga", "note": "A 1930s gas station turned tasting room, right next to the inn.", "type": "Tasting" },
-    { "name": "Mosswood Market", "place": "Anderson Valley", "note": "A café stop in Boonville on the drive to Mendocino.", "type": "Lunch" },
-    { "name": "Brewery Gulch Inn", "place": "Mendocino", "note": "Dinner and the wine hour at our inn, two nights running.", "type": "Dinner" },
-    { "name": "Izabella", "place": "Lake Tahoe", "note": "Italian, walkable from the Timber Lodge.", "type": "Dinner" }
+    {
+      "name": "Ferry Building farmers market",
+      "place": "San Francisco",
+      "note": "Saturdays 8 AM – 2 PM. We grazed here instead of a sit-down lunch.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Scoma's",
+      "place": "San Francisco",
+      "note": "Seafood on Fisherman's Wharf, a 10-minute walk from the Alcatraz ferry at Pier 33.",
+      "type": "Dinner"
+    },
+    {
+      "name": "The Buena Vista",
+      "place": "San Francisco",
+      "note": "Dinner outside and the famous Irish coffee.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Calistoga Inn & Brewery",
+      "place": "Calistoga",
+      "note": "Outdoor dining by the river, walkable from the Inn on Pine.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Evangeline",
+      "place": "Calistoga",
+      "note": "New Orleans-inspired, walkable from the inn.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Madrigal Family Winery",
+      "place": "Calistoga",
+      "type": "Tasting"
+    },
+    {
+      "name": "Bennett Lane Winery",
+      "place": "Calistoga",
+      "type": "Tasting"
+    },
+    {
+      "name": "Tank Garage Winery",
+      "place": "Calistoga",
+      "note": "A 1930s gas station turned tasting room, right next to the inn.",
+      "type": "Tasting"
+    },
+    {
+      "name": "Mosswood Market",
+      "place": "Anderson Valley",
+      "note": "A café stop in Boonville on the drive to Mendocino.",
+      "type": "Lunch"
+    },
+    {
+      "name": "Brewery Gulch Inn",
+      "place": "Mendocino",
+      "note": "Dinner and the wine hour at our inn, two nights running.",
+      "type": "Dinner"
+    },
+    {
+      "name": "Izabella",
+      "place": "Lake Tahoe",
+      "note": "Italian, walkable from the Timber Lodge.",
+      "type": "Dinner"
+    }
   ],
   "book_ahead": [
     "Alcatraz Night Tour (sells out weeks ahead)",
@@ -230,20 +589,56 @@
     "Dinners at Calistoga Inn, Evangeline and Izabella"
   ],
   "tips": [
-    { "title": "Bring the National Park Pass", "text": "It covered the San Francisco Maritime National Historical Park and Muir Woods entry. Muir Woods still needs a separate parking reservation, printed or on your phone." },
-    { "title": "Eat early on Alcatraz night", "text": "The night tour ferry leaves around 6 PM. A 4 PM dinner at Scoma's, a short walk from Pier 33, meant we weren't starving on the island." },
-    { "title": "Don't overpack the city days", "text": "We planned more than we could do in San Francisco. Cable cars, the Painted Ladies, Golden Gate Park, Haight-Ashbury and the Musée Mécanique arcade all had to wait for next time. A Muni day pass or Clipper card makes the cable cars easy if you do get to them." },
-    { "title": "Let the shuttle drive in Calistoga", "text": "The free Calistoga Shuttle does door-to-door pickups around town, which makes a two-winery afternoon easy. Call ahead to book it." }
+    {
+      "title": "Bring the National Park Pass",
+      "text": "It covered the San Francisco Maritime National Historical Park and Muir Woods entry. Muir Woods still needs a separate parking reservation, printed or on your phone."
+    },
+    {
+      "title": "Eat early on Alcatraz night",
+      "text": "The night tour ferry leaves around 6 PM. A 4 PM dinner at Scoma's, a short walk from Pier 33, meant we weren't starving on the island."
+    },
+    {
+      "title": "Don't overpack the city days",
+      "text": "We planned more than we could do in San Francisco. Cable cars, the Painted Ladies, Golden Gate Park, Haight-Ashbury and the Musée Mécanique arcade all had to wait for next time. A Muni day pass or Clipper card makes the cable cars easy if you do get to them."
+    },
+    {
+      "title": "Let the shuttle drive in Calistoga",
+      "text": "The free Calistoga Shuttle does door-to-door pickups around town, which makes a two-winery afternoon easy. Call ahead to book it."
+    }
   ],
   "map": {
-    "San Francisco": [37.8080, -122.4177],
-    "Muir Woods": [37.8970, -122.5811],
-    "Point Reyes": [38.0405, -122.7997],
-    "Calistoga": [38.5788, -122.5797],
-    "Mendocino": [39.3077, -123.7995],
-    "Fort Bragg": [39.4457, -123.8053],
-    "Lake Tahoe": [38.9566, -119.9406],
-    "Sand Harbor": [39.1979, -119.9306]
+    "San Francisco": [
+      37.808,
+      -122.4177
+    ],
+    "Muir Woods": [
+      37.897,
+      -122.5811
+    ],
+    "Point Reyes": [
+      38.0405,
+      -122.7997
+    ],
+    "Calistoga": [
+      38.5788,
+      -122.5797
+    ],
+    "Mendocino": [
+      39.3077,
+      -123.7995
+    ],
+    "Fort Bragg": [
+      39.4457,
+      -123.8053
+    ],
+    "Lake Tahoe": [
+      38.9566,
+      -119.9406
+    ],
+    "Sand Harbor": [
+      39.1979,
+      -119.9306
+    ]
   },
   "videos": []
 }
