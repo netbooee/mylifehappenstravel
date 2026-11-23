@@ -73,6 +73,21 @@ pages (a trip lists the ids it wants in `"videos"`). Videos only load when someo
 so pages stay fast. The channel's public feed lists every video:
 `https://www.youtube.com/feeds/videos.xml?channel_id=UChGwHSH0eNh_fp6XNtfj5jg`
 
+## Flight stats
+
+The lifetime numbers on the home page and the "By the numbers" section of the About page (miles,
+flights, airports, the route map) come from our Flighty export. To update them:
+
+1. In Flighty: **Settings → Account Data → Export Your Flights**. The CSV arrives by email.
+2. Run `python3 tools/flights.py path/to/FlightyExport-YYYY-MM-DD.csv` (keep the CSV outside this
+   repo; it holds booking codes and seats). It writes `content/flights.json` with only the year,
+   airline, airports, miles and time in the air for each flight, and which trip it belongs to.
+3. Run `python3 tools/build.py` and commit.
+
+Canceled flights are left out automatically; flights we tracked but didn't take go in `NOT_FLOWN`
+in `tools/flights.py`. A new airport or airline stops the script until it's added there.
+Trip pages show a "Flights" line in "At a glance" for flights within a day of the trip's dates.
+
 ## Maps
 
 Each trip's route map uses [Leaflet](https://leafletjs.com) (bundled in `site/assets/vendor/`) with

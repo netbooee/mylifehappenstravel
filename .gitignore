@@ -2,3 +2,6 @@
 .image-slots.state.json
 node_modules/
 .netlify/
+
+# Flighty exports hold booking codes and seats; keep them out of the repo
+*.csv
