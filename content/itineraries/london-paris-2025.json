@@ -8,7 +8,7 @@
   "start": "2025-04-12",
   "end": "2025-04-20",
   "days": 8,
-  "hero": "",
+  "hero": "london",
   "glance": [
     {
       "label": "Dates",
@@ -115,7 +115,13 @@
           "text": "Walk back to The Bailey's Hotel"
         }
       ],
-      "tip": "Even with an early arrival, a day of walking-distance sights is the best cure for jet lag. Nothing today needs a train."
+      "tip": "Even with an early arrival, a day of walking-distance sights is the best cure for jet lag. Nothing today needs a train.",
+      "photos": [
+        "lon-albert-memorial",
+        "lon-cherry-blossoms",
+        "lon-orangery-tea",
+        "lon-natural-history-whale"
+      ]
     },
     {
       "label": "Day 2",
@@ -191,7 +197,13 @@
           "text": "Tube back to The Bailey's Hotel"
         }
       ],
-      "tip": "We held a second, closer dinner reservation in case we were worn out. The Cadogan Arms books through SevenRooms and charges if you don't cancel 24 hours ahead, so decide the day before."
+      "tip": "We held a second, closer dinner reservation in case we were worn out. The Cadogan Arms books through SevenRooms and charges if you don't cancel 24 hours ahead, so decide the day before.",
+      "photos": [
+        "lon-cabinet-war-room",
+        "lon-buckingham-palace",
+        "lon-westminster-abbey",
+        "lon-millennium-bridge"
+      ]
     },
     {
       "label": "Day 3",
@@ -249,7 +261,13 @@
           "text": "Uber back to The Bailey's Hotel"
         }
       ],
-      "tip": "Go to the Crown Jewels first thing. The line grows fast once the tour groups arrive, and the Yeoman Warder tours run regularly, so you can always join the next one."
+      "tip": "Go to the Crown Jewels first thing. The line grows fast once the tour groups arrive, and the Yeoman Warder tours run regularly, so you can always join the next one.",
+      "photos": [
+        "lon-white-tower",
+        "lon-tower-selfie",
+        "lon-tower-bridge",
+        "lon-hamilton"
+      ]
     },
     {
       "label": "Day 4",
@@ -301,7 +319,13 @@
           "text": "Leave for London, back at The Bailey's Hotel around 10:30"
         }
       ],
-      "tip": "Book the studio tour with the Hogwarts dinner if it's offered for your date. Eating in the Great Hall is the highlight, and it splits a long visit nicely in two."
+      "tip": "Book the studio tour with the Hogwarts dinner if it's offered for your date. Eating in the Great Hall is the highlight, and it splits a long visit nicely in two.",
+      "photos": [
+        "lon-portobello-road",
+        "lon-great-hall",
+        "lon-hogwarts-express",
+        "lon-butterbeer"
+      ]
     },
     {
       "label": "Day 5",
@@ -380,7 +404,13 @@
           "text": "Evening walk back to the hotel"
         }
       ],
-      "tip": "Eurostar check-in closes 30 minutes before departure, and there's passport control for both countries at St Pancras, so give yourself more time than that."
+      "tip": "Eurostar check-in closes 30 minutes before departure, and there's passport control for both countries at St Pancras, so give yourself more time than that.",
+      "photos": [
+        "lon-sky-garden-breakfast",
+        "lon-eurostar",
+        "par-sainte-chapelle",
+        "par-vieux-bistrot"
+      ]
     },
     {
       "label": "Day 6",
@@ -424,7 +454,12 @@
           "booked": true
         }
       ],
-      "tip": "Even with a timed ticket and a Museum Pass, arrive at the Louvre 30 minutes early. Head straight for the Mona Lisa, then work outward while the rest of the museum is still quiet."
+      "tip": "Even with a timed ticket and a Museum Pass, arrive at the Louvre 30 minutes early. Head straight for the Mona Lisa, then work outward while the rest of the museum is still quiet.",
+      "photos": [
+        "par-water-lilies",
+        "par-louvre-pyramid",
+        "par-colonnes-de-buren"
+      ]
     },
     {
       "label": "Day 7",
@@ -481,7 +516,13 @@
           "text": "Walk to see the Eiffel Tower sparkle, then back to the hotel"
         }
       ],
-      "tip": "The Eiffel Tower sparkles for five minutes at the start of every hour after dark, so you don't need to plan much to catch it."
+      "tip": "The Eiffel Tower sparkles for five minutes at the start of every hour after dark, so you don't need to plan much to catch it.",
+      "photos": [
+        "par-orsay-hall",
+        "par-pont-alexandre",
+        "par-eiffel-summit",
+        "par-eiffel-night"
+      ]
     },
     {
       "label": "Day 8",
@@ -542,7 +583,13 @@
           "text": "Evening walk back to the hotel"
         }
       ],
-      "tip": "Get to the Versailles station 15–20 minutes before you need to leave, and buy RER tickets at the machines (some take contactless cards)."
+      "tip": "Get to the Versailles station 15–20 minutes before you need to leave, and buy RER tickets at the machines (some take contactless cards).",
+      "photos": [
+        "par-versailles-orangerie",
+        "par-versailles-blossoms",
+        "par-versailles-tulips",
+        "par-shopping-elevator"
+      ]
     }
   ],
   "stays": [
