@@ -8,6 +8,5 @@ configuration → Build & deploy → Build settings), leave the build command em
 | --- | --- | --- |
 | barcelonamallorca.netlify.app | `redirects/barcelonamallorca` | `/itineraries/barcelona-mallorca-2026/` |
 
-The links point at `mylifehappenstravel.netlify.app`. Once `mylifehappens.com` is set as the main
-site's primary domain, Netlify forwards those to the custom domain automatically, so these never
-need changing.
+The links point at `mylifehappenstravel.netlify.app`, which shows the same site as
+`mylifehappenstravel.com`, so they keep working whichever address people use.

@@ -1,6 +1,6 @@
 # My Life Happens Travel
 
-The website for **mylifehappens.com**: Tony & Sharon's real trips, written up day by day.
+The website for **mylifehappenstravel.com**: Tony & Sharon's real trips, written up day by day.
 
 Every itinerary is stored as data (one JSON file per trip) and turned into web pages by a small
 Python script. All trips share one design, the way the big travel blogs do, so adding a trip is
@@ -104,7 +104,7 @@ Then open http://localhost:8000.
 
 ## Short links
 
-`mylifehappens.com/italy`, `/barcelona`, `/vegas`, `/california`, `/london`, `/paris`, `/montreal`, `/ireland` go straight to each
+`mylifehappenstravel.com/italy`, `/barcelona`, `/vegas`, `/california`, `/london`, `/paris`, `/montreal`, `/ireland` go straight to each
 trip (set in `netlify.toml`). Handy for an Instagram bio.
 
 ## Newsletter sign-up
@@ -115,12 +115,12 @@ notifications there, or export the list into Mailchimp, Kit or similar later.
 
 ## Going live on Netlify
 
-1. Netlify is already deploying this repository to `mylifehappenstravel.netlify.app` from the
-   `main` branch. Merge this work into `main` and it goes live there. `netlify.toml` tells Netlify
-   to publish `site/`, with no build command.
-2. **Domain:** in the site's **Domain management**, add `mylifehappens.com` (and `www`), then set the
-   DNS records Netlify shows you at wherever the domain is registered (Squarespace Domains if you
-   bought it there). HTTPS is set up automatically.
+1. Netlify deploys this repository from the `main` branch to **mylifehappenstravel.com** (`www`
+   forwards there too; `mylifehappenstravel.netlify.app` shows the same site). Merge into `main` and
+   it's live. `netlify.toml` tells Netlify to publish `site/`, with no build command.
+2. **The old domain:** `mylifehappens.com` is still the Squarespace site. To bring it here as well,
+   add it in the Netlify site's **Domain management** and set the DNS records Netlify shows you
+   where the domain is registered (Squarespace Domains if you bought it there).
 3. **Before cancelling Squarespace:** the old site also holds the 2009–2015 journal, family blogs
    and the banner, sticker and 3D-print shops. None of that is moved here. Export anything you
    want to keep first (Squarespace: *Settings → Import & Export*).
@@ -132,7 +132,7 @@ To keep links you've already shared working, replace the contents of each old si
 `_redirects` file, for example for `mlkitaly.netlify.app`:
 
 ```
-/*  https://mylifehappens.com/itineraries/italy-2026/  301!
+/*  https://mylifehappenstravel.com/itineraries/italy-2026/  301!
 ```
 
 ## Gear

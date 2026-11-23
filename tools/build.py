@@ -25,7 +25,7 @@ import re
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
 CONTENT = ROOT / "content" / "itineraries"
-DOMAIN = "https://mylifehappens.com"
+DOMAIN = "https://mylifehappenstravel.com"
 INSTAGRAM = "https://www.instagram.com/mylifehappenstravel"
 YOUTUBE = "https://www.youtube.com/@MyLifeHappensTravel"
 VIDEOS: list[dict] = []  # filled from content/videos.json in main()
