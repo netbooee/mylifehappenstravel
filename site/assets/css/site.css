@@ -242,6 +242,11 @@ svg { flex: none; }
 .gear-img img { width: 100%; height: 100%; object-fit: cover; }
 .gear-card h3 { font-size: 24px; margin-bottom: 8px; }
 .gear-card p { color: var(--ink-soft); font-size: 15.5px; }
+.gear-card.no-img { grid-template-columns: 1fr; }
+.gear-card .btn { margin-top: 14px; }
+.gear-more { margin-top: 18px; }
+.gear-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 460px), 1fr)); gap: 24px; }
+.page-head .fine { color: var(--ink-soft); font-size: 14px; margin-top: 14px; max-width: 40em; }
 @media (max-width: 520px) { .gear-card { grid-template-columns: 1fr; } .gear-img { aspect-ratio: 16 / 9; } }
 
 /* instagram */

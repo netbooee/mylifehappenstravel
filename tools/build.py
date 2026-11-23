@@ -7,6 +7,7 @@ Reads every trip in content/itineraries/*.json and writes plain HTML into site/:
     site/itineraries/index.html          all itineraries (filter by region)
     site/itineraries/<slug>/index.html   one page per trip
     site/about/index.html                about us
+    site/gear/index.html                 gear we use (from content/gear.json)
     site/404.html, site/sitemap.xml
 
 Run it after adding or editing a trip:   python3 tools/build.py
@@ -29,6 +30,7 @@ INSTAGRAM = "https://www.instagram.com/mylifehappenstravel"
 YOUTUBE = "https://www.youtube.com/@MyLifeHappensTravel"
 VIDEOS: list[dict] = []  # filled from content/videos.json in main()
 FLIGHTS: dict = {}  # filled from content/flights.json in main() (made by tools/flights.py)
+GEAR: list[dict] = []  # filled from content/gear.json in main(); items without a name are skipped
 EARTH_MILES = 24901  # once around the equator
 
 # ── Photos ────────────────────────────────────────────────────────────────────
@@ -155,7 +157,7 @@ def head(title: str, desc: str, path: str, image: str = "valley-of-fire-1", noin
 """
 
 
-NAV = [("/itineraries/", "Itineraries"), ("/about/", "About us"), ("/#gear", "Gear")]
+NAV = [("/itineraries/", "Itineraries"), ("/about/", "About us"), ("/gear/", "Gear")]
 
 
 def header(current: str = "", over_photo: bool = False) -> str:
@@ -211,7 +213,7 @@ def footer(trips: list[dict]) -> str:
       <h3>More</h3>
       <ul>
         <li><a href="/about/">About us</a></li>
-        <li><a href="/#gear">Gear we use</a></li>
+        <li><a href="/gear/">Gear we use</a></li>
         <li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li>
         <li><a href="{YOUTUBE}" rel="noopener">YouTube</a></li>
       </ul>
@@ -274,6 +276,44 @@ def item_kind(text: str) -> str:
         if re.search(rx, low):
             return kind
     return "see"
+
+
+def gear_card(g: dict, heading: str = "h3") -> str:
+    img = picture(g["photo"], "(min-width: 960px) 200px, 40vw", "gear-img") if g.get("photo") else ""
+    kicker = f'<p class="card-kicker">{e(g["category"])}</p>' if g.get("category") else ""
+    note = f'<p>{e(g["note"])}</p>' if g.get("note") else ""
+    return f"""<div class="gear-card{'' if img else ' no-img'}">
+        {img}
+        <div>
+          {kicker}
+          <{heading}>{e(g["name"])}</{heading}>
+          {note}
+          <a class="btn dark sm" href="{e(g["url"])}" rel="sponsored noopener">Shop on Amazon →</a>
+        </div>
+      </div>"""
+
+
+def gear_page(trips: list[dict]) -> str:
+    lede = "Only things we've packed ourselves and would buy again."
+    return head("Gear we use", "The travel gear we actually pack, from sleeping on planes to long days on foot.", "/gear/",
+                image="in-flight") + f"""<body>
+{header("/gear/")}
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Gear we actually use</span>
+      <h1>Pack smarter, <em>travel better.</em></h1>
+      <p class="lede">{lede}</p>
+      <p class="fine">These are affiliate links: if you buy through them we may earn a small commission, at no extra cost to you.</p>
+    </div>
+  </section>
+  <section class="section tint">
+    <div class="wrap gear-grid">
+      {"".join(gear_card(g, "h2") for g in GEAR)}
+    </div>
+  </section>
+</main>
+""" + footer(trips)
 
 
 def video_card(v: dict, heading: str = "h3") -> str:
@@ -490,14 +530,9 @@ def home(trips: list[dict]) -> str:
         <h2>Pack smarter, <em>travel better.</em></h2>
         <p class="lede">Only things we've packed ourselves and would buy again.</p>
       </div>
-      <div class="gear-card">
-        {picture("in-flight", "(min-width: 960px) 200px, 40vw", "gear-img")}
-        <div>
-          <p class="card-kicker">Sleep · on the plane</p>
-          <h3>Airplane Head Strap with Eye Mask</h3>
-          <p>A 360° headrest that holds softly across your head instead of propping up your chin, so you don't wake up bobbing into your neighbour's shoulder.</p>
-          <a class="btn dark sm" href="https://amzn.to/4s5lhJ9" rel="sponsored noopener">Shop on Amazon →</a>
-        </div>
+      <div>
+        {gear_card(GEAR[0]) if GEAR else ""}
+        {'<p class="gear-more"><a class="more" href="/gear/">See all our gear →</a></p>' if len(GEAR) > 1 else ""}
       </div>
     </div>
   </section>
@@ -728,6 +763,8 @@ def main() -> None:
     trips.sort(key=lambda t: t.get("start") or "0000", reverse=True)
     fp = ROOT / "content" / "flights.json"
     FLIGHTS.update(json.loads(fp.read_text(encoding="utf-8")) if fp.exists() else {})
+    gp = ROOT / "content" / "gear.json"
+    GEAR[:] = [g for g in (json.loads(gp.read_text(encoding="utf-8")) if gp.exists() else []) if g.get("name")]
     VIDEOS[:] = sorted(json.loads((ROOT / "content" / "videos.json").read_text(encoding="utf-8")), key=lambda v: v["date"], reverse=True)
 
     def write(rel: str, text: str) -> None:
@@ -741,11 +778,12 @@ def main() -> None:
     for t in trips:
         write(f"itineraries/{t['slug']}/index.html", itinerary(t, trips))
     write("about/index.html", about(trips))
+    write("gear/index.html", gear_page(trips))
     write("404.html", simple_page(trips, "Page not found", "404 · page not found", "Took a <em>wrong turn.</em>",
                                   "That page isn't here. If you followed a link to our old site, the trip you're after is probably in the itineraries.", "/404"))
     write("thanks/index.html", simple_page(trips, "Thanks for signing up", "You're on the list", "Thank <em>you!</em>",
                                            "We'll email you when the next itinerary goes up.", "/thanks/"))
-    urls = ["/", "/itineraries/", "/about/"] + [f"/itineraries/{t['slug']}/" for t in trips]
+    urls = ["/", "/itineraries/", "/about/", "/gear/"] + [f"/itineraries/{t['slug']}/" for t in trips]
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           + "".join(f"  <url><loc>{DOMAIN}{u}</loc></url>\n" for u in urls) + "</urlset>\n")
 
