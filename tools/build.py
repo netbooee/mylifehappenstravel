@@ -308,7 +308,7 @@ def flight_stats() -> dict:
         "airlines": count([f["airline"] for f in fl]),
         "busiest": count([x for f in fl for x in (f["from"], f["to"])]),
         "routes": count([" ↔ ".join(sorted((f["from"], f["to"]))) for f in fl]),
-        "longest": longest, "since": min(f["year"] for f in fl),
+        "longest": longest, "since": min(f["year"] for f in fl), "until": max(f["year"] for f in fl),
         "updated": f"{upd:%B %Y}" if upd else "",
     }
 
@@ -333,16 +333,16 @@ def flight_map(st: dict) -> str:
 def numbers_section(st: dict) -> str:
     ap = FLIGHTS["airports"]
     lg = st["longest"]
-    tiles = [
-        (n(st["miles"]), "miles flown"),
-        (n(st["flights"]), "flights"),
-        (n(st["airports"]), "airports"),
-        (n(st["countries"]), "countries &amp; territories"),
-        (n(st["hours"]), "hours in the air"),
-        (f'{st["laps"]:.1f}×', "around the Earth"),
-        (n(len(st["airlines"])), "airlines"),
-        (n(lg["miles"]), f'miles on our longest flight, {e(ap[lg["from"]]["name"])} → {e(ap[lg["to"]]["name"])}'),
+    totals = [
+        ("Miles flown", n(st["miles"])),
+        ("Flights", n(st["flights"])),
+        ("Airports", n(st["airports"])),
+        ("Countries &amp; territories", n(st["countries"])),
+        ("Hours in the air", n(st["hours"])),
+        ("Around the Earth", f'{st["laps"]:.1f}×'),
+        ("Airlines", n(len(st["airlines"]))),
     ]
+    end = lambda c, cls="": (f'<div class="{cls}"><strong>{c}</strong><span>{e(ap[c]["name"])}</span></div>')
     name = lambda c: f'{e(ap[c]["name"])} <small>{c}</small>'
     def ranked(title: str, rows: list[tuple[int, str]], label) -> str:
         top = rows[0][0]
@@ -354,8 +354,16 @@ def numbers_section(st: dict) -> str:
     <div class="wrap">
       <div class="section-head"><div><span class="eyebrow">By the numbers</span><h2>Every flight <em>since {st["since"]}.</em></h2>
         <p>Our lifetime totals from Flighty, the app we track every flight in{f", updated {st['updated']}" if st["updated"] else ""}. Distances are airport to airport, as the crow flies.</p></div></div>
-      <dl class="number-grid">{"".join(f"<div><dt>{lbl}</dt><dd>{v}</dd></div>" for v, lbl in tiles)}</dl>
-      {flight_map(st)}
+      <article class="pass">
+        {flight_map(st).replace('class="flight-map"', 'class="flight-map pass-map"')}
+        <header class="pass-top"><span>Tony &amp; Sharon · Flight log</span><span>{st["since"]}–{st["until"]}</span></header>
+        <dl class="pass-grid">{"".join(f"<div><dt>{lbl}</dt><dd>{v}</dd></div>" for lbl, v in totals)}</dl>
+        <div class="pass-tear" aria-hidden="true"></div>
+        <div class="pass-stub">
+          <p class="pass-label">Longest flight</p>
+          <div class="pass-route">{end(lg["from"])}<div class="pass-mid"><span aria-hidden="true">✈</span>{n(lg["miles"])} miles</div>{end(lg["to"], "to")}</div>
+        </div>
+      </article>
       <div class="ranked-row">
         {ranked("Most-flown routes", st["routes"], route_name)}
         {ranked("Busiest airports", st["busiest"], name)}
