@@ -140,7 +140,7 @@ it replaces its own entries.
 - A day with a single photo shows it 4:3. A tall photo gets cropped around the middle, so check signs
   and faces; if they're cut, set `crop` to a 4:3 box (e.g. `[0, 0.10, 1, 0.6625]` keeps the top of a
   3:4 portrait) and publish again.
-- Gallery: 5, 8 or 11 photos fill the grid. The first photo is shown large; lead with the best one.
+- Gallery: 5, 8, 11, 14 or 17 photos fill the grid. The first photo is shown large; lead with the best one.
 - The hero must be a wide landscape at least 1600 px wide (it's also the share-preview image).
 
 If they named a tour or asked for day text, fill in the day's `text` in the itinerary (same voice as

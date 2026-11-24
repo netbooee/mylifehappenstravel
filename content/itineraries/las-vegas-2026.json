@@ -72,7 +72,10 @@
           "booked": true
         }
       ],
-      "tip": "The Venetian's attached self-park garage is free for hotel guests; we used it instead of valet to keep the car handy for early departures."
+      "tip": "The Venetian's attached self-park garage is free for hotel guests; we used it instead of valet to keep the car handy for early departures.",
+      "photos": [
+        "veg-first-night-slots"
+      ]
     },
     {
       "label": "Day 2",
@@ -123,7 +126,10 @@
       ],
       "tip": "The Flamingo Wildlife Habitat is free and genuinely surprising – Chilean flamingos, African penguins and koi behind a casino. Easy to spend 20 minutes there.",
       "photos": [
-        "veg-casino"
+        "veg-casino",
+        "veg-area15-sign",
+        "veg-welcome-sign",
+        "veg-pinball-hall"
       ]
     },
     {
@@ -195,7 +201,13 @@
           "text": "Wind down at the Bellagio: the fountains and the free, 24/7 Conservatory, dressed for Lunar New Year"
         }
       ],
-      "tip": "Bring at least 2 liters of water per person – the desert is dehydrating even in January. The Fire Wave photographs best when the sun is low, morning or late afternoon."
+      "tip": "Bring at least 2 liters of water per person – the desert is dehydrating even in January. The Fire Wave photographs best when the sun is low, morning or late afternoon.",
+      "photos": [
+        "veg-fire-wave-top",
+        "veg-canyon-selfie",
+        "veg-sandstone-arch",
+        "veg-ice-bar"
+      ]
     },
     {
       "label": "Day 4",
@@ -250,7 +262,9 @@
       "tip": "Get to Seven Magic Mountains as early as you can – the low morning light makes the colors pop, and by 10 AM the tour groups often arrive.",
       "photos": [
         "veg-sign",
-        "veg-neon"
+        "veg-neon",
+        "veg-doom-mural",
+        "veg-arts-district-walk"
       ]
     }
   ],

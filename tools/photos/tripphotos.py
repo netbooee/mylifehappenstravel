@@ -47,7 +47,11 @@ PRIVATE_CAPTION = re.compile(r"\b(passport|driver'?s? licen[cs]e|id card|identit
                              r"ticket|receipt|invoice|bank|screenshot|qr code|barcode)\b", re.I)
 MARGIN_DEG = 1.5          # how far outside the itinerary's map points still counts as "on the trip"
 NEAR_DUP_SECONDS = 2      # shots this close together (same camera) count as one moment
-GALLERY_GOOD_COUNTS = {2, 5, 8, 11}  # sizes that fill the trip gallery grid on desktop
+def gallery_fills(n: int) -> bool:
+    """The gallery grid is one large photo (2 rows) beside 2 small ones per row, then rows of 3:
+    2, 5, 8, 11, 14, 17… fill it with no gaps (and pair up evenly on phones after the large one)."""
+    return n % 3 == 2
+PHONE_CAMERA = re.compile(r"iPhone|Pixel|Galaxy|^SM-", re.I)  # cameras that take their time zone from the network
 
 
 # ── helpers ──────────────────────────────────────────────────────────────────
@@ -208,11 +212,18 @@ def cmd_find(a) -> None:
         r["batch"] = batch_id(r)
         batches[r["batch"]].append(r)
 
-    # The trip's real time zone: what the GPS-tagged photos (phones) were recorded in.
-    anchored = [dt.datetime.fromisoformat(r["date"]).utcoffset() for r in rows if r["has_gps"]]
+    # The trip's real time zone: what the phones recorded it in. Phones set their zone from the network;
+    # a camera can have GPS (from a paired phone app) but still keep home time as its zone (the Leica Q2
+    # on the Las Vegas trip, set to Eastern), so its offset only counts when no phone has GPS photos.
+    def offset(r):
+        return dt.datetime.fromisoformat(r["date"]).utcoffset()
+    phone = [offset(r) for r in rows if r["has_gps"] and PHONE_CAMERA.search(r["camera"])]
+    anchored = phone or [offset(r) for r in rows if r["has_gps"]]
     trip_off = statistics.mode(anchored) if anchored else (
-        statistics.mode([dt.datetime.fromisoformat(r["date"]).utcoffset() for r in rows]) if rows else dt.timedelta())
+        statistics.mode([offset(r) for r in rows]) if rows else dt.timedelta())
     trip_tz = dt.timezone(trip_off)
+    other_zones = sorted({f'{r["camera"]} (UTC{offset(r).total_seconds() / 3600:+g})'
+                          for r in rows if r["has_gps"] and offset(r) != trip_off})
 
     clock = load_json(trip_dir(a.slug) / "clock.json", {})
     slots = day_slots(trip)
@@ -282,7 +293,10 @@ def cmd_find(a) -> None:
     stats["outside the trip dates"] = sum(1 for r in rows if not r["slot"])
     stats["duplicate imports"] = sum(1 for r in rows if r.get("dup_of"))
     print(f"{len(found)} items in Photos between {start - pad} and {end + pad} "
-          f"(trip {start} → {end}, UTC{trip_off.total_seconds() / 3600:+g}).")
+          f"(trip {start} → {end}, UTC{trip_off.total_seconds() / 3600:+g}"
+          f"{', from the phones' if phone else ''}).")
+    if other_zones:
+        print(f"  GPS photos recorded in another time zone (converted to the trip's): {', '.join(other_zones)}")
     for k, v in stats.items():
         if v:
             print(f"  skipped {v} {k}")
@@ -579,7 +593,8 @@ def cmd_export(a) -> None:
     cmd = [str(osxphotos), "export", str(out), "--uuid-from-file", str(td / "picks.txt"),
            "--download-missing",          # fetch from iCloud through Photos, for these picks only
            "--convert-to-jpeg", "--skip-original-if-edited", "--skip-live", "--skip-raw",
-           "--filename", "{uuid}"]
+           "--filename", "{uuid}",
+           "--update"]                    # picks added later: export just those, without osxphotos asking
     subprocess.run(cmd, check=True)
     missing = [p["uuid"] for p in picks if not find_export(out, p["uuid"])]
     size = sum(f.stat().st_size for f in out.iterdir() if f.is_file()) / 1e6
@@ -759,8 +774,8 @@ def layout_warnings(trip, gallery, entries=None):
             if h > w * 0.8:
                 out.append(f'{d["label"]} has one tall photo ({k}); the page crops it to 4:3 around the middle. '
                            'If that cuts a face or sign, set "crop" for it in picks.json and publish again.')
-    if gallery and len(gallery) not in GALLERY_GOOD_COUNTS:
-        out.append(f"The gallery has {len(gallery)} photos; 5, 8 or 11 fill the grid with no gaps.")
+    if gallery and not gallery_fills(len(gallery)):
+        out.append(f"The gallery has {len(gallery)} photos; 5, 8, 11, 14 or 17 fill the grid with no gaps.")
     return out
 
 
