@@ -623,55 +623,64 @@
       "name": "Carmel Valley Ranch",
       "place": "Carmel Valley",
       "nights": "2 nights",
-      "note": "Luxury resort in the Santa Lucia mountains with ranch activities, pools, an infinity hot tub, an organic garden and a lavender field."
+      "note": "Luxury resort in the Santa Lucia mountains with ranch activities, pools, an infinity hot tub, an organic garden and a lavender field.",
+      "url": "https://carmelvalleyranch.com/"
     },
     {
       "name": "Cambria Beach Lodge",
       "place": "Cambria",
       "nights": "2 nights",
-      "note": "Steps from the Moonstone Beach boardwalk; continental breakfast."
+      "note": "Steps from the Moonstone Beach boardwalk; continental breakfast.",
+      "url": "https://www.cambriabeachlodge.com/"
     },
     {
       "name": "InterContinental The Clement Monterey",
       "place": "Monterey",
       "nights": "2 nights",
-      "note": "Right on historic Cannery Row, walking distance to the aquarium and the Coastal Trail."
+      "note": "Right on historic Cannery Row, walking distance to the aquarium and the Coastal Trail.",
+      "url": "https://www.ihg.com/intercontinental/hotels/us/en/monterey/mryha/hoteldetail"
     },
     {
       "name": "Beach House Hotel",
       "place": "Half Moon Bay",
       "nights": "2 nights",
-      "note": "On the Coastside Trail, a two-minute walk from Sam's Chowder House; free parking and continental breakfast."
+      "note": "On the Coastside Trail, a two-minute walk from Sam's Chowder House; free parking and continental breakfast.",
+      "url": "https://www.beach-house.com/half-moon-bay/"
     },
     {
       "name": "Vrbo rental",
       "place": "Bay Area",
       "nights": "2 nights",
-      "note": "Our base for Muir Woods."
+      "note": "Our base for Muir Woods.",
+      "map": false
     },
     {
       "name": "Inn on Pine",
       "place": "Calistoga",
       "nights": "2 nights",
-      "note": "Walking distance to Calistoga Creamery; continental breakfast."
+      "note": "Walking distance to Calistoga Creamery; continental breakfast.",
+      "url": "https://www.theinnonpine.com/"
     },
     {
       "name": "Brewery Gulch Inn",
       "place": "Mendocino",
       "nights": "2 nights",
-      "note": "On the south edge of town with a superb full breakfast and a complimentary wine hour from 5:30 to 6:30 PM every evening."
+      "note": "On the south edge of town with a superb full breakfast and a complimentary wine hour from 5:30 to 6:30 PM every evening.",
+      "url": "https://www.brewerygulchinn.com/"
     },
     {
       "name": "Alila Napa Valley",
       "place": "Napa Valley",
       "nights": "1 night",
-      "note": "Resort pool, infinity hot tub, balcony and welcome wine in the room; home to Salva Terrace & Bar."
+      "note": "Resort pool, infinity hot tub, balcony and welcome wine in the room; home to Salva Terrace & Bar.",
+      "url": "https://www.hyatt.com/alila-hotels-and-resorts/en-US/apcal-alila-napa-valley"
     },
     {
       "name": "Palace Hotel",
       "place": "San Francisco",
       "nights": "2 nights",
-      "note": "Grand 1875 hotel with the Garden Court at its heart; breakfast included."
+      "note": "Grand 1875 hotel with the Garden Court at its heart; breakfast included.",
+      "url": "https://www.sfpalace.com/"
     }
   ],
   "eats": [
@@ -679,55 +688,64 @@
       "name": "Valley Kitchen",
       "place": "Carmel Valley Ranch",
       "note": "Farm-to-table cooking with produce from the resort's organic garden; no driving needed on arrival night.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://carmelvalleyranch.com/dining/valley-kitchen/"
     },
     {
       "name": "Folktale Winery",
       "place": "Carmel Valley",
       "note": "Wine garden dining with live music until 7 PM on Friday evenings, estate wines and light bites.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.folktalewinery.com/"
     },
     {
       "name": "Café Carmel",
       "place": "Carmel-by-the-Sea",
       "note": "Local classic on Ocean Avenue for sandwiches, paninis, quiche, pastries and espresso. Walk in.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://www.cafecarmel.com/"
     },
     {
       "name": "Robin's Restaurant",
       "place": "Cambria",
       "note": "A Cambria institution with a diverse, globally inspired menu and a lovely garden setting.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.robinsrestaurant.com/"
     },
     {
       "name": "Sea Chest Oyster Bar",
       "place": "Cambria",
       "note": "Across from Cambria Beach Lodge: fresh Pacific seafood, cash only, no reservations. Arrive early.",
-      "type": "Seafood"
+      "type": "Seafood",
+      "url": "https://www.seachestoysterbar.com/"
     },
     {
       "name": "The Black Cat Bistro",
       "place": "Cambria",
       "note": "Seasonal California cuisine; a refined finish after Hearst Castle and wine tasting.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.blackcatbistro.com/"
     },
     {
       "name": "Seaside Foods at Sebastian's",
       "place": "San Simeon Pier",
       "note": "Order online ahead for pickup at Sebastian's General Store, a historic building overlooking San Simeon Cove.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://www.seasidefoodsllc.com/"
     },
     {
       "name": "Sam's Chowder House",
       "place": "Half Moon Bay",
       "note": "Award-winning Maine Lobster Roll and New England clam chowder, and a deck with sweeping headland views.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://samschowderhouse.com/"
     },
     {
       "name": "Barbara's Fishtrap",
       "place": "Half Moon Bay",
       "note": "A local institution for fried seafood with harbor views. Cash only, no reservations; arrive by 5:30–6 PM.",
-      "type": "Casual"
+      "type": "Casual",
+      "url": "https://www.barbarasfishtrap.com/"
     },
     {
       "name": "Calistoga Creamery",
@@ -739,13 +757,15 @@
       "name": "Boonville Hotel Restaurant",
       "place": "Boonville, Anderson Valley",
       "note": "The natural lunch stop between Calistoga and Mendocino, in Pinot Noir country.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://www.boonvillehotel.com/eat"
     },
     {
       "name": "Salva Terrace & Bar",
       "place": "Alila Napa Valley",
       "note": "Outdoor terrace dining at one of Napa's most beautiful resort properties.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.hyatt.com/alila-hotels-and-resorts/en-US/apcal-alila-napa-valley/dining"
     }
   ],
   "book_ahead": [

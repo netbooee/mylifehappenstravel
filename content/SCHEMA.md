@@ -40,6 +40,8 @@ All text is plain text (no HTML). Keep the writing in our own voice ("we", "us")
     }
   ],
   "stays": [ { "name": "L'Orologio Firenze", "place": "Florence", "nights": "5 nights", "note": "Right on Piazza Santa Maria Novella." } ],
+  // stays and eats can also have "url" (the place's own website) and "map": false (no Google Maps
+  // link, for generic entries like "Vrbo rental"); every other place gets a Map link automatically
   "eats":  [ { "name": "L'Osteria di Giovanni", "place": "Florence", "note": "Classic Florentine trattoria.", "type": "Dinner" } ],
   "book_ahead": ["Uffizi & Accademia tour", "Campanile climb (timed entry)"],
   "tips": [ { "title": "Pack light for the trains", "text": "..." } ],

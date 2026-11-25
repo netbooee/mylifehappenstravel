@@ -273,7 +273,8 @@
       "name": "The Venetian",
       "place": "Las Vegas Strip",
       "nights": "3 nights",
-      "note": "Grand Canal Shoppes, Grand Lux Cafe, Rosina and Delmonico are all steps from the room, the Strip is walkable in both directions, and self-parking is free for hotel guests."
+      "note": "Grand Canal Shoppes, Grand Lux Cafe, Rosina and Delmonico are all steps from the room, the Strip is walkable in both directions, and self-parking is free for hotel guests.",
+      "url": "https://www.venetianlasvegas.com/"
     }
   ],
   "eats": [
@@ -281,49 +282,57 @@
       "name": "Grand Lux Cafe",
       "place": "The Venetian",
       "note": "The Cheesecake Factory's upscale concept with an extensive all-day menu – a proper sit-down breakfast without leaving the hotel. Walk in.",
-      "type": "Breakfast"
+      "type": "Breakfast",
+      "url": "https://locations.grandluxcafe.com/nv/las-vegas/1/"
     },
     {
       "name": "Gordon Ramsay Burger",
       "place": "The Flamingo",
       "note": "Casual and satisfying, and exactly right before a two-hour concert. The Hell's Kitchen burger and truffle fries are the go-to order.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.gordonramsayrestaurants.com/en/us/gordon-ramsay-burger/locations/flamingo-las-vegas"
     },
     {
       "name": "Smith & Wollensky's",
       "place": "Grand Canal Shoppes, The Venetian",
       "note": "Classic American steakhouse with excellent cuts and an impressive wine list. The dinner menu starts at 5 PM, so book for 5 or later if you want it.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.smithandwollensky.com/locations/las-vegas/"
     },
     {
       "name": "Esther's Kitchen",
       "place": "Arts District",
       "note": "One of Las Vegas's most acclaimed non-casino restaurants: wood-fired, Italian-influenced cooking, excellent pasta and a lively room. Off-Strip, so drive or Uber; reservation recommended.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://www.estherslv.com/"
     },
     {
       "name": "Delmonico Steakhouse",
       "place": "The Venetian",
       "note": "Emeril Lagasse's flagship steakhouse – aged beef, Creole-influenced sides and a beautifully designed room. A strong, no-Uber-needed final dinner.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://emerilsrestaurants.com/delmonico-steakhouse/"
     },
     {
       "name": "Milk Bar",
       "place": "The Cosmopolitan",
       "note": "Famous for Cereal Milk soft serve. Open late, inexpensive and genuinely delicious after the Bellagio fountains or a Strip walk.",
-      "type": "Dessert"
+      "type": "Dessert",
+      "url": "https://www.cosmopolitanlasvegas.com/restaurants/milk-bar"
     },
     {
       "name": "Rosina Cocktail Lounge",
       "place": "The Venetian",
       "note": "Classic cocktails in a relaxed but upscale room – not a club, not a dive. Exactly the right vibe after a long day; no reservation needed.",
-      "type": "Drinks"
+      "type": "Drinks",
+      "url": "https://www.venetianlasvegas.com/dining/nightlife-bars/rosina-cocktail-lounge.html"
     },
     {
       "name": "The Chandelier Lounge",
       "place": "The Cosmopolitan",
       "note": "A stunning three-story lounge inside a massive chandelier installation. Craft cocktails and a grown-up energy – one of the best bars in Las Vegas.",
-      "type": "Drinks"
+      "type": "Drinks",
+      "url": "https://www.cosmopolitanlasvegas.com/lounges-bars/the-chandelier"
     },
     {
       "name": "Skyfall Lounge",
@@ -335,19 +344,22 @@
       "name": "Giordano's",
       "place": "Las Vegas Strip",
       "note": "Chicago-style deep dish pizza – hearty and familiar for a casual dinner when nobody wants another steakhouse.",
-      "type": "Pizza"
+      "type": "Pizza",
+      "url": "https://giordanos.com/locations/las-vegas-nv/"
     },
     {
       "name": "Earl of Sandwich",
       "place": "Planet Hollywood",
       "note": "Hot pressed sandwiches, fast service and low prices – a reliable grab-and-go between Strip activities.",
-      "type": "Quick eats"
+      "type": "Quick eats",
+      "url": "https://earlofsandwichusa.com/locations/planet-hollywood-resort-casino/"
     },
     {
       "name": "Pink Box Donuts",
       "place": "The Plaza, Fremont Street",
       "note": "Creative donut flavors and an inexpensive stop during a Fremont Street evening.",
-      "type": "Dessert"
+      "type": "Dessert",
+      "url": "https://pinkboxdoughnuts.com/fremont-street-donuts/"
     }
   ],
   "book_ahead": [

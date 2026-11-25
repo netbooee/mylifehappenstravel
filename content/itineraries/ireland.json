@@ -295,7 +295,8 @@
       "name": "Hotel in the Grafton Street area",
       "place": "Dublin",
       "nights": "6 nights",
-      "note": "A central base for the whole week; almost everything in Dublin was within walking distance."
+      "note": "A central base for the whole week; almost everything in Dublin was within walking distance.",
+      "map": false
     }
   ],
   "eats": [
@@ -303,7 +304,8 @@
       "name": "Nan Chinese Restaurant",
       "place": "Dublin (near Grafton Street)",
       "note": "Casual, well priced and close to the hotel: a no-fuss dinner after a long travel day.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.nanchinese.ie/"
     },
     {
       "name": "Two Pups Coffee",
@@ -315,19 +317,22 @@
       "name": "Liberties Gate Bar and Restaurant",
       "place": "The Liberties, Dublin",
       "note": "A solid alternative to Two Pups for a more substantial lunch.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://www.hyattrestaurants.com/en/dublin/restaurant/liberties-gate-bar-restaurant"
     },
     {
       "name": "Spitalfields",
       "place": "The Liberties, Dublin",
       "note": "A proper Irish gastropub. Dress well and come hungry: there's a minimum of 3 dishes per person, including a main.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://spitalfields.ie/"
     },
     {
       "name": "Bartley's Bar at The Grafton",
       "place": "Grafton Street area, Dublin",
       "note": "Food until 9:30 PM: close and easy after the 13-hour Northern Ireland tour.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.thegrafton.ie/bartleys-bar/"
     },
     {
       "name": "Tram Coffee & Wine",
@@ -339,37 +344,43 @@
       "name": "Skerries Mills café",
       "place": "Skerries",
       "note": "Cream tea with a freshly baked scone made from flour milled on site.",
-      "type": "Cream tea"
+      "type": "Cream tea",
+      "url": "https://www.skerriesmills.ie/attractions/the-watermill-cafe/"
     },
     {
       "name": "Stoop Your Head",
       "place": "Harbour Road, Skerries",
       "note": "The top-rated restaurant in Skerries, right on the harbour. Classic Irish food and a highlight of the coastal day trip.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://stoopyourhead.ie/"
     },
     {
       "name": "Java's Crepes",
       "place": "Abbeygate Street, Galway",
       "note": "A standout lunch stop during the Galway stop on the Cliffs of Moher tour.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://www.javascafe.ie/"
     },
     {
       "name": "BAMBINO",
       "place": "Stephen Street Lower, Dublin",
       "note": "Big New York–style pizza slices, late hours, no fuss. The perfect end to a long tour day.",
-      "type": "Pizza"
+      "type": "Pizza",
+      "url": "https://bambino.ie/"
     },
     {
       "name": "DiFontaine's",
       "place": "Parliament Street, Temple Bar, Dublin",
       "note": "Late-night pizza right on the walk back from the tour drop-off.",
-      "type": "Pizza"
+      "type": "Pizza",
+      "url": "https://difontainespizzeria.ie/"
     },
     {
       "name": "Pickle",
       "place": "Dublin city centre",
       "note": "Michelin-recommended modern Indian and one of Dublin's most acclaimed restaurants. Worth the splurge, but book well in advance.",
-      "type": "Splurge"
+      "type": "Splurge",
+      "url": "https://picklerestaurant.com/"
     },
     {
       "name": "Stage Door Café",

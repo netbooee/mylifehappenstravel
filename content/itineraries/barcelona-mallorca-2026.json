@@ -325,13 +325,15 @@
       "name": "InterContinental Barcelona",
       "place": "Barcelona",
       "nights": "2 nights",
-      "note": "On Montjuïc, 5–10 minutes' walk from the Palau Nacional, with a rooftop pool and bar."
+      "note": "On Montjuïc, 5–10 minutes' walk from the Palau Nacional, with a rooftop pool and bar.",
+      "url": "https://barcelona.intercontinental.com/"
     },
     {
       "name": "Zafiro Palace Andratx",
       "place": "Camp de Mar, Mallorca",
       "nights": "5 nights",
-      "note": "Our base for five slow days on Mallorca's southwest coast."
+      "note": "Our base for five slow days on Mallorca's southwest coast.",
+      "url": "https://www.zafirohotels.com/en/zafiro-palace-andratx/"
     }
   ],
   "eats": [
@@ -363,7 +365,8 @@
       "name": "Mercat de la Sagrada Família",
       "place": "Barcelona (Sagrada Família)",
       "note": "A one-minute walk from the basilica, with stalls selling sandwiches, empanadas, fruit and local snacks.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://ajuntament.barcelona.cat/mercats/ca/mercat-de-la-sagrada-familia"
     },
     {
       "name": "Restaurant Terra Mía",
