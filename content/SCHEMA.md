@@ -49,7 +49,7 @@ All text is plain text (no HTML). Keep the writing in our own voice ("we", "us")
   },
   "videos": ["4GLtHpa4wJE"],                 // YouTube ids from content/videos.json to show on this trip
   "note": "our favourite yet!",              // optional handwritten aside, shown slanted on the trip's cards and header
-  "weather": { ... }                         // filled in by tools/weather.py; don't edit by hand                  // YouTube ids from content/videos.json to show on this trip
+  "weather": { ... }                         // filled in by tools/weather.py; don't edit by hand
 }
 ```
 
