@@ -368,8 +368,8 @@ def month_year(t: dict) -> str:
 # ── Shared page chrome ────────────────────────────────────────────────────────
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-         '<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800'
-         '&family=Schibsted+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">')
+         '<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500'
+         '&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">')
 
 
 def head(title: str, desc: str, path: str, image: str = "valley-of-fire-1", noindex: bool = False, extra: str = "") -> str:
@@ -391,7 +391,7 @@ def head(title: str, desc: str, path: str, image: str = "valley-of-fire-1", noin
 <meta property="og:url" content="{DOMAIN}{path}">
 <meta property="og:image" content="{DOMAIN}/assets/img/{image}-{share_w}.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#f1f2ec">
+<meta name="theme-color" content="#faf6ef">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 {FONTS}
 <link rel="stylesheet" href="/assets/css/site.css">
