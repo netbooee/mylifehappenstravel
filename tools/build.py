@@ -377,6 +377,13 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
          '&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;600&display=swap" rel="stylesheet">')
 
 
+def asset_version(rel: str) -> str:
+    """Short fingerprint of an asset's contents. Browsers keep /assets/* for a week (netlify.toml),
+    so the link changes whenever the file does and nobody is left with an outdated stylesheet."""
+    import hashlib
+    return hashlib.sha1((SITE / "assets" / rel).read_bytes()).hexdigest()[:10]
+
+
 def head(title: str, desc: str, path: str, image: str = "valley-of-fire-1", noindex: bool = False, extra: str = "") -> str:
     full = title if "My Life Happens" in title else f"{title} · My Life Happens Travel"
     robots = '<meta name="robots" content="noindex">' if noindex else f'<link rel="canonical" href="{DOMAIN}{path}">'
@@ -399,8 +406,8 @@ def head(title: str, desc: str, path: str, image: str = "valley-of-fire-1", noin
 <meta name="theme-color" content="#faf6ef">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 {FONTS}
-<link rel="stylesheet" href="/assets/css/site.css">
-{extra}<script src="/assets/js/site.js" defer></script>
+<link rel="stylesheet" href="/assets/css/site.css?v={asset_version("css/site.css")}">
+{extra}<script src="/assets/js/site.js?v={asset_version("js/site.js")}" defer></script>
 </head>
 """
 
