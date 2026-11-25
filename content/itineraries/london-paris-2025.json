@@ -659,19 +659,22 @@
       "name": "Byward Kitchen & Bar",
       "place": "London",
       "note": "Three minutes from the Tower of London. Booked on their website.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://www.bywardkitchenandbar.com/"
     },
     {
       "name": "Steak & Company",
       "place": "London",
       "note": "152 Gloucester Road, two minutes from the hotel. The theatre set menu and happy hour got us out by 6:45 for Hamilton.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.steakandcompany.co.uk/"
     },
     {
       "name": "Gold Notting Hill",
       "place": "London",
       "note": "Trendy European-Mediterranean spot at 95–97 Portobello Road for pasta, seafood and wood-fired pizza.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://www.goldnottinghill.com/"
     },
     {
       "name": "Farmacy",
@@ -683,55 +686,64 @@
       "name": "Eggbreak",
       "place": "London",
       "note": "Casual all-day brunch at 30 Uxbridge Street, known for eggs, burgers and sandwiches.",
-      "type": "Brunch"
+      "type": "Brunch",
+      "url": "https://eggbreak.com/"
     },
     {
       "name": "Hogwarts Table Dinner",
       "place": "London",
       "note": "Dinner in the Great Hall in the middle of the Warner Bros. Studio Tour.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.wbstudiotour.co.uk/tickets/tickets-and-dinner-package/"
     },
     {
       "name": "Darwin Brasserie",
       "place": "London",
       "note": "Breakfast at the top of the Sky Garden. As restaurant guests we went up early and saw the gardens before we ate.",
-      "type": "Breakfast"
+      "type": "Breakfast",
+      "url": "https://skygarden.london/?p=317"
     },
     {
       "name": "Berthillon",
       "place": "Paris",
       "note": "The famous ice cream of Île Saint-Louis. Most counters close around 8 PM.",
-      "type": "Ice cream"
+      "type": "Ice cream",
+      "url": "https://berthillon.fr/"
     },
     {
       "name": "Le Vieux Bistrot",
       "place": "Paris",
       "note": "All about the cheese, at 54 Rue Mouffetard. Booked on their website.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.levieuxbistrot-paris.fr/en/"
     },
     {
       "name": "Café Kitsuné",
       "place": "Paris",
       "note": "Coffee and a light lunch at the Palais Royal.",
-      "type": "Café"
+      "type": "Café",
+      "url": "https://maisonkitsune.com/ww/storelocator-cafekitsune-palaisroyal"
     },
     {
       "name": "Le Fumoir",
       "place": "Paris",
       "note": "Casual lunch across from the Louvre.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://www.lefumoir.com/"
     },
     {
       "name": "Joséphine Chez Dumonet",
       "place": "Paris",
       "note": "Classic French bistro at 117 Rue du Cherche-Midi.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.josephinechezdumonet.fr/"
     },
     {
       "name": "Le Relais de l'Entrecôte",
       "place": "Paris",
       "note": "Steak frites at 20 Rue Saint-Benoît. No reservations, and there's often a queue.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.relaisdelentrecote.com/"
     },
     {
       "name": "Le Petit Cler",
@@ -743,7 +755,8 @@
       "name": "Boulangerie Poilâne",
       "place": "Paris",
       "note": "Famous for its pastries and apple tarts.",
-      "type": "Bakery"
+      "type": "Bakery",
+      "url": "https://poilane.com/en"
     },
     {
       "name": "Carette",
@@ -755,7 +768,8 @@
       "name": "Bateaux Mouches dinner cruise",
       "place": "Paris",
       "note": "Dinner with live music on the Seine from Port de la Conférence. Booked on Tripadvisor.",
-      "type": "Dinner cruise"
+      "type": "Dinner cruise",
+      "url": "https://www.bateaux-mouches.fr/en/cruise/dinner"
     },
     {
       "name": "Café de la Nouvelle Mairie",
@@ -767,7 +781,8 @@
       "name": "Le Coupe-Chou",
       "place": "Paris",
       "note": "Cozy, historic French restaurant near the Panthéon.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://en.lecoupechou.com/"
     },
     {
       "name": "L'Avant Comptoir",
@@ -779,7 +794,8 @@
       "name": "Odette",
       "place": "Paris",
       "note": "Cream puffs, for a snack on Rue Mouffetard.",
-      "type": "Pastry"
+      "type": "Pastry",
+      "url": "https://www.odette-paris.com/fr/"
     },
     {
       "name": "La Maison de Verlaine",
