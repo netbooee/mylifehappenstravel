@@ -274,7 +274,8 @@
       "name": "The Trade, Autograph Collection",
       "place": "Downtown Milwaukee",
       "nights": "4 nights",
-      "note": "Walking distance to the Baird Center, the RiverWalk and the Third Ward; Craft, the hotel restaurant, is a convenient but pricier fallback."
+      "note": "Walking distance to the Baird Center, the RiverWalk and the Third Ward; Craft, the hotel restaurant, is a convenient but pricier fallback.",
+      "url": "https://www.marriott.com/en-us/hotels/mkedd-the-trade-autograph-collection/overview"
     }
   ],
   "eats": [
@@ -282,55 +283,64 @@
       "name": "The Social American Tavern",
       "place": "611 N Broadway",
       "note": "Our first-night dinner, booked on OpenTable.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.thesocialmke.com/"
     },
     {
       "name": "Craft",
       "place": "The Trade, Autograph Collection",
       "note": "The hotel restaurant – reliable and no-Uber-needed, but on the pricier side with fewer casual options. Good for a lighter dinner before a fencing day.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.marriott.com/en-us/hotels/mkedd-the-trade-autograph-collection/dining/"
     },
     {
       "name": "Giordano's",
       "place": "730 N Rush St, Chicago",
       "note": "Famous Chicago-style deep dish – takes about 45 minutes to bake, so call ahead (312-951-0747) and ask for it ready by noon.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://giordanos.com/locations/gold-coast-magnificent-mile/"
     },
     {
       "name": "Luke's Lobster",
       "place": "134 N LaSalle St, Chicago",
       "note": "Fast-casual lobster, crab and shrimp rolls – ask for no mayo. About $18 for a roll; quick enough to eat at the Riverwalk.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://lukeslobster.com/pages/city-hall"
     },
     {
       "name": "Lakefront Brewery",
       "place": "1872 N Commerce St",
       "note": "Tour the brewery, then stay for lunch if a table's free – the cheese curds are supposed to be excellent.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://lakefrontbrewery.com/brewery-tours/our-famous-tour"
     },
     {
       "name": "Purple Door Ice Cream",
       "place": "205 S 2nd St",
       "note": "Open until 10 PM, with good reviews and unique flavors.",
-      "type": "Dessert"
+      "type": "Dessert",
+      "url": "https://purpledooricecream.com/"
     },
     {
       "name": "Cafe at the Pfister",
       "place": "424 E Wisconsin Ave",
       "note": "Breakfast only served until 11 AM, then the lunch menu starts. No reservation needed.",
-      "type": "Brunch"
+      "type": "Brunch",
+      "url": "https://thepfisterhotel.com/dining/cafe-at-the-pfister"
     },
     {
       "name": "Oak Barrel Public House",
       "place": "Around the corner from The Trade",
       "note": "Convenient on a packing night; reviews are mixed.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://oakbarrelmilwaukee.com/"
     },
     {
       "name": "Milwaukee Public Market",
       "place": "Historic Third Ward",
       "note": "A good casual lunch stop if there's time on either end of the trip.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://milwaukeepublicmarket.org/"
     }
   ],
   "book_ahead": [

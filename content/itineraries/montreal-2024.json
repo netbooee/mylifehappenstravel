@@ -285,13 +285,15 @@
       "name": "Hyatt Place Saratoga/Malta",
       "place": "Malta, New York",
       "nights": "1 night",
-      "note": "A stop on the way north so Thursday's drive is short. Breakfast at the hotel before we leave. Aug 21."
+      "note": "A stop on the way north so Thursday's drive is short. Breakfast at the hotel before we leave. Aug 21.",
+      "url": "https://www.hyatt.com/hyatt-place/en-US/albzs-hyatt-place-saratoga-malta"
     },
     {
       "name": "Le Saint-Sulpice Hotel Montréal",
       "place": "Old Montreal",
       "nights": "3 nights",
-      "note": "414 Rue Saint-Sulpice, beside the Notre-Dame Basilica. An easy walk to the Old Port, Place Jacques-Cartier and Rue Saint-Paul. Aug 22–25."
+      "note": "414 Rue Saint-Sulpice, beside the Notre-Dame Basilica. An easy walk to the Old Port, Place Jacques-Cartier and Rue Saint-Paul. Aug 22–25.",
+      "url": "https://www.lesaintsulpice.com/en/hotel/about-us"
     }
   ],
   "eats": [
@@ -299,49 +301,57 @@
       "name": "Schwartz's Deli",
       "place": "The Plateau",
       "note": "3895 Boulevard Saint-Laurent. The famous Montreal smoked meat sandwich. Expect a line at lunchtime.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://schwartzsdeli.com/"
     },
     {
       "name": "La Banquise",
       "place": "The Plateau",
       "note": "Poutine with every topping you can think of, next to La Fontaine Park. Our backup if the line at Schwartz's is too long.",
-      "type": "Poutine"
+      "type": "Poutine",
+      "url": "https://www.labanquise.com/"
     },
     {
       "name": "Vieux-Port Steakhouse & Terrasse",
       "place": "Old Montreal",
       "note": "Steak dinner with a terrace, a short walk from Place Jacques-Cartier. Booked on OpenTable.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://vieuxportsteakhouse.com/en/venues/"
     },
     {
       "name": "Gaspar Brasserie Française",
       "place": "Old Montreal",
       "note": "A French brasserie, close enough to walk to the ghost tour after dinner. Booked on OpenTable.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://gasparmtl.com/en/"
     },
     {
       "name": "Jacopo",
       "place": "Old Montreal",
       "note": "Our Saturday dinner. Booked on OpenTable.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://jacopomtl.com/en/"
     },
     {
       "name": "Olive et Gourmando",
       "place": "Old Montreal",
       "note": "A popular bakery and café for breakfast.",
-      "type": "Breakfast"
+      "type": "Breakfast",
+      "url": "https://oliveetgourmando.com/en"
     },
     {
       "name": "Le Petit Dep",
       "place": "Old Montreal",
       "note": "A café with two locations. Good for breakfast.",
-      "type": "Breakfast"
+      "type": "Breakfast",
+      "url": "https://www.lepetitdep.com/"
     },
     {
       "name": "Café Olimpico Vieux-Montréal",
       "place": "Old Montreal",
       "note": "More about the coffee than the food.",
-      "type": "Coffee"
+      "type": "Coffee",
+      "url": "https://cafeolimpico.com/"
     },
     {
       "name": "Café de Mercanti",
@@ -353,31 +363,36 @@
       "name": "Bonsecours Market",
       "place": "Old Montreal",
       "note": "Lunch or snacks between the Old Port and Rue Saint-Paul.",
-      "type": "Market"
+      "type": "Market",
+      "url": "https://www.marchebonsecours.qc.ca/en/"
     },
     {
       "name": "Terrasse Nelligan",
       "place": "Old Montreal",
       "note": "A rooftop terrace that's good for lunch or drinks.",
-      "type": "Rooftop"
+      "type": "Rooftop",
+      "url": "https://hotelnelligan.com/food/terrasse-nelligan/"
     },
     {
       "name": "Nacarat Rooftop Bar",
       "place": "Montreal",
       "note": "Another rooftop option for lunch or drinks.",
-      "type": "Rooftop"
+      "type": "Rooftop",
+      "url": "https://www.barnacarat.com/"
     },
     {
       "name": "Fairmount Bagel",
       "place": "Mile End",
       "note": "One half of the great Montreal bagel debate.",
-      "type": "Bagels"
+      "type": "Bagels",
+      "url": "https://fairmountbagel.com/"
     },
     {
       "name": "St-Viateur Bagel",
       "place": "Mile End",
       "note": "The other half. Taste them side by side and pick a winner.",
-      "type": "Bagels"
+      "type": "Bagels",
+      "url": "https://stviateurbagel.com"
     }
   ],
   "book_ahead": [

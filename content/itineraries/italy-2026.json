@@ -519,19 +519,22 @@
       "name": "Hotel L'Orologio Firenze",
       "place": "Florence",
       "nights": "5 nights",
-      "note": "On Piazza Santa Maria Novella, a short walk from Firenze SMN station and perfectly placed for exploring the center on foot. Apr 3–8."
+      "note": "On Piazza Santa Maria Novella, a short walk from Firenze SMN station and perfectly placed for exploring the center on foot. Apr 3–8.",
+      "url": "https://www.hotelorologioflorence.com/"
     },
     {
       "name": "Palazzo Veneziano",
       "place": "Venice",
       "nights": "3 nights",
-      "note": "A walk or water-taxi ride from Venezia Santa Lucia station. Apr 8–11."
+      "note": "A walk or water-taxi ride from Venezia Santa Lucia station. Apr 8–11.",
+      "url": "https://www.palazzoveneziano.com/en/4-star-venice/hotel-in-dorsoduro-district-venice"
     },
     {
       "name": "Grand Hotel Cavour",
       "place": "Florence",
       "nights": "1 night",
-      "note": "Centrally located for our last night, with most of the city walkable. Apr 11."
+      "note": "Centrally located for our last night, with most of the city walkable. Apr 11.",
+      "url": "https://www.hotelcavour.com/"
     }
   ],
   "eats": [
@@ -539,43 +542,50 @@
       "name": "L'Osteria di Giovanni",
       "place": "Florence",
       "note": "Classic Florentine trattoria, with traditional cooking in a warm room. The ideal first dinner in the city.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.osteriadigiovanni.it/"
     },
     {
       "name": "Osteria Lucignolo",
       "place": "Florence",
       "note": "Booked through TheFork with 30% off food. Pair it with sunset at Piazzale Michelangelo or San Miniato first.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.osterialucignolofirenze.com/"
     },
     {
       "name": "Osteria Pastella",
       "place": "Florence",
       "note": "The cheese-wheel pasta experience, finished at the table. Cancel more than 2 hours ahead or pay a €20 fee.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.osteriapastella.it/"
     },
     {
       "name": "Il Bufalo Trippone",
       "place": "Florence",
       "note": "Small, authentic sandwich shop with rave reviews from locals.",
-      "type": "Sandwiches"
+      "type": "Sandwiches",
+      "url": "https://www.bufalotrippone.it/"
     },
     {
       "name": "Pino's Sandwiches / Salumeria Verdi",
       "place": "Florence",
       "note": "Excellent classic panini. There's usually a line.",
-      "type": "Sandwiches"
+      "type": "Sandwiches",
+      "url": "https://www.pinossandwiches.com/"
     },
     {
       "name": "Mercato Centrale",
       "place": "Florence",
       "note": "Food-court-style market near Santa Maria Novella, great for grazing.",
-      "type": "Market"
+      "type": "Market",
+      "url": "https://www.mercatocentrale.it/en/mercato-centrale-florence/"
     },
     {
       "name": "Hotel La Scaletta rooftop bar",
       "place": "Florence",
       "note": "Drinks with a view over the Ponte Vecchio, if it's open.",
-      "type": "Drinks"
+      "type": "Drinks",
+      "url": "https://www.hotellascaletta.it/?act=the-best-rooftop-bar-in-florence-drinks-with-a-view"
     },
     {
       "name": "Mister Pizza",
@@ -587,7 +597,8 @@
       "name": "LiVio Pizzeria",
       "place": "Florence",
       "note": "Another easy walk-in pizza option.",
-      "type": "Pizza"
+      "type": "Pizza",
+      "url": "https://www.pizzerialivio.com/la-pizzeria/"
     },
     {
       "name": "Pasticceria Salza",
@@ -611,7 +622,8 @@
       "name": "Ciacco",
       "place": "Lucca",
       "note": "Casual sit-down bistro on Piazza Napoleone.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://www.ciaccobistrot.it/"
     },
     {
       "name": "Pasticceria Sessa 1930",
@@ -623,7 +635,8 @@
       "name": "Pasqualino Al Colosseo dal 1956",
       "place": "Rome",
       "note": "Classic Italian restaurant with pasta dishes by the Colosseum, for a sit-down lunch. Hard to fit in if you're also going inside the Pantheon.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://pasqualinoalcolosseo.com/"
     },
     {
       "name": "Mizio's Street Food",
@@ -641,7 +654,8 @@
       "name": "All'Antico Vinaio",
       "place": "Rome",
       "note": "Famous hearty sandwiches near Piazza Maddalena.",
-      "type": "Sandwiches"
+      "type": "Sandwiches",
+      "url": "https://www.allanticovinaio.com/roma/"
     },
     {
       "name": "Gelato in Trevi",
@@ -653,7 +667,8 @@
       "name": "Impronta Restaurant Venice",
       "place": "Venice",
       "note": "Our first dinner in Venice, 15 minutes from Palazzo Veneziano.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://improntarestaurantvenice.com/"
     },
     {
       "name": "San Silvestro Restaurant",

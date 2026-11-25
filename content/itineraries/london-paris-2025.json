@@ -597,13 +597,15 @@
       "name": "The Bailey's Hotel London",
       "place": "London",
       "nights": "4 nights",
-      "note": "In South Kensington, across from Gloucester Road Tube station. Kensington Palace, Hyde Park and the big museums are all walkable. Apr 12–16."
+      "note": "In South Kensington, across from Gloucester Road Tube station. Kensington Palace, Hyde Park and the big museums are all walkable. Apr 12–16.",
+      "url": "https://www.millenniumhotels.com/en/destinations/europe/united-kingdom/london/the-baileys-hotel-london/"
     },
     {
       "name": "Hotel Atmospheres",
       "place": "Paris",
       "nights": "4 nights",
-      "note": "In the Latin Quarter, 15 minutes on foot from Sainte-Chapelle and Notre-Dame and 10 minutes from Rue Mouffetard. Apr 16–20."
+      "note": "In the Latin Quarter, 15 minutes on foot from Sainte-Chapelle and Notre-Dame and 10 minutes from Rue Mouffetard. Apr 16–20.",
+      "url": "https://2lcollection.com/en/hotel-atmospheres.html"
     }
   ],
   "eats": [
@@ -611,7 +613,8 @@
       "name": "The Orangery at Kensington Palace",
       "place": "London",
       "note": "Traditional afternoon tea with scones, sandwiches and pastries, right before our Kensington Palace tour.",
-      "type": "Afternoon tea"
+      "type": "Afternoon tea",
+      "url": "https://www.hrp.org.uk/kensington-palace/visit/the-orangery-restaurant/"
     },
     {
       "name": "Café de Nata",
@@ -623,7 +626,8 @@
       "name": "Rocca",
       "place": "London",
       "note": "Classic Italian comfort food at 73 Old Brompton Road, a 10-minute walk from The Bailey's.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.roccarestaurants.com/"
     },
     {
       "name": "Honest Burger",
@@ -635,13 +639,15 @@
       "name": "Borough Market",
       "place": "London",
       "note": "Brindisa's chorizo and rocket rolls, Kappacasein's grilled cheese, Bread Ahead's doughnuts and the chocolate strawberry stand.",
-      "type": "Market"
+      "type": "Market",
+      "url": "https://boroughmarket.org.uk/"
     },
     {
       "name": "Flat Iron Covent Garden",
       "place": "London",
       "note": "Great-value steak at 17–18 Henrietta Street. We booked a late table.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://flatironsteak.co.uk/restaurant/covent-garden/"
     },
     {
       "name": "Cadogan Arms",

@@ -491,25 +491,29 @@
       "name": "Argonaut Hotel",
       "place": "Fisherman's Wharf, San Francisco",
       "nights": "3 nights",
-      "note": "A nautical-themed hotel in an old cannery, an easy walk to the piers, Ghirardelli Square and the Alcatraz ferry."
+      "note": "A nautical-themed hotel in an old cannery, an easy walk to the piers, Ghirardelli Square and the Alcatraz ferry.",
+      "url": "https://www.argonauthotel.com/"
     },
     {
       "name": "The Inn on Pine",
       "place": "Calistoga",
       "nights": "2 nights",
-      "note": "Walkable to the Calistoga shops, restaurants and Tank Garage Winery."
+      "note": "Walkable to the Calistoga shops, restaurants and Tank Garage Winery.",
+      "url": "https://www.theinnonpine.com/"
     },
     {
       "name": "Brewery Gulch Inn",
       "place": "Mendocino",
       "nights": "2 nights",
-      "note": "Breakfast, an evening wine hour and dinner on site, a few minutes south of Mendocino village."
+      "note": "Breakfast, an evening wine hour and dinner on site, a few minutes south of Mendocino village.",
+      "url": "https://www.brewerygulchinn.com/"
     },
     {
       "name": "Marriott's Timber Lodge",
       "place": "South Lake Tahoe",
       "nights": "3 nights",
-      "note": "In Heavenly Village, walkable to restaurants and shops."
+      "note": "In Heavenly Village, walkable to restaurants and shops.",
+      "url": "https://www.marriott.com/en-us/hotels/rnotl-marriotts-timber-lodge/overview/"
     }
   ],
   "eats": [
@@ -517,31 +521,36 @@
       "name": "Ferry Building farmers market",
       "place": "San Francisco",
       "note": "Saturdays 8 AM – 2 PM. We grazed here instead of a sit-down lunch.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://foodwise.org/ferry-plaza-farmers-market"
     },
     {
       "name": "Scoma's",
       "place": "San Francisco",
       "note": "Seafood on Fisherman's Wharf, a 10-minute walk from the Alcatraz ferry at Pier 33.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://scomas.com/"
     },
     {
       "name": "The Buena Vista",
       "place": "San Francisco",
       "note": "Dinner outside and the famous Irish coffee.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.thebuenavista.com/"
     },
     {
       "name": "Calistoga Inn & Brewery",
       "place": "Calistoga",
       "note": "Outdoor dining by the river, walkable from the Inn on Pine.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.calistogainn.com/"
     },
     {
       "name": "Evangeline",
       "place": "Calistoga",
       "note": "New Orleans-inspired, walkable from the inn.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.evangelinenapa.com/"
     },
     {
       "name": "Madrigal Family Winery",
@@ -551,31 +560,36 @@
     {
       "name": "Bennett Lane Winery",
       "place": "Calistoga",
-      "type": "Tasting"
+      "type": "Tasting",
+      "url": "https://www.bennettlane.com/plan-a-visit"
     },
     {
       "name": "Tank Garage Winery",
       "place": "Calistoga",
       "note": "A 1930s gas station turned tasting room, right next to the inn.",
-      "type": "Tasting"
+      "type": "Tasting",
+      "url": "https://www.tankgaragewinery.com/calistoga"
     },
     {
       "name": "Mosswood Market",
       "place": "Anderson Valley",
       "note": "A café stop in Boonville on the drive to Mendocino.",
-      "type": "Lunch"
+      "type": "Lunch",
+      "url": "https://www.mosswoodmarketcafe.com/"
     },
     {
       "name": "Brewery Gulch Inn",
       "place": "Mendocino",
       "note": "Dinner and the wine hour at our inn, two nights running.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://www.brewerygulchinn.com/"
     },
     {
       "name": "Izabella",
       "place": "Lake Tahoe",
       "note": "Italian, walkable from the Timber Lodge.",
-      "type": "Dinner"
+      "type": "Dinner",
+      "url": "https://izabellatahoe.com/"
     }
   ],
   "book_ahead": [
