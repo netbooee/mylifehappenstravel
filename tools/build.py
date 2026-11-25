@@ -511,21 +511,67 @@ def wear_notes(sp: dict) -> list[str]:
     return notes
 
 
+WX_ICONS = {
+    "sun": '<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="12" fill="#ffd977"/><g stroke="#ffd977" stroke-width="4" stroke-linecap="round"><path d="M32 6v8M32 50v8M6 32h8M50 32h8M13.6 13.6l5.7 5.7M44.7 44.7l5.7 5.7M13.6 50.4l5.7-5.7M44.7 19.3l5.7-5.7"/></g></svg>',
+    "partly": '<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="24" cy="24" r="10" fill="#ffd977"/><g stroke="#ffd977" stroke-width="3.5" stroke-linecap="round"><path d="M24 4v6M4 24h6M9.9 9.9l4.2 4.2M38.1 9.9l-4.2 4.2"/></g><path d="M22 52h28a10 10 0 0 0 0-20 14 14 0 0 0-26.6 4.2A8 8 0 0 0 22 52z" fill="#fff"/></svg>',
+    "cloud": '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 48h30a11 11 0 0 0 0-22 15 15 0 0 0-28.6 4.6A8.7 8.7 0 0 0 18 48z" fill="#fff"/></svg>',
+    "rain": '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 40h30a11 11 0 0 0 0-22 15 15 0 0 0-28.6 4.6A8.7 8.7 0 0 0 18 40z" fill="#fff"/><g stroke="#cfe6ff" stroke-width="3.5" stroke-linecap="round"><path d="M22 47l-3 8M33 47l-3 8M44 47l-3 8"/></g></svg>',
+    "snow": '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 38h30a11 11 0 0 0 0-22 15 15 0 0 0-28.6 4.6A8.7 8.7 0 0 0 18 38z" fill="#fff"/><g fill="#fff"><circle cx="22" cy="48" r="3"/><circle cx="33" cy="54" r="3"/><circle cx="44" cy="48" r="3"/></g></svg>',
+}
+
+
+def sky(sp: dict) -> str:
+    """Which weather icon fits: mostly the share of rainy days, then how warm it was."""
+    wet = sp.get("rain_days", 0) / max(sp.get("days", 1), 1)
+    if sp["high"] < 38:
+        return "snow"
+    if wet >= .35:
+        return "rain"
+    if wet >= .15:
+        return "partly"
+    return "sun" if sp["high"] >= 65 else "partly"
+
+
 def wear_section(t: dict) -> str:
     w = t.get("weather") or {}
     spots = w.get("spots") or []
     if not spots:
         return ""
-    rows = "".join(f"""<li class="wx">
-  <div class="wx-top"><h3>{e(sp["place"])}</h3><span class="wx-feel wx-{feel(sp["high"])[0].lower()}">{feel(sp["high"])[0]}</span></div>
-  <p class="wx-temps"><span>{e(sp["dates"])}</span><span>Highs around <b>{sp["high"]}°F</b></span><span>lows around <b>{sp["low"]}°F</b></span></p>
-  <ul class="wx-wear">{"".join(f"<li>{e(n)}</li>" for n in wear_notes(sp))}</ul>
-</li>""" for sp in spots)
+    # one temperature scale for the whole trip, so the bars compare place to place
+    lo = min(sp.get("coolest", sp["low"]) for sp in spots) - 4
+    hi = max(sp.get("warmest", sp["high"]) for sp in spots) + 4
+    pct = lambda v: round((v - lo) / (hi - lo) * 100, 1)
+    # bar colours follow the actual temperature (°F), like a weather app: icy blue to hot red
+    stops = [(35, "#7fb2ff"), (50, "#8fd9e6"), (60, "#bfe7a6"), (68, "#ffe08a"), (78, "#ffb46b"), (88, "#ff7f5c"), (98, "#e8483a")]
+    grad = "linear-gradient(90deg," + ",".join(f"{c} {max(min(pct(t), 140), -40)}%" for t, c in stops) + ")"
+    month = w.get("basis") == "month"
+    cards = []
+    for sp in spots:
+        name, _ = feel(sp["high"])
+        cool, warm = sp.get("coolest", sp["low"]), sp.get("warmest", sp["high"])
+        rd, days = sp.get("rain_days", 0), sp.get("days", 0)
+        rain = (f"Dry all {days} days" if not rd else f"Rain on {rd} of {days} days") if not month else \
+               (f"Rain on {rd} of {days} days in the month" if rd else "A dry month")
+        cards.append(f"""<li class="wx wx-{name.lower()}">
+  <div class="wx-sky">
+    <div class="wx-head"><div><h3>{e(sp["place"])}</h3><p class="wx-dates">{e(sp["dates"])}</p></div><span class="wx-icon">{WX_ICONS[sky(sp)]}</span></div>
+    <div class="wx-now"><span class="wx-big">{sp["high"]}°</span><span class="wx-feel">{name}</span></div>
+    <p class="wx-hl"><span>H {sp["high"]}°</span><span>L {sp["low"]}°</span><span class="wx-rain">{'💧' if rd else '☀︎'} {e(rain)}</span></p>
+    <div class="wx-range" role="img" aria-label="Temperatures ranged from {cool}°F to {warm}°F; average low {sp["low"]}°F, average high {sp["high"]}°F">
+      <span class="wx-end">{cool}°</span>
+      <span class="wx-track"><span class="wx-fill" style="background:{grad};clip-path:inset(0 {100 - pct(warm)}% 0 {pct(cool)}% round 99px)"></span><span class="wx-dot" style="left:{pct(sp["low"])}%"></span><span class="wx-dot" style="left:{pct(sp["high"])}%"></span></span>
+      <span class="wx-end">{warm}°</span>
+    </div>
+  </div>
+  <div class="wx-pack"><p class="wx-pack-title">What to pack</p><ul class="wx-wear">{"".join(f"<li>{e(n)}</li>" for n in wear_notes(sp))}</ul></div>
+</li>""")
+    lede = ("Average daytime highs and overnight lows for the whole month we traveled, in each place."
+            if month else "Based on the weather we actually had: average daytime highs and overnight lows for our dates in each place.")
     return f"""<section class="block wear" id="wear">
   <h2>{ICONS["shirt"]}What to wear</h2>
-  <p class="wear-lede">{"Average daytime highs and overnight lows for the whole month we traveled, in each place." if w.get("basis") == "month" else "Based on the weather we actually had: average daytime highs and overnight lows for our dates in each place."}</p>
-  <ul class="wx-list">{rows}</ul>
-  <p class="wear-source">Temperatures: Open-Meteo historical weather. More detailed packing notes to come.</p>
+  <p class="wear-lede">{lede} The bar shows the coldest and warmest it got, on one scale for the whole trip; the dots are the average low and high.</p>
+  <ul class="wx-list">{"".join(cards)}</ul>
+  <p class="wear-source">Temperatures in °F from Open-Meteo historical weather. More detailed packing notes to come.</p>
 </section>"""
 
 

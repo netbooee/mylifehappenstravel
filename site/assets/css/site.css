@@ -505,19 +505,37 @@ svg { flex: none; }
 .hero-note { font-size: clamp(30px, 3.4vw, 40px); color: var(--sun); margin: 18px 0 0; transform: rotate(-3deg); text-shadow: 0 1px 12px rgba(0, 0, 0, .35); }
 @media print { .note { transform: none; } }
 
-/* ── What to wear ── */
-.wear-lede { color: var(--ink-soft); margin: 4px 0 18px; }
-.wx-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
-.wx { background: var(--card); border-radius: var(--r); padding: 20px 22px; box-shadow: var(--shadow); }
-.wx-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
-.wx-top h3 { font-size: 22px; }
-.wx-feel { font: 600 24px/1 var(--hand); transform: rotate(-4deg); white-space: nowrap; }
-.wx-hot { color: #c2502b; } .wx-warm { color: #d9862b; } .wx-mild { color: #5f7a3d; } .wx-cool { color: #2d6f78; } .wx-cold { color: #33508a; }
-.wx-temps { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 8px 0 12px; font-size: 14px; color: var(--ink-soft); }
-.wx-temps b { color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; }
-.wx-wear { margin: 0; padding-left: 18px; font-size: 15.5px; line-height: 1.5; }
+/* ── What to wear: weather-app cards ── */
+.wear-lede { color: var(--ink-soft); margin: 4px 0 20px; max-width: 46em; }
+.wx-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 18px; }
+.wx { border-radius: 20px; overflow: hidden; background: var(--card); box-shadow: 0 1px 2px rgba(34, 27, 21, .08), 0 18px 36px -18px rgba(34, 27, 21, .45); display: flex; flex-direction: column; }
+.wx-sky { position: relative; color: #fff; padding: 18px 20px 20px; background: var(--wx-bg); isolation: isolate; }
+.wx-sky::after { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(120% 80% at 85% 0%, rgba(255, 255, 255, .28), transparent 60%); }
+.wx-hot { --wx-bg: linear-gradient(165deg, #f29a4a 0%, #e0683a 45%, #b8432a 100%); }
+.wx-warm { --wx-bg: linear-gradient(165deg, #f4c15a 0%, #e9944a 55%, #cf6f3c 100%); }
+.wx-mild { --wx-bg: linear-gradient(165deg, #8cc3d6 0%, #5c9ab8 55%, #3f789a 100%); }
+.wx-cool { --wx-bg: linear-gradient(165deg, #7d98ab 0%, #557489 55%, #354f63 100%); }
+.wx-cold { --wx-bg: linear-gradient(165deg, #6077a6 0%, #3d5486 55%, #243457 100%); }
+.wx-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.wx-head h3 { font-size: 20px; line-height: 1.15; color: #fff; text-shadow: 0 1px 6px rgba(0, 0, 0, .15); }
+.wx-dates { margin: 4px 0 0; font-size: 13px; font-weight: 600; opacity: .9; }
+.wx-icon svg { width: 54px; height: 54px; flex: none; filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .18)); }
+.wx-now { display: flex; align-items: flex-end; gap: 12px; margin: 6px 0 2px; }
+.wx-big { font: 400 64px/.95 var(--display); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.wx-feel { font: 600 30px/1 var(--hand); transform: rotate(-5deg); margin-bottom: 8px; color: #fff3d6; }
+.wx-hl { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 6px 0 14px; font-size: 14px; font-weight: 600; }
+.wx-rain { flex-basis: 100%; font-weight: 500; opacity: .92; }
+.wx-range { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; font: 600 13px/1 var(--body); font-variant-numeric: tabular-nums; }
+.wx-end { opacity: .85; }
+.wx-track { position: relative; height: 6px; border-radius: 99px; background: rgba(255, 255, 255, .28); }
+.wx-fill { position: absolute; inset: 0; border-radius: 99px; }
+.wx-dot { position: absolute; top: 50%; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 2.5px rgba(0, 0, 0, .18); }
+.wx-pack { padding: 16px 20px 20px; flex: 1; }
+.wx-pack-title { font: 600 12px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--accent-dk); margin: 0 0 10px; }
+.wx-wear { margin: 0; padding-left: 18px; font-size: 15px; line-height: 1.5; }
 .wx-wear li + li { margin-top: 6px; }
-.wear-source { margin-top: 12px; font-size: 13px; color: var(--ink-soft); }
+.wx-wear li::marker { color: var(--accent); }
+.wear-source { margin-top: 14px; font-size: 13px; color: var(--ink-soft); }
+@media print { .wx-sky { color: var(--ink); background: none; } .wx-icon { display: none; } }
 .trip-hero h1 em { font-size: .42em; line-height: 1.25; margin-top: 14px; }
-.wx-temps span:first-child { flex-basis: 100%; font-weight: 600; color: var(--accent-dk); }
 .intro p:first-child::first-letter { font-size: 3.1em; line-height: .9; padding: 4px 8px 0 0; }
