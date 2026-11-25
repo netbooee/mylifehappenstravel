@@ -47,7 +47,9 @@ All text is plain text (no HTML). Keep the writing in our own voice ("we", "us")
     "Florence": [43.7696, 11.2558],
     "Rome": [41.9028, 12.4964]
   },
-  "videos": ["4GLtHpa4wJE"]                  // YouTube ids from content/videos.json to show on this trip
+  "videos": ["4GLtHpa4wJE"],                 // YouTube ids from content/videos.json to show on this trip
+  "note": "our favourite yet!",              // optional handwritten aside, shown slanted on the trip's cards and header
+  "weather": { ... }                         // filled in by tools/weather.py; don't edit by hand
 }
 ```
 
@@ -57,3 +59,10 @@ around); see `KIND_RULES` in `tools/build.py`. The route map only appears when e
 
 Fields other than `slug`, `title`, `summary`, `country`, `region`, `start`, `end`, `days` and
 `days_plan` may be empty (`""` or `[]`); the template simply leaves those sections out.
+
+### What to wear
+
+`tools/weather.py` looks up the weather we actually had (Open-Meteo's free historical archive) for
+each place and date range listed for the trip in its `SPOTS` table, and saves highs, lows and rainy
+days under `"weather"`. The build turns that into the "What to wear" section and a Weather line in
+"At a glance". After adding a trip, add its places to `SPOTS` and run `python3 tools/weather.py <slug>`.

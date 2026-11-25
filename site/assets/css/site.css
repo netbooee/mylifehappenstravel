@@ -16,8 +16,11 @@
   --teal-dk: #0f3336;
   --sun: #f0b541;
 
-  --display: "Fraunces", Georgia, "Times New Roman", serif;
-  --body: "Figtree", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  /* Travel Journal: Young Serif (warm old-style, one weight) for headings, Hanken Grotesk for
+     reading, Caveat for our handwritten notes. */
+  --display: "Young Serif", Georgia, "Times New Roman", serif;
+  --body: "Hanken Grotesk", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --hand: "Caveat", "Segoe Print", "Bradley Hand", cursive;
 
   --gutter: clamp(16px, 4.5vw, 56px);
   --max: 1240px;
@@ -32,8 +35,8 @@ body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.65 
 img { display: block; max-width: 100%; height: auto; }
 picture { display: block; }
 a { color: inherit; }
-h1, h2, h3, h4 { font-family: var(--display); font-weight: 500; line-height: 1.1; margin: 0; letter-spacing: -.01em; font-variation-settings: "opsz" 96; }
-h1 em, h2 em, h3 em { font-style: italic; font-weight: 400; color: var(--accent); }
+h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.12; margin: 0; letter-spacing: -.005em; }
+h1 em, h2 em, h3 em { font-style: normal; font-weight: 400; color: var(--accent); }
 p { margin: 0 0 1em; }
 p:last-child { margin-bottom: 0; }
 svg { flex: none; }
@@ -77,7 +80,7 @@ svg { flex: none; }
 .brand-mark { width: 36px; height: 36px; color: var(--sun); }
 .brand-mark circle:first-child { fill: var(--teal); }
 .over-photo .brand-mark circle:first-child { fill: rgba(255, 255, 255, .16); }
-.brand-name { display: flex; flex-direction: column; font: 600 19px/1 var(--display); letter-spacing: -.01em; }
+.brand-name { display: flex; flex-direction: column; font: 400 20px/1 var(--display); letter-spacing: -.01em; }
 .brand-name em { font: 600 10.5px/1 var(--body); letter-spacing: .32em; text-transform: uppercase; margin-top: 5px; opacity: .75; font-style: normal; }
 .site-nav { display: flex; align-items: center; gap: 4px; }
 .site-nav a { padding: 9px 14px; border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; }
@@ -114,7 +117,7 @@ svg { flex: none; }
 .stats { background: var(--teal); color: #fff; }
 .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-block: 30px; }
 .stats-row div { display: flex; flex-direction: column; gap: 4px; }
-.stats-row strong { font: 500 clamp(32px, 4vw, 44px)/1 var(--display); color: var(--sun); }
+.stats-row strong { font: 400 clamp(32px, 4vw, 44px)/1 var(--display); color: var(--sun); }
 .stats-row span { font-size: 14.5px; color: rgba(255, 255, 255, .8); }
 @media (max-width: 760px) { .stats-row { grid-template-columns: 1fr 1fr; } }
 .stats-more { grid-column: 1 / -1; justify-self: start; margin-top: -8px; font-size: 14.5px; font-weight: 600; color: var(--sun); text-decoration: none; }
@@ -133,7 +136,7 @@ svg { flex: none; }
 .pass-grid div { display: flex; flex-direction: column; gap: 6px; }
 .pass-grid dt, .pass-label { font: 600 12px/1.3 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
 .pass-grid dt { order: -1; }
-.pass-grid dd { margin: 0; font: 500 clamp(28px, 3.4vw, 42px)/1 var(--display); font-variant-numeric: tabular-nums; }
+.pass-grid dd { margin: 0; font: 400 clamp(28px, 3.4vw, 42px)/1 var(--display); font-variant-numeric: tabular-nums; }
 .pass-tear { position: relative; border-top: 2px dashed var(--line); margin: 0 18px; }
 .pass-tear::before, .pass-tear::after { content: ""; position: absolute; top: -15px; width: 28px; height: 28px; border-radius: 50%; background: var(--bg); box-shadow: inset 0 0 0 1px var(--line); }
 .pass-tear::before { left: -33px; }
@@ -141,7 +144,7 @@ svg { flex: none; }
 .pass-stub { padding: 22px clamp(20px, 3vw, 36px) 28px; }
 .pass-label { margin: 0 0 10px; }
 .pass-route { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 20px; }
-.pass-route strong { display: block; font: 500 clamp(44px, 6vw, 72px)/1 var(--display); color: var(--teal); }
+.pass-route strong { display: block; font: 400 clamp(44px, 6vw, 72px)/1 var(--display); color: var(--teal); }
 .pass-route span { font-size: 15px; color: var(--ink-soft); }
 .pass-route .to { text-align: right; }
 .pass-mid { position: relative; z-index: 0; display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: -26px; font-size: 14px; font-weight: 600; white-space: nowrap; }
@@ -232,7 +235,7 @@ svg { flex: none; }
 .region h3 { font-size: 30px; padding-bottom: 14px; border-bottom: 2px solid var(--ink); margin-bottom: 6px; }
 .region ul { list-style: none; margin: 0; padding: 0; }
 .region a { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 16px 2px; border-bottom: 1px solid var(--line); text-decoration: none; }
-.region a span { font: 500 21px/1.2 var(--display); }
+.region a span { font: 400 21px/1.2 var(--display); }
 .region a small { font-size: 14px; color: var(--ink-soft); white-space: nowrap; }
 .region a:hover span { color: var(--accent); }
 
@@ -265,7 +268,7 @@ svg { flex: none; }
 .signup h2 em { color: #ffe1b0; }
 .signup p { color: rgba(255, 255, 255, .88); }
 .signup-form { display: flex; gap: 10px; flex-wrap: wrap; }
-.signup-form input[type="email"] { flex: 1 1 220px; min-width: 0; padding: 15px 20px; border-radius: 999px; border: 0; font: 500 16px var(--body); color: var(--ink); }
+.signup-form input[type="email"] { flex: 1 1 220px; min-width: 0; padding: 15px 20px; border-radius: 999px; border: 0; font: 400 16px var(--body); color: var(--ink); }
 .signup-form .btn.primary { background: var(--teal); }
 .signup-form .btn.primary:hover { background: var(--teal-dk); }
 @media (max-width: 860px) { .signup-inner { grid-template-columns: 1fr; } }
@@ -328,12 +331,12 @@ svg { flex: none; }
 .trip-body { max-width: 820px; }
 .byline { font-size: 14.5px; font-weight: 600; color: var(--ink-soft); margin-bottom: 20px; }
 .intro p { font-size: clamp(18px, 1.9vw, 20.5px); line-height: 1.65; }
-.intro p:first-child::first-letter { font: 500 3.6em/.85 var(--display); float: left; padding: 6px 10px 0 0; color: var(--accent); }
+.intro p:first-child::first-letter { font: 400 3.6em/.85 var(--display); float: left; padding: 6px 10px 0 0; color: var(--accent); }
 .glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 18px 26px; margin: 36px 0 0; padding: 26px 28px; background: var(--card); border-radius: var(--r); box-shadow: var(--shadow); border-top: 4px solid var(--sun); }
 .glance .glance-title { grid-column: 1 / -1; margin: 0; }
 .route-wrap { margin-top: 32px; }
 .route { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 0; align-items: center; }
-.route li { font: 500 18px/1.2 var(--display); display: flex; align-items: center; }
+.route li { font: 400 18px/1.2 var(--display); display: flex; align-items: center; }
 .route li + li::before { content: ""; width: 34px; height: 2px; margin: 0 10px; background: repeating-linear-gradient(90deg, var(--accent) 0 5px, transparent 5px 9px); }
 /* photo mosaic: one big photo + the rest (pattern from Expedia / GetYourGuide guide pages) */
 .gallery { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-auto-rows: clamp(120px, 15vw, 190px); gap: 10px; margin-top: 36px; }
@@ -404,7 +407,7 @@ svg { flex: none; }
   .day { break-inside: avoid; }
   .glance, .stays li, .tips li { box-shadow: none; border: 1px solid var(--line); }
 }
-.feature-sub { font: italic 400 20px/1.35 var(--display); color: var(--accent); margin-top: -6px; }
+.feature-sub { font: 600 17px/1.4 var(--body); color: var(--accent-dk); margin-top: -4px; }
 .gallery picture, .about-photos picture > img { height: 100%; }
 
 /* ── timeline stop icons (eat / see / stay / move) ── */
@@ -479,14 +482,14 @@ svg { flex: none; }
 /* ── home: every trip, grouped by year, three across ── */
 .year-group + .year-group { margin-top: clamp(40px, 5vw, 64px); }
 .year-label { display: flex; align-items: baseline; gap: 14px; margin: 0 0 22px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
-.year-label span { font: 500 clamp(34px, 4vw, 46px)/1 var(--display); color: var(--teal); letter-spacing: -.02em; }
+.year-label span { font: 400 clamp(34px, 4vw, 46px)/1 var(--display); color: var(--teal); letter-spacing: -.02em; }
 .year-label small { font: 600 13px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
 .year-group .card-title { font-size: clamp(22px, 2vw, 26px); }
 .badge.latest { left: auto; right: 14px; background: var(--sun); color: var(--ink); }
 /* trips without a photo yet: the place name instead of an empty box */
 .card-img.placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(150deg, var(--teal), var(--teal-dk)); color: #fff; padding: 20px; text-align: center; }
 .card-img.placeholder svg { width: 30px; height: 30px; fill: none; stroke: var(--sun); stroke-width: 1.8; }
-.card-img.placeholder span { font: 500 clamp(28px, 3vw, 38px)/1.05 var(--display); letter-spacing: -.01em; }
+.card-img.placeholder span { font: 400 clamp(28px, 3vw, 38px)/1.05 var(--display); letter-spacing: -.01em; }
 
 /* phones: maps never trap a scrolling finger, and skip the tile colour filter (it forces the
    whole map to be redrawn on every scrolled frame) */
@@ -494,3 +497,27 @@ svg { flex: none; }
   .route-map, .flight-map { touch-action: pan-x pan-y pinch-zoom; }
   .route-map .leaflet-tile-pane, .flight-map .leaflet-tile-pane { filter: none; }
 }
+
+
+/* ── Travel Journal: handwritten notes ── */
+.note { font: 600 26px/1 var(--hand); color: var(--accent); display: inline-block; transform: rotate(-4deg); transform-origin: left center; margin: 2px 0 6px; }
+.feature-body .note { font-size: 30px; margin: 4px 0 10px; }
+.hero-note { font-size: clamp(30px, 3.4vw, 40px); color: var(--sun); margin: 18px 0 0; transform: rotate(-3deg); text-shadow: 0 1px 12px rgba(0, 0, 0, .35); }
+@media print { .note { transform: none; } }
+
+/* ── What to wear ── */
+.wear-lede { color: var(--ink-soft); margin: 4px 0 18px; }
+.wx-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.wx { background: var(--card); border-radius: var(--r); padding: 20px 22px; box-shadow: var(--shadow); }
+.wx-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.wx-top h3 { font-size: 22px; }
+.wx-feel { font: 600 24px/1 var(--hand); transform: rotate(-4deg); white-space: nowrap; }
+.wx-hot { color: #c2502b; } .wx-warm { color: #d9862b; } .wx-mild { color: #5f7a3d; } .wx-cool { color: #2d6f78; } .wx-cold { color: #33508a; }
+.wx-temps { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 8px 0 12px; font-size: 14px; color: var(--ink-soft); }
+.wx-temps b { color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.wx-wear { margin: 0; padding-left: 18px; font-size: 15.5px; line-height: 1.5; }
+.wx-wear li + li { margin-top: 6px; }
+.wear-source { margin-top: 12px; font-size: 13px; color: var(--ink-soft); }
+.trip-hero h1 em { font-size: .42em; line-height: 1.25; margin-top: 14px; }
+.wx-temps span:first-child { flex-basis: 100%; font-weight: 600; color: var(--accent-dk); }
+.intro p:first-child::first-letter { font-size: 3.1em; line-height: .9; padding: 4px 8px 0 0; }

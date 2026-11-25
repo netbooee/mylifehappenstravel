@@ -106,6 +106,12 @@ Each trip's route map uses [Leaflet](https://leafletjs.com) (bundled in `site/as
 OpenStreetMap's free tiles, which only ask for the attribution shown on the map. If the site ever
 gets a lot of traffic, switch to a paid tile provider in `site/assets/js/site.js`.
 
+## What to wear
+
+Each trip page has a "What to wear" section built from the weather we actually had there.
+After adding a trip, list its places and dates in `SPOTS` in `tools/weather.py`, then run
+`python3 tools/weather.py <trip-slug>` and rebuild. Trips without dates (Ireland, for now) skip it.
+
 ## Previewing locally
 
 ```

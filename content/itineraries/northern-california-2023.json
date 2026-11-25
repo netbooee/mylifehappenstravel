@@ -640,5 +640,51 @@
       -119.9306
     ]
   },
-  "videos": []
+  "videos": [],
+  "weather": {
+    "source": "Open-Meteo historical weather",
+    "unit": "F",
+    "spots": [
+      {
+        "place": "San Francisco & Marin",
+        "dates": "Jun 23–25 & Jun 30",
+        "high": 61,
+        "low": 54,
+        "warmest": 64,
+        "coolest": 54,
+        "rain_days": 0,
+        "days": 4
+      },
+      {
+        "place": "Calistoga",
+        "dates": "Jun 26–27",
+        "high": 80,
+        "low": 51,
+        "warmest": 80,
+        "coolest": 50,
+        "rain_days": 0,
+        "days": 2
+      },
+      {
+        "place": "Mendocino",
+        "dates": "Jun 28–29",
+        "high": 62,
+        "low": 49,
+        "warmest": 62,
+        "coolest": 48,
+        "rain_days": 0,
+        "days": 2
+      },
+      {
+        "place": "Lake Tahoe",
+        "dates": "Jul 1–4",
+        "high": 83,
+        "low": 55,
+        "warmest": 86,
+        "coolest": 53,
+        "rain_days": 0,
+        "days": 4
+      }
+    ]
+  }
 }

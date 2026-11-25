@@ -743,5 +743,41 @@
       45.9003,
       11.9969
     ]
+  },
+  "weather": {
+    "source": "Open-Meteo historical weather",
+    "unit": "F",
+    "spots": [
+      {
+        "place": "Florence, Pisa & Lucca",
+        "dates": "Apr 3–6 & Apr 11–12",
+        "high": 75,
+        "low": 46,
+        "warmest": 79,
+        "coolest": 40,
+        "rain_days": 0,
+        "days": 6
+      },
+      {
+        "place": "Rome",
+        "dates": "Apr 7",
+        "high": 73,
+        "low": 48,
+        "warmest": 73,
+        "coolest": 48,
+        "rain_days": 0,
+        "days": 1
+      },
+      {
+        "place": "Venice & the Prosecco Hills",
+        "dates": "Apr 8–10",
+        "high": 63,
+        "low": 49,
+        "warmest": 65,
+        "coolest": 45,
+        "rain_days": 0,
+        "days": 3
+      }
+    ]
   }
 }

@@ -445,5 +445,31 @@
       -73.5986
     ]
   },
-  "videos": []
+  "videos": [],
+  "weather": {
+    "source": "Open-Meteo historical weather",
+    "unit": "F",
+    "spots": [
+      {
+        "place": "Saratoga, New York",
+        "dates": "Aug 21",
+        "high": 68,
+        "low": 52,
+        "warmest": 68,
+        "coolest": 52,
+        "rain_days": 1,
+        "days": 1
+      },
+      {
+        "place": "Montreal",
+        "dates": "Aug 22–25",
+        "high": 75,
+        "low": 59,
+        "warmest": 78,
+        "coolest": 56,
+        "rain_days": 2,
+        "days": 4
+      }
+    ]
+  }
 }
