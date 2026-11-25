@@ -22,6 +22,8 @@ import json
 import pathlib
 import re
 
+import geomap  # tools/geomap.py: the "Where we've been" maps
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
 CONTENT = ROOT / "content" / "itineraries"
@@ -31,6 +33,7 @@ YOUTUBE = "https://www.youtube.com/@MyLifeHappensTravel"
 VIDEOS: list[dict] = []  # filled from content/videos.json in main()
 FLIGHTS: dict = {}  # filled from content/flights.json in main() (made by tools/flights.py)
 GEAR: list[dict] = []  # filled from content/gear.json in main(); items without a name are skipped
+VISITED: dict = {}  # filled from content/visited.json in main(): countries and states for the map
 EARTH_MILES = 24901  # once around the equator
 
 # ── Photos ────────────────────────────────────────────────────────────────────
@@ -759,7 +762,121 @@ def flight_map(st: dict) -> str:
             f'aria-label="World map of every route we have flown: {len(routes)} routes between {len(ap)} airports"></div>')
 
 
-def numbers_section(st: dict) -> str:
+# ── Where we've been (map of countries and states, on the About page) ────────
+COUNTRY_ALIASES = {"USA": "United States of America", "England": "United Kingdom", "Turks & Caicos": "Turks and Caicos Is."}
+
+
+def places_map(trips: list[dict]) -> str:
+    """Countries and states we've been to, drawn as SVG at build time; site.js adds the tabs,
+    hover labels and the panel that says when we went. Data: content/visited.json."""
+    if not VISITED:
+        return ""
+    ap, fl = FLIGHTS.get("airports", {}), FLIGHTS.get("flights", [])
+    by_slug = {t["slug"]: t for t in trips}
+    a_state = VISITED.get("airport_states", {})
+
+    def info(pid: str, name: str, meta: dict, is_home: bool, airports: set[str], auto_trips: list[str]) -> dict:
+        slugs = list(dict.fromkeys(auto_trips + meta.get("trips", [])))
+        tr = [[by_slug[x]["title"], f"/itineraries/{x}/", (by_slug[x].get("start") or "")[:4]] for x in slugs if x in by_slug]
+        arr = [f for f in fl if f["to"] in airports]
+        names = sorted({ap[f["to"]]["name"] for f in arr})
+        yrs = sorted({f["year"] for f in arr})
+        span = (f"{yrs[0]}" if len(yrs) == 1 else f"{yrs[0]}–{yrs[-1]}") if yrs else ""
+        if meta.get("layover"):
+            codes = sorted({f["to"] for f in arr})
+            where = " and ".join(f"{ap[c]['name']} ({c})" for c in codes)
+            fly = f"Changed planes in {where}, {span}" if codes else "Changed planes here"
+        elif arr and not is_home:
+            times = {1: "once", 2: "twice"}.get(len(arr), f"{len(arr)} times")
+            fly = f"Flew into {' and '.join(names) if len(names) < 3 else ', '.join(names)} {times} ({span})"
+        else:
+            fly = ""
+        kind = "home" if is_home else "layover" if meta.get("layover") else "visited"
+        return {"id": pid, "name": meta.get("label", name), "kind": kind, "note": meta.get("note", ""), "trips": tr, "flights": fly}
+
+    # countries
+    c_meta = VISITED.get("countries", {})
+    home_country = "United States of America"
+    keep = {n for n in c_meta}
+    world = list(geomap.world_shapes(keep))
+    names = {n for n, *_ in world}
+    missing = [n for n in c_meta if n not in names]
+    if missing:
+        raise SystemExit(f"content/visited.json: no country called {missing} on the map (check tools/geo/countries-50m.json)")
+    places = []
+    c_ids = {}
+    for i, n in enumerate(sorted(c_meta, key=lambda n: c_meta[n].get("label", n))):
+        c_ids[n] = f"c{i}"
+        auto = [t["slug"] for t in trips if n in {COUNTRY_ALIASES.get(c, c) for c in t["country"].split(" & ")}]
+        airports = {c for c, a in ap.items() if COUNTRY_ALIASES.get(a["country"], a["country"]) == n}
+        places.append(info(c_ids[n], n, c_meta[n], n == home_country, airports, auto))
+
+    # states
+    s_meta = VISITED.get("states", {})
+    us = list(geomap.us_shapes())
+    snames = {n for n, *_ in us}
+    missing = [n for n in s_meta if n not in snames]
+    if missing:
+        raise SystemExit(f"content/visited.json: no state called {missing} on the map")
+    s_ids = {}
+    for i, n in enumerate(sorted(s_meta, key=lambda n: s_meta[n].get("label", n))):
+        s_ids[n] = f"s{i}"
+        airports = {c for c, st in a_state.items() if st == n}
+        places.append(info(s_ids[n], n, s_meta[n], n == VISITED.get("home"), airports, []))
+    kinds = {p["id"]: p["kind"] for p in places}
+
+    def shapes(items, ids, dot_below: float, dot_r: float) -> str:
+        land, dots = [], []
+        for n, d, (cx, cy), area in items:
+            pid = ids.get(n)
+            if pid:
+                land.append(f'<path class="pl {kinds[pid]}" data-id="{pid}" d="{d}"/>')
+                if area < dot_below:
+                    dots.append(f'<circle class="pl-dot {kinds[pid]}" data-id="{pid}" cx="{cx * 10:.0f}" cy="{cy * 10:.0f}" r="{dot_r}"/>')
+            else:
+                land.append(f'<path d="{d}"/>')
+        return f'<g class="pl-land">{"".join(land)}</g><g class="pl-dots">{"".join(dots)}</g>'
+
+    def scaled(box: str) -> str:
+        return " ".join(str(int(float(v) * 10)) for v in box.split())
+
+    world_view = f"0 0 {int(geomap.WORLD_W * 10)} {int(geomap.WORLD_H * 10)}"
+    views = {"world": world_view, "europe": scaled(geomap.world_box(*geomap.EUROPE))}
+    visited_c = [n for n in c_meta if not c_meta[n].get("layover")]
+    visited_s = [n for n in s_meta if not s_meta[n].get("layover")]
+    n_states = len([n for n in visited_s if n != "District of Columbia"])
+    dc = " + D.C." if "District of Columbia" in visited_s else ""
+    chip = lambda n, meta, pid: (f'<li><button type="button" class="pl-chip {kinds[pid]}" data-id="{pid}">'
+                                 f'{e(meta.get("label", n))}</button></li>')
+    c_chips = "".join(chip(n, c_meta[n], c_ids[n]) for n in sorted(c_meta, key=lambda n: c_meta[n].get("label", n)))
+    s_chips = "".join(chip(n, s_meta[n], s_ids[n]) for n in sorted(s_meta, key=lambda n: s_meta[n].get("label", n)))
+    data = json.dumps({"places": places, "views": views}, ensure_ascii=False, separators=(",", ":"))
+    return f"""<article class="places" id="where">
+        <header class="places-head">
+          <div><p class="pass-label">Where we've been</p>
+            <h3><strong>{len(visited_c)}</strong> countries &amp; territories · <strong>{n_states}</strong> states{dc}</h3></div>
+          <div class="places-tabs" role="group" aria-label="Map view">
+            <button type="button" data-view="world" aria-pressed="true">World</button>
+            <button type="button" data-view="europe" aria-pressed="false">Europe</button>
+            <button type="button" data-view="us" aria-pressed="false">United States</button>
+          </div>
+        </header>
+        <div class="places-stage">
+          <svg class="places-svg pl-world" viewBox="{world_view}" role="img" aria-label="World map with the {len(visited_c)} countries and territories we've visited filled in">{shapes(world, c_ids, 30, 45)}</svg>
+          <svg class="places-svg pl-us" viewBox="0 0 {geomap.US_W * 10} {geomap.US_H * 10}" role="img" aria-label="Map of the United States with the {n_states} states we've visited filled in" hidden>{shapes(us, s_ids, 60, 70)}</svg>
+          <div class="places-tip" aria-hidden="true" hidden></div>
+        </div>
+        <div class="places-info" aria-live="polite"><p class="places-hint">Tap a coloured place, or a name below, to see when we went.</p></div>
+        <ul class="places-legend" aria-label="Key"><li><i class="visited"></i>Visited</li><li><i class="home"></i>Home</li><li><i class="layover"></i>Only changed planes</li></ul>
+        <div class="places-lists">
+          <div><h4>Countries &amp; territories</h4><ul class="pl-chips">{c_chips}</ul></div>
+          <div><h4>States</h4><ul class="pl-chips">{s_chips}</ul></div>
+        </div>
+        <script type="application/json" class="places-data">{data.replace("</", "<\\/")}</script>
+      </article>"""
+
+
+def numbers_section(st: dict, trips: list[dict] | None = None) -> str:
     ap = FLIGHTS["airports"]
     lg = st["longest"]
     totals = [
@@ -791,6 +908,7 @@ def numbers_section(st: dict) -> str:
           <div class="pass-route">{end(lg["from"])}<div class="pass-mid"><span aria-hidden="true">✈</span>{n(lg["miles"])} miles</div>{end(lg["to"], "to")}</div>
         </div>
       </article>
+      {places_map(trips or [])}
       <div class="ranked-row">
         {ranked("Most-flown routes", st["routes"], route_name)}
         {ranked("Busiest airports", st["busiest"], name)}
@@ -1163,7 +1281,7 @@ def about(trips: list[dict]) -> str:
       <div class="actions"><a class="btn primary" href="/itineraries/">See our itineraries</a><a class="btn ghost" href="{INSTAGRAM}" rel="noopener">Say hi on Instagram</a></div>
     </div>
   </section>
-  {numbers_section(st) if st else ""}
+  {numbers_section(st, trips) if st else ""}
 </main>
 """ + footer(trips)
 
@@ -1191,6 +1309,8 @@ def main() -> None:
     fp = ROOT / "content" / "flights.json"
     FLIGHTS.update(json.loads(fp.read_text(encoding="utf-8")) if fp.exists() else {})
     gp = ROOT / "content" / "gear.json"
+    vp = ROOT / "content" / "visited.json"
+    VISITED.update(json.loads(vp.read_text(encoding="utf-8")) if vp.exists() else {})
     GEAR[:] = [g for g in (json.loads(gp.read_text(encoding="utf-8")) if gp.exists() else []) if g.get("name")]
     VIDEOS[:] = sorted(json.loads((ROOT / "content" / "videos.json").read_text(encoding="utf-8")), key=lambda v: v["date"], reverse=True)
 

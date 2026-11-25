@@ -151,6 +151,62 @@ svg { flex: none; }
 .pass-mid::before { content: ""; position: absolute; left: 0; right: 0; top: 15px; border-top: 2px dotted var(--line); z-index: -1; }
 .pass-mid span { font-size: 22px; line-height: 1.4; color: var(--accent); background: var(--card); padding: 0 8px; }
 @media (max-width: 760px) { .pass-grid { grid-template-columns: 1fr 1fr; } .pass-map { aspect-ratio: 4 / 3; } .pass-route { gap: 10px; } }
+/* "Where we've been": countries and states map (SVG drawn at build time, see tools/geomap.py) */
+.places { max-width: 980px; margin: clamp(28px, 4vw, 44px) auto 0; background: var(--card); border: 1px solid var(--line); border-radius: calc(var(--r) + 6px); box-shadow: var(--shadow); padding: clamp(20px, 3vw, 36px); }
+.places-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 24px; margin-bottom: 18px; }
+.places-head .pass-label { margin-bottom: 6px; }
+.places-head h3 { font-size: clamp(21px, 2.6vw, 28px); }
+.places-head h3 strong { font-weight: 400; color: var(--accent); }
+.places-tabs { display: inline-flex; padding: 4px; gap: 2px; background: var(--tint); border-radius: 999px; }
+.places-tabs button { border: 0; background: none; font: 600 14px/1 var(--body); color: var(--ink-soft); padding: 10px 16px; border-radius: 999px; cursor: pointer; }
+.places-tabs button[aria-pressed="true"] { background: var(--card); color: var(--ink); box-shadow: 0 1px 3px rgba(34, 27, 21, .15); }
+.places-stage { position: relative; background: #eaf0ec; border-radius: var(--r); overflow: hidden; }
+.places-svg { display: block; width: 100%; height: auto; aspect-ratio: 2.3 / 1; }
+.places-svg.pl-us { aspect-ratio: 975 / 610; padding: 3% 2%; }
+.places-svg[hidden] { display: none; }
+.places-svg path { fill: #dccfb9; stroke: #f7f2e9; stroke-width: .7px; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.places-svg .pl { cursor: pointer; transition: fill .15s; }
+.places-svg .pl.visited, .pl-dot.visited { fill: var(--accent); }
+.places-svg .pl.home, .pl-dot.home { fill: var(--teal); }
+.places-svg .pl.layover, .pl-dot.layover { fill: #e9b9a4; }
+.places-svg .pl:hover { fill: var(--accent-dk); }
+.places-svg .pl.home:hover { fill: var(--teal-dk); }
+.places-svg .pl.is-on { stroke: var(--ink); stroke-width: 2px; }
+.pl-dot { stroke: #fff; stroke-width: 1.5px; vector-effect: non-scaling-stroke; cursor: pointer; }
+.pl-dot.is-on { stroke: var(--ink); stroke-width: 2.5px; }
+.places-tip { position: absolute; z-index: 2; transform: translate(-50%, calc(-100% - 12px)); pointer-events: none; background: var(--ink); color: #fff; font: 600 13px/1.2 var(--body); padding: 7px 10px; border-radius: 8px; white-space: nowrap; }
+.places-info { min-height: 76px; margin-top: 18px; padding: 16px 18px; background: var(--tint); border-radius: var(--r); }
+.places-info h4 { font-size: 24px; margin: 2px 0 6px; }
+.places-info p { margin: 0 0 6px; font-size: 15.5px; }
+.places-hint { color: var(--ink-soft); }
+.pl-kind { font: 700 11.5px/1.3 var(--body) !important; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-dk); }
+.pl-kind.home { color: var(--teal); }
+.pl-trips { list-style: none; margin: 4px 0 8px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.pl-trips a { font-weight: 600; color: var(--accent-dk); }
+.pl-trips span { color: var(--ink-soft); font-size: 14px; }
+.pl-flights { color: var(--ink-soft); }
+.pl-see-us { margin-top: 4px; border: 0; background: none; padding: 0; font: 600 15px/1.4 var(--body); color: var(--teal); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.places-legend { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 14px 0 0; padding: 0; font-size: 13.5px; color: var(--ink-soft); }
+.places-legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 7px; vertical-align: -1px; background: var(--accent); }
+.places-legend i.home { background: var(--teal); }
+.places-legend i.layover { background: #e9b9a4; }
+.places-lists { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line); }
+.places-lists h4 { font: 600 12px/1.3 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 10px; }
+.pl-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; }
+.pl-chip { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 6px 12px; font: 500 14px/1.2 var(--body); color: var(--ink); cursor: pointer; }
+.pl-chip::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 7px; vertical-align: 1px; background: var(--accent); }
+.pl-chip.home::before { background: var(--teal); }
+.pl-chip.layover::before { background: #e9b9a4; }
+.pl-chip:hover, .pl-chip.is-on { border-color: var(--ink); }
+.pl-chip.is-on { background: var(--ink); color: #fff; }
+@media (max-width: 760px) {
+  .places-lists { grid-template-columns: 1fr; }
+  .places-tabs { width: 100%; }
+  .places-tabs button { flex: 1; padding-inline: 8px; }
+  .places[data-view="europe"] .pl-world { aspect-ratio: 1.3 / 1; }
+}
+@media print { .places-tabs, .places-tip { display: none; } }
+
 .ranked-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 4vw, 48px); margin-top: clamp(32px, 4vw, 48px); }
 @media (max-width: 900px) { .ranked-row { grid-template-columns: 1fr; } }
 .ranked h3 { font-size: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--ink); margin-bottom: 4px; }
