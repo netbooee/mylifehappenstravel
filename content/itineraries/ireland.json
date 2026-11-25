@@ -5,14 +5,14 @@
   "summary": "A week based in Dublin, built around the Go City Dublin Explorer Pass, with day trips to Northern Ireland's Giant's Causeway, the coastal villages of Howth, Malahide and Skerries, and the Cliffs of Moher and Galway.",
   "country": "Ireland",
   "region": "Europe",
-  "start": "",
+  "start": "2024-05",
   "end": "",
   "days": 7,
   "hero": "ireland",
   "glance": [
     {
       "label": "Duration",
-      "value": "7 days"
+      "value": "7 days, May 2024"
     },
     {
       "label": "Base",
@@ -440,5 +440,42 @@
       52.9715,
       -9.4309
     ]
+  },
+  "weather": {
+    "source": "Open-Meteo historical weather",
+    "unit": "F",
+    "spots": [
+      {
+        "place": "Dublin & the coast north of it",
+        "dates": "May 2024 average",
+        "high": 60,
+        "low": 50,
+        "warmest": 66,
+        "coolest": 46,
+        "rain_days": 13,
+        "days": 31
+      },
+      {
+        "place": "Giant's Causeway & Belfast",
+        "dates": "May 2024 average",
+        "high": 62,
+        "low": 49,
+        "warmest": 70,
+        "coolest": 44,
+        "rain_days": 15,
+        "days": 31
+      },
+      {
+        "place": "Cliffs of Moher & Galway",
+        "dates": "May 2024 average",
+        "high": 62,
+        "low": 49,
+        "warmest": 72,
+        "coolest": 43,
+        "rain_days": 17,
+        "days": 31
+      }
+    ],
+    "basis": "month"
   }
 }

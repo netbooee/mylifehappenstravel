@@ -27,6 +27,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content" / "itineraries"
 API = "https://archive-api.open-meteo.com/v1/archive"
 
+MONTH_ONLY = {"ireland"}  # trips where we only know the month: summarize the whole month
+
 # slug -> list of (place shown on the page, latitude, longitude, [(first day, last day), ...])
 SPOTS: dict[str, list[tuple[str, float, float, list[tuple[str, str]]]]] = {
     "barcelona-mallorca-2026": [
@@ -65,7 +67,12 @@ SPOTS: dict[str, list[tuple[str, float, float, list[tuple[str, str]]]]] = {
         ("Mendocino", 39.3077, -123.7995, [("2023-06-28", "2023-06-29")]),
         ("Lake Tahoe", 38.9399, -119.9772, [("2023-07-01", "2023-07-04")]),
     ],
-    # "ireland": no dates on the trip yet, so no weather.
+    # Ireland: we know the month (May 2024) but not the exact week, so these are month averages.
+    "ireland": [
+        ("Dublin & the coast north of it", 53.3498, -6.2603, [("2024-05-01", "2024-05-31")]),
+        ("Giant's Causeway & Belfast", 54.5973, -5.9301, [("2024-05-01", "2024-05-31")]),
+        ("Cliffs of Moher & Galway", 53.2707, -9.0568, [("2024-05-01", "2024-05-31")]),
+    ],
 }
 
 
@@ -123,7 +130,12 @@ def summarize(slug: str) -> dict:
             "rain_days": sum(1 for d in days if (d["rain"] or 0) >= 0.04),
             "days": len(days),
         })
-    return {"source": "Open-Meteo historical weather", "unit": "F", "spots": spots}
+    out = {"source": "Open-Meteo historical weather", "unit": "F", "spots": spots}
+    if slug in MONTH_ONLY:
+        out["basis"] = "month"
+        for sp in out["spots"]:
+            sp["dates"] = f'{dt.date.fromisoformat(SPOTS[slug][0][3][0][0]):%B %Y} average'
+    return out
 
 
 def main() -> None:
