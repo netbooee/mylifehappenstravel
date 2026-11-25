@@ -582,6 +582,34 @@ def wear_section(t: dict) -> str:
 </section>"""
 
 
+def maps_url(x: dict, t: dict) -> str:
+    """Google Maps search for a hotel or restaurant ("map": false in the JSON turns it off,
+    e.g. for a generic entry like "Vrbo rental")."""
+    if x.get("map") is False:
+        return ""
+    import urllib.parse
+    where = x.get("place") or ""
+    q = ", ".join(v for v in (x["name"], where, t.get("country", "")) if v)
+    return "https://www.google.com/maps/search/?api=1&query=" + urllib.parse.quote_plus(q)
+
+
+def place_name(x: dict, t: dict) -> str:
+    """A hotel or restaurant name, linked to its own website when we have one ("url" in the JSON)."""
+    if x.get("url"):
+        return f'<a class="ext" href="{e(x["url"])}" target="_blank" rel="noopener">{e(x["name"])}</a>'
+    return e(x["name"])
+
+
+def place_links(x: dict, t: dict) -> str:
+    m = maps_url(x, t)
+    links = []
+    if x.get("url"):
+        links.append(f'<a href="{e(x["url"])}" target="_blank" rel="noopener">Website ↗</a>')
+    if m:
+        links.append(f'<a href="{e(m)}" target="_blank" rel="noopener" aria-label="Map: {e(x["name"])}">{ICONS["pin"]}Map</a>')
+    return f'<span class="place-links">{"".join(links)}</span>' if links else ""
+
+
 def trip_card(t: dict, size: str = "", heading: str = "h3", latest: bool = False) -> str:
     ph = TRIP_PHOTOS.get(t.get("hero", ""), {})
     sizes = "(min-width: 1100px) 560px, (min-width: 700px) 50vw, 100vw" if size == "lg" else "(min-width: 1100px) 380px, (min-width: 700px) 50vw, 100vw"
@@ -1005,7 +1033,7 @@ def itinerary(t: dict, trips: list[dict]) -> str:
 
     extra = []
     if t.get("stays"):
-        cards = "".join(f'<li><h4>{e(s["name"])}</h4><p class="sub">{ICONS["pin"]}{e(s.get("place", ""))}{" · " + e(s["nights"]) if s.get("nights") else ""}</p>{f"<p>{e(s["note"])}</p>" if s.get("note") else ""}</li>' for s in t["stays"])
+        cards = "".join(f'<li><h4>{place_name(s, t)}</h4>{place_links(s, t)}<p class="sub">{ICONS["pin"]}{e(s.get("place", ""))}{" · " + e(s["nights"]) if s.get("nights") else ""}</p>{f"<p>{e(s["note"])}</p>" if s.get("note") else ""}</li>' for s in t["stays"])
         extra.append(("stay", "Where we stayed", f'<ul class="stays">{cards}</ul>', "bed"))
     trip_videos = [v for v in VIDEOS if v["id"] in t.get("videos", [])]
     if trip_videos:
@@ -1016,7 +1044,7 @@ def itinerary(t: dict, trips: list[dict]) -> str:
             groups.setdefault(x.get("place", "") or "Around town", []).append(x)
         body = "".join(
             f'<div class="eat-group"><h4>{e(p)}</h4><ul>' + "".join(
-                f'<li><strong>{e(x["name"])}</strong>{f" <span class=\"type\">{e(x["type"])}</span>" if x.get("type") else ""}{f"<p>{e(x["note"])}</p>" if x.get("note") else ""}</li>' for x in xs)
+                f'<li><strong>{place_name(x, t)}</strong>{f" <span class=\"type\">{e(x["type"])}</span>" if x.get("type") else ""}{place_links(x, t)}{f"<p>{e(x["note"])}</p>" if x.get("note") else ""}</li>' for x in xs)
             + "</ul></div>" for p, xs in groups.items())
         extra.append(("eat", "Where we ate", f'<div class="eats">{body}</div>', "fork"))
     if t.get("book_ahead"):

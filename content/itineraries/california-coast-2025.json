@@ -647,7 +647,8 @@
       "name": "Vrbo rental",
       "place": "Bay Area",
       "nights": "2 nights",
-      "note": "Our base for Muir Woods."
+      "note": "Our base for Muir Woods.",
+      "map": false
     },
     {
       "name": "Inn on Pine",

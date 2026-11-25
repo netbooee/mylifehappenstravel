@@ -295,7 +295,8 @@
       "name": "Hotel in the Grafton Street area",
       "place": "Dublin",
       "nights": "6 nights",
-      "note": "A central base for the whole week; almost everything in Dublin was within walking distance."
+      "note": "A central base for the whole week; almost everything in Dublin was within walking distance.",
+      "map": false
     }
   ],
   "eats": [
