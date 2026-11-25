@@ -31,6 +31,8 @@ design/prototype/            the original design mock-up (not published; kept fo
    and fill it in. `content/SCHEMA.md` explains every field.
 2. Add photos (see below) and point the trip's `hero` at them in `TRIP_PHOTOS` in `tools/build.py`.
 3. Run `python3 tools/build.py`. It regenerates the home page, the list, the trip page and the sitemap.
+   If the trip went somewhere new, add the country (and US state) to `content/visited.json` too:
+   that file drives the "Where we've been" map on the About page.
 4. Preview, then commit everything (including the generated files in `site/`).
 
 Or just ask Claude: *"Add our Japan trip"* and paste your plan or booking notes.

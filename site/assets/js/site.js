@@ -138,6 +138,87 @@ document.addEventListener('DOMContentLoaded', () => {
     map.fitBounds(L.latLngBounds(d.airports.map((a) => [a[2], a[3]])), { padding: [24, 24] });
   }
 
+  // about page: "Where we've been" map (the SVG is drawn by tools/build.py; this adds the interaction)
+  const pl = document.querySelector('.places');
+  if (pl) {
+    const data = JSON.parse(pl.querySelector('.places-data').textContent);
+    const byId = Object.fromEntries(data.places.map((p) => [p.id, p]));
+    const world = pl.querySelector('.pl-world'), us = pl.querySelector('.pl-us');
+    const tip = pl.querySelector('.places-tip'), panel = pl.querySelector('.places-info');
+    const tabs = [...pl.querySelectorAll('.places-tabs button')];
+    const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const label = { visited: 'Visited', home: 'Home', layover: 'Only changed planes' };
+    let view = 'world', anim = 0;
+
+    const box = (s) => s.split(' ').map(Number);
+    const sizeDots = (w) => world.querySelectorAll('.pl-dot').forEach((c) => c.setAttribute('r', (w / 10000) * 45));
+    const zoomTo = (target) => { // glide the world map's viewBox between World and Europe
+      cancelAnimationFrame(anim);
+      const from = box(world.getAttribute('viewBox')), to = box(target), t0 = performance.now();
+      const step = (now) => {
+        const k = still ? 1 : Math.min(1, (now - t0) / 550), ease = 1 - Math.pow(1 - k, 3);
+        const v = from.map((a, i) => a + (to[i] - a) * ease);
+        world.setAttribute('viewBox', v.map((x) => x.toFixed(1)).join(' '));
+        sizeDots(v[2]);
+        if (k < 1) anim = requestAnimationFrame(step);
+      };
+      anim = requestAnimationFrame(step);
+    };
+    const setView = (v) => {
+      view = v;
+      pl.dataset.view = v;
+      tabs.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+      world.toggleAttribute('hidden', v === 'us'); // SVG elements have no .hidden property
+      us.toggleAttribute('hidden', v !== 'us');
+      tip.hidden = true;
+      if (v !== 'us') zoomTo(data.views[v]);
+    };
+    tabs.forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
+
+    const select = (id, fromChip) => {
+      const p = byId[id];
+      if (!p) return;
+      pl.querySelectorAll('.is-on').forEach((x) => x.classList.remove('is-on'));
+      pl.querySelectorAll(`[data-id="${id}"]`).forEach((x) => {
+        x.classList.add('is-on');
+        if (x.tagName === 'path') x.parentNode.appendChild(x); // draw its outline on top of the neighbours
+      });
+      if (fromChip) { // show the map the place is on
+        const isState = id[0] === 's';
+        if (isState && view !== 'us') setView('us');
+        if (!isState && view === 'us') setView('world');
+      }
+      const trips = p.trips.map((t) => `<li><a href="${t[1]}">${esc(t[0])}</a>${t[2] ? ` <span>${t[2]}</span>` : ''}</li>`).join('');
+      panel.innerHTML = `<p class="pl-kind ${p.kind}">${label[p.kind]}</p><h4>${esc(p.name)}</h4>`
+        + (p.note ? `<p>${esc(p.note)}</p>` : '')
+        + (trips ? `<ul class="pl-trips">${trips}</ul>` : '')
+        + (p.flights ? `<p class="pl-flights">✈ ${esc(p.flights)}</p>` : '')
+        + (!p.note && !trips && !p.flights ? '<p>We\'ve been, but haven\'t written that trip up yet.</p>' : '')
+        + (p.kind === 'home' && id[0] === 'c' ? '<button type="button" class="pl-see-us">See the states →</button>' : '');
+      const go = panel.querySelector('.pl-see-us');
+      if (go) go.addEventListener('click', () => setView('us'));
+    };
+    pl.querySelectorAll('.pl-chip').forEach((b) => b.addEventListener('click', () => select(b.dataset.id, true)));
+
+    [world, us].forEach((svg) => {
+      svg.addEventListener('click', (ev) => {
+        const t = ev.target.closest('[data-id]');
+        if (t) select(t.dataset.id, false);
+      });
+      svg.addEventListener('pointermove', (ev) => {
+        const t = ev.target.closest('[data-id]');
+        if (!t || ev.pointerType !== 'mouse') { tip.hidden = true; return; }
+        const p = byId[t.dataset.id], r = pl.querySelector('.places-stage').getBoundingClientRect();
+        tip.textContent = p.name + (p.kind === 'visited' ? '' : ' · ' + label[p.kind]);
+        tip.style.left = ev.clientX - r.left + 'px';
+        tip.style.top = ev.clientY - r.top + 'px';
+        tip.hidden = false;
+      });
+      svg.addEventListener('pointerleave', () => { tip.hidden = true; });
+    });
+  }
+
   const pb = document.querySelector('.print-btn');
   if (pb) pb.addEventListener('click', () => window.print());
 });

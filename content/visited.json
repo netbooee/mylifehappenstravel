@@ -1,0 +1,45 @@
+{
+  "_about": "Where we've been, for the map on the About page. Names must match the map data exactly (see tools/geo/). 'layover' means we only changed planes there. 'trips' adds trip pages (slugs) beyond the ones the build already finds from each trip's country. 'note' is one short line shown when someone taps the place.",
+  "home": "New Jersey",
+  "countries": {
+    "United States of America": { "label": "United States", "note": "Home. Tap the United States tab to see the states." },
+    "Canada": {},
+    "Mexico": {},
+    "Turks and Caicos Is.": { "label": "Turks & Caicos" },
+    "Puerto Rico": {},
+    "United Kingdom": { "trips": ["ireland"], "note": "England, plus Northern Ireland on our Ireland trip." },
+    "Ireland": {},
+    "France": {},
+    "Spain": {},
+    "Portugal": {},
+    "Italy": {},
+    "Switzerland": {},
+    "Austria": { "layover": true }
+  },
+  "states": {
+    "New Jersey": { "note": "Home, and Newark is our airport." },
+    "New York": { "trips": ["montreal-2024"] },
+    "Massachusetts": {},
+    "District of Columbia": { "label": "Washington, D.C." },
+    "Tennessee": {},
+    "Florida": {},
+    "Minnesota": {},
+    "Missouri": {},
+    "Illinois": { "trips": ["milwaukee-fencing-2025"], "note": "A day in Chicago on our Milwaukee trip." },
+    "Wisconsin": { "trips": ["milwaukee-fencing-2025"] },
+    "Colorado": {},
+    "Arizona": {},
+    "Nevada": { "trips": ["las-vegas-2026", "northern-california-2023"] },
+    "California": { "trips": ["california-coast-2025", "northern-california-2023"] },
+    "North Carolina": { "layover": true },
+    "Virginia": { "layover": true },
+    "Utah": { "layover": true }
+  },
+  "airport_states": {
+    "EWR": "New Jersey", "JFK": "New York", "LGA": "New York", "BOS": "Massachusetts",
+    "DCA": "District of Columbia", "IAD": "Virginia", "BNA": "Tennessee", "CLT": "North Carolina",
+    "MCO": "Florida", "MIA": "Florida", "FLL": "Florida", "MSP": "Minnesota", "MCI": "Missouri",
+    "DEN": "Colorado", "PHX": "Arizona", "SLC": "Utah", "LAS": "Nevada", "SFO": "California",
+    "LAX": "California"
+  }
+}
