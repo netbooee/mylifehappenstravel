@@ -843,5 +843,61 @@
       37.7749,
       -122.4194
     ]
+  },
+  "weather": {
+    "source": "Open-Meteo historical weather",
+    "unit": "F",
+    "spots": [
+      {
+        "place": "Carmel, Cambria & Monterey",
+        "dates": "Jul 24–30",
+        "high": 62,
+        "low": 55,
+        "warmest": 63,
+        "coolest": 54,
+        "rain_days": 0,
+        "days": 7
+      },
+      {
+        "place": "Half Moon Bay & Muir Woods",
+        "dates": "Jul 31 – Aug 2",
+        "high": 61,
+        "low": 53,
+        "warmest": 62,
+        "coolest": 51,
+        "rain_days": 0,
+        "days": 3
+      },
+      {
+        "place": "Calistoga & Napa",
+        "dates": "Aug 3–4 & Aug 7",
+        "high": 91,
+        "low": 59,
+        "warmest": 93,
+        "coolest": 57,
+        "rain_days": 0,
+        "days": 3
+      },
+      {
+        "place": "Mendocino",
+        "dates": "Aug 5–6",
+        "high": 66,
+        "low": 51,
+        "warmest": 67,
+        "coolest": 48,
+        "rain_days": 0,
+        "days": 2
+      },
+      {
+        "place": "San Francisco",
+        "dates": "Aug 8–10",
+        "high": 68,
+        "low": 56,
+        "warmest": 72,
+        "coolest": 56,
+        "rain_days": 0,
+        "days": 3
+      }
+    ]
   }
 }

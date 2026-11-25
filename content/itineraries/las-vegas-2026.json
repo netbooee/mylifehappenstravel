@@ -426,5 +426,21 @@
       36.1707,
       -115.144
     ]
+  },
+  "weather": {
+    "source": "Open-Meteo historical weather",
+    "unit": "F",
+    "spots": [
+      {
+        "place": "Las Vegas & Valley of Fire",
+        "dates": "Jan 30 – Feb 2",
+        "high": 69,
+        "low": 45,
+        "warmest": 73,
+        "coolest": 42,
+        "rain_days": 0,
+        "days": 4
+      }
+    ]
   }
 }

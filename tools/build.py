@@ -368,8 +368,8 @@ def month_year(t: dict) -> str:
 # ── Shared page chrome ────────────────────────────────────────────────────────
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-         '<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500'
-         '&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">')
+         '<link href="https://fonts.googleapis.com/css2?family=Young+Serif'
+         '&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;600&display=swap" rel="stylesheet">')
 
 
 def head(title: str, desc: str, path: str, image: str = "valley-of-fire-1", noindex: bool = False, extra: str = "") -> str:
@@ -470,6 +470,57 @@ def footer(trips: list[dict]) -> str:
 
 
 # ── Cards ─────────────────────────────────────────────────────────────────────
+def hand_note(t: dict, cls: str = "") -> str:
+    """Our handwritten aside on a trip (the "note" field), slanted like a pen note in a journal."""
+    return f'<p class="note {cls}">{e(t["note"])}</p>' if t.get("note") else ""
+
+
+# ── What to wear (from content: "weather", filled by tools/weather.py) ──────
+def feel(high: int) -> tuple[str, str]:
+    if high >= 85:
+        return "Hot", "Light, breathable clothes: shorts, linen, sundresses, sandals, a sun hat and sunscreen."
+    if high >= 75:
+        return "Warm", "Summer clothes: shorts or light trousers, T-shirts, comfortable walking shoes and sunglasses."
+    if high >= 65:
+        return "Mild", "Light layers: jeans or chinos, a T-shirt with a long-sleeve top or light sweater over it."
+    if high >= 52:
+        return "Cool", "Layers: long trousers, a sweater or fleece and a light jacket, and closed shoes."
+    return "Cold", "Warm clothes: a proper coat, a sweater, scarf and gloves, and closed, comfortable shoes."
+
+
+def wear_notes(sp: dict) -> list[str]:
+    notes = [feel(sp["high"])[1]]
+    lo, swing = sp["low"], sp["high"] - sp["low"]
+    if lo < 45:
+        notes.append("Cold mornings and evenings: bring a warm jacket.")
+    elif lo < 55:
+        notes.append("Cool mornings and evenings: pack a jacket or fleece.")
+    elif lo < 65 and swing >= 12:
+        notes.append("Evenings cool off: bring a light layer for dinner.")
+    if sp.get("rain_days"):
+        d = sp["rain_days"]
+        notes.append(f"It rained on {d} of {sp['days']} day{'s' if sp['days'] != 1 else ''}: pack a compact umbrella or rain jacket.")
+    return notes
+
+
+def wear_section(t: dict) -> str:
+    w = t.get("weather") or {}
+    spots = w.get("spots") or []
+    if not spots:
+        return ""
+    rows = "".join(f"""<li class="wx">
+  <div class="wx-top"><h3>{e(sp["place"])}</h3><span class="wx-feel wx-{feel(sp["high"])[0].lower()}">{feel(sp["high"])[0]}</span></div>
+  <p class="wx-temps"><span>{e(sp["dates"])}</span><span>Highs around <b>{sp["high"]}°F</b></span><span>lows around <b>{sp["low"]}°F</b></span></p>
+  <ul class="wx-wear">{"".join(f"<li>{e(n)}</li>" for n in wear_notes(sp))}</ul>
+</li>""" for sp in spots)
+    return f"""<section class="block wear" id="wear">
+  <h2>{ICONS["shirt"]}What to wear</h2>
+  <p class="wear-lede">Based on the weather we actually had: average daytime highs and overnight lows for our dates in each place.</p>
+  <ul class="wx-list">{rows}</ul>
+  <p class="wear-source">Temperatures: Open-Meteo historical weather. More detailed packing notes to come.</p>
+</section>"""
+
+
 def trip_card(t: dict, size: str = "", heading: str = "h3", latest: bool = False) -> str:
     ph = TRIP_PHOTOS.get(t.get("hero", ""), {})
     sizes = "(min-width: 1100px) 560px, (min-width: 700px) 50vw, 100vw" if size == "lg" else "(min-width: 1100px) 380px, (min-width: 700px) 50vw, 100vw"
@@ -484,7 +535,7 @@ def trip_card(t: dict, size: str = "", heading: str = "h3", latest: bool = False
   <div class="card-media">{media}<span class="badge">{t["days"]} days</span>{flag}</div>
   <div class="card-body">
     <p class="card-kicker">{e(t["country"])} · {e(month_year(t) or t["region"])}</p>
-    <{heading} class="card-title"><a href="/itineraries/{t["slug"]}/">{e(t["title"])}</a></{heading}>
+    {hand_note(t)}<{heading} class="card-title"><a href="/itineraries/{t["slug"]}/">{e(t["title"])}</a></{heading}>
     <p class="card-text">{e(t["summary"])}</p>
     <p class="card-when">{e(when)}</p>
   </div>
@@ -502,6 +553,7 @@ ICONS = {
     "play": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>',
     "video": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z"/></svg>',
     "map": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg>',
+    "shirt": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3 4 6l2 4 2-1v12h8V9l2 1 2-4-4-3c-.5 1.7-2 3-4 3s-3.5-1.3-4-3z"/></svg>',
     "bulb": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></svg>',
 }
 
@@ -686,7 +738,7 @@ def latest_feature(t: dict) -> str:
         <a class="feature-media" href="/itineraries/{t["slug"]}/" tabindex="-1" aria-hidden="true">{media}<span class="badge">{t["days"]} days</span></a>
         <div class="feature-body">
           <p class="card-kicker">{e(t["country"])}{" · " + e(when) if when else ""}</p>
-          <h3><a href="/itineraries/{t["slug"]}/">{e(t["title"])}</a></h3>
+          {hand_note(t)}<h3><a href="/itineraries/{t["slug"]}/">{e(t["title"])}</a></h3>
           {f'<p class="feature-sub">{e(t["subtitle"])}</p>' if t.get("subtitle") else ""}
           <p>{e(t["summary"])}</p>
           {f'<dl class="mini-glance">{glance}</dl>' if glance else ""}
@@ -914,11 +966,15 @@ def itinerary(t: dict, trips: list[dict]) -> str:
         extra.append(("tips", "Our tips", f'<ul class="tips">{lis}</ul>', "bulb"))
 
     extra_html = "".join(f'<section class="block" id="{i}"><h2>{ICONS[ic]}{e(h)}</h2>{b}</section>' for i, h, b, ic in extra)
-    toc_html = "".join(f'<li><a href="#{i}">{e(lbl)}<small>{e(p)}</small></a></li>' for i, lbl, p in toc) + "".join(
+    wear_html = wear_section(t)
+    toc_html = ('<li><a href="#wear">What to wear</a></li>' if wear_html else "") + "".join(f'<li><a href="#{i}">{e(lbl)}<small>{e(p)}</small></a></li>' for i, lbl, p in toc) + "".join(
         f'<li><a href="#{i}">{e(h)}</a></li>' for i, h, _b, _ic in extra)
     glance_rows = list(t.get("glance", []))
     if trip_flights(slug) and not any(g["label"].lower().startswith("flight") for g in glance_rows):
         glance_rows.append({"label": "Flights", "value": trip_flights(slug)})
+    wx = (t.get("weather") or {}).get("spots") or []
+    if wx and not any(g["label"].lower().startswith("weather") for g in glance_rows):
+        glance_rows.append({"label": "Weather", "value": f'{min(s["low"] for s in wx)}–{max(s["high"] for s in wx)}°F'})
     glance = "".join(f'<div><dt>{e(g["label"])}</dt><dd>{e(g["value"])}</dd></div>' for g in glance_rows)
     route = ""
     if t.get("route"):
@@ -953,6 +1009,7 @@ def itinerary(t: dict, trips: list[dict]) -> str:
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/itineraries/">Itineraries</a><span>›</span><span>{e(t["region"])}</span><span>›</span><span>{e(t["country"])}</span></nav>
       <h1>{e(t["title"])}{f'<em>{e(t["subtitle"])}</em>' if t.get("subtitle") else ""}</h1>
       <p class="trip-meta">{"".join(f"<span>{e(m)}</span>" for m in meta)}</p>
+      {hand_note(t, "hero-note")}
     </div>
     {f'<p class="hero-caption">{e(ph["place"])}{" · Photo: " + credit if credit else ""}</p>' if ph else ""}
   </section>
@@ -970,6 +1027,7 @@ def itinerary(t: dict, trips: list[dict]) -> str:
       {f'<dl class="glance"><p class="glance-title">At a glance</p>{glance}</dl>' if glance else ""}
       {f'<div class="route-wrap"><p class="glance-title">The route</p>{route}{route_map}</div>' if route else ""}
       {gallery}
+      {wear_html}
       <h2 class="days-title">{ICONS["clock"]}The plan, day by day</h2>
       {"".join(days_html)}
       {extra_html}

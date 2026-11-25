@@ -879,5 +879,31 @@
   },
   "videos": [
     "bkmfZITxA_I"
-  ]
+  ],
+  "weather": {
+    "source": "Open-Meteo historical weather",
+    "unit": "F",
+    "spots": [
+      {
+        "place": "London",
+        "dates": "Apr 12–15",
+        "high": 64,
+        "low": 47,
+        "warmest": 72,
+        "coolest": 43,
+        "rain_days": 1,
+        "days": 4
+      },
+      {
+        "place": "Paris & Versailles",
+        "dates": "Apr 16–20",
+        "high": 64,
+        "low": 47,
+        "warmest": 69,
+        "coolest": 43,
+        "rain_days": 2,
+        "days": 5
+      }
+    ]
+  }
 }

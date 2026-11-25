@@ -479,5 +479,32 @@
   },
   "videos": [
     "4GLtHpa4wJE"
-  ]
+  ],
+  "weather": {
+    "source": "Open-Meteo historical weather",
+    "unit": "F",
+    "spots": [
+      {
+        "place": "Barcelona",
+        "dates": "Jul 2–3 & Jul 9–10",
+        "high": 89,
+        "low": 74,
+        "warmest": 94,
+        "coolest": 72,
+        "rain_days": 0,
+        "days": 4
+      },
+      {
+        "place": "Camp de Mar, Mallorca",
+        "dates": "Jul 4–8",
+        "high": 92,
+        "low": 75,
+        "warmest": 94,
+        "coolest": 74,
+        "rain_days": 0,
+        "days": 5
+      }
+    ]
+  },
+  "note": "our favourite yet!"
 }
