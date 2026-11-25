@@ -344,13 +344,18 @@ def picture(key: str, sizes: str, cls: str = "", lazy: bool = True, alt: str | N
 
 # ── Dates ─────────────────────────────────────────────────────────────────────
 def parse(d: str):
-    return dt.date.fromisoformat(d) if d else None
+    """ISO date, or a month only ("2024-05") when we don't know the exact days."""
+    if not d:
+        return None
+    return dt.date.fromisoformat(d + "-01") if len(d) == 7 else dt.date.fromisoformat(d)
 
 
 def date_range(t: dict) -> str:
     s, f = parse(t.get("start", "")), parse(t.get("end", ""))
     if not s:
         return ""
+    if len(t.get("start", "")) == 7:  # month only
+        return f"{s:%B %Y}"
     if not f or f == s:
         return f"{s:%b} {s.day}, {s.year}"
     if s.year != f.year:
@@ -499,7 +504,10 @@ def wear_notes(sp: dict) -> list[str]:
         notes.append("Evenings cool off: bring a light layer for dinner.")
     if sp.get("rain_days"):
         d = sp["rain_days"]
-        notes.append(f"It rained on {d} of {sp['days']} day{'s' if sp['days'] != 1 else ''}: pack a compact umbrella or rain jacket.")
+        if sp["days"] >= 28:  # a whole month of averages
+            notes.append(f"Rain fell on {d} of {sp['days']} days that month: bring a waterproof jacket and shoes that cope with wet streets.")
+        else:
+            notes.append(f"It rained on {d} of {sp['days']} day{'s' if sp['days'] != 1 else ''}: pack a compact umbrella or rain jacket.")
     return notes
 
 
@@ -515,7 +523,7 @@ def wear_section(t: dict) -> str:
 </li>""" for sp in spots)
     return f"""<section class="block wear" id="wear">
   <h2>{ICONS["shirt"]}What to wear</h2>
-  <p class="wear-lede">Based on the weather we actually had: average daytime highs and overnight lows for our dates in each place.</p>
+  <p class="wear-lede">{"Average daytime highs and overnight lows for the whole month we traveled, in each place." if w.get("basis") == "month" else "Based on the weather we actually had: average daytime highs and overnight lows for our dates in each place."}</p>
   <ul class="wx-list">{rows}</ul>
   <p class="wear-source">Temperatures: Open-Meteo historical weather. More detailed packing notes to come.</p>
 </section>"""
